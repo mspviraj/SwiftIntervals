@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B092CC531E21B7BC000048FE /* DateEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = B092CC521E21B7BC000048FE /* DateEnum.swift */; };
+		B092CC541E21B7BC000048FE /* DateEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = B092CC521E21B7BC000048FE /* DateEnum.swift */; };
+		B092CC561E21B7CD000048FE /* DateIntervals.swift in Sources */ = {isa = PBXBuildFile; fileRef = B092CC551E21B7CD000048FE /* DateIntervals.swift */; };
+		B092CC571E21B7CD000048FE /* DateIntervals.swift in Sources */ = {isa = PBXBuildFile; fileRef = B092CC551E21B7CD000048FE /* DateIntervals.swift */; };
 		B0E731DA1E21B38C00160E37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E731D91E21B38C00160E37 /* AppDelegate.swift */; };
 		B0E731DC1E21B38C00160E37 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E731DB1E21B38C00160E37 /* FirstViewController.swift */; };
 		B0E731DE1E21B38C00160E37 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E731DD1E21B38C00160E37 /* SecondViewController.swift */; };
@@ -35,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B092CC521E21B7BC000048FE /* DateEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateEnum.swift; sourceTree = "<group>"; };
+		B092CC551E21B7CD000048FE /* DateIntervals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateIntervals.swift; sourceTree = "<group>"; };
 		B0E731D61E21B38C00160E37 /* SwiftEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0E731D91E21B38C00160E37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0E731DB1E21B38C00160E37 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +105,8 @@
 		B0E731D81E21B38C00160E37 /* SwiftEvents */ = {
 			isa = PBXGroup;
 			children = (
+				B092CC551E21B7CD000048FE /* DateIntervals.swift */,
+				B092CC521E21B7BC000048FE /* DateEnum.swift */,
 				B0E731D91E21B38C00160E37 /* AppDelegate.swift */,
 				B0E731DB1E21B38C00160E37 /* FirstViewController.swift */,
 				B0E731DD1E21B38C00160E37 /* SecondViewController.swift */,
@@ -265,6 +273,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B092CC561E21B7CD000048FE /* DateIntervals.swift in Sources */,
+				B092CC531E21B7BC000048FE /* DateEnum.swift in Sources */,
 				B0E731DE1E21B38C00160E37 /* SecondViewController.swift in Sources */,
 				B0E731DA1E21B38C00160E37 /* AppDelegate.swift in Sources */,
 				B0E731DC1E21B38C00160E37 /* FirstViewController.swift in Sources */,
@@ -275,6 +285,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B092CC541E21B7BC000048FE /* DateEnum.swift in Sources */,
+				B092CC571E21B7CD000048FE /* DateIntervals.swift in Sources */,
 				B0E731F11E21B38C00160E37 /* SwiftEventsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -518,6 +530,7 @@
 				B0E732021E21B38C00160E37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B0E732031E21B38C00160E37 /* Build configuration list for PBXNativeTarget "SwiftEventsTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +539,7 @@
 				B0E732051E21B38C00160E37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B0E732061E21B38C00160E37 /* Build configuration list for PBXNativeTarget "SwiftEventsUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +548,7 @@
 				B0E732081E21B38C00160E37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
