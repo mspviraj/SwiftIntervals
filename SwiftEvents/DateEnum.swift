@@ -36,31 +36,26 @@ enum DateEnum {
         if dates.count != 2 {
             return (.invalidDate, nil, nil)
         }
-        var date1, date2 : Date?
-        var type : DateEnum = .between
         
         if dates[0] == "*" {
-            date1 = Date()
-            type = .fixEnd
-        } else {
-            if let date = DateEnum.dateFromString(dates[0]) {
-                date1 = date
-            } else {
-                type = .invalidDate
+            guard let date = DateEnum.dateFromString(dates[1]) else {
+                return (.invalidDate, nil, nil)
             }
+            return (.fixEnd, Date(), date)
         }
         
-        if dates[1] == "*" {
-            date2 = Date()
-            type = .fixStart
-        } else {
-            if let date = DateEnum.dateFromString(dates[1]) {
-                date2 = date
-            } else {
-                type = .invalidDate
+        if (dates[1] == "*") {
+            guard let date = DateEnum.dateFromString(dates[0]) else {
+                return (.invalidDate, nil, nil)
             }
+            return (.fixStart, date, Date())
         }
+        
+        guard let startDate = DateEnum.dateFromString(dates[0]), let endDate = DateEnum.dateFromString(dates[1]) else {
+            return (.invalidDate, nil, nil)
+        }
+        
+        return (.between, startDate, endDate)
 
-        return (type, date1, date2)
     }
 }

@@ -122,7 +122,7 @@ class SwiftEventsTests: XCTestCase {
         let interval = DateEnum.parseIntervalDateString(badDate)
         assert(interval.intervalType == .invalidDate, "Interval:\(interval.intervalType)")
         assert(interval.date1 == nil, "Date1 not nil")
-        assert(interval.date2 != nil, "Date2 nil")
+        assert(interval.date2 == nil, "Date2 nil")
         
     }
 
