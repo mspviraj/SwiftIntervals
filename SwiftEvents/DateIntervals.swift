@@ -10,22 +10,24 @@ import Foundation
 
 class DateIntervals {
     
-    private var startTime : Date
-    private var endTime : Date
-    private var context : DateEnum?
-    
+    //Return DateIntervals where the start time is fix (aka not wild card)
     public static func fixStart(startDate : Date, endDate : Date) -> DateIntervals {
         let result = DateIntervals(startTime: startDate, endTime: endDate)
         result.context = DateEnum.compareDate(startDate, toDate: endDate)
         return result;
     }
     
+    //Return DateIntervals where the end time is fix (aka not wild card)
     public static func fixEnd(startDate : Date, endDate : Date) -> DateIntervals {
         let result = DateIntervals(startTime: startDate, endTime: endDate)
         result.context = DateEnum.compareDate(endDate, toDate: startDate)
         return result;
     }
-
+    
+    private var startTime : Date
+    private var endTime : Date
+    private var context : DateEnum?
+    
     private init(startTime : Date, endTime : Date) {
         if DateEnum.compareDate(startTime, toDate: endTime) == DateEnum.until {
             self.startTime = endTime
