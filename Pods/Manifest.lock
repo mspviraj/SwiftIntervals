@@ -1,18 +1,21 @@
 PODS:
   - Alamofire (4.0.1)
+  - Gloss (1.1.1)
   - SwiftDate (4.0.11)
   - SwiftyDropbox (4.1.1):
     - Alamofire (~> 4.0.1)
 
 DEPENDENCIES:
+  - Gloss
   - SwiftDate (~> 4.0)
   - SwiftyDropbox
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  Gloss: 4a892694cba7387efa4102a51f86110651366b18
   SwiftDate: a36d5ce7c86bed3ed92b583ccbf15045f374ac65
   SwiftyDropbox: dfcd4d308d32d74729255b48833db61acdfb9c23
 
-PODFILE CHECKSUM: d89e04ef6aa6dad03a717f82f8a17451e6d55af2
+PODFILE CHECKSUM: 047eba54d8c836d49076f86dad38a6a8ebfd1025
 
 COCOAPODS: 1.1.1

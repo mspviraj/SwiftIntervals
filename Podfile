@@ -4,6 +4,7 @@
 def myPods
     pod 'SwiftDate','~>4.0'
     pod 'SwiftyDropbox'
+    pod 'Gloss'
 end
 
 target 'SwiftEvents' do

@@ -15,6 +15,9 @@
 		B0756B6B1E2338E700C267A2 /* DropboxCloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0756B6A1E2338E700C267A2 /* DropboxCloud.swift */; };
 		B0756B6C1E2338E700C267A2 /* DropboxCloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0756B6A1E2338E700C267A2 /* DropboxCloud.swift */; };
 		B0756B6F1E234CE500C267A2 /* DateEnumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0756B6E1E234CE500C267A2 /* DateEnumTests.swift */; };
+		B0756B751E236EF800C267A2 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0756B741E236EF800C267A2 /* Event.swift */; };
+		B0756B761E23762A00C267A2 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0756B741E236EF800C267A2 /* Event.swift */; };
+		B0756B781E23783F00C267A2 /* EventTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0756B771E23783F00C267A2 /* EventTests.swift */; };
 		B092CC531E21B7BC000048FE /* DateEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = B092CC521E21B7BC000048FE /* DateEnum.swift */; };
 		B092CC541E21B7BC000048FE /* DateEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = B092CC521E21B7BC000048FE /* DateEnum.swift */; };
 		B092CC561E21B7CD000048FE /* DateIntervals.swift in Sources */ = {isa = PBXBuildFile; fileRef = B092CC551E21B7CD000048FE /* DateIntervals.swift */; };
@@ -58,6 +61,8 @@
 		B0756B671E232A3300C267A2 /* EventsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTests.swift; sourceTree = "<group>"; };
 		B0756B6A1E2338E700C267A2 /* DropboxCloud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropboxCloud.swift; sourceTree = "<group>"; };
 		B0756B6E1E234CE500C267A2 /* DateEnumTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateEnumTests.swift; sourceTree = "<group>"; };
+		B0756B741E236EF800C267A2 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		B0756B771E23783F00C267A2 /* EventTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTests.swift; sourceTree = "<group>"; };
 		B092CC521E21B7BC000048FE /* DateEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateEnum.swift; sourceTree = "<group>"; };
 		B092CC551E21B7CD000048FE /* DateIntervals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateIntervals.swift; sourceTree = "<group>"; };
 		B0E731D61E21B38C00160E37 /* SwiftEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,6 +172,7 @@
 				B0E731E71E21B38C00160E37 /* Info.plist */,
 				B0756B6A1E2338E700C267A2 /* DropboxCloud.swift */,
 				B0756B631E2323C800C267A2 /* Events.swift */,
+				B0756B741E236EF800C267A2 /* Event.swift */,
 			);
 			path = SwiftEvents;
 			sourceTree = "<group>";
@@ -178,6 +184,7 @@
 				B0E731F01E21B38C00160E37 /* SwiftEventsTests.swift */,
 				B0E731F21E21B38C00160E37 /* Info.plist */,
 				B0756B6E1E234CE500C267A2 /* DateEnumTests.swift */,
+				B0756B771E23783F00C267A2 /* EventTests.swift */,
 			);
 			path = SwiftEventsTests;
 			sourceTree = "<group>";
@@ -476,6 +483,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0756B751E236EF800C267A2 /* Event.swift in Sources */,
 				B0756B641E2323C800C267A2 /* Events.swift in Sources */,
 				B0756B6B1E2338E700C267A2 /* DropboxCloud.swift in Sources */,
 				B092CC561E21B7CD000048FE /* DateIntervals.swift in Sources */,
@@ -490,12 +498,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0756B761E23762A00C267A2 /* Event.swift in Sources */,
 				B0756B6F1E234CE500C267A2 /* DateEnumTests.swift in Sources */,
 				B0756B651E2323C800C267A2 /* Events.swift in Sources */,
 				B092CC541E21B7BC000048FE /* DateEnum.swift in Sources */,
 				B0756B681E232A3300C267A2 /* EventsTests.swift in Sources */,
 				B092CC571E21B7CD000048FE /* DateIntervals.swift in Sources */,
 				B0756B6C1E2338E700C267A2 /* DropboxCloud.swift in Sources */,
+				B0756B781E23783F00C267A2 /* EventTests.swift in Sources */,
 				B0E731F11E21B38C00160E37 /* SwiftEventsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

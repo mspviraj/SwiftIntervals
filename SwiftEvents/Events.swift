@@ -7,31 +7,30 @@
 //
 
 import Foundation
+import Gloss
 
-class Events
-{
-    enum EventKeys {
-        case root
-        case event
-        case startTime, endTime
+struct Events {
+    private let keyEvents = "events"
+    
+    var events : [Event] = [Event]()
+    
+    init?(json: JSON) {
+        events = (keyEvents <~~ json)!
     }
     
-    let keyEvent = "keyEvent"
-    let keyStart = "keyStart"
-    let keyEnd = "keyEnd"
-    let keyRoot = "keyRoot"
-    
-    var eventDictionary = [String:Array<String>]()
-    
-    init() {
-        if let json = JSONEvent("Started Using this app", startTime: DateEnum.stringFromDate(Date()), endTime: DateEnum.dateWildCard) {
-            eventDictionary[keyRoot] = [json]
-        }
+    init?(event : Event) {
+        events.append(event)
     }
     
-    func asJSON() -> String? {
+    mutating func addEvent(event : Event) -> Int {
+        events.append(event)
+        return events.count
+    }
+    
+    func toString() -> String? {
+        let json : JSON? = toJSON()
         do {
-            let jsonData = try JSONSerialization.data(withJSONObject: eventDictionary, options: .prettyPrinted)
+            let jsonData = try JSONSerialization.data(withJSONObject: json!, options: .prettyPrinted)
             let jsonString = String(data: jsonData, encoding: .utf8)
             return jsonString
         } catch {
@@ -39,30 +38,51 @@ class Events
         }
         return nil
     }
+    func toJSON() -> JSON? {
+        return jsonify([
+            keyEvents ~~> self.events
+            ])
+    }
+//    init() {
+//        if let json = JSONEvent("Started Using this app", startTime: DateEnum.stringFromDate(Date()), endTime: DateEnum.dateWildCard) {
+//            eventDictionary[keyRoot] = [json]
+//        }
+//    }
+//    
+//    func asJSON() -> String? {
+//        do {
+//            let jsonData = try JSONSerialization.data(withJSONObject: eventDictionary, options: .prettyPrinted)
+//            let jsonString = String(data: jsonData, encoding: .utf8)
+//            return jsonString
+//        } catch {
+//            print(error.localizedDescription)
+//        }
+//        return nil
+//    }
     
-    private func JSONEvent(_ eventName : String, startTime: String, endTime: String) -> String? {
-        let dict : [String:String] = [keyEvent : eventName, keyStart : startTime, keyEnd : endTime]
-        do {
-            let jsonData = try JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted)
-            // here "jsonData" is the dictionary encoded in JSON data
-            
-            let decoded = try JSONSerialization.jsonObject(with: jsonData, options: [])
-            // here "decoded" is of type `Any`, decoded from JSON data
-            
-            // you can now cast it with the right type
-            if let dictFromJSON = decoded as? [String:String] {
-                print(dictFromJSON)
-            }
-            let returnString = String(data: jsonData, encoding: .utf8)
-            print(returnString!)
-            return returnString
-        } catch {
-            print(error.localizedDescription)
-        }
-        return nil
-    }
-
-    func addEvent(_ eventName : String, startTime : String, endTime : String) {
-        
-    }
+//    private func JSONEvent(_ eventName : String, startTime: String, endTime: String) -> String? {
+//        let dict : [String:String] = [keyEvent : eventName, keyStart : startTime, keyEnd : endTime]
+//        do {
+//            let jsonData = try JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted)
+//            // here "jsonData" is the dictionary encoded in JSON data
+//            
+//            let decoded = try JSONSerialization.jsonObject(with: jsonData, options: [])
+//            // here "decoded" is of type `Any`, decoded from JSON data
+//            
+//            // you can now cast it with the right type
+//            if let dictFromJSON = decoded as? [String:String] {
+//                print(dictFromJSON)
+//            }
+//            let returnString = String(data: jsonData, encoding: .utf8)
+//            print(returnString!)
+//            return returnString
+//        } catch {
+//            print(error.localizedDescription)
+//        }
+//        return nil
+//    }
+//
+//    func addEvent(_ eventName : String, startTime : String, endTime : String) {
+//        
+//    }
 }
