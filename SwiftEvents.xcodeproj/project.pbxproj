@@ -8,13 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		71736F5EFED65FC093E809A2 /* Pods_SwiftEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DCEA0992686D2138C04966A /* Pods_SwiftEvents.framework */; };
+		B0756B5E1E22D39200C267A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0E731E21E21B38C00160E37 /* Assets.xcassets */; };
+		B0756B641E2323C800C267A2 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0756B631E2323C800C267A2 /* Events.swift */; };
+		B0756B651E2323C800C267A2 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0756B631E2323C800C267A2 /* Events.swift */; };
+		B0756B681E232A3300C267A2 /* EventsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0756B671E232A3300C267A2 /* EventsTests.swift */; };
+		B0756B6B1E2338E700C267A2 /* DropboxCloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0756B6A1E2338E700C267A2 /* DropboxCloud.swift */; };
+		B0756B6C1E2338E700C267A2 /* DropboxCloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0756B6A1E2338E700C267A2 /* DropboxCloud.swift */; };
+		B0756B6F1E234CE500C267A2 /* DateEnumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0756B6E1E234CE500C267A2 /* DateEnumTests.swift */; };
 		B092CC531E21B7BC000048FE /* DateEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = B092CC521E21B7BC000048FE /* DateEnum.swift */; };
 		B092CC541E21B7BC000048FE /* DateEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = B092CC521E21B7BC000048FE /* DateEnum.swift */; };
 		B092CC561E21B7CD000048FE /* DateIntervals.swift in Sources */ = {isa = PBXBuildFile; fileRef = B092CC551E21B7CD000048FE /* DateIntervals.swift */; };
 		B092CC571E21B7CD000048FE /* DateIntervals.swift in Sources */ = {isa = PBXBuildFile; fileRef = B092CC551E21B7CD000048FE /* DateIntervals.swift */; };
 		B0E731DA1E21B38C00160E37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E731D91E21B38C00160E37 /* AppDelegate.swift */; };
 		B0E731DC1E21B38C00160E37 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E731DB1E21B38C00160E37 /* FirstViewController.swift */; };
-		B0E731DE1E21B38C00160E37 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E731DD1E21B38C00160E37 /* SecondViewController.swift */; };
+		B0E731DE1E21B38C00160E37 /* DropboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E731DD1E21B38C00160E37 /* DropboxViewController.swift */; };
 		B0E731E11E21B38C00160E37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0E731DF1E21B38C00160E37 /* Main.storyboard */; };
 		B0E731E31E21B38C00160E37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0E731E21E21B38C00160E37 /* Assets.xcassets */; };
 		B0E731E61E21B38C00160E37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0E731E41E21B38C00160E37 /* LaunchScreen.storyboard */; };
@@ -47,12 +54,16 @@
 		3366458C1E05C6BB5DF3B562 /* Pods-SwiftEvents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftEvents.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftEvents/Pods-SwiftEvents.release.xcconfig"; sourceTree = "<group>"; };
 		4DCEA0992686D2138C04966A /* Pods_SwiftEvents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftEvents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A1FA26EABAA9DB667C67F36 /* Pods-SwiftEvents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftEvents.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftEvents/Pods-SwiftEvents.debug.xcconfig"; sourceTree = "<group>"; };
+		B0756B631E2323C800C267A2 /* Events.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
+		B0756B671E232A3300C267A2 /* EventsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTests.swift; sourceTree = "<group>"; };
+		B0756B6A1E2338E700C267A2 /* DropboxCloud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropboxCloud.swift; sourceTree = "<group>"; };
+		B0756B6E1E234CE500C267A2 /* DateEnumTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateEnumTests.swift; sourceTree = "<group>"; };
 		B092CC521E21B7BC000048FE /* DateEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateEnum.swift; sourceTree = "<group>"; };
 		B092CC551E21B7CD000048FE /* DateIntervals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateIntervals.swift; sourceTree = "<group>"; };
 		B0E731D61E21B38C00160E37 /* SwiftEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0E731D91E21B38C00160E37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0E731DB1E21B38C00160E37 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		B0E731DD1E21B38C00160E37 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		B0E731DD1E21B38C00160E37 /* DropboxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropboxViewController.swift; sourceTree = "<group>"; };
 		B0E731E01E21B38C00160E37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B0E731E21E21B38C00160E37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0E731E51E21B38C00160E37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -145,15 +156,17 @@
 		B0E731D81E21B38C00160E37 /* SwiftEvents */ = {
 			isa = PBXGroup;
 			children = (
+				B0E731D91E21B38C00160E37 /* AppDelegate.swift */,
 				B092CC551E21B7CD000048FE /* DateIntervals.swift */,
 				B092CC521E21B7BC000048FE /* DateEnum.swift */,
-				B0E731D91E21B38C00160E37 /* AppDelegate.swift */,
 				B0E731DB1E21B38C00160E37 /* FirstViewController.swift */,
-				B0E731DD1E21B38C00160E37 /* SecondViewController.swift */,
+				B0E731DD1E21B38C00160E37 /* DropboxViewController.swift */,
 				B0E731DF1E21B38C00160E37 /* Main.storyboard */,
 				B0E731E21E21B38C00160E37 /* Assets.xcassets */,
 				B0E731E41E21B38C00160E37 /* LaunchScreen.storyboard */,
 				B0E731E71E21B38C00160E37 /* Info.plist */,
+				B0756B6A1E2338E700C267A2 /* DropboxCloud.swift */,
+				B0756B631E2323C800C267A2 /* Events.swift */,
 			);
 			path = SwiftEvents;
 			sourceTree = "<group>";
@@ -161,8 +174,10 @@
 		B0E731EF1E21B38C00160E37 /* SwiftEventsTests */ = {
 			isa = PBXGroup;
 			children = (
+				B0756B671E232A3300C267A2 /* EventsTests.swift */,
 				B0E731F01E21B38C00160E37 /* SwiftEventsTests.swift */,
 				B0E731F21E21B38C00160E37 /* Info.plist */,
+				B0756B6E1E234CE500C267A2 /* DateEnumTests.swift */,
 			);
 			path = SwiftEventsTests;
 			sourceTree = "<group>";
@@ -312,6 +327,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0756B5E1E22D39200C267A2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,9 +476,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0756B641E2323C800C267A2 /* Events.swift in Sources */,
+				B0756B6B1E2338E700C267A2 /* DropboxCloud.swift in Sources */,
 				B092CC561E21B7CD000048FE /* DateIntervals.swift in Sources */,
 				B092CC531E21B7BC000048FE /* DateEnum.swift in Sources */,
-				B0E731DE1E21B38C00160E37 /* SecondViewController.swift in Sources */,
+				B0E731DE1E21B38C00160E37 /* DropboxViewController.swift in Sources */,
 				B0E731DA1E21B38C00160E37 /* AppDelegate.swift in Sources */,
 				B0E731DC1E21B38C00160E37 /* FirstViewController.swift in Sources */,
 			);
@@ -472,8 +490,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0756B6F1E234CE500C267A2 /* DateEnumTests.swift in Sources */,
+				B0756B651E2323C800C267A2 /* Events.swift in Sources */,
 				B092CC541E21B7BC000048FE /* DateEnum.swift in Sources */,
+				B0756B681E232A3300C267A2 /* EventsTests.swift in Sources */,
 				B092CC571E21B7CD000048FE /* DateIntervals.swift in Sources */,
+				B0756B6C1E2338E700C267A2 /* DropboxCloud.swift in Sources */,
 				B0E731F11E21B38C00160E37 /* SwiftEventsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

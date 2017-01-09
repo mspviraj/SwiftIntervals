@@ -25,9 +25,20 @@ enum DateEnum {
         }
     }
     
+    static let utcFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
+    
+    static let dateWildCard = "*"
+    
+    static func stringFromDate(_ date : Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = utcFormat
+        dateFormatter.timeZone = TimeZone.init(secondsFromGMT: 0)
+        return dateFormatter.string(from: date)
+    }
+    
     static func dateFromString(_ dateString: String) -> Date? {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZ"
+        dateFormatter.dateFormat = utcFormat
         return dateFormatter.date(from: dateString)
     }
     
@@ -37,14 +48,14 @@ enum DateEnum {
             return (.invalidDate, nil, nil)
         }
         
-        if dates[0] == "*" {
+        if dates[0] == dateWildCard {
             guard let date = DateEnum.dateFromString(dates[1]) else {
                 return (.invalidDate, nil, nil)
             }
             return (.fixEnd, Date(), date)
         }
         
-        if (dates[1] == "*") {
+        if (dates[1] == dateWildCard) {
             guard let date = DateEnum.dateFromString(dates[0]) else {
                 return (.invalidDate, nil, nil)
             }
