@@ -38,7 +38,7 @@ class DropboxViewController: UIViewController {
         
         let fileData = "testing data example".data(using: String.Encoding.utf8, allowLossyConversion: false)!
         
-        let request = client?.files.upload(path: "/v.txt", input: fileData)
+        _ = client?.files.upload(path: "/v.txt", input: fileData)
             .response { response, error in
                 if let response = response {
                     print(response)
@@ -51,11 +51,6 @@ class DropboxViewController: UIViewController {
             }
             .progress { progressData in
                 print(progressData)
-        }
-        let someConditionIsSatisfied = false
-        // in case you want to cancel the request
-        if someConditionIsSatisfied {
-            request?.cancel()
         }
     }
     

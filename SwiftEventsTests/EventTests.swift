@@ -20,23 +20,24 @@ class EventTests: XCTestCase {
         super.tearDown()
     }
     
-    func testEvent() {
-        let event = Event("First", startTime: "*", endTime: "*")
-        print(event)
-        assert(event.endTime != nil, "Event is nil")
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testEventInit() {
     }
     
-    func testEvents() {
-        let event = Event("First", startTime:"*", endTime:"*")
-        assert(event.endTime != nil, "Event is nil")
-        let events = Events(event: event)
-        let json = events?.toJSON()
-        print(json!)
-        assert(json?.count != 0, "count:\(json?.count)")
-        let jsonString = events?.toString()
-        assert(jsonString != nil, "JsonString nil");
+    func testEvent() {
+        
+        
+        if let event = Event("First", startTime:"*", endTime:"*") {
+            guard let json = event.toJSON() else {
+                assert(true, "string is nil")
+                return
+            }
+            let stringEvent = Event(json: json)
+            guard let string = stringEvent?.toString() else {
+                assert(true, "string is nil")
+                return
+            }
+            print(string)
+        }
     }
     func testPerformanceExample() {
         // This is an example of a performance test case.

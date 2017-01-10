@@ -9,17 +9,43 @@
 import Foundation
 import Gloss
 
-struct Events {
-    private let keyEvents = "events"
-    
+struct Events : JSONSerializable, Glossy {
     var events : [Event] = [Event]()
     
     init?(json: JSON) {
-        events = (keyEvents <~~ json)!
+        events = ("events" <~~ json)!
     }
     
     init?(event : Event) {
         events.append(event)
+    }
+    
+    init?(path : String) {
+        let dropboxCloud = DropboxCloud(filePath: path)
+        dropboxCloud.getString() { String, CloudErrors in
+        }
+    }
+    
+    init?(_ string : String) {
+         guard let data = string.data(using: .utf8) else {
+            return nil
+        }
+        do {
+            var convertedJSON : JSON? = [:]
+            try convertedJSON = JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions(rawValue: 0)) as? JSON
+            guard let json = convertedJSON else {
+                return nil
+            }
+            let events = Events(json: json)
+            self.events = (events?.events)!
+        } catch {
+            print(error)
+            return nil
+        }
+    }
+    
+    func getEvents() -> [Event] {
+        return self.events
     }
     
     mutating func addEvent(event : Event) -> Int {
@@ -27,62 +53,47 @@ struct Events {
         return events.count
     }
     
-    func toString() -> String? {
-        let json : JSON? = toJSON()
-        do {
-            let jsonData = try JSONSerialization.data(withJSONObject: json!, options: .prettyPrinted)
-            let jsonString = String(data: jsonData, encoding: .utf8)
-            return jsonString
-        } catch {
-            print(error.localizedDescription)
-        }
-        return nil
-    }
     func toJSON() -> JSON? {
         return jsonify([
-            keyEvents ~~> self.events
+            "events" ~~> self.events
             ])
     }
-//    init() {
-//        if let json = JSONEvent("Started Using this app", startTime: DateEnum.stringFromDate(Date()), endTime: DateEnum.dateWildCard) {
-//            eventDictionary[keyRoot] = [json]
-//        }
-//    }
-//    
-//    func asJSON() -> String? {
-//        do {
-//            let jsonData = try JSONSerialization.data(withJSONObject: eventDictionary, options: .prettyPrinted)
-//            let jsonString = String(data: jsonData, encoding: .utf8)
-//            return jsonString
-//        } catch {
-//            print(error.localizedDescription)
-//        }
-//        return nil
-//    }
     
-//    private func JSONEvent(_ eventName : String, startTime: String, endTime: String) -> String? {
-//        let dict : [String:String] = [keyEvent : eventName, keyStart : startTime, keyEnd : endTime]
-//        do {
-//            let jsonData = try JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted)
-//            // here "jsonData" is the dictionary encoded in JSON data
-//            
-//            let decoded = try JSONSerialization.jsonObject(with: jsonData, options: [])
-//            // here "decoded" is of type `Any`, decoded from JSON data
-//            
-//            // you can now cast it with the right type
-//            if let dictFromJSON = decoded as? [String:String] {
-//                print(dictFromJSON)
-//            }
-//            let returnString = String(data: jsonData, encoding: .utf8)
-//            print(returnString!)
-//            return returnString
-//        } catch {
-//            print(error.localizedDescription)
-//        }
-//        return nil
-//    }
-//
-//    func addEvent(_ eventName : String, startTime : String, endTime : String) {
-//        
-//    }
+    func toString() -> String? {
+        func buildList(_ items : [Event], index: Int) -> String {
+            if index < items.count - 1 {
+                return items[index].toString()! + "," + buildList(items, index: index + 1)
+            }
+            return items[index].toString()!
+        }
+        
+        return "{\"events\":[\n" + buildList(events, index: 0) + "\n]}"
+        
+    }
+    
+    static func EventSetup(path : String, completion: @escaping (Events?, CloudErrors) -> Void) {
+        let dropbox = DropboxCloud(filePath: "/MyEvents.json")
+        dropbox.getString() { jsonString, error in
+            switch(error) {
+            case .ok :
+                if let events = Events(jsonString!) {
+                    completion(events, .ok)
+                } else {
+                    completion(nil, .badFile)
+                }
+            case .notFound:
+                if let events = Events(event: Event()) {
+                    let asString = events.toString()
+                    if let string = asString {
+                        dropbox.saveString(string) { (cloudError : CloudErrors) in
+                            completion(events, cloudError)
+                        }
+                    }
+                    
+                }
+            default:
+                completion(nil, error)
+            }
+        }
+    }
 }

@@ -29,17 +29,23 @@ enum DateEnum {
     
     static let dateWildCard = "*"
     
-    static func stringFromDate(_ date : Date) -> String {
+    static func stringFromDate(_ date : Date?) -> String? {
+        guard let date = date else {
+            return nil
+        }
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = utcFormat
         dateFormatter.timeZone = TimeZone.init(secondsFromGMT: 0)
         return dateFormatter.string(from: date)
     }
     
-    static func dateFromString(_ dateString: String) -> Date? {
+    static func dateFromString(_ string: String?) -> Date? {
+        guard let string = string else {
+            return nil
+        }
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = utcFormat
-        return dateFormatter.date(from: dateString)
+        return dateFormatter.date(from: string)
     }
     
     static func parseIntervalDateString(_ dateString : String) -> (intervalType : DateEnum, date1 : Date?, date2 : Date?) {

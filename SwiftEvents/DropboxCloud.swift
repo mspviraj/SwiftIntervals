@@ -9,13 +9,14 @@
 import Foundation
 import SwiftyDropbox
 
-enum DropboxErrors : Error {
+enum CloudErrors : Error {
     case ok
     case invalidString
     case saveError
     case getError
     case notFound
     case notFile
+    case badFile
 }
 
 class DropboxCloud {
@@ -29,18 +30,19 @@ class DropboxCloud {
     }
     
     
-    func saveString(_ jsonString: String, completion: @escaping (DropboxErrors)-> Void) {
+    func saveString(_ jsonString: String, completion: @escaping (CloudErrors)-> Void) {
         guard let fileData = jsonString.data(using: .utf8, allowLossyConversion: false) else {
-            completion(DropboxErrors.invalidString)
+            completion(CloudErrors.invalidString)
             return
         }
         
-        _ = client?.files.upload(path: self.filePath, input: fileData)
+        
+        _ = client?.files.upload(path: self.filePath, mode: .overwrite, input: fileData)
             .response { response, error in
                 if response != nil {
-                    completion(DropboxErrors.ok)
+                    completion(CloudErrors.ok)
                 } else if error != nil {
-                    completion(DropboxErrors.saveError)
+                    completion(CloudErrors.saveError)
                 }
             }
             .progress { progressData in
@@ -50,7 +52,7 @@ class DropboxCloud {
     }
     
     
-    func getString(completion: @escaping (String?, DropboxErrors) -> Void) {
+    func getString(completion: @escaping (String?, CloudErrors) -> Void) {
         client?.files.download(path: self.filePath)
             .response { response, error in
                 if let response = response {
@@ -58,9 +60,9 @@ class DropboxCloud {
                     print(responseMetadata)
                     let fileContents = response.1
                     if let contentsAsString = String(data: fileContents, encoding: .utf8) {
-                        completion(contentsAsString, DropboxErrors.ok)
+                        completion(contentsAsString, CloudErrors.ok)
                     } else {
-                        completion(nil, DropboxErrors.invalidString)
+                        completion(nil, CloudErrors.invalidString)
                     }
                 } else if let error = error {
                     let j = error as CallError
@@ -71,10 +73,10 @@ class DropboxCloud {
                             print("Couldn't find it:\(lookupError.description)")
                             switch lookupError {
                             case .notFound :
-                                completion(nil, DropboxErrors.notFound)
+                                completion(nil, CloudErrors.notFound)
                                 return
                             case .notFile:
-                                completion(nil, DropboxErrors.notFile)
+                                completion(nil, CloudErrors.notFile)
                                 return
                             default:
                                 print("Can't. Why \(lookupError.description)")
@@ -86,7 +88,7 @@ class DropboxCloud {
                         print("Default")
                     }
                     print(error)
-                    completion(nil, DropboxErrors.getError)
+                    completion(nil, CloudErrors.getError)
                 }
             }
             .progress { progressData in

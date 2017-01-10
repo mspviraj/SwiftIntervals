@@ -23,8 +23,27 @@ class EventsTests: XCTestCase {
     func testInit() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-        let event = Event("Using this event", startTime: "*", endTime: "*")
+        guard let event = Event("Using this event", startTime: "*", endTime: "*") else {
+            assert(false, "Event is nil")
+            return
+        }
         print(event)
+    }
+    
+    func testDropbox() {
+        let waiter = expectation(description: "perform asyc")
+
+        Events.EventSetup(path: "/MyEvents.json") { events, error in
+            switch error {
+            case .ok:
+                break;
+            default:
+                assert(false, "return error: \(error)")
+            }
+            waiter.fulfill()
+        }
+        
+        waitForExpectations(timeout: 120, handler: nil)
     }
     
     func testPerformanceExample() {
