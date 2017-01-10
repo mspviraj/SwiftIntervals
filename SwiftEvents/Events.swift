@@ -48,33 +48,19 @@ struct Events : JSONSerializable, Glossy {
         return self.events
     }
     
-    mutating func addEvent(event : Event) -> Int {
-        events.append(event)
-        return events.count
-    }
-    
     func writeStatus(error: CloudErrors)->Void {
         print("\(error)")
     }
     
-    mutating func add(event: Event,
-                      saveToCloud: @escaping(String, @escaping (CloudErrors)->Void)->Void = {_,_ in},
-                      path:String? = nil,
-                      completion:@escaping (CloudErrors)->Void = {_ in }) {
-        events.append(event)
-        if let filePath = path {
-            saveToCloud(filePath, completion)
-        }
-    }
     
-    func saveEventsToCloud(path: String, completion: @escaping (CloudErrors)->Void?){
+    func saveEventsToCloud(path: String, target: Events, completion: @escaping (CloudErrors)->Void = {_ in}){
         let block = DispatchWorkItem {
-            guard let jsonString = self.toString() else {
+            guard let jsonString = target.toString() else {
                 return
             }
             
             let cloud = DropboxCloud(filePath: path)
-            cloud.saveString(jsonString, completion: completion as! (CloudErrors) -> Void)
+            cloud.saveString(jsonString, completion: completion)
         }
         
         let queue = DispatchQueue(label: "cloudWrite",
@@ -128,26 +114,20 @@ struct Events : JSONSerializable, Glossy {
         }
     }
     
-    func writeEventsToCloud(path: String, completion: @escaping(CloudErrors) -> Void){
-        let block = DispatchWorkItem {
-            guard let jsonString = self.toString() else {
-                return
-            }
-            
-            let cloud = DropboxCloud(filePath: path)
-            cloud.saveString(jsonString) { (errors : CloudErrors) in
-                completion(errors)
-            }
+    mutating func add(event: Event,
+                      saveToCloud: @escaping(String, Events, @escaping (CloudErrors)->Void)->Void = {_,_,_ in},
+                      path:String? = nil,
+                      completion:@escaping (CloudErrors)->Void = {_ in }) {
+        events.append(event)
+        if let filePath = path {
+            saveToCloud(filePath, self, completion)
         }
-        
-        let queue = DispatchQueue(label: "cloudWrite",
-                                  qos: .background,
-                                  target: nil)
-        
-        queue.sync(execute: block)
     }
     
-    mutating func removeEvent(atIndex index: Int, from path: String, completion: @escaping(CloudErrors) -> Void) {
+    mutating func removeEvent(atIndex index: Int,
+                              saveToCloud: @escaping(String, Events, @escaping (CloudErrors)->Void)->Void = {_,_,_ in},
+                              path:String? = nil,
+                              completion:@escaping (CloudErrors)->Void = {_ in }) {
         guard index >= 0 && index < events.count else {
             completion(.invalidEvent)
             return
@@ -157,8 +137,25 @@ struct Events : JSONSerializable, Glossy {
         if events.count == 0 {
             events.append(Event())
         }
-        writeEventsToCloud(path: path) { (error : CloudErrors) in
-            completion(error)
+        if let filePath = path {
+            saveToCloud(filePath, self, completion)
         }
     }
+    
+    mutating func updateEvent(atIndex index: Int,
+                              withNewEvent event: Event,
+                              saveToCloud: @escaping(String, Events, @escaping (CloudErrors)->Void)->Void = {_,_,_ in},
+                              path:String? = nil,
+                              completion:@escaping (CloudErrors)->Void = {_ in }) {
+        guard index >= 0 && index < events.count else {
+            completion(.invalidEvent)
+            return
+        }
+        
+        self.events[index] = event
+        if let filePath = path {
+            saveToCloud(filePath, self, completion)
+        }
+    }
+
 }

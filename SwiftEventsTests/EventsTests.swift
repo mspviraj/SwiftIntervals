@@ -46,43 +46,18 @@ class EventsTests: XCTestCase {
         waitForExpectations(timeout: 120, handler: nil)
     }
     
-    func testAddEventToDropBox() {
+    func testAddEvent() {
         let waiter = expectation(description: "perform asyc")
-        let path = "/MyEventsX.json"
+        let path = "/MyEventsAdd.json"
         
-        Events.EventSetup(path: path) { events, error in
-            switch error {
-            case .ok:
-                if let addEvent = Event("AddEvent") {
-                    var myEvents : Events = events!
-                    let count = myEvents.addEvent(event: addEvent)
-                    assert(count > 0, "Count is \(count)")
-                    myEvents.writeEventsToCloud(path: path) { (error : CloudErrors) in
-                        waiter.fulfill()
-                    }
-                }
-                break;
-            default:
-                assert(false, "return error: \(error)")
-                waiter.fulfill()
-            }
-        }
-        
-        waitForExpectations(timeout: 120, handler: nil)
-        
-    }
-    
-    func testNewAddEvent() {
-        let waiter = expectation(description: "perform asyc")
-        let path = "/MyEventsR.json"
-        
-        Events.EventSetup(path: path) { events, error in
+        Events.EventSetup(path: path) { (events : Events?, error : CloudErrors) in
             switch error {
             case .ok:
                 if let addEvent = Event("AddEvent") {
                     var myEvents : Events = events!
                     func result(error : CloudErrors) {
                         print("error:\(error)")
+                        assert(error == CloudErrors.ok, "error:\(error)")
                         waiter.fulfill()
                     }
                     myEvents.add(event: addEvent,
