@@ -17,6 +17,7 @@ enum CloudErrors : Error {
     case notFound
     case notFile
     case badFile
+    case invalidEvent
 }
 
 class DropboxCloud {
