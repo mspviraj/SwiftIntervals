@@ -25,7 +25,6 @@ class EventTests: XCTestCase {
     
     func testEvent() {
         
-        
         if let event = Event("First", startTime:"*", endTime:"*") {
             guard let json = event.toJSON() else {
                 assert(true, "string is nil")

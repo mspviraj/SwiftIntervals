@@ -75,40 +75,4 @@ class EventsTests: XCTestCase {
         waitForExpectations(timeout: 120, handler: nil)
 
     }
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        let waiter = expectation(description: "perform asyc")
-        let path = "/MyEventsK.json"
-        self.measure {
-            // Put the code you want to measure the time of here.
-            
-            Events.EventSetup(path: path) { events, error in
-                switch error {
-                case .ok:
-                    if let addEvent = Event("AddEvent") {
-                        var myEvents : Events = events!
-                        let count = myEvents.addEvent(event: addEvent)
-                        assert(count > 0, "Count is \(count)")
-                        myEvents.writeEventsToCloud(path: path) { (error : CloudErrors) in
-                            switch error {
-                            case .ok:
-                                break;
-                            default:
-                                assert(false, "returned error \(error)")
-                                waiter.fulfill()
-                            }
-                            
-                        }
-                    }
-                    break;
-                default:
-                    assert(false, "return error: \(error)")
-                    waiter.fulfill()
-                }
-            }
-            
-            self.waitForExpectations(timeout: 120, handler: nil)
-        }
-    }
-    
 }
