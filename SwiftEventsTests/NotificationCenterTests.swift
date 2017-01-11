@@ -23,30 +23,17 @@ class NotificationCenterTests: XCTestCase {
     func testNotificationCenterSetup() {
         let name = Notification.Name("Here")
         
-        let notificationCenter = TestNotificationCenter(center: NotificationCenter.default)
-        let dict = notificationCenter.observers
-        assert(dict.count == 0, "Dictionary has \(dict.count) entries")
+        let notificationCenter = MockNotificationCenter(center: NotificationCenter.default)
+        notificationCenter.post(name: name, object: nil, userInfo: ["result" : "value"])
         
-        print("\(dict)")
-        
-        notificationCenter.addObserver(self, selector:#selector(testNotificationCenterSetup), name: name, object: nil)
-        let observer = notificationCenter.observers
-        assert(observer.count == 1, "Dictionary has \(dict.count) entries")
-        if let notification : Notification.Name = observer[name] as! Notification.Name? {
-            print("\(notification)")
-            assert(notification == name, "name:\(name)")
+        guard let result = notificationCenter.userInfo else {
+            assertionFailure("result is nil")
+            return
         }
         
-        notificationCenter.post(name: name, object: nil, userInfo:["result" : "value"])
-        let result = notificationCenter.observers
         assert(result.count == 1, "Dictionary has \(result.count)")
-        print("\(result)")
+        print("result: \(result)")
     
-        if let answer = result[name] as? Dictionary<String,String> {
-            print("answer:\(answer)")
-        } else {
-            assertionFailure("answer is not a dictionary")
-        }
     }
     
         func testPerformanceExample() {
