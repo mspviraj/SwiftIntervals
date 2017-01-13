@@ -25,7 +25,7 @@ class YearManagerTests: XCTestCase {
         let yearManager = YearManager(notificationCenter: notificationCenter)
         
         yearManager.add(string: "A")
-        guard let checkStatus = notificationCenter.userInfo?[CalendarManagerCodes.building] else {
+        guard let checkStatus = notificationCenter.userInfo?[CalendarManagerCodes.keyStatus] else {
             XCTAssertTrue(false, "Could not find in dictionary")
             return
         }
