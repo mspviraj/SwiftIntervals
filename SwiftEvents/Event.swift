@@ -65,24 +65,7 @@ struct Event : JSONSerializable, Glossy {
         self.endTime = endTime
     }
     
-//    init?(_ string: String) {
-//        guard let data = string.data(using: .utf8) else {
-//            return nil
-//        }
-//        do {
-//            var json : JSON? = [:]
-//            try json = JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions(rawValue: 0)) as? JSON
-//            let build = Event(json: json!)
-//            self.eventName = build!.eventName
-//            self.startTime = build!.startTime
-//            self.endTime = build!.endTime
-//        } catch {
-//            print(error)
-//            return nil
-//        }
-//    }
-    
-    func toJSON() -> JSON? {
+    func toJSON() -> JSON? {  //Uses GLOSS pod
         return jsonify([
             "eventName" ~~> self.eventName,
             "startTime" ~~> self.startTime,

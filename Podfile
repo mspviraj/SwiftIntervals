@@ -2,9 +2,9 @@
 # platform :ios, '9.0'
 
 def myPods
-    pod 'SwiftDate','~>4.0'
-    pod 'SwiftyDropbox'
-    pod 'Gloss'
+    pod 'SwiftDate','~>4.0'   # methods to manage dates
+    pod 'SwiftyDropbox'       # dropbox pod
+    pod 'Gloss'               # JSON pod
 end
 
 target 'SwiftEvents' do

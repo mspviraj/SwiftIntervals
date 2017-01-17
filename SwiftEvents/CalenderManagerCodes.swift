@@ -9,6 +9,6 @@
 import Foundation
 
 enum CalendarManagerCodes : String {
-    case completed, building, badInput
+    case completed, building, badInput, incomplete
     case keyResult, keyStatus, keyBuild
 }
