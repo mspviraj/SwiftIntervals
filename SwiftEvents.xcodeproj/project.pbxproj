@@ -211,6 +211,7 @@
 		B0E731EF1E21B38C00160E37 /* SwiftEventsTests */ = {
 			isa = PBXGroup;
 			children = (
+				B007CF0E1E2D70690053F851 /* CloudDropboxTests.swift */,
 				B0756B6E1E234CE500C267A2 /* DateEnumTests.swift */,
 				B05A16321E28462C0053518E /* DayManagerTests.swift */,
 				B0756B671E232A3300C267A2 /* EventsTests.swift */,
@@ -220,7 +221,6 @@
 				B0C63C161E25EEFB00D86AE9 /* NotificationCenterTests.swift */,
 				B0E731F01E21B38C00160E37 /* SwiftEventsTests.swift */,
 				B05A16301E2845200053518E /* YearManagerTests.swift */,
-				B007CF0E1E2D70690053F851 /* CloudDropboxTests.swift */,
 			);
 			path = SwiftEventsTests;
 			sourceTree = "<group>";

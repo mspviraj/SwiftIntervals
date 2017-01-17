@@ -29,7 +29,7 @@ enum DateEnum {
     
     static let dateWildCard = "*"
     
-    static func stringFromDate(_ date : Date?) -> String? {
+    static func stringFrom(date : Date?) -> String? {
         guard let date = date else {
             return nil
         }
@@ -39,40 +39,43 @@ enum DateEnum {
         return dateFormatter.string(from: date)
     }
     
-    static func dateFromString(_ string: String?) -> Date? {
+    static func dateFrom(string: String?) -> Date? {
         guard let string = string else {
             return nil
+        }
+        if string == dateWildCard {
+            return Date()
         }
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = utcFormat
         return dateFormatter.date(from: string)
     }
     
-    static func parseIntervalDateString(_ dateString : String) -> (intervalType : DateEnum, date1 : Date?, date2 : Date?) {
-        let dates : [String] = dateString.components(separatedBy: ",")
-        if dates.count != 2 {
-            return (.invalidDate, nil, nil)
-        }
-        
-        if dates[0] == dateWildCard {
-            guard let date = DateEnum.dateFromString(dates[1]) else {
-                return (.invalidDate, nil, nil)
-            }
-            return (.fixEnd, Date(), date)
-        }
-        
-        if (dates[1] == dateWildCard) {
-            guard let date = DateEnum.dateFromString(dates[0]) else {
-                return (.invalidDate, nil, nil)
-            }
-            return (.fixStart, date, Date())
-        }
-        
-        guard let startDate = DateEnum.dateFromString(dates[0]), let endDate = DateEnum.dateFromString(dates[1]) else {
-            return (.invalidDate, nil, nil)
-        }
-        
-        return (.between, startDate, endDate)
-
-    }
+//    static func parseIntervalDateString(_ dateString : String) -> (intervalType : DateEnum, date1 : Date?, date2 : Date?) {
+//        let dates : [String] = dateString.components(separatedBy: ",")
+//        if dates.count != 2 {
+//            return (.invalidDate, nil, nil)
+//        }
+//        
+//        if dates[0] == dateWildCard {
+//            guard let date = DateEnum.dateFromString(dates[1]) else {
+//                return (.invalidDate, nil, nil)
+//            }
+//            return (.fixEnd, Date(), date)
+//        }
+//        
+//        if (dates[1] == dateWildCard) {
+//            guard let date = DateEnum.dateFromString(dates[0]) else {
+//                return (.invalidDate, nil, nil)
+//            }
+//            return (.fixStart, date, Date())
+//        }
+//        
+//        guard let startDate = DateEnum.dateFromString(dates[0]), let endDate = DateEnum.dateFromString(dates[1]) else {
+//            return (.invalidDate, nil, nil)
+//        }
+//        
+//        return (.between, startDate, endDate)
+//
+//    }
 }

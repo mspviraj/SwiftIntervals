@@ -11,41 +11,38 @@ import Gloss
 
 
 struct Event : JSONSerializable, Glossy {
-    let eventName : String?
-    let startTime : String?
-    let endTime : String?
- 
-    init?(_ eventName: String, startTime: String, endTime: String = DateEnum.dateWildCard) {
-        if startTime != DateEnum.dateWildCard {
-            guard DateEnum.dateFromString(startTime) != nil else {
-                return nil
-            }
+    private let eventStart : String
+    private let eventFinish : String
+    
+    let eventName : String
+    var startTime : Date {
+        get {
+            return DateEnum.dateFrom(string: eventStart)!
         }
-        if endTime != DateEnum.dateWildCard {
-            guard DateEnum.dateFromString(endTime) != nil else {
-                return nil
-            }
+    }
+    var endTime : Date {
+        get {
+            return DateEnum.dateFrom(string: eventStart)!
+        }
+    }
+    
+    init?(_ eventName: String, startTime: String, endTime: String = DateEnum.dateWildCard) {
+        guard DateEnum.dateFrom(string: startTime) != nil else {
+            return nil
+        }
+        guard DateEnum.dateFrom(string: endTime) != nil else {
+            return nil
         }
         self.eventName = eventName
-        self.startTime = startTime
-        self.endTime = endTime
+        self.eventStart = startTime
+        self.eventFinish = endTime
     }
-
+    
     
     init() {
         self.eventName = "Started using this app"
-        self.startTime = DateEnum.stringFromDate(Date())
-        self.endTime = DateEnum.dateWildCard
-    }
-    
-    init?(_ eventName: String, startDate: Date = Date(), endDate: String = DateEnum.dateWildCard) {
-        if let build = Event(eventName, startTime: DateEnum.stringFromDate(Date())!,endTime: endDate) {
-            self.eventName = build.eventName
-            self.startTime = build.startTime
-            self.endTime = build.endTime
-        } else {
-            return nil
-        }
+        self.eventStart = DateEnum.stringFrom(date: Date())!
+        self.eventFinish = DateEnum.dateWildCard
     }
     
     init?(json: JSON) {
@@ -57,12 +54,12 @@ struct Event : JSONSerializable, Glossy {
         guard let startTime : String = "startTime" <~~ json else {
             return nil
         }
-        self.startTime = startTime
+        self.eventStart = startTime
         
         guard  let endTime : String = "endTime" <~~ json else {
             return nil
         }
-        self.endTime = endTime
+        self.eventFinish = endTime
     }
     
     func toJSON() -> JSON? {  //Uses GLOSS pod
@@ -72,5 +69,4 @@ struct Event : JSONSerializable, Glossy {
             "endTime" ~~> self.endTime
             ])
     }
-    
 }

@@ -22,7 +22,7 @@ class DateEnumTests: XCTestCase {
     
     func testUTC() {
         let date = Date()
-        let now : String = DateEnum.stringFromDate(date)!
+        let now : String = DateEnum.stringFrom(date: date)!
         let k = now.contains("T")
         assert(k, "K is false")
         

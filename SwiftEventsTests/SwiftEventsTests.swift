@@ -16,9 +16,9 @@ class SwiftEventsTests: XCTestCase {
     fileprivate var present : Date = Date()
     fileprivate var future : Date = Date()
     fileprivate let birthday : String = "1960-12-19T20:56:00+00:00"
-    fileprivate let sinceBirthday = "1960-12-19T20:56:00+00:00,*"
-    fileprivate let birthdayGap = "1960-12-19T20:56:00+00:00,2017-12-19T20:56:00+00:00"
-    fileprivate let badDate = "1960-12-19:20:56:00+00:00,2017-12-19T20:56:00+00:00"
+//    fileprivate let sinceBirthday = "1960-12-19T20:56:00+00:00,*"
+//    fileprivate let birthdayGap = "1960-12-19T20:56:00+00:00,2017-12-19T20:56:00+00:00"
+//    fileprivate let badDate = "1960-12-19:20:56:00+00:00,2017-12-19T20:56:00+00:00"
     
     override func setUp() {
         super.setUp()
@@ -90,42 +90,6 @@ class SwiftEventsTests: XCTestCase {
         
     }
     
-    func testSpilt() {
-        
-        let dates : [String] = sinceBirthday.components(separatedBy: ",");
-        assert(dates.count == 2, "Count is \(dates.count)")
-        let date = DateEnum.dateFromString(birthday)
-        print("date:\(date)")
-    }
-    
-    func testBadDate() {
-        let date = DateEnum.dateFromString(sinceBirthday)
-        assert(date == nil, "Date is not nil:\(date)")
-    }
-    
-    func testIntervals() {
-        let interval = DateEnum.parseIntervalDateString(sinceBirthday)
-        assert(interval.intervalType == .fixStart, "Interval:\(interval.intervalType)")
-        assert(interval.date1 != nil, "Date1 nil")
-        assert(interval.date2 != nil, "Date2 nil")
-    }
-    
-    func testGap() {
-        let interval = DateEnum.parseIntervalDateString(birthdayGap)
-        assert(interval.intervalType == .between, "Interval:\(interval.intervalType)")
-        assert(interval.date1 != nil, "Date1 nil")
-        assert(interval.date2 != nil, "Date2 nil")
-
-    }
-    
-    func testBadGap() {
-        let interval = DateEnum.parseIntervalDateString(badDate)
-        assert(interval.intervalType == .invalidDate, "Interval:\(interval.intervalType)")
-        assert(interval.date1 == nil, "Date1 not nil")
-        assert(interval.date2 == nil, "Date2 nil")
-        
-    }
-
     //    func testPerformanceExample() {
     //        // This is an example of a performance test case.
     //        self.measure {
