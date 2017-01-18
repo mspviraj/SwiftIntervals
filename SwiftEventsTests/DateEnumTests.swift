@@ -35,6 +35,4 @@ class DateEnumTests: XCTestCase {
         XCTAssertEqual(dateString, birthday, "String:\(dateString) does not match \(birthday)")
         
     }
-    
-    
 }
