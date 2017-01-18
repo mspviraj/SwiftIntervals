@@ -22,7 +22,7 @@ struct Event : JSONSerializable, Glossy {
     }
     var endTime : Date {
         get {
-            return DateEnum.dateFrom(string: eventStart)!
+            return DateEnum.dateFrom(string: eventFinish)!
         }
     }
     
@@ -65,8 +65,8 @@ struct Event : JSONSerializable, Glossy {
     func toJSON() -> JSON? {  //Uses GLOSS pod
         return jsonify([
             "eventName" ~~> self.eventName,
-            "startTime" ~~> self.startTime,
-            "endTime" ~~> self.endTime
+            "startTime" ~~> self.eventStart,
+            "endTime" ~~> self.eventFinish
             ])
     }
 }

@@ -7,9 +7,13 @@
 //
 
 import XCTest
+import Gloss
 
 class EventTests: XCTestCase {
     
+    fileprivate let birthday : String = "1960-12-19T20:56:00Z"
+    fileprivate let future   : String = "2017-01-01T20:56:00Z"
+
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -23,20 +27,55 @@ class EventTests: XCTestCase {
     func testEventInit() {
     }
     
-    func testEvent() {
-        
-        if let event = Event("First", startTime:"*", endTime:"*") {
-            guard let json = event.toJSON() else {
-                assert(true, "string is nil")
-                return
-            }
-            let stringEvent = Event(json: json)
-            guard let string = stringEvent?.toString() else {
-                assert(true, "string is nil")
-                return
-            }
-            print(string)
+    func testInitEvent() {
+        let now = Date()
+        let event = Event()
+        guard let nowString = DateEnum.stringFrom(date: now) else {
+            XCTAssert(false, "nowString returned nil")
+            return
         }
+        guard let eventStart = DateEnum.stringFrom(date: event.startTime) else {
+            XCTAssert(false, "eventStart returned nil")
+            return
+        }
+        XCTAssertEqual(nowString, eventStart)
+    }
+    
+    func testInitJSON() {
+        let now = Date()
+        let event = Event()
+        guard let nowString = DateEnum.stringFrom(date: now) else {
+            XCTAssert(false, "nowString returned nil")
+            return
+        }
+        guard let eventStart = DateEnum.stringFrom(date: event.startTime) else {
+            XCTAssert(false, "eventStart returned nil")
+            return
+        }
+        XCTAssertEqual(nowString, eventStart)
+        let json : JSON = event.toJSON()!
+        print("json:\(json)")
+        XCTAssertNotNil(json)
+        let event2 = Event(json: json)
+        XCTAssertNotNil(event2)
+        
+        let jsonStart = DateEnum.stringFrom(date: event.startTime)
+        let jsonFinish = DateEnum.stringFrom(date: event.endTime)
+        XCTAssertEqual(jsonStart, nowString)
+        XCTAssertEqual(jsonFinish, nowString)
+        
+    }
+    
+    func testInitWithStart() {
+
+        let now = Date()
+        let nowString = DateEnum.stringFrom(date: now)
+        let event = Event("My Event", startTime: birthday)
+        let endString = DateEnum.stringFrom(date: event?.endTime)
+        XCTAssertEqual(nowString, endString)
+        let birthDate = DateEnum.dateFrom(string: birthday)
+        XCTAssertEqual(birthDate, event?.startTime)
+        
     }
     func testPerformanceExample() {
         // This is an example of a performance test case.
