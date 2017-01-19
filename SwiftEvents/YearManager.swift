@@ -10,6 +10,8 @@ import Foundation
 
 class YearManager {
     
+    let yearManager :Notification.Name = Notification.Name(rawValue: "YearManager")
+    
     private let notificationCenter : NotificationCenter
     private var theYear = ""
     var year : String {
@@ -22,7 +24,7 @@ class YearManager {
     
     private func broadcast(reason: CalendarManagerCodes, result: String) {
         let userInfo = [CalendarManagerCodes.keyStatus : reason, CalendarManagerCodes.keyResult: result] as [CalendarManagerCodes : Any]
-        self.notificationCenter.post(name: Notification.Name("YearManager"), object: nil, userInfo: userInfo)
+        self.notificationCenter.post(name: yearManager, object: nil, userInfo: userInfo)
     }
     
     func add(string: String) {

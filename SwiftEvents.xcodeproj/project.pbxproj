@@ -10,6 +10,9 @@
 		71736F5EFED65FC093E809A2 /* Pods_SwiftEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DCEA0992686D2138C04966A /* Pods_SwiftEvents.framework */; };
 		B007CF0F1E2D70690053F851 /* CloudDropboxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B007CF0E1E2D70690053F851 /* CloudDropboxTests.swift */; };
 		B007CF111E2EF8D80053F851 /* DateIntervalsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B007CF101E2EF8D80053F851 /* DateIntervalsTest.swift */; };
+		B007CF131E2F27450053F851 /* TimeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B007CF121E2F27450053F851 /* TimeManager.swift */; };
+		B007CF151E2F30E10053F851 /* TimeManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B007CF141E2F30E10053F851 /* TimeManagerTests.swift */; };
+		B007CF161E2F31E40053F851 /* TimeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B007CF121E2F27450053F851 /* TimeManager.swift */; };
 		B05A162E1E2845020053518E /* DayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05A162D1E2845020053518E /* DayManager.swift */; };
 		B05A162F1E2845020053518E /* DayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05A162D1E2845020053518E /* DayManager.swift */; };
 		B05A16311E2845200053518E /* YearManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05A16301E2845200053518E /* YearManagerTests.swift */; };
@@ -19,7 +22,6 @@
 		B0756B5E1E22D39200C267A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0E731E21E21B38C00160E37 /* Assets.xcassets */; };
 		B0756B641E2323C800C267A2 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0756B631E2323C800C267A2 /* Events.swift */; };
 		B0756B651E2323C800C267A2 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0756B631E2323C800C267A2 /* Events.swift */; };
-		B0756B681E232A3300C267A2 /* EventsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0756B671E232A3300C267A2 /* EventsTests.swift */; };
 		B0756B6F1E234CE500C267A2 /* DateEnumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0756B6E1E234CE500C267A2 /* DateEnumTests.swift */; };
 		B0756B751E236EF800C267A2 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0756B741E236EF800C267A2 /* Event.swift */; };
 		B0756B761E23762A00C267A2 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0756B741E236EF800C267A2 /* Event.swift */; };
@@ -45,7 +47,6 @@
 		B0E731E11E21B38C00160E37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0E731DF1E21B38C00160E37 /* Main.storyboard */; };
 		B0E731E31E21B38C00160E37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0E731E21E21B38C00160E37 /* Assets.xcassets */; };
 		B0E731E61E21B38C00160E37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0E731E41E21B38C00160E37 /* LaunchScreen.storyboard */; };
-		B0E731F11E21B38C00160E37 /* SwiftEventsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E731F01E21B38C00160E37 /* SwiftEventsTests.swift */; };
 		B0E731FC1E21B38C00160E37 /* SwiftEventsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E731FB1E21B38C00160E37 /* SwiftEventsUITests.swift */; };
 		BF5B96A42B8DBF27EF65BE49 /* Pods_SwiftEventsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04694C1B08F90B96E204E938 /* Pods_SwiftEventsTests.framework */; };
 		E56723480EE738E78F72C388 /* Pods_SwiftEventsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05553FB36146DE08F9DDCEE1 /* Pods_SwiftEventsUITests.framework */; };
@@ -76,12 +77,13 @@
 		5A1FA26EABAA9DB667C67F36 /* Pods-SwiftEvents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftEvents.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftEvents/Pods-SwiftEvents.debug.xcconfig"; sourceTree = "<group>"; };
 		B007CF0E1E2D70690053F851 /* CloudDropboxTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudDropboxTests.swift; sourceTree = "<group>"; };
 		B007CF101E2EF8D80053F851 /* DateIntervalsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateIntervalsTest.swift; sourceTree = "<group>"; };
+		B007CF121E2F27450053F851 /* TimeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeManager.swift; sourceTree = "<group>"; };
+		B007CF141E2F30E10053F851 /* TimeManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeManagerTests.swift; sourceTree = "<group>"; };
 		B05A162D1E2845020053518E /* DayManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayManager.swift; sourceTree = "<group>"; };
 		B05A16301E2845200053518E /* YearManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YearManagerTests.swift; sourceTree = "<group>"; };
 		B05A16321E28462C0053518E /* DayManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayManagerTests.swift; sourceTree = "<group>"; };
 		B05A16341E2948D50053518E /* CloudDropbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudDropbox.swift; sourceTree = "<group>"; };
 		B0756B631E2323C800C267A2 /* Events.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
-		B0756B671E232A3300C267A2 /* EventsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTests.swift; sourceTree = "<group>"; };
 		B0756B6E1E234CE500C267A2 /* DateEnumTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateEnumTests.swift; sourceTree = "<group>"; };
 		B0756B741E236EF800C267A2 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		B0756B771E23783F00C267A2 /* EventTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTests.swift; sourceTree = "<group>"; };
@@ -102,7 +104,6 @@
 		B0E731E51E21B38C00160E37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B0E731E71E21B38C00160E37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0E731EC1E21B38C00160E37 /* SwiftEventsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftEventsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B0E731F01E21B38C00160E37 /* SwiftEventsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftEventsTests.swift; sourceTree = "<group>"; };
 		B0E731F21E21B38C00160E37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0E731F71E21B38C00160E37 /* SwiftEventsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftEventsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0E731FB1E21B38C00160E37 /* SwiftEventsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftEventsUITests.swift; sourceTree = "<group>"; };
@@ -205,6 +206,7 @@
 				B0E731E41E21B38C00160E37 /* LaunchScreen.storyboard */,
 				B0E731DF1E21B38C00160E37 /* Main.storyboard */,
 				B0C63C131E25DD4900D86AE9 /* MyNotificationCenter.swift */,
+				B007CF121E2F27450053F851 /* TimeManager.swift */,
 				B0C63C181E26CBE900D86AE9 /* YearManager.swift */,
 			);
 			path = SwiftEvents;
@@ -217,13 +219,12 @@
 				B0756B6E1E234CE500C267A2 /* DateEnumTests.swift */,
 				B007CF101E2EF8D80053F851 /* DateIntervalsTest.swift */,
 				B05A16321E28462C0053518E /* DayManagerTests.swift */,
-				B0756B671E232A3300C267A2 /* EventsTests.swift */,
 				B0756B771E23783F00C267A2 /* EventTests.swift */,
 				B0E731F21E21B38C00160E37 /* Info.plist */,
 				B0C63C201E26D9AB00D86AE9 /* MockNotificationCenter.swift */,
 				B0C63C161E25EEFB00D86AE9 /* NotificationCenterTests.swift */,
-				B0E731F01E21B38C00160E37 /* SwiftEventsTests.swift */,
 				B05A16301E2845200053518E /* YearManagerTests.swift */,
+				B007CF141E2F30E10053F851 /* TimeManagerTests.swift */,
 			);
 			path = SwiftEventsTests;
 			sourceTree = "<group>";
@@ -530,6 +531,7 @@
 				B092CC561E21B7CD000048FE /* DateIntervals.swift in Sources */,
 				B092CC531E21B7BC000048FE /* DateEnum.swift in Sources */,
 				B0E731DE1E21B38C00160E37 /* DropboxViewController.swift in Sources */,
+				B007CF131E2F27450053F851 /* TimeManager.swift in Sources */,
 				B0C63C1E1E26D57D00D86AE9 /* CalenderManagerCodes.swift in Sources */,
 				B0E731DA1E21B38C00160E37 /* AppDelegate.swift in Sources */,
 				B05A16351E2948D50053518E /* CloudDropbox.swift in Sources */,
@@ -550,7 +552,6 @@
 				B05A16361E2948D50053518E /* CloudDropbox.swift in Sources */,
 				B0C63C151E25DD4900D86AE9 /* MyNotificationCenter.swift in Sources */,
 				B092CC541E21B7BC000048FE /* DateEnum.swift in Sources */,
-				B0756B681E232A3300C267A2 /* EventsTests.swift in Sources */,
 				B007CF111E2EF8D80053F851 /* DateIntervalsTest.swift in Sources */,
 				B05A16331E28462C0053518E /* DayManagerTests.swift in Sources */,
 				B092CC571E21B7CD000048FE /* DateIntervals.swift in Sources */,
@@ -561,7 +562,8 @@
 				B05A16311E2845200053518E /* YearManagerTests.swift in Sources */,
 				B0756B781E23783F00C267A2 /* EventTests.swift in Sources */,
 				B0C63C1A1E26CBE900D86AE9 /* YearManager.swift in Sources */,
-				B0E731F11E21B38C00160E37 /* SwiftEventsTests.swift in Sources */,
+				B007CF151E2F30E10053F851 /* TimeManagerTests.swift in Sources */,
+				B007CF161E2F31E40053F851 /* TimeManager.swift in Sources */,
 				B0C63C171E25EEFB00D86AE9 /* NotificationCenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
