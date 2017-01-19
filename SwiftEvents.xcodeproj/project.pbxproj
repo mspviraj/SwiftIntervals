@@ -223,8 +223,8 @@
 				B0E731F21E21B38C00160E37 /* Info.plist */,
 				B0C63C201E26D9AB00D86AE9 /* MockNotificationCenter.swift */,
 				B0C63C161E25EEFB00D86AE9 /* NotificationCenterTests.swift */,
-				B05A16301E2845200053518E /* YearManagerTests.swift */,
 				B007CF141E2F30E10053F851 /* TimeManagerTests.swift */,
+				B05A16301E2845200053518E /* YearManagerTests.swift */,
 			);
 			path = SwiftEventsTests;
 			sourceTree = "<group>";
