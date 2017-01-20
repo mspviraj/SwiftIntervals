@@ -5,6 +5,8 @@
 //  Created by Steven Smith on 1/9/17.
 //  Copyright © 2017 LTMM. All rights reserved.
 //
+// Convert Swift structs to JSON
+
 
 import Foundation
 
@@ -23,6 +25,8 @@ extension JSONSerializable {
     var JSONRepresentation: AnyObject {
         var representation = [String: AnyObject]()
         
+        
+        //discover and interate over the list of properties of the struct
         for case let (label?, value) in Mirror(reflecting: self).children {
             
             switch value {

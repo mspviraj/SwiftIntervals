@@ -5,7 +5,8 @@
 //  Created by Steven Smith on 1/9/17.
 //  Copyright © 2017 LTMM. All rights reserved.
 //
-
+// Single event with caption, start time, end time, and refresh interval
+//
 import Foundation
 import Gloss
 

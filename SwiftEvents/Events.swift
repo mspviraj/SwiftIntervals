@@ -5,7 +5,8 @@
 //  Created by Steven Smith on 1/8/17.
 //  Copyright © 2017 LTMM. All rights reserved.
 //
-
+// Manages a collection/array of Event classes
+//
 import Foundation
 import Gloss
 

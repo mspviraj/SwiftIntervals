@@ -5,7 +5,9 @@
 //  Created by Steven Smith on 1/12/17.
 //  Copyright © 2017 LTMM. All rights reserved.
 //
-
+// Takes string input of digits and parse/build a string number for the
+// day of the month.
+//
 import Foundation
 
 class DayManager {
