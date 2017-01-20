@@ -13,6 +13,7 @@ enum DateEnum {
     case since, now, until, between
     case fixStart, fixEnd
     case invalidDate
+    case intervalSecond, intervalMinute, intervalHour, intervalDay, intervalMonth, intervalYear
     
     static func compareDate(_  from: Date, toDate: Date) -> DateEnum{
         switch(from.compare(toDate)) {
@@ -51,31 +52,4 @@ enum DateEnum {
         return dateFormatter.date(from: string)
     }
     
-//    static func parseIntervalDateString(_ dateString : String) -> (intervalType : DateEnum, date1 : Date?, date2 : Date?) {
-//        let dates : [String] = dateString.components(separatedBy: ",")
-//        if dates.count != 2 {
-//            return (.invalidDate, nil, nil)
-//        }
-//        
-//        if dates[0] == dateWildCard {
-//            guard let date = DateEnum.dateFromString(dates[1]) else {
-//                return (.invalidDate, nil, nil)
-//            }
-//            return (.fixEnd, Date(), date)
-//        }
-//        
-//        if (dates[1] == dateWildCard) {
-//            guard let date = DateEnum.dateFromString(dates[0]) else {
-//                return (.invalidDate, nil, nil)
-//            }
-//            return (.fixStart, date, Date())
-//        }
-//        
-//        guard let startDate = DateEnum.dateFromString(dates[0]), let endDate = DateEnum.dateFromString(dates[1]) else {
-//            return (.invalidDate, nil, nil)
-//        }
-//        
-//        return (.between, startDate, endDate)
-//
-//    }
 }
