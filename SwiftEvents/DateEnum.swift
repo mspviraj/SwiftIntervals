@@ -9,12 +9,35 @@
 import Foundation
 import SwiftDate
 
+enum UpdateInterval : String {
+    case second, minute, hour, day, month, year
+    
+    static func from(string: String) -> UpdateInterval {
+        switch string {
+        case second.rawValue:
+            return second
+        case minute.rawValue:
+            return minute
+        case hour.rawValue:
+            return hour
+        case day.rawValue:
+            return day
+        case month.rawValue:
+            return month
+        case year.rawValue:
+            return year
+        default:
+            assertionFailure("Invalid enum")
+        }
+        return minute
+    }
+}
+
 enum DateEnum {
     case since, now, until, between
     case fixStart, fixEnd
     case invalidDate
-    case intervalSecond, intervalMinute, intervalHour, intervalDay, intervalMonth, intervalYear
-    
+
     static func compareDate(_  from: Date, toDate: Date) -> DateEnum{
         switch(from.compare(toDate)) {
         case .orderedAscending:

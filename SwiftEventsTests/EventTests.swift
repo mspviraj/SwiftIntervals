@@ -77,6 +77,12 @@ class EventTests: XCTestCase {
         XCTAssertEqual(birthDate, event?.startTime)
         
     }
+    
+    func testInterval() {
+        let event = Event()
+        let interval = event.refreshInterval
+        XCTAssertEqual(interval, UpdateInterval.minute)
+    }
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {

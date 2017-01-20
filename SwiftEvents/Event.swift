@@ -9,10 +9,10 @@
 import Foundation
 import Gloss
 
-
 struct Event : JSONSerializable, Glossy {
     private let eventStart : String
     private let eventFinish : String
+    private var interval: String
     
     let eventName : String
     var startTime : Date {
@@ -26,6 +26,15 @@ struct Event : JSONSerializable, Glossy {
         }
     }
     
+    var refreshInterval : UpdateInterval {
+        get {
+            return UpdateInterval.from(string: interval)
+        }
+        set {
+            self.interval = newValue.rawValue
+        }
+    }
+    
     init?(_ eventName: String, startTime: String, endTime: String = DateEnum.dateWildCard) {
         guard DateEnum.dateFrom(string: startTime) != nil else {
             return nil
@@ -36,6 +45,7 @@ struct Event : JSONSerializable, Glossy {
         self.eventName = eventName
         self.eventStart = startTime
         self.eventFinish = endTime
+        self.interval = UpdateInterval.minute.rawValue
     }
     
     
@@ -43,6 +53,7 @@ struct Event : JSONSerializable, Glossy {
         self.eventName = "Started using this app"
         self.eventStart = DateEnum.stringFrom(date: Date())!
         self.eventFinish = DateEnum.dateWildCard
+        self.interval = UpdateInterval.minute.rawValue
     }
     
     init?(json: JSON) {
@@ -60,13 +71,20 @@ struct Event : JSONSerializable, Glossy {
             return nil
         }
         self.eventFinish = endTime
+        
+        guard let interval : String = "interval" <~~ json else {
+            return nil
+        }
+        self.interval = interval
+        
     }
     
     func toJSON() -> JSON? {  //Uses GLOSS pod
         return jsonify([
             "eventName" ~~> self.eventName,
             "startTime" ~~> self.eventStart,
-            "endTime" ~~> self.eventFinish
+            "endTime" ~~> self.eventFinish,
+            "interval" ~~> self.interval
             ])
     }
 }
