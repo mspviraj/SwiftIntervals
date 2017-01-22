@@ -1,53 +1,10 @@
-//
-//  DateEnum.swift
-//  TimeLapse
-//
-//  Created by Steven Smith on 1/6/17.
-//  Copyright © 2017 LTMM. All rights reserved.
-//
-
 import Foundation
-import SwiftDate
-
-enum UpdateInterval : String {
-    case second, minute, hour, day, month, year
-    
-    static func from(string: String) -> UpdateInterval {
-        switch string {
-        case second.rawValue:
-            return second
-        case minute.rawValue:
-            return minute
-        case hour.rawValue:
-            return hour
-        case day.rawValue:
-            return day
-        case month.rawValue:
-            return month
-        case year.rawValue:
-            return year
-        default:
-            assertionFailure("Invalid enum")
-        }
-        return minute
-    }
-}
 
 enum DateEnum {
-    case since, now, until, between
-    case fixStart, fixEnd
-    case invalidDate
-
-    static func compareDate(_  from: Date, toDate: Date) -> DateEnum{
-        switch(from.compare(toDate)) {
-        case .orderedAscending:
-            return .since
-        case .orderedSame:
-            return .now
-        case .orderedDescending:
-            return .until
-        }
-    }
+    case since
+    case until
+    case between
+    case invalid
     
     static let utcFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
     
@@ -75,4 +32,28 @@ enum DateEnum {
         return dateFormatter.date(from: string)
     }
     
+    static func intervalType(firstDate: String, secondDate: String) -> DateEnum {
+        guard let start = DateEnum.dateFrom(string: firstDate) else {
+            assertionFailure("Invalid start date:\(firstDate)")
+            return .invalid
+        }
+        
+        guard let ending = DateEnum.dateFrom(string: secondDate) else {
+            assertionFailure("Invalid ending date:\(secondDate)")
+            return .invalid
+        }
+        
+        if firstDate != dateWildCard && secondDate != dateWildCard {
+            return .between
+        }
+        switch start.compare(ending) {
+        case .orderedAscending:
+            return .since
+        case .orderedSame:
+            assertionFailure("Identical dates")
+            return .invalid
+        case .orderedDescending:
+            return .until
+        }
+    }
 }

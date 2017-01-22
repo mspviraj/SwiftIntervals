@@ -11,81 +11,63 @@ import Foundation
 import Gloss
 
 struct Event : JSONSerializable, Glossy {
-    private let eventStart : String
-    private let eventFinish : String
-    private var interval: String
+    let name : String
+    let start : String
+    let finish : String
+    let displayInterval : DisplayInterval
     
-    let eventName : String
-    var startTime : Date {
-        get {
-            return DateEnum.dateFrom(string: eventStart)!
-        }
-    }
-    var endTime : Date {
-        get {
-            return DateEnum.dateFrom(string: eventFinish)!
-        }
+    init() {
+        self.name = "First used application"
+        self.start = DateEnum.stringFrom(date: Date())!
+        self.finish = DateEnum.dateWildCard
+        self.displayInterval = DisplayInterval.minute
     }
     
-    var refreshInterval : UpdateInterval {
-        get {
-            return UpdateInterval.from(string: interval)
-        }
-        set {
-            self.interval = newValue.rawValue
-        }
-    }
-    
-    init?(_ eventName: String, startTime: String, endTime: String = DateEnum.dateWildCard) {
+    init?(name: String, startTime: String, endTime: String = DateEnum.dateWildCard) {
+        self.name = name
+        
         guard DateEnum.dateFrom(string: startTime) != nil else {
             return nil
         }
+        self.start = startTime
+        
         guard DateEnum.dateFrom(string: endTime) != nil else {
             return nil
         }
-        self.eventName = eventName
-        self.eventStart = startTime
-        self.eventFinish = endTime
-        self.interval = UpdateInterval.minute.rawValue
-    }
-    
-    
-    init() {
-        self.eventName = "Started using this app"
-        self.eventStart = DateEnum.stringFrom(date: Date())!
-        self.eventFinish = DateEnum.dateWildCard
-        self.interval = UpdateInterval.minute.rawValue
+        self.finish = endTime
+        
+        self.displayInterval = DisplayInterval.minute
     }
     
     init?(json: JSON) {
         guard let eventName : String = "eventName" <~~ json else {
             return nil
         }
-        self.eventName = eventName
+        self.name = eventName
         
-        guard let startTime : String = "startTime" <~~ json else {
+        guard let eventStart : String = "startTime" <~~ json else {
             return nil
         }
-        self.eventStart = startTime
+        self.start = eventStart
         
-        guard  let endTime : String = "endTime" <~~ json else {
+        guard let eventFinish : String = "endTime" <~~ json else {
             return nil
         }
-        self.eventFinish = endTime
+        self.finish = eventFinish
         
-        guard let interval : String = "interval" <~~ json else {
+        guard let displayInterval : String = "interval" <~~ json else {
             return nil
         }
-        self.interval = interval
-        
+        self.displayInterval = DisplayInterval.from(string: displayInterval)
     }
     
     func toJSON() -> JSON? {  //Uses GLOSS pod
         return jsonify([
-            "eventName" ~~> self.eventName,
-            "startTime" ~~> self.eventStart,
-            "endTime" ~~> self.eventFinish,
-            "interval" ~~> self.interval
+            "eventName" ~~> self.name,
+            "startTime" ~~> self.start,
+            "endTime" ~~> self.finish,
+            "interval" ~~> self.displayInterval.rawValue
             ])
     }
+    
 }

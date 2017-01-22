@@ -31,63 +31,43 @@ class EventTests: XCTestCase {
         let now = Date()
         let event = Event()
         guard let nowString = DateEnum.stringFrom(date: now) else {
-            XCTAssert(false, "nowString returned nil")
+            XCTAssertTrue(false)
             return
         }
-        guard let eventStart = DateEnum.stringFrom(date: event.startTime) else {
-            XCTAssert(false, "eventStart returned nil")
-            return
-        }
-        XCTAssertEqual(nowString, eventStart)
+        XCTAssertEqual(nowString, event.start)
     }
     
     func testInitJSON() {
         let now = Date()
         let event = Event()
         guard let nowString = DateEnum.stringFrom(date: now) else {
-            XCTAssert(false, "nowString returned nil")
+            XCTAssertTrue(false)
             return
         }
-        guard let eventStart = DateEnum.stringFrom(date: event.startTime) else {
-            XCTAssert(false, "eventStart returned nil")
-            return
-        }
-        XCTAssertEqual(nowString, eventStart)
+        XCTAssertEqual(nowString, event.start)
+        
         let json : JSON = event.toJSON()!
         print("json:\(json)")
         XCTAssertNotNil(json)
-        let event2 = Event(json: json)
-        XCTAssertNotNil(event2)
+        guard let event2 = Event(json: json) else {
+            XCTAssertTrue(false)
+            return
+        }
         
-        let jsonStart = DateEnum.stringFrom(date: event.startTime)
-        let jsonFinish = DateEnum.stringFrom(date: event.endTime)
-        XCTAssertEqual(jsonStart, nowString)
-        XCTAssertEqual(jsonFinish, nowString)
-        
+        XCTAssertEqual(event.displayInterval, event2.displayInterval)
+        XCTAssertEqual(event.name, event2.name)
+        XCTAssertEqual(event.start, event2.start)
+        XCTAssertEqual(event.finish, event2.finish)
     }
     
     func testInitWithStart() {
 
-        let now = Date()
-        let nowString = DateEnum.stringFrom(date: now)
-        let event = Event("My Event", startTime: birthday)
-        let endString = DateEnum.stringFrom(date: event?.endTime)
-        XCTAssertEqual(nowString, endString)
-        let birthDate = DateEnum.dateFrom(string: birthday)
-        XCTAssertEqual(birthDate, event?.startTime)
-        
-    }
-    
-    func testInterval() {
-        let event = Event()
-        let interval = event.refreshInterval
-        XCTAssertEqual(interval, UpdateInterval.minute)
-    }
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+        guard let event = Event(name: "My Event", startTime: birthday) else {
+            XCTAssertTrue(false)
+            return
         }
+        XCTAssertEqual(event.start, birthday)
+        XCTAssertEqual(event.finish, DateEnum.dateWildCard)
     }
     
 }
