@@ -13,6 +13,10 @@ import Gloss
 struct Events : JSONSerializable, Glossy {
     var events : [Event] = [Event]()
     
+    init() {
+        events.append(Event())
+    }
+    
     init?(json: JSON) {
         events = ("events" <~~ json)!
     }
