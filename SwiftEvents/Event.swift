@@ -10,6 +10,18 @@
 import Foundation
 import Gloss
 
+struct EventInfo {
+    let name : String
+    let interval : String
+    let caption : String
+    
+    init(name: String, interval: String, caption: String) {
+        self.name = name
+        self.interval = interval
+        self.caption = caption
+    }
+    
+}
 struct Event : JSONSerializable, Glossy {
     let name : String
     let start : String
@@ -19,6 +31,12 @@ struct Event : JSONSerializable, Glossy {
     private var intervalType : DateEnum {
         get {
             return DateEnum.intervalType(firstDate: self.start, secondDate: self.finish)
+        }
+    }
+    
+    var information : EventInfo {
+        get {
+            return EventInfo(name: self.name, interval: self.publishInterval(), caption: self.publishCaption())
         }
     }
     
@@ -107,7 +125,7 @@ struct Event : JSONSerializable, Glossy {
         return intervals.publish(interval: type)
     }
     
-    func publicInterval() -> String {
+    func publishInterval() -> String {
         return publishInterval(type: displayInterval)
     }
 }

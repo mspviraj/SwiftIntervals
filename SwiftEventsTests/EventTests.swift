@@ -113,7 +113,7 @@ class EventTests: XCTestCase {
         let results = "Between \(Date.fromUTC(string: future)!) and \(Date.fromUTC(string: nextXMas)!)"
         XCTAssertEqual(results, caption)
         
-        let interval = event.publicInterval()
+        let interval = event.publishInterval()
         XCTAssertNotEqual(interval, "Hello")
         
     }
