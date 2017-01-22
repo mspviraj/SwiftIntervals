@@ -62,7 +62,7 @@ class EventTests: XCTestCase {
     }
     
     func testInitWithStart() {
-
+        
         guard let event = Event(name: "My Event", startTime: birthday) else {
             XCTAssertTrue(false)
             return
@@ -78,7 +78,7 @@ class EventTests: XCTestCase {
         }
         XCTAssertEqual(event.start, birthday)
         XCTAssertEqual(event.finish, DateEnum.dateWildCard)
-        let caption = event.caption()
+        let caption = event.publishCaption()
         XCTAssertEqual(caption, "Since " + Date.fromUTC(string: birthday)!)
     }
     
@@ -89,7 +89,7 @@ class EventTests: XCTestCase {
         }
         XCTAssertEqual(event.start, nextXMas)
         XCTAssertEqual(event.finish, DateEnum.dateWildCard)
-        let caption = event.caption()
+        let caption = event.publishCaption()
         XCTAssertEqual(caption, "Until " + Date.fromUTC(string: nextXMas)!)
         
     }
@@ -100,5 +100,21 @@ class EventTests: XCTestCase {
         } else {
             XCTAssertTrue(false)
         }
+    }
+    
+    func testPublishInterval() {
+        guard let event = Event(name: "Next Christmas", startTime: future, endTime: nextXMas) else {
+            XCTAssertTrue(false)
+            return
+        }
+        XCTAssertEqual(event.start, future)
+        XCTAssertEqual(event.finish, nextXMas)
+        let caption = event.publishCaption()
+        let results = "Between \(Date.fromUTC(string: future)!) and \(Date.fromUTC(string: nextXMas)!)"
+        XCTAssertEqual(results, caption)
+        
+        let interval = event.publicInterval()
+        XCTAssertNotEqual(interval, "Hello")
+        
     }
 }

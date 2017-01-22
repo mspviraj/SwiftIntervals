@@ -77,16 +77,16 @@ struct Event : JSONSerializable, Glossy {
     }
     
     private func fixedDate() -> String {
-        if start != DateEnum.dateWildCard {
-            return Date.fromUTC(string: start)!
-        }
-        if finish != DateEnum.dateWildCard {
+        if start == DateEnum.dateWildCard {
             return Date.fromUTC(string: finish)!
         }
-        return Date.fromUTC(string: start)! + " " + Date.fromUTC(string: finish)!
+        if finish == DateEnum.dateWildCard {
+            return Date.fromUTC(string: start)!
+        }
+        return "\(Date.fromUTC(string: start)!) and \(Date.fromUTC(string: finish)!)"
     }
     
-    func caption() -> String {
+    func publishCaption() -> String {
         let intervalType = DateEnum.intervalType(firstDate: start, secondDate: finish)
         switch intervalType {
         case .since:
@@ -100,4 +100,14 @@ struct Event : JSONSerializable, Glossy {
         }
     }
     
+    func publishInterval(type: DisplayInterval) -> String {
+        guard let intervals : DateIntervals = DateIntervals.setFor(startDate: start, endDate: finish) else {
+            return "no interval for \(start) \(finish)"
+        }
+        return intervals.publish(interval: type)
+    }
+    
+    func publicInterval() -> String {
+        return publishInterval(type: displayInterval)
+    }
 }
