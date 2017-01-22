@@ -1,61 +1,73 @@
-//
-//  DateEnum.swift
-//  TimeLapse
-//
-//  Created by Steven Smith on 1/6/17.
-//  Copyright © 2017 LTMM. All rights reserved.
-//
-
 import Foundation
-import SwiftDate
+
+extension Date {
+    static func fromUTC(string: String) -> String? {
+        guard let date = DateEnum.dateFrom(string: string) else {
+            return nil
+        }
+        let localFormat = "dd-MMM-yyyy h:mm:ss a"
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = localFormat
+        dateFormatter.timeZone = TimeZone.current
+        let x = dateFormatter.string(from: date)
+        return x
+    }
+}
 
 enum DateEnum {
-    case since, now, until, between
-    case fixStart, fixEnd
-    case invalidDate
+    case since
+    case until
+    case between
+    case invalid
     
-    static func compareDate(_  from: Date, toDate: Date) -> DateEnum{
-        switch(from.compare(toDate)) {
+    static let utcFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
+    
+    static let dateWildCard = "*"
+    
+    static func stringFrom(date : Date?) -> String? {
+        guard let date = date else {
+            return nil
+        }
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = utcFormat
+        dateFormatter.timeZone = TimeZone.init(secondsFromGMT: 0)
+        return dateFormatter.string(from: date)
+    }
+    
+    static func dateFrom(string: String?) -> Date? {
+        guard let string = string else {
+            return nil
+        }
+        if string == dateWildCard {
+            return Date()
+        }
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = utcFormat
+        return dateFormatter.date(from: string)
+    }
+    
+    static func intervalType(firstDate: String, secondDate: String) -> DateEnum {
+        guard let start = DateEnum.dateFrom(string: firstDate) else {
+            assertionFailure("Invalid start date:\(firstDate)")
+            return .invalid
+        }
+        
+        guard let ending = DateEnum.dateFrom(string: secondDate) else {
+            assertionFailure("Invalid ending date:\(secondDate)")
+            return .invalid
+        }
+        
+        if firstDate != dateWildCard && secondDate != dateWildCard {
+            return .between
+        }
+        switch start.compare(ending) {
         case .orderedAscending:
             return .since
         case .orderedSame:
-            return .now
+            assertionFailure("Identical dates")
+            return .invalid
         case .orderedDescending:
             return .until
         }
-    }
-    
-    static func dateFromString(_ dateString: String) -> Date? {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZ"
-        return dateFormatter.date(from: dateString)
-    }
-    
-    static func parseIntervalDateString(_ dateString : String) -> (intervalType : DateEnum, date1 : Date?, date2 : Date?) {
-        let dates : [String] = dateString.components(separatedBy: ",")
-        if dates.count != 2 {
-            return (.invalidDate, nil, nil)
-        }
-        
-        if dates[0] == "*" {
-            guard let date = DateEnum.dateFromString(dates[1]) else {
-                return (.invalidDate, nil, nil)
-            }
-            return (.fixEnd, Date(), date)
-        }
-        
-        if (dates[1] == "*") {
-            guard let date = DateEnum.dateFromString(dates[0]) else {
-                return (.invalidDate, nil, nil)
-            }
-            return (.fixStart, date, Date())
-        }
-        
-        guard let startDate = DateEnum.dateFromString(dates[0]), let endDate = DateEnum.dateFromString(dates[1]) else {
-            return (.invalidDate, nil, nil)
-        }
-        
-        return (.between, startDate, endDate)
-
     }
 }

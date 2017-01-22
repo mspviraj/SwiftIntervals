@@ -8,17 +8,45 @@
 
 /* Begin PBXBuildFile section */
 		71736F5EFED65FC093E809A2 /* Pods_SwiftEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DCEA0992686D2138C04966A /* Pods_SwiftEvents.framework */; };
+		B007CF0F1E2D70690053F851 /* CloudDropboxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B007CF0E1E2D70690053F851 /* CloudDropboxTests.swift */; };
+		B007CF111E2EF8D80053F851 /* DateIntervalsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B007CF101E2EF8D80053F851 /* DateIntervalsTest.swift */; };
+		B007CF131E2F27450053F851 /* TimeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B007CF121E2F27450053F851 /* TimeManager.swift */; };
+		B007CF151E2F30E10053F851 /* TimeManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B007CF141E2F30E10053F851 /* TimeManagerTests.swift */; };
+		B007CF161E2F31E40053F851 /* TimeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B007CF121E2F27450053F851 /* TimeManager.swift */; };
+		B05A162E1E2845020053518E /* DayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05A162D1E2845020053518E /* DayManager.swift */; };
+		B05A162F1E2845020053518E /* DayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05A162D1E2845020053518E /* DayManager.swift */; };
+		B05A16311E2845200053518E /* YearManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05A16301E2845200053518E /* YearManagerTests.swift */; };
+		B05A16331E28462C0053518E /* DayManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05A16321E28462C0053518E /* DayManagerTests.swift */; };
+		B05A16351E2948D50053518E /* CloudDropbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05A16341E2948D50053518E /* CloudDropbox.swift */; };
+		B05A16361E2948D50053518E /* CloudDropbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05A16341E2948D50053518E /* CloudDropbox.swift */; };
+		B0756B5E1E22D39200C267A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0E731E21E21B38C00160E37 /* Assets.xcassets */; };
+		B0756B641E2323C800C267A2 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0756B631E2323C800C267A2 /* Events.swift */; };
+		B0756B651E2323C800C267A2 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0756B631E2323C800C267A2 /* Events.swift */; };
+		B0756B6F1E234CE500C267A2 /* DateEnumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0756B6E1E234CE500C267A2 /* DateEnumTests.swift */; };
+		B0756B751E236EF800C267A2 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0756B741E236EF800C267A2 /* Event.swift */; };
+		B0756B761E23762A00C267A2 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0756B741E236EF800C267A2 /* Event.swift */; };
+		B0756B781E23783F00C267A2 /* EventTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0756B771E23783F00C267A2 /* EventTests.swift */; };
 		B092CC531E21B7BC000048FE /* DateEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = B092CC521E21B7BC000048FE /* DateEnum.swift */; };
 		B092CC541E21B7BC000048FE /* DateEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = B092CC521E21B7BC000048FE /* DateEnum.swift */; };
 		B092CC561E21B7CD000048FE /* DateIntervals.swift in Sources */ = {isa = PBXBuildFile; fileRef = B092CC551E21B7CD000048FE /* DateIntervals.swift */; };
 		B092CC571E21B7CD000048FE /* DateIntervals.swift in Sources */ = {isa = PBXBuildFile; fileRef = B092CC551E21B7CD000048FE /* DateIntervals.swift */; };
+		B0942A191E23D970002EECEE /* JSONUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0942A181E23D970002EECEE /* JSONUtil.swift */; };
+		B0942A1B1E23E424002EECEE /* JSONUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0942A181E23D970002EECEE /* JSONUtil.swift */; };
+		B0C63C141E25DD4900D86AE9 /* MyNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C63C131E25DD4900D86AE9 /* MyNotificationCenter.swift */; };
+		B0C63C151E25DD4900D86AE9 /* MyNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C63C131E25DD4900D86AE9 /* MyNotificationCenter.swift */; };
+		B0C63C171E25EEFB00D86AE9 /* NotificationCenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C63C161E25EEFB00D86AE9 /* NotificationCenterTests.swift */; };
+		B0C63C191E26CBE900D86AE9 /* YearManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C63C181E26CBE900D86AE9 /* YearManager.swift */; };
+		B0C63C1A1E26CBE900D86AE9 /* YearManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C63C181E26CBE900D86AE9 /* YearManager.swift */; };
+		B0C63C1E1E26D57D00D86AE9 /* CalenderManagerCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C63C1D1E26D57D00D86AE9 /* CalenderManagerCodes.swift */; };
+		B0C63C1F1E26D57D00D86AE9 /* CalenderManagerCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C63C1D1E26D57D00D86AE9 /* CalenderManagerCodes.swift */; };
+		B0C63C211E26D9AB00D86AE9 /* MockNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C63C201E26D9AB00D86AE9 /* MockNotificationCenter.swift */; };
+		B0C63C221E26D9AB00D86AE9 /* MockNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C63C201E26D9AB00D86AE9 /* MockNotificationCenter.swift */; };
 		B0E731DA1E21B38C00160E37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E731D91E21B38C00160E37 /* AppDelegate.swift */; };
 		B0E731DC1E21B38C00160E37 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E731DB1E21B38C00160E37 /* FirstViewController.swift */; };
-		B0E731DE1E21B38C00160E37 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E731DD1E21B38C00160E37 /* SecondViewController.swift */; };
+		B0E731DE1E21B38C00160E37 /* DropboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E731DD1E21B38C00160E37 /* DropboxViewController.swift */; };
 		B0E731E11E21B38C00160E37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0E731DF1E21B38C00160E37 /* Main.storyboard */; };
 		B0E731E31E21B38C00160E37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0E731E21E21B38C00160E37 /* Assets.xcassets */; };
 		B0E731E61E21B38C00160E37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0E731E41E21B38C00160E37 /* LaunchScreen.storyboard */; };
-		B0E731F11E21B38C00160E37 /* SwiftEventsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E731F01E21B38C00160E37 /* SwiftEventsTests.swift */; };
 		B0E731FC1E21B38C00160E37 /* SwiftEventsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E731FB1E21B38C00160E37 /* SwiftEventsUITests.swift */; };
 		BF5B96A42B8DBF27EF65BE49 /* Pods_SwiftEventsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04694C1B08F90B96E204E938 /* Pods_SwiftEventsTests.framework */; };
 		E56723480EE738E78F72C388 /* Pods_SwiftEventsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05553FB36146DE08F9DDCEE1 /* Pods_SwiftEventsUITests.framework */; };
@@ -47,18 +75,35 @@
 		3366458C1E05C6BB5DF3B562 /* Pods-SwiftEvents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftEvents.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftEvents/Pods-SwiftEvents.release.xcconfig"; sourceTree = "<group>"; };
 		4DCEA0992686D2138C04966A /* Pods_SwiftEvents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftEvents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A1FA26EABAA9DB667C67F36 /* Pods-SwiftEvents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftEvents.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftEvents/Pods-SwiftEvents.debug.xcconfig"; sourceTree = "<group>"; };
+		B007CF0E1E2D70690053F851 /* CloudDropboxTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudDropboxTests.swift; sourceTree = "<group>"; };
+		B007CF101E2EF8D80053F851 /* DateIntervalsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateIntervalsTest.swift; sourceTree = "<group>"; };
+		B007CF121E2F27450053F851 /* TimeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeManager.swift; sourceTree = "<group>"; };
+		B007CF141E2F30E10053F851 /* TimeManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeManagerTests.swift; sourceTree = "<group>"; };
+		B05A162D1E2845020053518E /* DayManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayManager.swift; sourceTree = "<group>"; };
+		B05A16301E2845200053518E /* YearManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YearManagerTests.swift; sourceTree = "<group>"; };
+		B05A16321E28462C0053518E /* DayManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayManagerTests.swift; sourceTree = "<group>"; };
+		B05A16341E2948D50053518E /* CloudDropbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudDropbox.swift; sourceTree = "<group>"; };
+		B0756B631E2323C800C267A2 /* Events.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
+		B0756B6E1E234CE500C267A2 /* DateEnumTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateEnumTests.swift; sourceTree = "<group>"; };
+		B0756B741E236EF800C267A2 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		B0756B771E23783F00C267A2 /* EventTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTests.swift; sourceTree = "<group>"; };
 		B092CC521E21B7BC000048FE /* DateEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateEnum.swift; sourceTree = "<group>"; };
 		B092CC551E21B7CD000048FE /* DateIntervals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateIntervals.swift; sourceTree = "<group>"; };
+		B0942A181E23D970002EECEE /* JSONUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONUtil.swift; sourceTree = "<group>"; };
+		B0C63C131E25DD4900D86AE9 /* MyNotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyNotificationCenter.swift; path = ../MyNotificationCenter.swift; sourceTree = "<group>"; };
+		B0C63C161E25EEFB00D86AE9 /* NotificationCenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCenterTests.swift; sourceTree = "<group>"; };
+		B0C63C181E26CBE900D86AE9 /* YearManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YearManager.swift; sourceTree = "<group>"; };
+		B0C63C1D1E26D57D00D86AE9 /* CalenderManagerCodes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalenderManagerCodes.swift; sourceTree = "<group>"; };
+		B0C63C201E26D9AB00D86AE9 /* MockNotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockNotificationCenter.swift; sourceTree = "<group>"; };
 		B0E731D61E21B38C00160E37 /* SwiftEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0E731D91E21B38C00160E37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0E731DB1E21B38C00160E37 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		B0E731DD1E21B38C00160E37 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		B0E731DD1E21B38C00160E37 /* DropboxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropboxViewController.swift; sourceTree = "<group>"; };
 		B0E731E01E21B38C00160E37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B0E731E21E21B38C00160E37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0E731E51E21B38C00160E37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B0E731E71E21B38C00160E37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0E731EC1E21B38C00160E37 /* SwiftEventsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftEventsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B0E731F01E21B38C00160E37 /* SwiftEventsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftEventsTests.swift; sourceTree = "<group>"; };
 		B0E731F21E21B38C00160E37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0E731F71E21B38C00160E37 /* SwiftEventsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftEventsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0E731FB1E21B38C00160E37 /* SwiftEventsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftEventsUITests.swift; sourceTree = "<group>"; };
@@ -145,15 +190,24 @@
 		B0E731D81E21B38C00160E37 /* SwiftEvents */ = {
 			isa = PBXGroup;
 			children = (
-				B092CC551E21B7CD000048FE /* DateIntervals.swift */,
-				B092CC521E21B7BC000048FE /* DateEnum.swift */,
 				B0E731D91E21B38C00160E37 /* AppDelegate.swift */,
-				B0E731DB1E21B38C00160E37 /* FirstViewController.swift */,
-				B0E731DD1E21B38C00160E37 /* SecondViewController.swift */,
-				B0E731DF1E21B38C00160E37 /* Main.storyboard */,
 				B0E731E21E21B38C00160E37 /* Assets.xcassets */,
-				B0E731E41E21B38C00160E37 /* LaunchScreen.storyboard */,
+				B0C63C1D1E26D57D00D86AE9 /* CalenderManagerCodes.swift */,
+				B05A16341E2948D50053518E /* CloudDropbox.swift */,
+				B092CC521E21B7BC000048FE /* DateEnum.swift */,
+				B092CC551E21B7CD000048FE /* DateIntervals.swift */,
+				B05A162D1E2845020053518E /* DayManager.swift */,
+				B0E731DD1E21B38C00160E37 /* DropboxViewController.swift */,
+				B0756B741E236EF800C267A2 /* Event.swift */,
+				B0756B631E2323C800C267A2 /* Events.swift */,
+				B0E731DB1E21B38C00160E37 /* FirstViewController.swift */,
 				B0E731E71E21B38C00160E37 /* Info.plist */,
+				B0942A181E23D970002EECEE /* JSONUtil.swift */,
+				B0E731E41E21B38C00160E37 /* LaunchScreen.storyboard */,
+				B0E731DF1E21B38C00160E37 /* Main.storyboard */,
+				B0C63C131E25DD4900D86AE9 /* MyNotificationCenter.swift */,
+				B007CF121E2F27450053F851 /* TimeManager.swift */,
+				B0C63C181E26CBE900D86AE9 /* YearManager.swift */,
 			);
 			path = SwiftEvents;
 			sourceTree = "<group>";
@@ -161,8 +215,16 @@
 		B0E731EF1E21B38C00160E37 /* SwiftEventsTests */ = {
 			isa = PBXGroup;
 			children = (
-				B0E731F01E21B38C00160E37 /* SwiftEventsTests.swift */,
+				B007CF0E1E2D70690053F851 /* CloudDropboxTests.swift */,
+				B0756B6E1E234CE500C267A2 /* DateEnumTests.swift */,
+				B007CF101E2EF8D80053F851 /* DateIntervalsTest.swift */,
+				B05A16321E28462C0053518E /* DayManagerTests.swift */,
+				B0756B771E23783F00C267A2 /* EventTests.swift */,
 				B0E731F21E21B38C00160E37 /* Info.plist */,
+				B0C63C201E26D9AB00D86AE9 /* MockNotificationCenter.swift */,
+				B0C63C161E25EEFB00D86AE9 /* NotificationCenterTests.swift */,
+				B007CF141E2F30E10053F851 /* TimeManagerTests.swift */,
+				B05A16301E2845200053518E /* YearManagerTests.swift */,
 			);
 			path = SwiftEventsTests;
 			sourceTree = "<group>";
@@ -312,6 +374,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0756B5E1E22D39200C267A2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,11 +523,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B05A162E1E2845020053518E /* DayManager.swift in Sources */,
+				B0756B751E236EF800C267A2 /* Event.swift in Sources */,
+				B0756B641E2323C800C267A2 /* Events.swift in Sources */,
+				B0C63C141E25DD4900D86AE9 /* MyNotificationCenter.swift in Sources */,
+				B0942A191E23D970002EECEE /* JSONUtil.swift in Sources */,
 				B092CC561E21B7CD000048FE /* DateIntervals.swift in Sources */,
 				B092CC531E21B7BC000048FE /* DateEnum.swift in Sources */,
-				B0E731DE1E21B38C00160E37 /* SecondViewController.swift in Sources */,
+				B0E731DE1E21B38C00160E37 /* DropboxViewController.swift in Sources */,
+				B007CF131E2F27450053F851 /* TimeManager.swift in Sources */,
+				B0C63C1E1E26D57D00D86AE9 /* CalenderManagerCodes.swift in Sources */,
 				B0E731DA1E21B38C00160E37 /* AppDelegate.swift in Sources */,
+				B05A16351E2948D50053518E /* CloudDropbox.swift in Sources */,
+				B0C63C191E26CBE900D86AE9 /* YearManager.swift in Sources */,
 				B0E731DC1E21B38C00160E37 /* FirstViewController.swift in Sources */,
+				B0C63C211E26D9AB00D86AE9 /* MockNotificationCenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,9 +545,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0756B761E23762A00C267A2 /* Event.swift in Sources */,
+				B0756B6F1E234CE500C267A2 /* DateEnumTests.swift in Sources */,
+				B007CF0F1E2D70690053F851 /* CloudDropboxTests.swift in Sources */,
+				B0756B651E2323C800C267A2 /* Events.swift in Sources */,
+				B05A16361E2948D50053518E /* CloudDropbox.swift in Sources */,
+				B0C63C151E25DD4900D86AE9 /* MyNotificationCenter.swift in Sources */,
 				B092CC541E21B7BC000048FE /* DateEnum.swift in Sources */,
+				B007CF111E2EF8D80053F851 /* DateIntervalsTest.swift in Sources */,
+				B05A16331E28462C0053518E /* DayManagerTests.swift in Sources */,
 				B092CC571E21B7CD000048FE /* DateIntervals.swift in Sources */,
-				B0E731F11E21B38C00160E37 /* SwiftEventsTests.swift in Sources */,
+				B0C63C1F1E26D57D00D86AE9 /* CalenderManagerCodes.swift in Sources */,
+				B0C63C221E26D9AB00D86AE9 /* MockNotificationCenter.swift in Sources */,
+				B0942A1B1E23E424002EECEE /* JSONUtil.swift in Sources */,
+				B05A162F1E2845020053518E /* DayManager.swift in Sources */,
+				B05A16311E2845200053518E /* YearManagerTests.swift in Sources */,
+				B0756B781E23783F00C267A2 /* EventTests.swift in Sources */,
+				B0C63C1A1E26CBE900D86AE9 /* YearManager.swift in Sources */,
+				B007CF151E2F30E10053F851 /* TimeManagerTests.swift in Sources */,
+				B007CF161E2F31E40053F851 /* TimeManager.swift in Sources */,
+				B0C63C171E25EEFB00D86AE9 /* NotificationCenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -618,7 +708,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5A1FA26EABAA9DB667C67F36 /* Pods-SwiftEvents.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = EYE62TNDHZ;
 				INFOPLIST_FILE = SwiftEvents/Info.plist;
@@ -633,7 +723,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3366458C1E05C6BB5DF3B562 /* Pods-SwiftEvents.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = EYE62TNDHZ;
 				INFOPLIST_FILE = SwiftEvents/Info.plist;
