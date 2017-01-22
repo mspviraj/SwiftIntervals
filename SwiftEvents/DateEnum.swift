@@ -1,5 +1,19 @@
 import Foundation
 
+extension Date {
+    static func fromUTC(string: String) -> String? {
+        guard let date = DateEnum.dateFrom(string: string) else {
+            return nil
+        }
+        let localFormat = "dd-MMM-yyyy h:mm:ss a"
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = localFormat
+        dateFormatter.timeZone = TimeZone.current
+        let x = dateFormatter.string(from: date)
+        return x
+    }
+}
+
 enum DateEnum {
     case since
     case until

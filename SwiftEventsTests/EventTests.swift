@@ -13,7 +13,8 @@ class EventTests: XCTestCase {
     
     fileprivate let birthday : String = "1960-12-19T20:56:00Z"
     fileprivate let future   : String = "2017-01-01T20:56:00Z"
-
+    fileprivate let nextXMas : String = "2017-12-25T00:00:00Z"
+    
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -70,4 +71,34 @@ class EventTests: XCTestCase {
         XCTAssertEqual(event.finish, DateEnum.dateWildCard)
     }
     
+    func testCaptioning() {
+        guard let event = Event(name: "My Event", startTime: birthday) else {
+            XCTAssertTrue(false)
+            return
+        }
+        XCTAssertEqual(event.start, birthday)
+        XCTAssertEqual(event.finish, DateEnum.dateWildCard)
+        let caption = event.caption()
+        XCTAssertEqual(caption, "Since " + Date.fromUTC(string: birthday)!)
+    }
+    
+    func testFutureCaption() {
+        guard let event = Event(name: "Next Christmas", startTime: nextXMas) else {
+            XCTAssertTrue(false)
+            return
+        }
+        XCTAssertEqual(event.start, nextXMas)
+        XCTAssertEqual(event.finish, DateEnum.dateWildCard)
+        let caption = event.caption()
+        XCTAssertEqual(caption, "Until " + Date.fromUTC(string: nextXMas)!)
+        
+    }
+    
+    func testDateExtension() {
+        if let myBirthday = Date.fromUTC(string: birthday) {
+            XCTAssertEqual(myBirthday, "19-Dec-1960 3:56:00 PM")
+        } else {
+            XCTAssertTrue(false)
+        }
+    }
 }

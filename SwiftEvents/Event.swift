@@ -16,6 +16,12 @@ struct Event : JSONSerializable, Glossy {
     let finish : String
     let displayInterval : DisplayInterval
     
+    private var intervalType : DateEnum {
+        get {
+            return DateEnum.intervalType(firstDate: self.start, secondDate: self.finish)
+        }
+    }
+    
     init() {
         self.name = "First used application"
         self.start = DateEnum.stringFrom(date: Date())!
@@ -68,6 +74,30 @@ struct Event : JSONSerializable, Glossy {
             "endTime" ~~> self.finish,
             "interval" ~~> self.displayInterval.rawValue
             ])
+    }
+    
+    private func fixedDate() -> String {
+        if start != DateEnum.dateWildCard {
+            return Date.fromUTC(string: start)!
+        }
+        if finish != DateEnum.dateWildCard {
+            return Date.fromUTC(string: finish)!
+        }
+        return Date.fromUTC(string: start)! + " " + Date.fromUTC(string: finish)!
+    }
+    
+    func caption() -> String {
+        let intervalType = DateEnum.intervalType(firstDate: start, secondDate: finish)
+        switch intervalType {
+        case .since:
+            return "Since \(fixedDate())"
+        case .until:
+            return "Until \(fixedDate())"
+        case .between:
+            return "Between \(fixedDate())"
+        case .invalid:
+            return "Invalid: \(start) \(finish)"
+        }
     }
     
 }
