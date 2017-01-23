@@ -10,10 +10,17 @@ import UIKit
 
 class EventTableViewController: UITableViewController {
     
-    var events : Events = Events()
+    var events = Events()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        let cloudManager = CloudManager()
+//        guard let loadEvents = cloudManager.getEvents(withKey: "Events") else {
+//            assertionFailure("Could not load events")
+//            return;
+//        }
+//        events = loadEvents
+        
         
         tableView.rowHeight = 78
         tableView.estimatedRowHeight = 78

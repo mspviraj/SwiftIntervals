@@ -41,7 +41,7 @@ class DateIntervalsTest: XCTestCase {
         
         
         let minute = interval.publish(interval: .minute)
-        XCTAssertEqual(minute, "29,472,480min 0sec")
+        XCTAssertEqual(minute, "min:29,472,480 sec:0")
 
     }
     
@@ -52,7 +52,7 @@ class DateIntervalsTest: XCTestCase {
         }
         
         let month = interval.publish(interval: .month)
-        XCTAssertEqual(month, "672mth 13dy 00:00:00")
+        XCTAssertEqual(month, "month:672 day:13 00:00:00")
         
     }
     
@@ -63,6 +63,6 @@ class DateIntervalsTest: XCTestCase {
         }
         
         let yearInterval = interval.publish(interval: .year)
-        XCTAssertEqual(yearInterval, "56yr 0mth 13dy 00:00:00")
+        XCTAssertEqual(yearInterval, "year:56 month:0 day:13 00:00:00")
     }
 }

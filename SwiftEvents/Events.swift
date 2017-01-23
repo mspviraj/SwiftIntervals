@@ -18,6 +18,10 @@ struct Events : JSONSerializable, Glossy {
     }
     
     init?(json: JSON) {
+        guard let z : Event = ("events" <~~ json) else {
+            return nil
+        }
+        print("found:\(z)")
         events = ("events" <~~ json)!
     }
     
@@ -51,14 +55,24 @@ struct Events : JSONSerializable, Glossy {
     }
     
     func toString() -> String? {
-        func buildList(_ items : [Event], index: Int) -> String {
+        func buildList(_ items : [Event], index: Int) -> String? {
             if index < items.count - 1 {
-                return items[index].toString()! + "," + buildList(items, index: index + 1)
+                guard let asJSONstring = items[index].toString() else {
+                    return nil
+                }
+                guard let list = buildList(items, index: index + 1) else {
+                    return nil
+                }
+                return asJSONstring + "," + list
             }
-            return items[index].toString()!
+            return items[index].toString()
         }
         
-        return "{\"events\":[\n" + buildList(events, index: 0) + "\n]}"
+        guard let listOfEvents = buildList(events, index: 0) else {
+            return nil
+        }
+    
+        return "{\"events\":[\n" + listOfEvents + "\n]}"
         
     }    
 }

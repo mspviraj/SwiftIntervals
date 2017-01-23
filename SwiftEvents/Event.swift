@@ -26,7 +26,7 @@ struct Event : JSONSerializable, Glossy {
     let name : String
     let start : String
     let finish : String
-    let displayInterval : DisplayInterval
+    //let displayInterval : String
     
     private var intervalType : DateEnum {
         get {
@@ -44,7 +44,7 @@ struct Event : JSONSerializable, Glossy {
         self.name = "First used application"
         self.start = DateEnum.stringFrom(date: Date())!
         self.finish = DateEnum.dateWildCard
-        self.displayInterval = DisplayInterval.progressive
+        //self.displayInterval = "minute"
     }
     
     init?(name: String, startTime: String, endTime: String = DateEnum.dateWildCard) {
@@ -60,7 +60,7 @@ struct Event : JSONSerializable, Glossy {
         }
         self.finish = endTime
         
-        self.displayInterval = DisplayInterval.minute
+        //self.displayInterval = "minute"
     }
     
     init?(json: JSON) {
@@ -79,10 +79,10 @@ struct Event : JSONSerializable, Glossy {
         }
         self.finish = eventFinish
         
-        guard let displayInterval : String = "interval" <~~ json else {
-            return nil
-        }
-        self.displayInterval = DisplayInterval.from(string: displayInterval)
+//        guard let displayInterval : String = "interval" <~~ json else {
+//            return nil
+//        }
+//        self.displayInterval = displayInterval
     }
     
     func toJSON() -> JSON? {  //Uses GLOSS pod
@@ -90,7 +90,7 @@ struct Event : JSONSerializable, Glossy {
             "eventName" ~~> self.name,
             "startTime" ~~> self.start,
             "endTime" ~~> self.finish,
-            "interval" ~~> self.displayInterval.rawValue
+            //"interval" ~~> self.displayInterval
             ])
     }
     
@@ -126,6 +126,7 @@ struct Event : JSONSerializable, Glossy {
     }
     
     func publishInterval() -> String {
-        return publishInterval(type: displayInterval)
+        //return publishInterval(type: DisplayInterval.from(string: self.displayInterval))
+        return publishInterval(type: DisplayInterval.from(string: "minute"))
     }
 }

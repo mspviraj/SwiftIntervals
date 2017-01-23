@@ -8,26 +8,7 @@
 
 import Foundation
 import SwiftyDropbox
-
-enum UserInfoKeys: String {
-    case servicePayload
-    case cloudCode, cloudType, cloudData
-}
-
-enum CloudTypes: String {
-    case fromDropbox
-    case mockDropbox
-    case fromICloud
-}
-
-enum CloudCodes: String {
-    case error
-    case ok
-    case progress
-    case notFile
-    case notFound
-    case other
-}
+@testable import SwiftEvents
 
 class CloudDropbox {
     
