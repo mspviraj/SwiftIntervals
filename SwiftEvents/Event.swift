@@ -44,7 +44,7 @@ struct Event : JSONSerializable, Glossy {
         self.name = "First used application"
         self.start = DateEnum.stringFrom(date: Date())!
         self.finish = DateEnum.dateWildCard
-        self.displayInterval = DisplayInterval.minute
+        self.displayInterval = DisplayInterval.progressive
     }
     
     init?(name: String, startTime: String, endTime: String = DateEnum.dateWildCard) {

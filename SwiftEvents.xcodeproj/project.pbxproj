@@ -17,6 +17,9 @@
 		B0170DF41E355BE500028CC4 /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0170DF21E355BE500028CC4 /* EventTableViewController.swift */; };
 		B0170DF61E355D9000028CC4 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0170DF51E355D9000028CC4 /* EventTableViewCell.swift */; };
 		B0170DF71E355D9000028CC4 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0170DF51E355D9000028CC4 /* EventTableViewCell.swift */; };
+		B0170DFC1E36019B00028CC4 /* NextTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0170DFB1E36019B00028CC4 /* NextTime.swift */; };
+		B0170DFF1E360C3300028CC4 /* NextTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0170DFE1E360C3300028CC4 /* NextTimeTests.swift */; };
+		B0170E001E360CF000028CC4 /* NextTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0170DFB1E36019B00028CC4 /* NextTime.swift */; };
 		B05A162E1E2845020053518E /* DayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05A162D1E2845020053518E /* DayManager.swift */; };
 		B05A162F1E2845020053518E /* DayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05A162D1E2845020053518E /* DayManager.swift */; };
 		B05A16311E2845200053518E /* YearManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05A16301E2845200053518E /* YearManagerTests.swift */; };
@@ -85,6 +88,8 @@
 		B007CF141E2F30E10053F851 /* TimeManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeManagerTests.swift; sourceTree = "<group>"; };
 		B0170DF21E355BE500028CC4 /* EventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewController.swift; sourceTree = "<group>"; };
 		B0170DF51E355D9000028CC4 /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
+		B0170DFB1E36019B00028CC4 /* NextTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextTime.swift; sourceTree = "<group>"; };
+		B0170DFE1E360C3300028CC4 /* NextTimeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextTimeTests.swift; sourceTree = "<group>"; };
 		B05A162D1E2845020053518E /* DayManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayManager.swift; sourceTree = "<group>"; };
 		B05A16301E2845200053518E /* YearManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YearManagerTests.swift; sourceTree = "<group>"; };
 		B05A16321E28462C0053518E /* DayManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayManagerTests.swift; sourceTree = "<group>"; };
@@ -206,16 +211,17 @@
 				B0E731DD1E21B38C00160E37 /* DropboxViewController.swift */,
 				B0756B741E236EF800C267A2 /* Event.swift */,
 				B0756B631E2323C800C267A2 /* Events.swift */,
+				B0170DF51E355D9000028CC4 /* EventTableViewCell.swift */,
+				B0170DF21E355BE500028CC4 /* EventTableViewController.swift */,
 				B0E731DB1E21B38C00160E37 /* FirstViewController.swift */,
 				B0E731E71E21B38C00160E37 /* Info.plist */,
 				B0942A181E23D970002EECEE /* JSONUtil.swift */,
 				B0E731E41E21B38C00160E37 /* LaunchScreen.storyboard */,
+				B0E731DF1E21B38C00160E37 /* Main.storyboard */,
 				B0C63C131E25DD4900D86AE9 /* MyNotificationCenter.swift */,
+				B0170DFB1E36019B00028CC4 /* NextTime.swift */,
 				B007CF121E2F27450053F851 /* TimeManager.swift */,
 				B0C63C181E26CBE900D86AE9 /* YearManager.swift */,
-				B0E731DF1E21B38C00160E37 /* Main.storyboard */,
-				B0170DF21E355BE500028CC4 /* EventTableViewController.swift */,
-				B0170DF51E355D9000028CC4 /* EventTableViewCell.swift */,
 			);
 			path = SwiftEvents;
 			sourceTree = "<group>";
@@ -230,6 +236,7 @@
 				B0756B771E23783F00C267A2 /* EventTests.swift */,
 				B0E731F21E21B38C00160E37 /* Info.plist */,
 				B0C63C201E26D9AB00D86AE9 /* MockNotificationCenter.swift */,
+				B0170DFE1E360C3300028CC4 /* NextTimeTests.swift */,
 				B0C63C161E25EEFB00D86AE9 /* NotificationCenterTests.swift */,
 				B007CF141E2F30E10053F851 /* TimeManagerTests.swift */,
 				B05A16301E2845200053518E /* YearManagerTests.swift */,
@@ -537,6 +544,7 @@
 				B0756B641E2323C800C267A2 /* Events.swift in Sources */,
 				B0C63C141E25DD4900D86AE9 /* MyNotificationCenter.swift in Sources */,
 				B0942A191E23D970002EECEE /* JSONUtil.swift in Sources */,
+				B0170DFC1E36019B00028CC4 /* NextTime.swift in Sources */,
 				B092CC561E21B7CD000048FE /* DateIntervals.swift in Sources */,
 				B092CC531E21B7BC000048FE /* DateEnum.swift in Sources */,
 				B0E731DE1E21B38C00160E37 /* DropboxViewController.swift in Sources */,
@@ -566,11 +574,13 @@
 				B05A16331E28462C0053518E /* DayManagerTests.swift in Sources */,
 				B092CC571E21B7CD000048FE /* DateIntervals.swift in Sources */,
 				B0C63C1F1E26D57D00D86AE9 /* CalenderManagerCodes.swift in Sources */,
+				B0170E001E360CF000028CC4 /* NextTime.swift in Sources */,
 				B0C63C221E26D9AB00D86AE9 /* MockNotificationCenter.swift in Sources */,
 				B0942A1B1E23E424002EECEE /* JSONUtil.swift in Sources */,
 				B05A162F1E2845020053518E /* DayManager.swift in Sources */,
 				B05A16311E2845200053518E /* YearManagerTests.swift in Sources */,
 				B0756B781E23783F00C267A2 /* EventTests.swift in Sources */,
+				B0170DFF1E360C3300028CC4 /* NextTimeTests.swift in Sources */,
 				B0C63C1A1E26CBE900D86AE9 /* YearManager.swift in Sources */,
 				B007CF151E2F30E10053F851 /* TimeManagerTests.swift in Sources */,
 				B007CF161E2F31E40053F851 /* TimeManager.swift in Sources */,
