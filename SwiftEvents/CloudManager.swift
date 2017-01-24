@@ -50,12 +50,9 @@ struct CloudManager {
     }
     
     func saveEvents(_ events: Events, withKey key: String) -> Bool {
-        guard let eventsAsString = events.toString() else {
+        guard let json = events.toJSON() else {
             return false
         }
-        let defaults = UserDefaults.standard
-        defaults.set(eventsAsString, forKey: key)
-        defaults.synchronize()
         return true
     }
 }

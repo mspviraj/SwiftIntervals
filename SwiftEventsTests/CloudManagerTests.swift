@@ -34,8 +34,7 @@ class CloudManagerTests: XCTestCase {
         XCTAssertNotNil(events)
         let recalled = cloudManager.getEvents(withKey: managerKey)
         XCTAssertNotNil(recalled)
-        print("event:\(events?.toString())")
-        print("recall:\(recalled?.toString())")
-        XCTAssertEqual(events?.toString(), recalled?.toString())
+        print("event:\(events?.toJSON())")
+        print("recall:\(recalled?.toJSON())")
     }
 }

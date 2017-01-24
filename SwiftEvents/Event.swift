@@ -22,18 +22,52 @@ struct EventInfo {
     }
     
 }
-struct Event : JSONSerializable, Glossy {
+
+struct Event2 : Decodable, Glossy {
     let name : String
     let start : String
     let finish : String
-    //let displayInterval : String
+    let displayInterval : String
     
-    private var intervalType : DateEnum {
-        get {
-            return DateEnum.intervalType(firstDate: self.start, secondDate: self.finish)
-        }
+    init() {
+        self.name = "First time"
+        self.start = DateEnum.stringFrom(date: Date())!
+        self.finish = "*"
+        self.displayInterval = "minute"
     }
     
+    init?(json: JSON) {
+        self.name = ("name" <~~ json)!
+        self.start = ("start" <~~ json)!
+        self.finish = ("finish" <~~ json)!
+        self.displayInterval = ("displayInterval" <~~ json)!
+    }
+    
+    func toJSON() -> JSON? {
+        return jsonify([
+            "name" ~~> self.name,
+            "start" ~~> self.start,
+            "finish" ~~> self.finish,
+            "displayInterval" ~~> self.displayInterval])
+    }
+    
+    func toString() -> String {
+        return "{\"name\": \"\(self.name)\",\"start\":\"\(self.start)\",\"finish\":\"\(self.finish)\",\"displayInterval\":\"\(self.displayInterval)\"}"
+    }
+}
+
+struct Event : Decodable, JSONSerializable, Glossy {
+    let name : String
+    let start : String
+    let finish : String
+    let displayInterval : String
+    
+//    private var intervalType : DateEnum {
+//        get {
+//            return DateEnum.intervalType(firstDate: self.start, secondDate: self.finish)
+//        }
+//    }
+//    
     var information : EventInfo {
         get {
             return EventInfo(name: self.name, interval: self.publishInterval(), caption: self.publishCaption())
@@ -44,7 +78,7 @@ struct Event : JSONSerializable, Glossy {
         self.name = "First used application"
         self.start = DateEnum.stringFrom(date: Date())!
         self.finish = DateEnum.dateWildCard
-        //self.displayInterval = "minute"
+        self.displayInterval = "minute"
     }
     
     init?(name: String, startTime: String, endTime: String = DateEnum.dateWildCard) {
@@ -60,7 +94,7 @@ struct Event : JSONSerializable, Glossy {
         }
         self.finish = endTime
         
-        //self.displayInterval = "minute"
+        self.displayInterval = "minute"
     }
     
     init?(json: JSON) {
@@ -79,10 +113,10 @@ struct Event : JSONSerializable, Glossy {
         }
         self.finish = eventFinish
         
-//        guard let displayInterval : String = "interval" <~~ json else {
-//            return nil
-//        }
-//        self.displayInterval = displayInterval
+        guard let displayInterval : String = "interval" <~~ json else {
+            return nil
+        }
+        self.displayInterval = displayInterval
     }
     
     func toJSON() -> JSON? {  //Uses GLOSS pod
@@ -90,7 +124,7 @@ struct Event : JSONSerializable, Glossy {
             "eventName" ~~> self.name,
             "startTime" ~~> self.start,
             "endTime" ~~> self.finish,
-            //"interval" ~~> self.displayInterval
+            "interval" ~~> self.displayInterval
             ])
     }
     
@@ -126,7 +160,6 @@ struct Event : JSONSerializable, Glossy {
     }
     
     func publishInterval() -> String {
-        //return publishInterval(type: DisplayInterval.from(string: self.displayInterval))
-        return publishInterval(type: DisplayInterval.from(string: "minute"))
+        return publishInterval(type: DisplayInterval.from(string: self.displayInterval))
     }
 }

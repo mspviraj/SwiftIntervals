@@ -23,7 +23,19 @@ class EventsTests: XCTestCase {
     
     func testEventsToString() {
         let events = Events()
-        let asString = events.toString()
+        let asString = events.toJSON()
         XCTAssertNotNil(asString)
+    }
+    
+    func testEventsAsString() {
+        let events = Events2()
+        let json = events.toString()
+        XCTAssertNotNil(json)
+        print("\(json)")
+        let data = json.data(using: .utf8)
+        if let parsed = try? JSONSerialization.jsonObject(with: data!) as! [String:Any] {
+            let e = Events2(json: parsed)
+            print("e:\(e)")
+        }
     }
 }

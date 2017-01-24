@@ -40,7 +40,7 @@ class EventTests: XCTestCase {
     
     func testToString() {
         let event = Event()
-        let asString = event.toString()
+        let asString = event.toJSON()
         XCTAssertNotNil(asString)
     }
     
