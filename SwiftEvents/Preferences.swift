@@ -18,6 +18,21 @@ struct Preferences : JSONSerializable, Glossy {
         self.lastCloudUpdate = DateEnum.stringFrom(date: lastCloudUpdate)!
     }
     
+    init?(jsonString: String) {
+        guard let dict = jsonString.toDictionary() else {
+            return nil
+        }
+        guard let refresh = dict["refreshInSeconds"] else {
+            return nil
+        }
+        self.refreshInSeconds = refresh as? Int
+        guard let update = dict["lastCloudUpdate"] else {
+            return nil
+        }
+        self.lastCloudUpdate = update as? String
+        
+    }
+    
     //Glossy protocol
     internal init?(json: JSON) {
         self.refreshInSeconds = ("refreshInSeconds" <~~ json)

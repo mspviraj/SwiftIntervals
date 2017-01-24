@@ -15,26 +15,32 @@ class CloudManagerTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
-        let cloudManager = CloudManager()
-        cloudManager.deleteEvents(withKey: managerKey)
+        CloudManager.delete(withKey: managerKey)
     }
     
     override func tearDown() {
-        let cloudManager = CloudManager()
-        cloudManager.deleteEvents(withKey: managerKey)
+        CloudManager.delete(withKey: managerKey)
         super.tearDown()
     }
     
     func testGetEvents() {
-        let cloudManager = CloudManager()
-        let events = cloudManager.getEvents(withKey: managerKey)
+        let events = CloudManager.getEvents(withKey: managerKey)
         XCTAssertNotNil(events)
-        let saved = cloudManager.save(events: events!, withKey: managerKey)
+        let saved = CloudManager.save(events: events!, withKey: managerKey)
         XCTAssertTrue(saved)
         XCTAssertNotNil(events)
-        let recalled = cloudManager.getEvents(withKey: managerKey)
+        let recalled = CloudManager.getEvents(withKey: managerKey)
         XCTAssertNotNil(recalled)
         print("event:\(events?.toJSON())")
         print("recall:\(recalled?.toJSON())")
+    }
+    
+    func testSaveGet() {
+        let isNil = CloudManager.get(withKey: managerKey)
+        XCTAssertNil(isNil)
+        let test = "This is a test string"
+        CloudManager.save(json: test, withKey: managerKey)
+        let compare = CloudManager.get(withKey: managerKey)
+        XCTAssertEqual(test, compare)
     }
 }

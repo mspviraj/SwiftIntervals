@@ -38,6 +38,7 @@
 		B095EA5A1E37BBBA007F130F /* EventListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B095EA591E37BBBA007F130F /* EventListTests.swift */; };
 		B095EA5C1E37D343007F130F /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = B095EA5B1E37D343007F130F /* Preferences.swift */; };
 		B095EA5E1E37D8C3007F130F /* JSONUtilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B095EA5D1E37D8C3007F130F /* JSONUtilTests.swift */; };
+		B099F2FD1E38037B00FC3F93 /* PreferencesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B099F2FC1E38037B00FC3F93 /* PreferencesTest.swift */; };
 		B0C63C141E25DD4900D86AE9 /* MyNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C63C131E25DD4900D86AE9 /* MyNotificationCenter.swift */; };
 		B0C63C151E25DD4900D86AE9 /* MyNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C63C131E25DD4900D86AE9 /* MyNotificationCenter.swift */; };
 		B0C63C171E25EEFB00D86AE9 /* NotificationCenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C63C161E25EEFB00D86AE9 /* NotificationCenterTests.swift */; };
@@ -106,6 +107,7 @@
 		B095EA591E37BBBA007F130F /* EventListTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventListTests.swift; sourceTree = "<group>"; };
 		B095EA5B1E37D343007F130F /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		B095EA5D1E37D8C3007F130F /* JSONUtilTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONUtilTests.swift; sourceTree = "<group>"; };
+		B099F2FC1E38037B00FC3F93 /* PreferencesTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesTest.swift; sourceTree = "<group>"; };
 		B0C63C131E25DD4900D86AE9 /* MyNotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyNotificationCenter.swift; path = ../MyNotificationCenter.swift; sourceTree = "<group>"; };
 		B0C63C161E25EEFB00D86AE9 /* NotificationCenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCenterTests.swift; sourceTree = "<group>"; };
 		B0C63C181E26CBE900D86AE9 /* YearManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YearManager.swift; sourceTree = "<group>"; };
@@ -252,6 +254,7 @@
 				B0C63C161E25EEFB00D86AE9 /* NotificationCenterTests.swift */,
 				B007CF141E2F30E10053F851 /* TimeManagerTests.swift */,
 				B05A16301E2845200053518E /* YearManagerTests.swift */,
+				B099F2FC1E38037B00FC3F93 /* PreferencesTest.swift */,
 			);
 			path = SwiftEventsTests;
 			sourceTree = "<group>";
@@ -587,6 +590,7 @@
 				B007CF111E2EF8D80053F851 /* DateIntervalsTest.swift in Sources */,
 				B05A16331E28462C0053518E /* DayManagerTests.swift in Sources */,
 				B092CC571E21B7CD000048FE /* DateIntervals.swift in Sources */,
+				B099F2FD1E38037B00FC3F93 /* PreferencesTest.swift in Sources */,
 				B0C63C1F1E26D57D00D86AE9 /* CalenderManagerCodes.swift in Sources */,
 				B0170E001E360CF000028CC4 /* NextTime.swift in Sources */,
 				B0C63C221E26D9AB00D86AE9 /* MockNotificationCenter.swift in Sources */,
