@@ -34,25 +34,28 @@ struct CloudManager {
         defaults.synchronize()
     }
     
-    func getEvents(withKey key: String) -> Events? {
+    func getEvents(withKey key: String) -> EventList? {
         let defaults = UserDefaults.standard
         guard let content : String = defaults.object(forKey: key) as? String else {
-            return Events()
+            return EventList()
         }
         print("\(content)")
         guard let data = content.data(using: .utf8, allowLossyConversion: false) else {
             return nil
         }
-        guard let events = Events(data) else {
+        guard let events = EventList(data) else {
             return nil
         }
         return events
     }
     
-    func saveEvents(_ events: Events, withKey key: String) -> Bool {
-        guard let json = events.toJSON() else {
+    func save(events: EventList, withKey key: String) -> Bool {
+        guard let eventListAsString = events.toString() else {
             return false
         }
+        let defaults = UserDefaults.standard
+        defaults.set(eventListAsString, forKey: key)
+        defaults.synchronize()
         return true
     }
 }

@@ -10,7 +10,7 @@ import UIKit
 
 class EventTableViewController: UITableViewController {
     
-    var events = Events()
+    var events = EventList()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,14 +57,17 @@ class EventTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return events.events.count
+        return events.list.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EventCell", for: indexPath) as! EventTableViewCell
         
         // Configure the cell...
-        let eventInformation = events.getEvents()[indexPath.row].information
+        guard let eventInformation = events.info(at: indexPath.row) else {
+            cell.name.text = "Invalid event"
+            return cell
+        }
         cell.name.text = eventInformation.name
         cell.interval.text = eventInformation.interval
         cell.caption.text = eventInformation.caption

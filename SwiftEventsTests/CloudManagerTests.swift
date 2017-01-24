@@ -29,7 +29,7 @@ class CloudManagerTests: XCTestCase {
         let cloudManager = CloudManager()
         let events = cloudManager.getEvents(withKey: managerKey)
         XCTAssertNotNil(events)
-        let saved = cloudManager.saveEvents(events!, withKey: managerKey)
+        let saved = cloudManager.save(events: events!, withKey: managerKey)
         XCTAssertTrue(saved)
         XCTAssertNotNil(events)
         let recalled = cloudManager.getEvents(withKey: managerKey)

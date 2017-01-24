@@ -24,8 +24,6 @@
 		B05A16331E28462C0053518E /* DayManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05A16321E28462C0053518E /* DayManagerTests.swift */; };
 		B05A16361E2948D50053518E /* CloudDropbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05A16341E2948D50053518E /* CloudDropbox.swift */; };
 		B0756B5E1E22D39200C267A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0E731E21E21B38C00160E37 /* Assets.xcassets */; };
-		B0756B641E2323C800C267A2 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0756B631E2323C800C267A2 /* Events.swift */; };
-		B0756B651E2323C800C267A2 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0756B631E2323C800C267A2 /* Events.swift */; };
 		B0756B6F1E234CE500C267A2 /* DateEnumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0756B6E1E234CE500C267A2 /* DateEnumTests.swift */; };
 		B0756B751E236EF800C267A2 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0756B741E236EF800C267A2 /* Event.swift */; };
 		B0756B761E23762A00C267A2 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0756B741E236EF800C267A2 /* Event.swift */; };
@@ -36,7 +34,8 @@
 		B092CC571E21B7CD000048FE /* DateIntervals.swift in Sources */ = {isa = PBXBuildFile; fileRef = B092CC551E21B7CD000048FE /* DateIntervals.swift */; };
 		B0942A191E23D970002EECEE /* JSONUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0942A181E23D970002EECEE /* JSONUtil.swift */; };
 		B0942A1B1E23E424002EECEE /* JSONUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0942A181E23D970002EECEE /* JSONUtil.swift */; };
-		B0BF02111E36956B004DBEC8 /* EventsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BF02101E36956B004DBEC8 /* EventsTests.swift */; };
+		B095EA581E37B73E007F130F /* EventList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B095EA571E37B73E007F130F /* EventList.swift */; };
+		B095EA5A1E37BBBA007F130F /* EventListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B095EA591E37BBBA007F130F /* EventListTests.swift */; };
 		B0C63C141E25DD4900D86AE9 /* MyNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C63C131E25DD4900D86AE9 /* MyNotificationCenter.swift */; };
 		B0C63C151E25DD4900D86AE9 /* MyNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C63C131E25DD4900D86AE9 /* MyNotificationCenter.swift */; };
 		B0C63C171E25EEFB00D86AE9 /* NotificationCenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C63C161E25EEFB00D86AE9 /* NotificationCenterTests.swift */; };
@@ -95,14 +94,14 @@
 		B05A16301E2845200053518E /* YearManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YearManagerTests.swift; sourceTree = "<group>"; };
 		B05A16321E28462C0053518E /* DayManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayManagerTests.swift; sourceTree = "<group>"; };
 		B05A16341E2948D50053518E /* CloudDropbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudDropbox.swift; sourceTree = "<group>"; };
-		B0756B631E2323C800C267A2 /* Events.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
 		B0756B6E1E234CE500C267A2 /* DateEnumTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateEnumTests.swift; sourceTree = "<group>"; };
 		B0756B741E236EF800C267A2 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		B0756B771E23783F00C267A2 /* EventTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTests.swift; sourceTree = "<group>"; };
 		B092CC521E21B7BC000048FE /* DateEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateEnum.swift; sourceTree = "<group>"; };
 		B092CC551E21B7CD000048FE /* DateIntervals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateIntervals.swift; sourceTree = "<group>"; };
 		B0942A181E23D970002EECEE /* JSONUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONUtil.swift; sourceTree = "<group>"; };
-		B0BF02101E36956B004DBEC8 /* EventsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTests.swift; sourceTree = "<group>"; };
+		B095EA571E37B73E007F130F /* EventList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventList.swift; sourceTree = "<group>"; };
+		B095EA591E37BBBA007F130F /* EventListTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventListTests.swift; sourceTree = "<group>"; };
 		B0C63C131E25DD4900D86AE9 /* MyNotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyNotificationCenter.swift; path = ../MyNotificationCenter.swift; sourceTree = "<group>"; };
 		B0C63C161E25EEFB00D86AE9 /* NotificationCenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCenterTests.swift; sourceTree = "<group>"; };
 		B0C63C181E26CBE900D86AE9 /* YearManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YearManager.swift; sourceTree = "<group>"; };
@@ -205,28 +204,28 @@
 		B0E731D81E21B38C00160E37 /* SwiftEvents */ = {
 			isa = PBXGroup;
 			children = (
+				B0E731E71E21B38C00160E37 /* Info.plist */,
 				B0E731D91E21B38C00160E37 /* AppDelegate.swift */,
-				B0E731E21E21B38C00160E37 /* Assets.xcassets */,
 				B0C63C1D1E26D57D00D86AE9 /* CalenderManagerCodes.swift */,
 				B05A16341E2948D50053518E /* CloudDropbox.swift */,
+				B0E889D71E367A4200F1ECD7 /* CloudManager.swift */,
 				B092CC521E21B7BC000048FE /* DateEnum.swift */,
 				B092CC551E21B7CD000048FE /* DateIntervals.swift */,
 				B05A162D1E2845020053518E /* DayManager.swift */,
 				B0E731DD1E21B38C00160E37 /* DropboxViewController.swift */,
 				B0756B741E236EF800C267A2 /* Event.swift */,
-				B0756B631E2323C800C267A2 /* Events.swift */,
+				B095EA571E37B73E007F130F /* EventList.swift */,
 				B0170DF51E355D9000028CC4 /* EventTableViewCell.swift */,
 				B0170DF21E355BE500028CC4 /* EventTableViewController.swift */,
 				B0E731DB1E21B38C00160E37 /* FirstViewController.swift */,
-				B0E731E71E21B38C00160E37 /* Info.plist */,
 				B0942A181E23D970002EECEE /* JSONUtil.swift */,
-				B0E731E41E21B38C00160E37 /* LaunchScreen.storyboard */,
-				B0E731DF1E21B38C00160E37 /* Main.storyboard */,
 				B0C63C131E25DD4900D86AE9 /* MyNotificationCenter.swift */,
 				B0170DFB1E36019B00028CC4 /* NextTime.swift */,
 				B007CF121E2F27450053F851 /* TimeManager.swift */,
 				B0C63C181E26CBE900D86AE9 /* YearManager.swift */,
-				B0E889D71E367A4200F1ECD7 /* CloudManager.swift */,
+				B0E731E21E21B38C00160E37 /* Assets.xcassets */,
+				B0E731E41E21B38C00160E37 /* LaunchScreen.storyboard */,
+				B0E731DF1E21B38C00160E37 /* Main.storyboard */,
 			);
 			path = SwiftEvents;
 			sourceTree = "<group>";
@@ -234,14 +233,14 @@
 		B0E731EF1E21B38C00160E37 /* SwiftEventsTests */ = {
 			isa = PBXGroup;
 			children = (
+				B0E731F21E21B38C00160E37 /* Info.plist */,
 				B007CF0E1E2D70690053F851 /* CloudDropboxTests.swift */,
 				B0E889D91E367C4900F1ECD7 /* CloudManagerTests.swift */,
 				B0756B6E1E234CE500C267A2 /* DateEnumTests.swift */,
 				B007CF101E2EF8D80053F851 /* DateIntervalsTest.swift */,
 				B05A16321E28462C0053518E /* DayManagerTests.swift */,
-				B0BF02101E36956B004DBEC8 /* EventsTests.swift */,
+				B095EA591E37BBBA007F130F /* EventListTests.swift */,
 				B0756B771E23783F00C267A2 /* EventTests.swift */,
-				B0E731F21E21B38C00160E37 /* Info.plist */,
 				B0C63C201E26D9AB00D86AE9 /* MockNotificationCenter.swift */,
 				B0170DFE1E360C3300028CC4 /* NextTimeTests.swift */,
 				B0C63C161E25EEFB00D86AE9 /* NotificationCenterTests.swift */,
@@ -547,8 +546,8 @@
 			files = (
 				B05A162E1E2845020053518E /* DayManager.swift in Sources */,
 				B0756B751E236EF800C267A2 /* Event.swift in Sources */,
-				B0756B641E2323C800C267A2 /* Events.swift in Sources */,
 				B0C63C141E25DD4900D86AE9 /* MyNotificationCenter.swift in Sources */,
+				B095EA581E37B73E007F130F /* EventList.swift in Sources */,
 				B0942A191E23D970002EECEE /* JSONUtil.swift in Sources */,
 				B0170DFC1E36019B00028CC4 /* NextTime.swift in Sources */,
 				B092CC561E21B7CD000048FE /* DateIntervals.swift in Sources */,
@@ -573,8 +572,7 @@
 				B0756B761E23762A00C267A2 /* Event.swift in Sources */,
 				B0756B6F1E234CE500C267A2 /* DateEnumTests.swift in Sources */,
 				B007CF0F1E2D70690053F851 /* CloudDropboxTests.swift in Sources */,
-				B0756B651E2323C800C267A2 /* Events.swift in Sources */,
-				B0BF02111E36956B004DBEC8 /* EventsTests.swift in Sources */,
+				B095EA5A1E37BBBA007F130F /* EventListTests.swift in Sources */,
 				B05A16361E2948D50053518E /* CloudDropbox.swift in Sources */,
 				B0C63C151E25DD4900D86AE9 /* MyNotificationCenter.swift in Sources */,
 				B092CC541E21B7BC000048FE /* DateEnum.swift in Sources */,

@@ -122,4 +122,19 @@ class EventTests: XCTestCase {
         XCTAssertNotEqual(interval, "Hello")
         
     }
+    
+    func testEventToJSONandBack() {
+        let event = Event()
+        let json = event.toString()
+        XCTAssertNotNil(json)
+        let data = json?.data(using: .utf8)
+        if let parsed = try? JSONSerialization.jsonObject(with: data!) as! [String:Any] {
+            let e = Event(json: parsed)
+            print("e=\(e)")
+            XCTAssertNotNil(e)
+        } else {
+            XCTAssertNotNil(nil)
+        }
+        
+    }
 }
