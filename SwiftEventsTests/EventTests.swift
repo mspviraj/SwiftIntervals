@@ -38,6 +38,12 @@ class EventTests: XCTestCase {
         XCTAssertEqual(nowString, event.start)
     }
     
+    func testToString() {
+        let event = Event()
+        let asString = event.toJSON()
+        XCTAssertNotNil(asString)
+    }
+    
     func testInitJSON() {
         let now = Date()
         let event = Event()
@@ -55,7 +61,6 @@ class EventTests: XCTestCase {
             return
         }
         
-        XCTAssertEqual(event.displayInterval, event2.displayInterval)
         XCTAssertEqual(event.name, event2.name)
         XCTAssertEqual(event.start, event2.start)
         XCTAssertEqual(event.finish, event2.finish)
@@ -115,6 +120,21 @@ class EventTests: XCTestCase {
         
         let interval = event.publishInterval()
         XCTAssertNotEqual(interval, "Hello")
+        
+    }
+    
+    func testEventToJSONandBack() {
+        let event = Event()
+        let json = event.toString()
+        XCTAssertNotNil(json)
+        let data = json?.data(using: .utf8)
+        if let parsed = try? JSONSerialization.jsonObject(with: data!) as! [String:Any] {
+            let e = Event(json: parsed)
+            print("e=\(e)")
+            XCTAssertNotNil(e)
+        } else {
+            XCTAssertNotNil(nil)
+        }
         
     }
 }
