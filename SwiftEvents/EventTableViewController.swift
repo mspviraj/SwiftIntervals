@@ -11,6 +11,7 @@ import UIKit
 class EventTableViewController: UITableViewController {
     
     var events = EventList()
+    var preferences = Preferences.get()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +36,6 @@ class EventTableViewController: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         //every(minutes: 1)
-        timerAt(minutes: 1)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -77,10 +77,11 @@ class EventTableViewController: UITableViewController {
     
     var timer : Timer? = nil
     
-    public func timerAt(minutes: Int) {
-        let timerDate = NextTime.with(date: Date(), interval: minutes)
+    public func startRefreshTimer() {
+        let refresh : Int = preferences.refreshInSeconds!
+        let timerDate = NextTime.with(date: Date(), interval: refresh)
         print("Timer will run at:\(timerDate)")
-        let interval : Double = minutes == 0 ? 1.0 : Double(60 * minutes)
+        let interval : Double = refresh == 0 ? 1.0 : Double(60 * refresh)
         timer = Timer.init(fire: timerDate, interval: interval, repeats: true){ (timer) in
             print("date:\(Date())")
             self.tableView.reloadData()

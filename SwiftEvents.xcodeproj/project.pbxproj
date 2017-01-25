@@ -185,6 +185,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B099F2FE1E39003800FC3F93 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B0170DF51E355D9000028CC4 /* EventTableViewCell.swift */,
+				B0170DF21E355BE500028CC4 /* EventTableViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		B0E731CD1E21B38C00160E37 = {
 			isa = PBXGroup;
 			children = (
@@ -221,8 +230,6 @@
 				B0E731DD1E21B38C00160E37 /* DropboxViewController.swift */,
 				B0756B741E236EF800C267A2 /* Event.swift */,
 				B095EA571E37B73E007F130F /* EventList.swift */,
-				B0170DF51E355D9000028CC4 /* EventTableViewCell.swift */,
-				B0170DF21E355BE500028CC4 /* EventTableViewController.swift */,
 				B0E731DB1E21B38C00160E37 /* FirstViewController.swift */,
 				B0942A181E23D970002EECEE /* JSONUtil.swift */,
 				B0C63C131E25DD4900D86AE9 /* MyNotificationCenter.swift */,
@@ -231,6 +238,7 @@
 				B007CF121E2F27450053F851 /* TimeManager.swift */,
 				B0C63C181E26CBE900D86AE9 /* YearManager.swift */,
 				B0E731E21E21B38C00160E37 /* Assets.xcassets */,
+				B099F2FE1E39003800FC3F93 /* Controllers */,
 				B0E731E41E21B38C00160E37 /* LaunchScreen.storyboard */,
 				B0E731DF1E21B38C00160E37 /* Main.storyboard */,
 			);

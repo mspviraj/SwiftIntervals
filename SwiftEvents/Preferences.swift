@@ -47,6 +47,23 @@ struct Preferences : JSONSerializable, Glossy {
             ])
     }
     
+    func save(withKey key: String = "Preferences") {
+        guard let jsonString = self.toString() else {
+            assertionFailure("Could not convert to string")
+            return
+        }
+        CloudManager.save(json: jsonString, withKey: key)
+    }
     
-    
+    static func get(withKey key: String = "Preferences") -> Preferences {
+        if let jsonString = CloudManager.get(withKey: key) {
+            if let result = Preferences(jsonString: jsonString) {
+                return result
+            }
+            assertionFailure("Cannot create prefrences from:\(jsonString)")
+        }
+        let pref = Preferences()
+        pref.save(withKey: key)
+        return pref
+    }
 }

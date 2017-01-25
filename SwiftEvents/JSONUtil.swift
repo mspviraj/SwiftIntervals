@@ -76,6 +76,7 @@ extension JSONSerializable {
     }
 }
 
+//Converts json style string and converts to dictionary or returns nil
 extension String {
     func toDictionary() -> [String:Any]? {
         guard let data = self.data(using: .utf8) else {
