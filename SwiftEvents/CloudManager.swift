@@ -28,13 +28,24 @@ enum CloudCodes: String {
 }
 
 struct CloudManager {
-    func deleteEvents(withKey key: String) {
+    static func delete(withKey key: String) {
         let defaults = UserDefaults.standard
         defaults.removeObject(forKey: key)
         defaults.synchronize()
     }
     
-    func getEvents(withKey key: String) -> EventList? {
+    static func get(withKey key: String) -> String? {
+        let defaults = UserDefaults.standard
+        return defaults.object(forKey: key) as? String
+    }
+    
+    static func save(json: String, withKey key: String) {
+        let defaults = UserDefaults.standard
+        defaults.set(json, forKey: key)
+        defaults.synchronize()
+    }
+    
+    static func getEvents(withKey key: String) -> EventList? {
         let defaults = UserDefaults.standard
         guard let content : String = defaults.object(forKey: key) as? String else {
             return EventList()
@@ -49,7 +60,7 @@ struct CloudManager {
         return events
     }
     
-    func save(events: EventList, withKey key: String) -> Bool {
+    static func save(events: EventList, withKey key: String) -> Bool {
         guard let eventListAsString = events.toString() else {
             return false
         }
