@@ -112,42 +112,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ZS6-Pb-SQe">
-                                <rect key="frame" x="16" y="20" width="288" height="214"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0n0-yw-bia">
+                                <rect key="frame" x="16" y="28" width="288" height="220"/>
                                 <subviews>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LAc-JH-QMg">
-                                        <rect key="frame" x="113.5" y="0.0" width="61" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="30"/>
                                         <state key="normal" title="1 second"/>
                                         <connections>
-                                            <action selector="intervalButtons:" destination="l27-Uy-uAM" eventType="touchUpInside" id="LZJ-61-TvK"/>
+                                            <action selector="onInterval:" destination="l27-Uy-uAM" eventType="touchUpInside" id="Iru-jQ-hje"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwq-27-0lj">
-                                        <rect key="frame" x="115" y="46" width="58" height="30"/>
+                                        <rect key="frame" x="0.0" y="38" width="288" height="30"/>
                                         <state key="normal" title="1 minute"/>
                                         <connections>
-                                            <action selector="intervalButtons:" destination="l27-Uy-uAM" eventType="touchUpInside" id="HT8-ec-psw"/>
+                                            <action selector="onInterval:" destination="l27-Uy-uAM" eventType="touchUpInside" id="rqO-bH-gjP"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGY-vh-tkP">
-                                        <rect key="frame" x="106.5" y="92" width="75" height="30"/>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tfr-0x-HGE" userLabel="5 minutes">
+                                        <rect key="frame" x="0.0" y="76" width="288" height="30"/>
+                                        <state key="normal" title="5 minutes"/>
+                                        <connections>
+                                            <action selector="onInterval:" destination="l27-Uy-uAM" eventType="touchUpInside" id="gXQ-AF-JpF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGY-vh-tkP">
+                                        <rect key="frame" x="0.0" y="114" width="288" height="30"/>
                                         <state key="normal" title="15 minutes"/>
                                         <connections>
-                                            <action selector="intervalButtons:" destination="l27-Uy-uAM" eventType="touchUpInside" id="FUX-bx-xG9"/>
+                                            <action selector="onInterval:" destination="l27-Uy-uAM" eventType="touchUpInside" id="EGp-eS-dYV"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FTg-FX-P9u">
-                                        <rect key="frame" x="105.5" y="138" width="77" height="30"/>
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FTg-FX-P9u">
+                                        <rect key="frame" x="0.0" y="152" width="288" height="30"/>
                                         <state key="normal" title="30 minutes"/>
                                         <connections>
-                                            <action selector="intervalButtons:" destination="l27-Uy-uAM" eventType="touchUpInside" id="ZoL-18-RlX"/>
+                                            <action selector="onInterval:" destination="l27-Uy-uAM" eventType="touchUpInside" id="egH-mo-3Ml"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D0e-BF-rVl">
-                                        <rect key="frame" x="122.5" y="184" width="43" height="30"/>
+                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D0e-BF-rVl">
+                                        <rect key="frame" x="0.0" y="190" width="288" height="30"/>
                                         <state key="normal" title="1 hour"/>
                                         <connections>
-                                            <action selector="intervalButtons:" destination="l27-Uy-uAM" eventType="touchUpInside" id="6cY-NY-aLd"/>
+                                            <action selector="onInterval:" destination="l27-Uy-uAM" eventType="touchUpInside" id="2Ip-tD-ucZ"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -155,10 +162,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="leadingMargin" secondItem="ZS6-Pb-SQe" secondAttribute="leading" id="dsS-SS-oIo"/>
-                            <constraint firstItem="ZS6-Pb-SQe" firstAttribute="top" secondItem="af8-MQ-kZ0" secondAttribute="bottom" id="f9K-JZ-3KE"/>
-                            <constraint firstItem="6E6-cH-XFl" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ZS6-Pb-SQe" secondAttribute="bottom" constant="246" id="g27-hh-Ge9"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ZS6-Pb-SQe" secondAttribute="trailing" id="yBT-3o-9dr"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="0n0-yw-bia" secondAttribute="leading" id="5Cs-kg-0fC"/>
+                            <constraint firstItem="0n0-yw-bia" firstAttribute="top" secondItem="af8-MQ-kZ0" secondAttribute="bottom" constant="8" id="80g-hq-uaz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0n0-yw-bia" secondAttribute="trailing" id="JgS-tI-fSJ"/>
+                            <constraint firstItem="6E6-cH-XFl" firstAttribute="top" relation="greaterThanOrEqual" secondItem="0n0-yw-bia" secondAttribute="bottom" constant="8" symbolic="YES" id="ecA-uQ-gKY"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8hD-yn-6ZX"/>
@@ -169,7 +176,85 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V8V-9D-1L8" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="JEL-Ua-26n" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2580" y="1249"/>
+            <point key="canvasLocation" x="2421" y="1209"/>
+        </scene>
+        <!--Month-->
+        <scene sceneID="I2h-Im-Dm8">
+            <objects>
+                <viewController id="jdw-oY-loM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CRk-Qc-WiP"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qko-9X-gMw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZyK-cr-vfN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Month" id="63p-f7-fhP">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="jdz-FG-0a3"/>
+                        <barButtonItem key="rightBarButtonItem" title="Day" id="6Dx-gH-XTH">
+                            <connections>
+                                <segue destination="J25-cZ-f3g" kind="popoverPresentation" popoverAnchorBarButtonItem="6Dx-gH-XTH" id="rQL-Kl-fEU">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gk2-A1-fd9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3420" y="1910"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="YJl-HX-7en">
+            <objects>
+                <viewController id="J25-cZ-f3g" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9LJ-tU-KwZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="hck-Jx-LnY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="coI-N2-6cd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W60-FZ-JFz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4121.25" y="1910"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="j4W-3j-4fd">
+            <objects>
+                <viewController id="uhs-WD-rqL" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3BR-R6-Cf5"/>
+                        <viewControllerLayoutGuide type="bottom" id="2Pd-YH-Rm5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="akc-Qm-1nq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7td-Nm-vBa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4809.375" y="1902.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="EkY-NO-nEo">
+            <objects>
+                <viewController id="nr7-Tj-0BX" sceneMemberID="viewController">
+                    <button key="view" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1Vf-SS-2Vx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <state key="normal" title="Button"/>
+                    </button>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YIP-fK-itT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5463.75" y="1902.5"/>
         </scene>
         <!--Dropbox-->
         <scene sceneID="wg7-f3-ORb">
@@ -330,7 +415,17 @@
                                 </segue>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="sqB-fn-qbk">
+                            <connections>
+                                <segue destination="Abb-Yd-zdY" kind="popoverPresentation" popoverAnchorBarButtonItem="sqB-fn-qbk" id="moI-n8-MEx">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="intervalButton" destination="VJS-C0-S1t" id="N16-Cc-yca"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DmI-np-7vv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -374,6 +469,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QhN-cv-Bmb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="399.375" y="1208.75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2ZD-p6-W85">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Abb-Yd-zdY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="y55-xh-uaB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="jdw-oY-loM" kind="relationship" relationship="rootViewController" id="vAV-MU-0US"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LYB-zx-1eG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2421" y="1999"/>
         </scene>
     </scenes>
     <resources>

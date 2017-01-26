@@ -12,19 +12,24 @@ import Gloss
 struct EventList : JSONSerializable, Glossy {
     var list : [String] = [String]()
     
+    private struct Constants {
+        static let key = "events"
+        static let rootName = "list"
+    }
+    
     init() {
         self.list.append(Event().toString()!)
     }
     
     //For Glossy protocol
     internal init?(json: JSON) {
-        self.list = ("list" <~~ json)!
+        self.list = (Constants.rootName <~~ json)!
     }
     
     //For Glossy protocol
     internal func toJSON() -> JSON? {
         return jsonify([
-            "list" ~~> self.list
+            Constants.rootName ~~> self.list
             ])
     }
     
@@ -44,7 +49,30 @@ struct EventList : JSONSerializable, Glossy {
             return nil
         }
     }
-
+    
+    static func getEvents(withKey key: String = Constants.key) -> EventList? {
+        
+        guard let content : String = CloudManager.get(withKey: key) else {
+            return EventList()
+        }
+        guard let data = content.data(using: .utf8, allowLossyConversion: false) else {
+            return nil
+        }
+        guard let events = EventList(data) else {
+            return nil
+        }
+        return events
+    }
+    
+    func saveEvents(withKey key: String = Constants.key) -> Bool {
+        guard let eventListAsString = self.toString() else {
+            return false
+        }
+        CloudManager.save(json: eventListAsString, withKey: key)
+        return true
+    }
+    
+    
     func asData() -> Data? {
         return self.toString()?.data(using: .utf8)
     }

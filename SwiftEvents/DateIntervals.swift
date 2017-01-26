@@ -8,14 +8,47 @@
 
 import Foundation
 
-//What kind of interval information is displayed
-struct TimeIntervals {
-    static let kSecond = 1
-    static let kMinute = 60
-    static let k15Minutes = 15 * 60
-    static let k30Minutes = 30 * 60
-    static let k60Minutes = 60 * 60
-
+enum RefreshRates {
+    case second
+    case minute
+    case fiveMinutes
+    case fifteenMinutes
+    case thirtyMinutes
+    case hour
+    func asSeconds() -> Int {
+        switch self {
+        case .second:
+            return 1
+        case .minute:
+            return 60
+        case .fiveMinutes:
+            return 5 * 60
+        case .fifteenMinutes:
+            return 15 * 60
+        case .thirtyMinutes:
+            return 30 * 60
+        case .hour:
+            return 60 * 60
+        }
+    }
+    static func from(seconds: Int) -> RefreshRates? {
+        switch(seconds) {
+        case 1:
+            return RefreshRates.second
+        case 60:
+            return RefreshRates.minute
+        case 300:
+            return RefreshRates.fiveMinutes
+        case 900:
+            return RefreshRates.fifteenMinutes
+        case 1800:
+            return RefreshRates.thirtyMinutes
+        case 3600:
+            return RefreshRates.hour
+        default:
+            return nil
+        }
+    }
 }
 enum DisplayInterval : String {
     case second

@@ -18,37 +18,35 @@ extension Date {
     func nextWith(gap: Int) -> Date? {
         switch gap {
         case 1:
-            return Gregorian.calendar.nextDate(after: self, matching: DateComponents(second: 0), matchingPolicy: .nextTime)
+            return Gregorian.calendar.nextDate(after: self, matching: DateComponents(second: 0), matchingPolicy: .nextTime) // nearest minute
         case 60:
-            return Gregorian.calendar.nextDate(after: self, matching: DateComponents(minute: 0), matchingPolicy: .nextTime)
+            return Gregorian.calendar.nextDate(after: self, matching: DateComponents(minute: 0), matchingPolicy: .nextTime) // nearest hour
         default:
-            return Gregorian.calendar.nextDate(after: self, matching: DateComponents(minute: gap), matchingPolicy: .nextTime)
+            return Gregorian.calendar.nextDate(after: self, matching: DateComponents(minute: gap), matchingPolicy: .nextTime) //next fraction of hour
         }
     }
 }
 
 struct NextTime {
-    static func with(date: Date, interval : Int = 1) -> Date {
+    static func with(date: Date, refreshRate : RefreshRates = RefreshRates.minute) -> Date {
         
-        switch interval {
-        case TimeIntervals.kSecond:
+        switch refreshRate {
+        case .second:
             return Date()
-        case TimeIntervals.kMinute:
+        case .minute:
             return date.nextWith(gap: 1)!
-
-        case 5:
+        case .fiveMinutes:
             let gap = nextPoint(date: date, points:[5,10,15,20,25,30,35,40,45,50,55,60])
             return date.nextWith(gap: gap)!
-        case 15:
+        case .fifteenMinutes:
             let gap = nextPoint(date: date, points:[15,30,45,60])
             return date.nextWith(gap: gap)!
-        case 30:
+        case .thirtyMinutes:
             let gap = nextPoint(date: date, points:[30,60])
             return date.nextWith(gap: gap)!
-        case 60:
+        case .hour:
             return date.nextHourShift!
-        default:
-            return date.nextWith(gap: 0)!
+            
         }
     }
     
@@ -63,5 +61,5 @@ struct NextTime {
         }
         return 0
     }
-
+    
 }

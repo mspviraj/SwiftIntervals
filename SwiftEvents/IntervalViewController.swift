@@ -10,7 +10,7 @@ import UIKit
 
 class IntervalViewController: UIViewController {
 
-    var selectedInterval = 1
+    var refreshRate = RefreshRates.minute
     
     @IBOutlet weak var oneSecondInterval: UIButton!
     
@@ -46,30 +46,30 @@ class IntervalViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    
-    @IBAction func intervalButtons(_ sender: UIButton) {
+    @IBAction func onInterval(_ sender: UIButton) {
         switch sender.tag {
         case 1:
-            interval(seconds:1)
+            refresh(rate: .second)
         case 2:
-            interval(seconds: TimeIntervals.kMinute)
+            refresh(rate: .minute)
         case 3:
-            interval(seconds: TimeIntervals.k15Minutes)
+            refresh(rate: .fiveMinutes)
         case 4:
-            interval(seconds: TimeIntervals.k30Minutes)
+            refresh(rate: .fifteenMinutes)
         case 5:
-            interval(seconds: TimeIntervals.k60Minutes)
+            refresh(rate: .thirtyMinutes)
+        case 6:
+            refresh(rate: .hour)
         default:
-            assertionFailure("Invalid time interval")
+            refresh(rate: .minute)
         }
     }
-
+    
     private struct Constants {
         static let updateIntervalSegue = "updateIntevalWithSegue"
     }
-    private func interval(seconds: Int) {
-        self.selectedInterval = seconds
-
+    private func refresh(rate: RefreshRates) {
+        self.refreshRate = rate
         self.performSegue(withIdentifier: Constants.updateIntervalSegue, sender: self)
         
     }

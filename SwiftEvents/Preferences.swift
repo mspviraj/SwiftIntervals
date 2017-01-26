@@ -13,8 +13,8 @@ struct Preferences : JSONSerializable, Glossy {
     var refreshInSeconds : Int?
     var lastCloudUpdate : String?
     
-    init(refreshInSeconds: Int = 60, lastCloudUpdate: Date = Date()) {
-        self.refreshInSeconds = refreshInSeconds
+    init(refreshRate: RefreshRates = RefreshRates.minute, lastCloudUpdate: Date = Date()) {
+        self.refreshInSeconds = refreshRate.asSeconds()
         self.lastCloudUpdate = DateEnum.stringFrom(date: lastCloudUpdate)!
     }
     

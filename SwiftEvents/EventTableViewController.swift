@@ -10,6 +10,8 @@ import UIKit
 
 class EventTableViewController: UITableViewController {
     
+    @IBOutlet weak var intervalButton: UIBarButtonItem!
+    
     var events = EventList()
     
     override func viewDidLoad() {
@@ -74,21 +76,40 @@ class EventTableViewController: UITableViewController {
     }
     
     @IBAction func updateInterval(segue: UIStoryboardSegue) {
-        if let selectedValue = (segue.source as? IntervalViewController)?.selectedInterval {
-            if updateInterval(to: selectedValue) {
+        if let refreshRate : RefreshRates = (segue.source as? IntervalViewController)?.refreshRate {
+            if updateInterval(to: refreshRate) {
                 startRefreshTimer()
             }
         }
     }
     
-    private func updateInterval(to: Int) -> Bool {
+    private func updateInterval(to: RefreshRates) -> Bool {
         var preferences = Preferences.get()
-        if preferences.refreshInSeconds! != to {
-            preferences.refreshInSeconds = to
-            preferences.save()
-            return true
+        if let currentRate : RefreshRates = RefreshRates.from(seconds: preferences.refreshInSeconds!) {
+            if currentRate != to {
+                preferences.refreshInSeconds = to.asSeconds()
+                preferences.save()
+                return true
+            }
         }
         return false
+    }
+    
+    private func updateCaptionTo(refreshRate : RefreshRates) {
+        switch refreshRate {
+        case .second:
+            self.intervalButton?.title = "1 Sec"
+        case .minute:
+            self.intervalButton?.title = "1 Min"
+        case .fiveMinutes:
+            self.intervalButton?.title = "5 Mins"
+        case .fifteenMinutes:
+            self.intervalButton?.title = "15 Mins"
+        case .thirtyMinutes:
+            self.intervalButton?.title = "30 Mins"
+        case .hour:
+            self.intervalButton?.title = "1 hr"
+        }
     }
     var timer : Timer? = nil
     
@@ -97,13 +118,18 @@ class EventTableViewController: UITableViewController {
             timer?.invalidate()
             timer = nil
         }
-        guard let refreshInterval : Int = Preferences.get().refreshInSeconds else {
+        guard let refreshSeconds : Int = Preferences.get().refreshInSeconds else {
             assertionFailure("Could not find refresh")
             return
         }
-        let timerDate = NextTime.with(date: Date(), interval: refreshInterval)
-        print("Timer will run at:\(timerDate) at interval:\(refreshInterval)")
-        timer = Timer.init(fire: timerDate, interval: Double(refreshInterval), repeats: true){ (timer) in
+        guard let refreshRate : RefreshRates = RefreshRates.from(seconds: refreshSeconds) else {
+            assertionFailure("Invalid refresh rate:\(refreshSeconds)")
+            return
+        }
+        updateCaptionTo(refreshRate: refreshRate)
+        let timerDate = NextTime.with(date: Date(), refreshRate: refreshRate)
+        print("Timer will run at:\(timerDate) at interval:\(refreshSeconds)")
+        timer = Timer.init(fire: timerDate, interval: Double(refreshSeconds), repeats: true){ (timer) in
             print("date:\(Date())")
             self.tableView.reloadData()
         }

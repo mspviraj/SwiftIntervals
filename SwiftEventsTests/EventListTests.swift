@@ -11,13 +11,16 @@ import XCTest
 
 class EventListTests: XCTestCase {
     
+    fileprivate let key = "EventsListTests"
+    
     override func setUp() {
         super.setUp()
+        CloudManager.delete(withKey: key)
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        CloudManager.delete(withKey: key)
         super.tearDown()
     }
     
@@ -66,7 +69,7 @@ class EventListTests: XCTestCase {
         let event = list.info(at: 100)
         XCTAssertNil(event)
     }
-
+    
     func testPerformanceExample() {
         // This is an example of a performance test case.
         let list = EventList()
@@ -82,4 +85,16 @@ class EventListTests: XCTestCase {
         }
     }
     
+    func testGetEvents() {
+        var eventList = EventList.getEvents(withKey: key)
+        XCTAssertNotNil(eventList)
+        XCTAssertTrue(eventList?.list.count == 1)
+        let event = Event()
+        eventList?.list.append(event.toString()!)
+        let save : Bool = (eventList?.saveEvents(withKey: key))!
+        XCTAssertTrue(save)
+        let result = EventList.getEvents(withKey: key)
+        XCTAssertNotNil(result)
+        XCTAssertEqual(result?.list.count, 2)
+    }
 }
