@@ -24,7 +24,7 @@ class NextTimeTests: XCTestCase {
     
     func test5() {
         let date = DateEnum.dateFrom(string: birthday)!
-        let nextTime = NextTime.with(date: date, interval: 5)
+        let nextTime = NextTime.with(date: date, refreshRate: RefreshRates.fiveMinutes)
         let calendar = Calendar.current
         let baseHour = calendar.component(.hour, from: date)
         let hour = calendar.component(.hour, from: nextTime)
@@ -36,7 +36,7 @@ class NextTimeTests: XCTestCase {
     
     func test15at10() {
         let date = DateEnum.dateFrom(string: "1960-12-19T20:10:00Z")!
-        let nextTime = NextTime.with(date: date, interval: 15)
+        let nextTime = NextTime.with(date: date, refreshRate: .fifteenMinutes)
         let calendar = Calendar.current
         let baseHour = calendar.component(.hour, from: date)
         let hour = calendar.component(.hour, from: nextTime)
@@ -49,7 +49,7 @@ class NextTimeTests: XCTestCase {
     
     func test15at26() {
         let date = DateEnum.dateFrom(string: "1960-12-19T20:26:00Z")!
-        let nextTime = NextTime.with(date: date, interval: 15)
+        let nextTime = NextTime.with(date: date, refreshRate: .fifteenMinutes)
         let calendar = Calendar.current
         let baseHour = calendar.component(.hour, from: date)
         let hour = calendar.component(.hour, from: nextTime)
@@ -62,7 +62,7 @@ class NextTimeTests: XCTestCase {
     
     func test15at33() {
         let date = DateEnum.dateFrom(string: "1960-12-19T20:33:00Z")!
-        let nextTime = NextTime.with(date: date, interval: 15)
+        let nextTime = NextTime.with(date: date, refreshRate:  .fifteenMinutes)
         let calendar = Calendar.current
         let baseHour = calendar.component(.hour, from: date)
         let hour = calendar.component(.hour, from: nextTime)

@@ -24,12 +24,12 @@ class CloudManagerTests: XCTestCase {
     }
     
     func testGetEvents() {
-        let events = CloudManager.getEvents(withKey: managerKey)
+        let events = EventList.getEvents(withKey: managerKey)
         XCTAssertNotNil(events)
-        let saved = CloudManager.save(events: events!, withKey: managerKey)
-        XCTAssertTrue(saved)
+        let saved = events?.saveEvents(withKey: managerKey)
+        XCTAssertTrue(saved!)
         XCTAssertNotNil(events)
-        let recalled = CloudManager.getEvents(withKey: managerKey)
+        let recalled = EventList.getEvents(withKey: managerKey)
         XCTAssertNotNil(recalled)
         print("event:\(events?.toJSON())")
         print("recall:\(recalled?.toJSON())")

@@ -39,6 +39,7 @@
 		B095EA5C1E37D343007F130F /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = B095EA5B1E37D343007F130F /* Preferences.swift */; };
 		B095EA5E1E37D8C3007F130F /* JSONUtilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B095EA5D1E37D8C3007F130F /* JSONUtilTests.swift */; };
 		B099F2FD1E38037B00FC3F93 /* PreferencesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B099F2FC1E38037B00FC3F93 /* PreferencesTest.swift */; };
+		B0A7AC891E39B2A30005A716 /* IntervalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7AC881E39B2A30005A716 /* IntervalViewController.swift */; };
 		B0C63C141E25DD4900D86AE9 /* MyNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C63C131E25DD4900D86AE9 /* MyNotificationCenter.swift */; };
 		B0C63C151E25DD4900D86AE9 /* MyNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C63C131E25DD4900D86AE9 /* MyNotificationCenter.swift */; };
 		B0C63C171E25EEFB00D86AE9 /* NotificationCenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C63C161E25EEFB00D86AE9 /* NotificationCenterTests.swift */; };
@@ -108,6 +109,7 @@
 		B095EA5B1E37D343007F130F /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		B095EA5D1E37D8C3007F130F /* JSONUtilTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONUtilTests.swift; sourceTree = "<group>"; };
 		B099F2FC1E38037B00FC3F93 /* PreferencesTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesTest.swift; sourceTree = "<group>"; };
+		B0A7AC881E39B2A30005A716 /* IntervalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntervalViewController.swift; sourceTree = "<group>"; };
 		B0C63C131E25DD4900D86AE9 /* MyNotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyNotificationCenter.swift; path = ../MyNotificationCenter.swift; sourceTree = "<group>"; };
 		B0C63C161E25EEFB00D86AE9 /* NotificationCenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCenterTests.swift; sourceTree = "<group>"; };
 		B0C63C181E26CBE900D86AE9 /* YearManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YearManager.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 		B099F2FE1E39003800FC3F93 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B0A7AC881E39B2A30005A716 /* IntervalViewController.swift */,
 				B0170DF51E355D9000028CC4 /* EventTableViewCell.swift */,
 				B0170DF21E355BE500028CC4 /* EventTableViewController.swift */,
 			);
@@ -354,6 +357,7 @@
 					B0E731D51E21B38C00160E37 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = EYE62TNDHZ;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					B0E731EB1E21B38C00160E37 = {
@@ -572,6 +576,7 @@
 				B092CC531E21B7BC000048FE /* DateEnum.swift in Sources */,
 				B0E731DE1E21B38C00160E37 /* DropboxViewController.swift in Sources */,
 				B095EA5C1E37D343007F130F /* Preferences.swift in Sources */,
+				B0A7AC891E39B2A30005A716 /* IntervalViewController.swift in Sources */,
 				B0E889DC1E3689AD00F1ECD7 /* EventTableViewController.swift in Sources */,
 				B007CF131E2F27450053F851 /* TimeManager.swift in Sources */,
 				B0C63C1E1E26D57D00D86AE9 /* CalenderManagerCodes.swift in Sources */,
@@ -758,11 +763,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = EYE62TNDHZ;
 				INFOPLIST_FILE = SwiftEvents/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.icodeforyou.com.SwiftEvents;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -773,6 +780,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = EYE62TNDHZ;
 				INFOPLIST_FILE = SwiftEvents/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

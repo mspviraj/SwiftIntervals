@@ -45,28 +45,5 @@ struct CloudManager {
         defaults.synchronize()
     }
     
-    static func getEvents(withKey key: String) -> EventList? {
-        let defaults = UserDefaults.standard
-        guard let content : String = defaults.object(forKey: key) as? String else {
-            return EventList()
-        }
-        print("\(content)")
-        guard let data = content.data(using: .utf8, allowLossyConversion: false) else {
-            return nil
-        }
-        guard let events = EventList(data) else {
-            return nil
-        }
-        return events
-    }
     
-    static func save(events: EventList, withKey key: String) -> Bool {
-        guard let eventListAsString = events.toString() else {
-            return false
-        }
-        let defaults = UserDefaults.standard
-        defaults.set(eventListAsString, forKey: key)
-        defaults.synchronize()
-        return true
-    }
 }
