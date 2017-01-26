@@ -11,7 +11,6 @@ import UIKit
 class EventTableViewController: UITableViewController {
     
     var events = EventList()
-    var preferences = Preferences.get()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +34,7 @@ class EventTableViewController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        //every(minutes: 1)
+        startRefreshTimer()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -74,15 +73,37 @@ class EventTableViewController: UITableViewController {
         return cell
     }
     
+    @IBAction func updateInterval(segue: UIStoryboardSegue) {
+        if let selectedValue = (segue.source as? IntervalViewController)?.selectedInterval {
+            if updateInterval(to: selectedValue) {
+                startRefreshTimer()
+            }
+        }
+    }
     
+    private func updateInterval(to: Int) -> Bool {
+        var preferences = Preferences.get()
+        if preferences.refreshInSeconds! != to {
+            preferences.refreshInSeconds = to
+            preferences.save()
+            return true
+        }
+        return false
+    }
     var timer : Timer? = nil
     
     public func startRefreshTimer() {
-        let refresh : Int = preferences.refreshInSeconds!
-        let timerDate = NextTime.with(date: Date(), interval: refresh)
-        print("Timer will run at:\(timerDate)")
-        let interval : Double = refresh == 0 ? 1.0 : Double(60 * refresh)
-        timer = Timer.init(fire: timerDate, interval: interval, repeats: true){ (timer) in
+        if timer != nil {
+            timer?.invalidate()
+            timer = nil
+        }
+        guard let refreshInterval : Int = Preferences.get().refreshInSeconds else {
+            assertionFailure("Could not find refresh")
+            return
+        }
+        let timerDate = NextTime.with(date: Date(), interval: refreshInterval)
+        print("Timer will run at:\(timerDate) at interval:\(refreshInterval)")
+        timer = Timer.init(fire: timerDate, interval: Double(refreshInterval), repeats: true){ (timer) in
             print("date:\(Date())")
             self.tableView.reloadData()
         }

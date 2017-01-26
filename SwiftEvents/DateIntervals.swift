@@ -9,6 +9,14 @@
 import Foundation
 
 //What kind of interval information is displayed
+struct TimeIntervals {
+    static let kSecond = 1
+    static let kMinute = 60
+    static let k15Minutes = 15 * 60
+    static let k30Minutes = 30 * 60
+    static let k60Minutes = 60 * 60
+
+}
 enum DisplayInterval : String {
     case second
     case minute
