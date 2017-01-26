@@ -17,8 +17,6 @@ extension Date {
     }
     func nextWith(gap: Int) -> Date? {
         switch gap {
-        case 0:
-            return Date()
         case 1:
             return Gregorian.calendar.nextDate(after: self, matching: DateComponents(second: 0), matchingPolicy: .nextTime)
         case 60:
@@ -33,9 +31,9 @@ struct NextTime {
     static func with(date: Date, interval : Int = 1) -> Date {
         
         switch interval {
-        case 0:
-            return date.nextWith(gap: 0)!
-        case 1:
+        case TimeIntervals.kSecond:
+            return Date()
+        case TimeIntervals.kMinute:
             return date.nextWith(gap: 1)!
 
         case 5:
