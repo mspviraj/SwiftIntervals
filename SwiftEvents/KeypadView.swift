@@ -13,6 +13,26 @@ class KeypadView: UIView {
 
     @IBOutlet var view: UIView!
     
+    @IBOutlet weak var labelView: UILabel!
+    @IBOutlet weak var oneButton: UIButton!
+    @IBOutlet weak var twoButton: UIButton!
+    @IBOutlet weak var threeButton: UIButton!
+    @IBOutlet weak var fourButton: UIButton!
+    @IBOutlet weak var fiveButton: UIButton!
+    @IBOutlet weak var sixButton: UIButton!
+    @IBOutlet weak var sevenButton: UIButton!
+    @IBOutlet weak var eightButton: UIButton!
+    @IBOutlet weak var nineButton: UIButton!
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var zeroButton: UIButton!
+    @IBOutlet weak var clearButton: UIButton!
+    @IBOutlet weak var submitButton: UIButton!
+    
+    @IBOutlet weak var amPmStack: UIStackView!
+    @IBOutlet weak var amButton: UIButton!
+    @IBOutlet weak var pmButton: UIButton!
+    
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         xibSetUp()
