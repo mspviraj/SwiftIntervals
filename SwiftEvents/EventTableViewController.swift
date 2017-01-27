@@ -8,20 +8,23 @@
 
 import UIKit
 
-class EventTableViewController: UITableViewController {
+class EventTableViewController: UITableViewController, UIPopoverPresentationControllerDelegate {
+    private struct Constants {
+        static let popoverSegue = "New Event"
+    }
     
     @IBOutlet weak var intervalButton: UIBarButtonItem!
     
-    var events = EventList()
+    var events = EventList.getEvents()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        let cloudManager = CloudManager()
-//        guard let loadEvents = cloudManager.getEvents(withKey: "Events") else {
-//            assertionFailure("Could not load events")
-//            return;
-//        }
-//        events = loadEvents
+        //        let cloudManager = CloudManager()
+        //        guard let loadEvents = cloudManager.getEvents(withKey: "Events") else {
+        //            assertionFailure("Could not load events")
+        //            return;
+        //        }
+        //        events = loadEvents
         
         
         tableView.rowHeight = 78
@@ -58,14 +61,14 @@ class EventTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return events.list.count
+        return events!.list.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EventCell", for: indexPath) as! EventTableViewCell
         
         // Configure the cell...
-        guard let eventInformation = events.info(at: indexPath.row) else {
+        guard let eventInformation = events?.info(at: indexPath.row) else {
             cell.name.text = "Invalid event"
             return cell
         }
@@ -75,6 +78,29 @@ class EventTableViewController: UITableViewController {
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination
+        
+        if segue.identifier == Constants.popoverSegue {
+            if let newevent = destination as? AddEventTableViewController {
+                if let popoverPresentationController = newevent.popoverPresentationController {
+                    popoverPresentationController.delegate = self //Makes func presentationController get called
+                }
+            }
+        }
+    }
+    
+    //Control the presentation style on iPhone vs iPad for popovers
+    func presentationController(_ controller: UIPresentationController,
+                                viewControllerForAdaptivePresentationStyle style: UIModalPresentationStyle) -> UIViewController? {
+        if style == .fullScreen {
+            let naviationController = UINavigationController(rootViewController: controller.presentedViewController)
+            return naviationController
+        } else {
+            return nil
+        }
+    }
+    
     @IBAction func updateInterval(segue: UIStoryboardSegue) {
         if let refreshRate : RefreshRates = (segue.source as? IntervalViewController)?.refreshRate {
             if updateInterval(to: refreshRate) {
@@ -82,6 +108,7 @@ class EventTableViewController: UITableViewController {
             }
         }
     }
+    
     
     private func updateInterval(to: RefreshRates) -> Bool {
         var preferences = Preferences.get()

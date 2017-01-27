@@ -39,6 +39,9 @@
 		B095EA5C1E37D343007F130F /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = B095EA5B1E37D343007F130F /* Preferences.swift */; };
 		B095EA5E1E37D8C3007F130F /* JSONUtilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B095EA5D1E37D8C3007F130F /* JSONUtilTests.swift */; };
 		B099F2FD1E38037B00FC3F93 /* PreferencesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B099F2FC1E38037B00FC3F93 /* PreferencesTest.swift */; };
+		B099F3041E3AAF5A00FC3F93 /* MonthTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B099F3021E3AAF5A00FC3F93 /* MonthTableViewCell.xib */; };
+		B099F30A1E3AB9C700FC3F93 /* AddEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B099F3091E3AB9C700FC3F93 /* AddEventTableViewCell.swift */; };
+		B099F30C1E3ABA2F00FC3F93 /* AddEventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B099F30B1E3ABA2F00FC3F93 /* AddEventTableViewController.swift */; };
 		B0A7AC891E39B2A30005A716 /* IntervalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7AC881E39B2A30005A716 /* IntervalViewController.swift */; };
 		B0C63C141E25DD4900D86AE9 /* MyNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C63C131E25DD4900D86AE9 /* MyNotificationCenter.swift */; };
 		B0C63C151E25DD4900D86AE9 /* MyNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C63C131E25DD4900D86AE9 /* MyNotificationCenter.swift */; };
@@ -109,6 +112,9 @@
 		B095EA5B1E37D343007F130F /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		B095EA5D1E37D8C3007F130F /* JSONUtilTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONUtilTests.swift; sourceTree = "<group>"; };
 		B099F2FC1E38037B00FC3F93 /* PreferencesTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesTest.swift; sourceTree = "<group>"; };
+		B099F3021E3AAF5A00FC3F93 /* MonthTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MonthTableViewCell.xib; sourceTree = "<group>"; };
+		B099F3091E3AB9C700FC3F93 /* AddEventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEventTableViewCell.swift; sourceTree = "<group>"; };
+		B099F30B1E3ABA2F00FC3F93 /* AddEventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEventTableViewController.swift; sourceTree = "<group>"; };
 		B0A7AC881E39B2A30005A716 /* IntervalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntervalViewController.swift; sourceTree = "<group>"; };
 		B0C63C131E25DD4900D86AE9 /* MyNotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyNotificationCenter.swift; path = ../MyNotificationCenter.swift; sourceTree = "<group>"; };
 		B0C63C161E25EEFB00D86AE9 /* NotificationCenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCenterTests.swift; sourceTree = "<group>"; };
@@ -193,6 +199,8 @@
 				B0A7AC881E39B2A30005A716 /* IntervalViewController.swift */,
 				B0170DF51E355D9000028CC4 /* EventTableViewCell.swift */,
 				B0170DF21E355BE500028CC4 /* EventTableViewController.swift */,
+				B099F3091E3AB9C700FC3F93 /* AddEventTableViewCell.swift */,
+				B099F30B1E3ABA2F00FC3F93 /* AddEventTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -244,6 +252,7 @@
 				B099F2FE1E39003800FC3F93 /* Controllers */,
 				B0E731E41E21B38C00160E37 /* LaunchScreen.storyboard */,
 				B0E731DF1E21B38C00160E37 /* Main.storyboard */,
+				B099F3021E3AAF5A00FC3F93 /* MonthTableViewCell.xib */,
 			);
 			path = SwiftEvents;
 			sourceTree = "<group>";
@@ -399,6 +408,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B099F3041E3AAF5A00FC3F93 /* MonthTableViewCell.xib in Resources */,
 				B0E731E61E21B38C00160E37 /* LaunchScreen.storyboard in Resources */,
 				B0E731E31E21B38C00160E37 /* Assets.xcassets in Resources */,
 				B0E731E11E21B38C00160E37 /* Main.storyboard in Resources */,
@@ -571,6 +581,7 @@
 				B095EA581E37B73E007F130F /* EventList.swift in Sources */,
 				B0942A191E23D970002EECEE /* JSONUtil.swift in Sources */,
 				B0170DFC1E36019B00028CC4 /* NextTime.swift in Sources */,
+				B099F30C1E3ABA2F00FC3F93 /* AddEventTableViewController.swift in Sources */,
 				B092CC561E21B7CD000048FE /* DateIntervals.swift in Sources */,
 				B0E889D81E367A4200F1ECD7 /* CloudManager.swift in Sources */,
 				B092CC531E21B7BC000048FE /* DateEnum.swift in Sources */,
@@ -579,6 +590,7 @@
 				B0A7AC891E39B2A30005A716 /* IntervalViewController.swift in Sources */,
 				B0E889DC1E3689AD00F1ECD7 /* EventTableViewController.swift in Sources */,
 				B007CF131E2F27450053F851 /* TimeManager.swift in Sources */,
+				B099F30A1E3AB9C700FC3F93 /* AddEventTableViewCell.swift in Sources */,
 				B0C63C1E1E26D57D00D86AE9 /* CalenderManagerCodes.swift in Sources */,
 				B0170DF61E355D9000028CC4 /* EventTableViewCell.swift in Sources */,
 				B0E731DA1E21B38C00160E37 /* AppDelegate.swift in Sources */,
