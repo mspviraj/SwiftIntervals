@@ -21,6 +21,10 @@
 		B0357B411E3BB14000683F3C /* MonthKeypad.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0357B401E3BB14000683F3C /* MonthKeypad.swift */; };
 		B0357B431E3BB97400683F3C /* MonthKeypad.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0357B421E3BB97400683F3C /* MonthKeypad.xib */; };
 		B0357B491E3BD42100683F3C /* Keypad.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0357B481E3BD42100683F3C /* Keypad.xib */; };
+		B0357B4B1E3BD7CD00683F3C /* Keypad.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0357B4A1E3BD7CD00683F3C /* Keypad.swift */; };
+		B0357B4D1E3BDADA00683F3C /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0357B4C1E3BDADA00683F3C /* AddEventViewController.swift */; };
+		B0357B4F1E3BEDA200683F3C /* KeypadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0357B4E1E3BEDA200683F3C /* KeypadView.swift */; };
+		B0357B531E3BEE0500683F3C /* KeypadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0357B521E3BEE0500683F3C /* KeypadView.xib */; };
 		B05A162E1E2845020053518E /* DayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05A162D1E2845020053518E /* DayManager.swift */; };
 		B05A162F1E2845020053518E /* DayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05A162D1E2845020053518E /* DayManager.swift */; };
 		B05A16311E2845200053518E /* YearManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05A16301E2845200053518E /* YearManagerTests.swift */; };
@@ -103,6 +107,10 @@
 		B0357B401E3BB14000683F3C /* MonthKeypad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthKeypad.swift; sourceTree = "<group>"; };
 		B0357B421E3BB97400683F3C /* MonthKeypad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MonthKeypad.xib; sourceTree = "<group>"; };
 		B0357B481E3BD42100683F3C /* Keypad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Keypad.xib; sourceTree = "<group>"; };
+		B0357B4A1E3BD7CD00683F3C /* Keypad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keypad.swift; sourceTree = "<group>"; };
+		B0357B4C1E3BDADA00683F3C /* AddEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
+		B0357B4E1E3BEDA200683F3C /* KeypadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeypadView.swift; sourceTree = "<group>"; };
+		B0357B521E3BEE0500683F3C /* KeypadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeypadView.xib; sourceTree = "<group>"; };
 		B05A162D1E2845020053518E /* DayManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayManager.swift; sourceTree = "<group>"; };
 		B05A16301E2845200053518E /* YearManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YearManagerTests.swift; sourceTree = "<group>"; };
 		B05A16321E28462C0053518E /* DayManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayManagerTests.swift; sourceTree = "<group>"; };
@@ -210,6 +218,10 @@
 				B0357B401E3BB14000683F3C /* MonthKeypad.swift */,
 				B0357B421E3BB97400683F3C /* MonthKeypad.xib */,
 				B0357B481E3BD42100683F3C /* Keypad.xib */,
+				B0357B4A1E3BD7CD00683F3C /* Keypad.swift */,
+				B0357B4C1E3BDADA00683F3C /* AddEventViewController.swift */,
+				B0357B4E1E3BEDA200683F3C /* KeypadView.swift */,
+				B0357B521E3BEE0500683F3C /* KeypadView.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -418,6 +430,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B099F3041E3AAF5A00FC3F93 /* MonthTableViewCell.xib in Resources */,
+				B0357B531E3BEE0500683F3C /* KeypadView.xib in Resources */,
 				B0E731E61E21B38C00160E37 /* LaunchScreen.storyboard in Resources */,
 				B0E731E31E21B38C00160E37 /* Assets.xcassets in Resources */,
 				B0357B491E3BD42100683F3C /* Keypad.xib in Resources */,
@@ -587,10 +600,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B05A162E1E2845020053518E /* DayManager.swift in Sources */,
+				B0357B4D1E3BDADA00683F3C /* AddEventViewController.swift in Sources */,
 				B0357B411E3BB14000683F3C /* MonthKeypad.swift in Sources */,
 				B0756B751E236EF800C267A2 /* Event.swift in Sources */,
 				B0C63C141E25DD4900D86AE9 /* MyNotificationCenter.swift in Sources */,
 				B095EA581E37B73E007F130F /* EventList.swift in Sources */,
+				B0357B4B1E3BD7CD00683F3C /* Keypad.swift in Sources */,
 				B0942A191E23D970002EECEE /* JSONUtil.swift in Sources */,
 				B0170DFC1E36019B00028CC4 /* NextTime.swift in Sources */,
 				B099F30C1E3ABA2F00FC3F93 /* AddEventTableViewController.swift in Sources */,
@@ -598,6 +613,7 @@
 				B0E889D81E367A4200F1ECD7 /* CloudManager.swift in Sources */,
 				B092CC531E21B7BC000048FE /* DateEnum.swift in Sources */,
 				B0E731DE1E21B38C00160E37 /* DropboxViewController.swift in Sources */,
+				B0357B4F1E3BEDA200683F3C /* KeypadView.swift in Sources */,
 				B095EA5C1E37D343007F130F /* Preferences.swift in Sources */,
 				B0A7AC891E39B2A30005A716 /* IntervalViewController.swift in Sources */,
 				B0E889DC1E3689AD00F1ECD7 /* EventTableViewController.swift in Sources */,
