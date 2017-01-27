@@ -18,6 +18,9 @@
 		B0170DFC1E36019B00028CC4 /* NextTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0170DFB1E36019B00028CC4 /* NextTime.swift */; };
 		B0170DFF1E360C3300028CC4 /* NextTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0170DFE1E360C3300028CC4 /* NextTimeTests.swift */; };
 		B0170E001E360CF000028CC4 /* NextTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0170DFB1E36019B00028CC4 /* NextTime.swift */; };
+		B0357B411E3BB14000683F3C /* MonthKeypad.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0357B401E3BB14000683F3C /* MonthKeypad.swift */; };
+		B0357B431E3BB97400683F3C /* MonthKeypad.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0357B421E3BB97400683F3C /* MonthKeypad.xib */; };
+		B0357B491E3BD42100683F3C /* Keypad.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0357B481E3BD42100683F3C /* Keypad.xib */; };
 		B05A162E1E2845020053518E /* DayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05A162D1E2845020053518E /* DayManager.swift */; };
 		B05A162F1E2845020053518E /* DayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05A162D1E2845020053518E /* DayManager.swift */; };
 		B05A16311E2845200053518E /* YearManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05A16301E2845200053518E /* YearManagerTests.swift */; };
@@ -97,6 +100,9 @@
 		B0170DF51E355D9000028CC4 /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		B0170DFB1E36019B00028CC4 /* NextTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextTime.swift; sourceTree = "<group>"; };
 		B0170DFE1E360C3300028CC4 /* NextTimeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextTimeTests.swift; sourceTree = "<group>"; };
+		B0357B401E3BB14000683F3C /* MonthKeypad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthKeypad.swift; sourceTree = "<group>"; };
+		B0357B421E3BB97400683F3C /* MonthKeypad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MonthKeypad.xib; sourceTree = "<group>"; };
+		B0357B481E3BD42100683F3C /* Keypad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Keypad.xib; sourceTree = "<group>"; };
 		B05A162D1E2845020053518E /* DayManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayManager.swift; sourceTree = "<group>"; };
 		B05A16301E2845200053518E /* YearManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YearManagerTests.swift; sourceTree = "<group>"; };
 		B05A16321E28462C0053518E /* DayManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayManagerTests.swift; sourceTree = "<group>"; };
@@ -201,6 +207,9 @@
 				B0170DF21E355BE500028CC4 /* EventTableViewController.swift */,
 				B099F3091E3AB9C700FC3F93 /* AddEventTableViewCell.swift */,
 				B099F30B1E3ABA2F00FC3F93 /* AddEventTableViewController.swift */,
+				B0357B401E3BB14000683F3C /* MonthKeypad.swift */,
+				B0357B421E3BB97400683F3C /* MonthKeypad.xib */,
+				B0357B481E3BD42100683F3C /* Keypad.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -411,6 +420,8 @@
 				B099F3041E3AAF5A00FC3F93 /* MonthTableViewCell.xib in Resources */,
 				B0E731E61E21B38C00160E37 /* LaunchScreen.storyboard in Resources */,
 				B0E731E31E21B38C00160E37 /* Assets.xcassets in Resources */,
+				B0357B491E3BD42100683F3C /* Keypad.xib in Resources */,
+				B0357B431E3BB97400683F3C /* MonthKeypad.xib in Resources */,
 				B0E731E11E21B38C00160E37 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -576,6 +587,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B05A162E1E2845020053518E /* DayManager.swift in Sources */,
+				B0357B411E3BB14000683F3C /* MonthKeypad.swift in Sources */,
 				B0756B751E236EF800C267A2 /* Event.swift in Sources */,
 				B0C63C141E25DD4900D86AE9 /* MyNotificationCenter.swift in Sources */,
 				B095EA581E37B73E007F130F /* EventList.swift in Sources */,
