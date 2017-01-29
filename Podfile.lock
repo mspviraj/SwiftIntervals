@@ -5,12 +5,14 @@ PODS:
   - SwiftDate (4.0.11)
   - SwiftyDropbox (4.1.1):
     - Alamofire (~> 4.0.1)
+  - SwiftyPickerPopover (2.4.1)
 
 DEPENDENCIES:
   - ExpandableDatePicker
   - Gloss
   - SwiftDate (~> 4.0)
   - SwiftyDropbox
+  - SwiftyPickerPopover
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
@@ -18,7 +20,8 @@ SPEC CHECKSUMS:
   Gloss: ec49584b2e8144e39810b6db6285433316e0c1c7
   SwiftDate: a36d5ce7c86bed3ed92b583ccbf15045f374ac65
   SwiftyDropbox: dfcd4d308d32d74729255b48833db61acdfb9c23
+  SwiftyPickerPopover: fe139ca1bf1757393e3055b97af3ab659b7a4246
 
-PODFILE CHECKSUM: 45096a3d4a07fbc29687ab3ddadc4140cb3af9ed
+PODFILE CHECKSUM: 4811e3d152e9c8f15cb6cabbfa8d7e7b1d3a9d9f
 
 COCOAPODS: 1.2.0

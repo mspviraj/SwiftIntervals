@@ -6,6 +6,7 @@ def myPods
     pod 'SwiftyDropbox'       # dropbox pod
     pod 'Gloss'               # JSON pod
     pod 'ExpandableDatePicker' # date/Time/TimeZone picker
+    pod 'SwiftyPickerPopover'
 end
 
 target 'SwiftEvents' do
