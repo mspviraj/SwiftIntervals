@@ -28,6 +28,8 @@ struct Event : Decodable, JSONSerializable, Glossy {
     let start : String
     let finish : String
     let displayInterval : String
+    var startDate : Date { get { return DateEnum.dateFrom(string: start)! }}
+    var finishDate : Date { get { return DateEnum.dateFrom(string: finish)! }}
     
 //    private var intervalType : DateEnum {
 //        get {
@@ -48,7 +50,7 @@ struct Event : Decodable, JSONSerializable, Glossy {
         self.displayInterval = "minute"
     }
     
-    init?(name: String, startTime: String, endTime: String = DateEnum.dateWildCard) {
+    init?(name: String, startTime: String = DateEnum.stringFrom(date: Date())!, endTime: String = DateEnum.dateWildCard) {
         self.name = name
         
         guard DateEnum.dateFrom(string: startTime) != nil else {

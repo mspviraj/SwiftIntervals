@@ -31,6 +31,9 @@ class AddEventViewController: UIViewController {
 
     private func loadKeypad() {
         let keypad = KeypadView()
+        keypad.disabled = [1,4]
+        keypad.captions = [2:"X", 9:"Y"]
+        keypad.hideAmPm = true
         self.paletView.addSubview(keypad)
     }
     /*

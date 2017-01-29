@@ -21,9 +21,36 @@ enum DateEnum {
     case invalid
     
     static let utcFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
+    static let dateFormat = "yyyy-MMM-dd"
+    static let timeFormat = "h:mm:ss a z"
+    
     
     static let dateWildCard = "*"
     
+    static func display(_ date : Date? = Date(),
+                        format: String = dateFormat + " " + timeFormat,
+                        timeZone: TimeZone = TimeZone.current) -> (String?, TimeZone) {
+        guard let date = date else {
+            return (nil, timeZone)
+        }
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+        dateFormatter.timeZone = timeZone
+        return (dateFormatter.string(from: date), timeZone)
+    }
+    
+    static func displayTime(_ date : Date? = Date(),
+                            timeZone: TimeZone = TimeZone.current) -> (caption: String?, timeZone: TimeZone) {
+        return display(date, format: timeFormat, timeZone: timeZone)
+    }
+    
+    static func displayDate(_ date : Date? = Date(),
+                            timeZone: TimeZone = TimeZone.current) -> (caption: String?, timeZone: TimeZone) {
+        return display(date, format: dateFormat, timeZone: timeZone)
+    }
+
+    
+
     static func stringFrom(date : Date?) -> String? {
         guard let date = date else {
             return nil

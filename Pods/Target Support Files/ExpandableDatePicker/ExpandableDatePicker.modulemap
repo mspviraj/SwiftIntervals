@@ -1,0 +1,6 @@
+framework module ExpandableDatePicker {
+  umbrella header "ExpandableDatePicker-umbrella.h"
+
+  export *
+  module * { export * }
+}
