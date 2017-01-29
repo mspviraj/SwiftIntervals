@@ -61,6 +61,7 @@
 		B0DD67311E3D4A3500162DE0 /* NewEventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DD67301E3D4A3500162DE0 /* NewEventTableViewController.swift */; };
 		B0DD67351E3D4F2600162DE0 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DD67341E3D4F2600162DE0 /* EventTableViewCell.swift */; };
 		B0DD67371E3D4FB900162DE0 /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DD67361E3D4FB900162DE0 /* TextTableViewCell.swift */; };
+		B0DD673B1E3E989800162DE0 /* EventWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DD673A1E3E989800162DE0 /* EventWrapper.swift */; };
 		B0E731DA1E21B38C00160E37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E731D91E21B38C00160E37 /* AppDelegate.swift */; };
 		B0E731DC1E21B38C00160E37 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E731DB1E21B38C00160E37 /* FirstViewController.swift */; };
 		B0E731DE1E21B38C00160E37 /* DropboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E731DD1E21B38C00160E37 /* DropboxViewController.swift */; };
@@ -140,6 +141,7 @@
 		B0DD67301E3D4A3500162DE0 /* NewEventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewEventTableViewController.swift; sourceTree = "<group>"; };
 		B0DD67341E3D4F2600162DE0 /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		B0DD67361E3D4FB900162DE0 /* TextTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
+		B0DD673A1E3E989800162DE0 /* EventWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventWrapper.swift; sourceTree = "<group>"; };
 		B0E731D61E21B38C00160E37 /* SwiftEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0E731D91E21B38C00160E37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0E731DB1E21B38C00160E37 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -290,6 +292,7 @@
 				B0E731E41E21B38C00160E37 /* LaunchScreen.storyboard */,
 				B0E731DF1E21B38C00160E37 /* Main.storyboard */,
 				B099F3021E3AAF5A00FC3F93 /* MonthTableViewCell.xib */,
+				B0DD673A1E3E989800162DE0 /* EventWrapper.swift */,
 			);
 			path = SwiftEvents;
 			sourceTree = "<group>";
@@ -625,6 +628,7 @@
 				B0357B4B1E3BD7CD00683F3C /* Keypad.swift in Sources */,
 				B0942A191E23D970002EECEE /* JSONUtil.swift in Sources */,
 				B0170DFC1E36019B00028CC4 /* NextTime.swift in Sources */,
+				B0DD673B1E3E989800162DE0 /* EventWrapper.swift in Sources */,
 				B099F30C1E3ABA2F00FC3F93 /* AddEventTableViewController.swift in Sources */,
 				B0C2397F1E3C58D700D93594 /* FromKeyPad.swift in Sources */,
 				B092CC561E21B7CD000048FE /* DateIntervals.swift in Sources */,

@@ -22,12 +22,29 @@ struct EventInfo {
     }
     
 }
+fileprivate enum Constants {
+    static let keyName = "name"
+    static let keyStart = "start"
+    static let keyStartTimeZone = "startTimeZone"
+    static let keyFinish = "finish"
+    static let keyFinishTimeZone = "finishTimeZone"
+    static let keyDisplayInterval = "displayInterval"
+}
+
+extension TimeZone {
+    public static var asString : String {
+        return TimeZone.current.abbreviation() ?? "UTC"
+    }
+}
 
 struct Event : Decodable, JSONSerializable, Glossy {
     let name : String
     let start : String
+    let startTimeZone: String
     let finish : String
+    let finishTimeZone: String
     let displayInterval : String
+    
     var startDate : Date { get { return DateEnum.dateFrom(string: start)! }}
     var finishDate : Date { get { return DateEnum.dateFrom(string: finish)! }}
     
@@ -46,7 +63,9 @@ struct Event : Decodable, JSONSerializable, Glossy {
     init() {
         self.name = "First used application"
         self.start = DateEnum.stringFrom(date: Date())!
+        self.startTimeZone = TimeZone.asString
         self.finish = DateEnum.dateWildCard
+        self.finishTimeZone = TimeZone.current.abbreviation() ?? "UTC"
         self.displayInterval = "minute"
     }
     
@@ -67,7 +86,7 @@ struct Event : Decodable, JSONSerializable, Glossy {
     }
     
     init?(json: JSON) {
-        guard let eventName : String = "name" <~~ json else {
+        guard let eventName : String = Constants.keyName <~~ json else {
             return nil
         }
         self.name = eventName

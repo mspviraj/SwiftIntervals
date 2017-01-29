@@ -14,6 +14,20 @@ extension Date {
     }
 }
 
+extension String {
+    private enum Formats {
+        static let utc  = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
+        static let date = "yyyy-MMM-dd"
+        static let time = "h:mm:ss a z"
+        static let full = "yyyy-MMM-dd h:mm:ss a z"
+    }
+    public func display(_ timeZone : TimeZone = TimeZone.current, format: String = Formats.full) {
+        
+    }
+    
+    public var asDate : String? { }
+    
+}
 enum DateEnum {
     case since
     case until

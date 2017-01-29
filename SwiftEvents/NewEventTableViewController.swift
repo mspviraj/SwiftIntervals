@@ -7,38 +7,38 @@
 //
 
 import UIKit
-import ExpandableDatePicker
 import SwiftyPickerPopover
+import ExpandableDatePicker
 
 class NewEventTableViewController: UITableViewController, ExpandableDatePicker {
     
     private struct Constants {
         static let textCell = "TextCell"
         static let basicCell = "BasicCell"
-        static let captionCell = "CaptionCell"
-        enum cellPurpose : Int {
-            case eventCaption = 0
-            case eventTextField
-            case startCaption
-            case startingDate
-            case startingTime
-            case endCaption
-            case elapsedOption
-            case endingDate
-            case endingTime
-            case submit
-        }
+        static let sectionHeaders = ["Event Caption", "Start Time", "End Time"]
+        static let sectionEvent = 0
+        static let sectionStart = 1
+        static let sectionEnd = 2
+        static let sectionSubmit = 3
+        static let rowEventCaption = IndexPath(row: 0, section: 0)
+        static let rowStartDate = IndexPath(row: 0, section: 1)
+        static let rowStartTime = IndexPath(row: 1, section: 1)
+        static let rowStartTimeZone = IndexPath(row: 2, section: 1)
+        static let rowEndIntervalOption = IndexPath(row: 3, section: 1)
+        static let rowEndDate = IndexPath(row: 0, section: 2)
+        static let rowEndTime = IndexPath(row: 1, section: 2)
+        static let rowEndTimeZone = IndexPath(row: 2, section: 2)
+        static let rowSubmit = IndexPath(row: 0, section: 3)
     }
     
+    // Part of ExpandableDatePicker protocol
     var edpIndexPath: IndexPath?
     var edpShowTimeZoneRow: Bool = true
-    
-    fileprivate var rowThatTogglesDatePicker: Int!
-    
+
     fileprivate var selectedDate = Date()
     fileprivate var selectedTimeZone = TimeZone.autoupdatingCurrent
     
-    private var event = Event(name: "Quick Entry")
+    private var event = Event(name: "Quick Entry")!
     private var timeZone = TimeZone.current
     
     override func viewDidLoad() {
@@ -60,129 +60,73 @@ class NewEventTableViewController: UITableViewController, ExpandableDatePicker {
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 4
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10 + edpDatePickerRowsShowing
+        switch section {
+        case Constants.sectionEvent: return 1
+        case Constants.sectionStart: return 3
+        case Constants.sectionEnd: return 4
+        case Constants.sectionSubmit: return 1
+        default: return 0
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if edpShouldShowDatePicker(at: indexPath) {
-            let cell = ExpandableDatePickerCell.reusableCell(for: indexPath, in: tableView)
-            let mode : UIDatePickerMode = (indexPath.row == 3 || indexPath.row == 7) ? .date : .time
-            cell.datePicker.datePickerMode = mode
-            cell.onDateChanged = {
-                [unowned self] date in
-                self.selectedDate = date
-                self.tableView.reloadRows(at: [self.edpLabelIndexPath!], with: .automatic)
-            }
-            
-            cell.datePicker.date = selectedDate
-            
-            return cell
-        } else if edpShouldShowTimeZoneRow(at: indexPath) {
-            return ExpandableDatePickerTimeZoneCell.reusableCell(for: indexPath, in: tableView, timeZone: selectedTimeZone)
+        switch indexPath.section {
+        case Constants.sectionEvent:
+            return eventCell(indexPath: indexPath)
+        case Constants.sectionStart:
+            return startCells(indexPath: indexPath)
+        default:
+            return UITableViewCell()
         }
-        
-        if indexPath.row == Constants.cellPurpose.eventCaption.rawValue {
-            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.captionCell, for: indexPath)
-            cell.textLabel?.text = "Event Caption"
-            return cell
-        }
-        
-        if indexPath.row == Constants.cellPurpose.eventTextField.rawValue {
-            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.textCell, for: indexPath) as! TextTableViewCell
-            cell.textLabel?.text = event?.name
-            return cell
-        }
-        
-        if indexPath.row == Constants.cellPurpose.startCaption.rawValue {
-            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.captionCell, for: indexPath)
-            cell.textLabel?.text = "Start Time"
-            return cell
-        }
-        
-        if indexPath.row == Constants.cellPurpose.startingDate.rawValue {
-            let dateCell = ExpandableDatePickerSelectionCell.reusableCell(for: indexPath, in: tableView)
-            dateCell.textLabel?.textAlignment = .center
-            let dateResult = DateEnum.displayDate(event?.startDate, timeZone: timeZone)
-            dateCell.textLabel?.text = dateResult.caption
-            return dateCell
-        }
-        
-        if indexPath.row == Constants.cellPurpose.startingTime.rawValue {
-            let timeCell = ExpandableDatePickerSelectionCell.reusableCell(for: indexPath, in: tableView)
-            timeCell.textLabel?.textAlignment = .right
-            let timeResult = DateEnum.displayTime(event?.startDate, timeZone: timeZone)
-            timeCell.textLabel?.text = timeResult.caption
-            return timeCell
-        }
-        
-        if indexPath.row == Constants.cellPurpose.endCaption.rawValue {
-            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.captionCell, for: indexPath)
-            cell.textLabel?.text = "Finish Time"
-            return cell
-        }
-        
-        if indexPath.row == Constants.cellPurpose.elapsedOption.rawValue {
-            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.basicCell, for: indexPath)
-            cell.textLabel?.text = "Show Elapsed Time"
-            return cell
-        }
-        
-        if indexPath.row == Constants.cellPurpose.endingDate.rawValue {
-            let cell = ExpandableDatePickerSelectionCell.reusableCell(for: indexPath, in: tableView)
-            cell.textLabel?.textAlignment = .center
-            cell.textLabel?.text = event?.finish == DateEnum.dateWildCard
-                ? "End Date?" : DateEnum.displayDate(event?.finishDate, timeZone: timeZone).caption
-            return cell
-        }
-        if indexPath.row == Constants.cellPurpose.endingTime.rawValue {
-            let cell = ExpandableDatePickerSelectionCell.reusableCell(for: indexPath, in: tableView)
-            cell.textLabel?.text = event?.finish == DateEnum.dateWildCard
-                ? "End Time?" : DateEnum.displayTime(event?.finishDate, timeZone: timeZone).caption
-            return cell
-        }
-
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.basicCell, for: indexPath)
-        if indexPath.row == Constants.cellPurpose.submit.rawValue {
-            cell.textLabel?.text = "Submit"
-        }
-        
-        return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.section {
+        case Constants.sectionEvent:
+            return
+        case Constants.sectionStart:
+            selectStartCells(at: indexPath)
+            return
+        default:
+            return
+        }
         if indexPath.row == 0 {
             let cell = tableView.cellForRow(at: indexPath)
             DatePickerPopover.appearFrom(originView: (cell?.contentView)!, baseViewController: self, title: "Clearable DatePicker", dateMode: .date, initialDate: Date(), doneAction: { selectedDate in print("selectedDate \(selectedDate)")}, cancelAction: {print("cancel")},clearAction: { print("clear")})
             return
         }
-        switch indexPath.row {
-        case Constants.cellPurpose.startingDate.rawValue :
-            edpShowTimeZoneRow = false
-        case Constants.cellPurpose.endingDate.rawValue:
-            edpShowTimeZoneRow = false
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return (section < Constants.sectionHeaders.count) ? Constants.sectionHeaders[section] : nil
+    }
+    
+    /// Create cell to display the event caption
+    private func eventCell(indexPath: IndexPath) -> TextTableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.textCell, for: indexPath) as! TextTableViewCell
+        cell.eventText.text = event.name
+        return cell
+    }
+    
+    /// Create cells for the Start Time information
+    private func startCells(indexPath: IndexPath) -> UITableViewCell {
+        switch indexPath {
+        case Constants.rowStartDate:
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.basicCell)
+            cell?.textLabel?.text = 
+        case Constants.rowStartTimeZone:
+            return ExpandableDatePickerTimeZoneCell.reusableCell(for: indexPath, in: tableView, timeZone: selectedTimeZone)
         default:
-            edpShowTimeZoneRow = true
+            return UITableViewCell()
         }
-        guard let modelIndexPath = edpTableCellWasSelected(at: indexPath) else {
-            // If tableCellWasSelected(at:) returns nil, they clicked on the time zone selector row.
-            let vc = ExpandableDatePickerTimeZoneTableViewController {
-                [unowned self] timeZone in
-                self.selectedTimeZone = timeZone
-                tableView.reloadRows(at: [indexPath], with: .automatic)
-            }
-            
-            navigationController!.pushViewController(vc, animated: true)
-            
-            return
-        }
-        
-        print("\(modelIndexPath)")
-        
-        // modelIndexPath is the new indexPath you use for which row was selected.
+    }
+    
+    /// Called when a cell in the Start Time section is selected
+    private func selectStartCells(at indexPath: IndexPath) {
     }
     
     /*
