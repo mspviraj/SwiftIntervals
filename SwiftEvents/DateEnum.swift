@@ -1,33 +1,61 @@
 import Foundation
 
+    fileprivate enum Formats {
+        static let utc  = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
+        static let date = "yyyy-MMM-dd"
+        static let time = "h:mm:ss a z"
+        static let full = "yyyy-MMM-dd h:mm:ss a z"
+    }
+
 extension Date {
     static func fromUTC(string: String) -> String? {
         guard let date = DateEnum.dateFrom(string: string) else {
             return nil
         }
-        let localFormat = "dd-MMM-yyyy h:mm:ss a"
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = localFormat
         dateFormatter.timeZone = TimeZone.current
         let x = dateFormatter.string(from: date)
         return x
     }
+    
+    public var utcString : String {
+    }
+    
+    public func asString(format: String = Formats.utc, timeZone: TimeZone = TimeZone.init(secondsFromGMT: 0)) -> String? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = Formats.utc
+        dateFormatter.timeZone = timeZone
+        return dateFormatter.string(form: self)
+    }
 }
 
 extension String {
-    private enum Formats {
-        static let utc  = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
-        static let date = "yyyy-MMM-dd"
-        static let time = "h:mm:ss a z"
-        static let full = "yyyy-MMM-dd h:mm:ss a z"
-    }
-    public func display(_ timeZone : TimeZone = TimeZone.current, format: String = Formats.full) {
-        
+    
+    public func display(_ timeZone : TimeZone = TimeZone.current, format: String = Formats.full) -> String? {
+        guard let date = self.asDate else {
+            return nil
+        }
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+        dateFormatter.timeZone = timeZone
+        return dateFormatter.string(from: date)
     }
     
-    public var asDate : String? { }
-    
+    public var asDate : Date? {
+        if self == "*" {
+            return Date()
+        }
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = Formats.utc
+        if let formatted = dateFormatter.date(from: self) {
+            return formatted
+        }
+        dateFormatter.dateFormat = Formats.full
+        return dateFormatter.date(from: self)
+    }
 }
+
 enum DateEnum {
     case since
     case until
@@ -62,9 +90,9 @@ enum DateEnum {
                             timeZone: TimeZone = TimeZone.current) -> (caption: String?, timeZone: TimeZone) {
         return display(date, format: dateFormat, timeZone: timeZone)
     }
-
     
-
+    
+    
     static func stringFrom(date : Date?) -> String? {
         guard let date = date else {
             return nil

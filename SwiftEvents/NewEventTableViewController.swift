@@ -34,7 +34,7 @@ class NewEventTableViewController: UITableViewController, ExpandableDatePicker {
     // Part of ExpandableDatePicker protocol
     var edpIndexPath: IndexPath?
     var edpShowTimeZoneRow: Bool = true
-
+    
     fileprivate var selectedDate = Date()
     fileprivate var selectedTimeZone = TimeZone.autoupdatingCurrent
     
@@ -116,8 +116,11 @@ class NewEventTableViewController: UITableViewController, ExpandableDatePicker {
     private func startCells(indexPath: IndexPath) -> UITableViewCell {
         switch indexPath {
         case Constants.rowStartDate:
-            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.basicCell)
-            cell?.textLabel?.text = 
+            if let cell = tableView.dequeueReusableCell(withIdentifier: Constants.basicCell) {
+                cell.textLabel?.text = "Zerk"
+                return cell
+            }
+            return UITableViewCell()
         case Constants.rowStartTimeZone:
             return ExpandableDatePickerTimeZoneCell.reusableCell(for: indexPath, in: tableView, timeZone: selectedTimeZone)
         default:
