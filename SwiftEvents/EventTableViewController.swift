@@ -61,20 +61,20 @@ class EventTableViewController: UITableViewController, UIPopoverPresentationCont
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return events!.list.count
+        return events!.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EventCell", for: indexPath) as! EventTableViewCell
         
         // Configure the cell...
-        guard let eventInformation = events?.info(at: indexPath.row) else {
+        guard let event = events?.event(at: indexPath.row) else {
             cell.name.text = "Invalid event"
             return cell
         }
-        cell.name.text = eventInformation.name
-        cell.interval.text = eventInformation.interval
-        cell.caption.text = eventInformation.caption
+        cell.name.text = event.name
+        cell.interval.text = event.publishInterval()
+        cell.caption.text = event.publishCaption()
         return cell
     }
     

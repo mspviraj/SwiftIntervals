@@ -24,19 +24,23 @@ class CloudDropboxTests: XCTestCase {
     }
     
     func testDropboxInit() {
+        guard let dropboxClient : DropboxClient = DropboxClientsManager.authorizedClient else {
+            return
+        }
         let notificationCenter = MockNotificationCenter(center: NotificationCenter.default)
-        let dropboxClient : DropboxClient? = DropboxClientsManager.authorizedClient
         let cloudDropbox : CloudDropbox? = CloudDropbox(dropboxClient: dropboxClient, notificationCenter: notificationCenter)
         XCTAssertNotNil(cloudDropbox, "CloudDropbox is nil")
     }
     
     func testWriteDropbox() {
+        guard let dropboxClient : DropboxClient = DropboxClientsManager.authorizedClient else {
+            return
+        }
         g = expectation(description: "Zerk")
         let input = "Hello World"
         let data = input.data(using: .utf8, allowLossyConversion: false)
         let notificationCenter = MyNotificationCenter(center: NotificationCenter.default)
         notificationCenter.addObserver(self, selector: #selector(CloudDropboxTests.onZerk), name: NSNotification.Name(rawValue: "ZERK"), object: nil)
-        let dropboxClient : DropboxClient? = DropboxClientsManager.authorizedClient
         let cloudDropbox : CloudDropbox? = CloudDropbox(dropboxClient: dropboxClient, notificationCenter: notificationCenter)
         XCTAssertNotNil(cloudDropbox, "CloudDropbox is nil")
         cloudDropbox?.saveOrCreateOnCloud(data: data!, filePath: "/zerk.txt", notificationName: "ZERK")

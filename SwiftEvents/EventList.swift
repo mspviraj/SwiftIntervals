@@ -10,7 +10,9 @@ import Foundation
 import Gloss
 
 struct EventList : JSONSerializable, Glossy {
-    var list : [String] = [String]()
+    private var list : [String] = [String]()
+    
+    public var count : Int { return list.count }
     
     private struct Constants {
         static let key = "events"
@@ -64,6 +66,7 @@ struct EventList : JSONSerializable, Glossy {
         return events
     }
     
+    
     func saveEvents(withKey key: String = Constants.key) -> Bool {
         guard let eventListAsString = self.toString() else {
             return false
@@ -77,13 +80,27 @@ struct EventList : JSONSerializable, Glossy {
         return self.toString()?.data(using: .utf8)
     }
     
-    func info(at: Int) -> EventInfo? {
-        guard at >= 0 && at < list.count else {
-            return nil
-        }
-        guard let event = Event(list[at]) else {
-            return nil
-        }
-        return event.information
+    public func event(at: Int) -> Event? {
+        return (at < 0 || at >= count) ? nil : Event(string: list[at])
     }
+    
+    public mutating func addEvent(_ event: Event) {
+        list.append(event.toString()!)
+    }
+    
+    public mutating func addEvent(string: String) {
+        guard Event(string: string) != nil else {
+            return
+        }
+        list.append(string)
+    }
+//    func info(at: Int) -> EventInfo? {
+//        guard at >= 0 && at < list.count else {
+//            return nil
+//        }
+//        guard let event = Event(list[at]) else {
+//            return nil
+//        }
+//        return event.information
+//    }
 }

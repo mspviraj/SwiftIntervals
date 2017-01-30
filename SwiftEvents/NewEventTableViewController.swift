@@ -126,14 +126,14 @@ class NewEventTableViewController: UITableViewController, ExpandableDatePicker {
                 return UITableViewCell()
             }
             cell.textLabel?.text = "Start Date"
-            cell.detailTextLabel?.text = event.start.display(timeZoneString: event.startTimeZone, format: Formats.date)
+            cell.detailTextLabel?.text = event.startAs(.date)
             return cell
         case Constants.rowStartTime:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.basicCell) else {
                 return UITableViewCell()
             }
             cell.textLabel?.text = "Start Time"
-            cell.detailTextLabel?.text = event.start.display(timeZoneString: event.startTimeZone, format: Formats.time)
+            cell.detailTextLabel?.text = event.startAs(.time)
             return cell
         case Constants.rowStartTimeZone:
             return ExpandableDatePickerTimeZoneCell.reusableCell(for: indexPath, in: tableView, timeZone: event.startTimeZone.asTimeZone!)
@@ -160,14 +160,14 @@ class NewEventTableViewController: UITableViewController, ExpandableDatePicker {
                 return UITableViewCell()
             }
             cell.textLabel?.text = "End Date"
-            cell.detailTextLabel?.text = (event.finish == Formats.wildCard) ? "Real Date" : event.finish.display(timeZoneString: event.finishTimeZone, format: Formats.date)
+            cell.detailTextLabel?.text = (event.finish == Formats.wildCard) ? "Real Date" : event.finishAs(.date)
             return cell
         case Constants.rowEndTime:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.basicCell) else {
                 return UITableViewCell()
             }
             cell.textLabel?.text = "End Time"
-            cell.detailTextLabel?.text = (event.finish == Formats.wildCard) ? "Real Time" : event.finish.display(timeZoneString: event.finishTimeZone, format: Formats.time)
+            cell.detailTextLabel?.text = (event.finish == Formats.wildCard) ? "Real Time" : event.finishAs(.time)
             return cell
         case Constants.rowEndTimeZone:
             return ExpandableDatePickerTimeZoneCell.reusableCell(for: indexPath, in: tableView, timeZone: selectedTimeZone)

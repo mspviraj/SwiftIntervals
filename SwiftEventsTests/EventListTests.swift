@@ -52,12 +52,12 @@ class EventListTests: XCTestCase {
         XCTAssertNotNil(data)
         let list2 = EventList(data)
         XCTAssertNotNil(data)
-        XCTAssertEqual(list2?.list.count, 1)
+        XCTAssertEqual(list2?.count, 1)
     }
     
     func testEventListEventAt() {
         let list = EventList()
-        guard let event = list.info(at: 0) else {
+        guard let event = list.event(at: 0) else {
             XCTFail("Nil info")
             return
         }
@@ -66,7 +66,7 @@ class EventListTests: XCTestCase {
     
     func testEventListEventAtBadIndex() {
         let list = EventList()
-        let event = list.info(at: 100)
+        let event = list.event(at: 100)
         XCTAssertNil(event)
     }
     
@@ -81,20 +81,23 @@ class EventListTests: XCTestCase {
             XCTAssertNotNil(data)
             let list2 = EventList(data)
             XCTAssertNotNil(data)
-            XCTAssertEqual(list2?.list.count, 1)
+            XCTAssertEqual(list2?.count, 1)
         }
     }
     
     func testGetEvents() {
-        var eventList = EventList.getEvents(withKey: key)
+        guard var eventList = EventList.getEvents(withKey: key) else {
+            XCTFail("event list is nil")
+            return
+        }
         XCTAssertNotNil(eventList)
-        XCTAssertTrue(eventList?.list.count == 1)
-        let event = Event()
-        eventList?.list.append(event.toString()!)
-        let save : Bool = (eventList?.saveEvents(withKey: key))!
+        XCTAssertTrue(eventList.count == 1)
+        let newEvent = Event()
+        eventList.addEvent(string: newEvent.toString()!)
+        let save : Bool = (eventList.saveEvents(withKey: key))
         XCTAssertTrue(save)
         let result = EventList.getEvents(withKey: key)
         XCTAssertNotNil(result)
-        XCTAssertEqual(result?.list.count, 2)
+        XCTAssertEqual(result?.count, 2)
     }
 }

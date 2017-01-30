@@ -50,11 +50,11 @@ struct Event : Decodable, JSONSerializable, Glossy {
 //        }
 //    }
 //    
-    var information : EventInfo {
-        get {
-            return EventInfo(name: self.name, interval: self.publishInterval(), caption: self.publishCaption())
-        }
-    }
+//    var information : EventInfo {
+//        get {
+//            return EventInfo(name: self.name, interval: self.publishInterval(), caption: self.publishCaption())
+//        }
+//    }
     
     init() {
         self.name = "First used application"
@@ -133,7 +133,7 @@ struct Event : Decodable, JSONSerializable, Glossy {
         }
     }
     
-    init?(_ string: String) {
+    init?(string: String) {
         guard let data = string.data(using: .utf8) else {
             return nil
         }
@@ -161,12 +161,12 @@ struct Event : Decodable, JSONSerializable, Glossy {
     
     private func fixedDate() -> String {
         if start == Formats.wildCard {
-            return self.finish.display(timeZoneString: self.finishTimeZone)
+            return finishAs(.full)
         }
         if finish == Formats.wildCard {
-            return self.start.display(timeZoneString: self.startTimeZone)
+            return startAs(.full)
         }
-        return "\(self.start.display(timeZoneString: self.startTimeZone)) and \(self.start.display(timeZoneString: self.startTimeZone))"
+        return "\(startAs(.full)) and \(finishAs(.full))"
     }
     
     func publishCaption() -> String {
@@ -181,6 +181,14 @@ struct Event : Decodable, JSONSerializable, Glossy {
         case .invalid:
             return "Invalid: \(start) \(finish)"
         }
+    }
+    
+    func startAs(_ format: Formats) -> String {
+        return start.formatAs(format, withTimeZone: self.startTimeZone)!
+    }
+    
+    func finishAs(_ format: Formats) -> String {
+        return finish.formatAs(format, withTimeZone: self.finishTimeZone)!
     }
     
     func publishInterval(type: DisplayInterval) -> String {

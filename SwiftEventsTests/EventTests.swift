@@ -107,7 +107,7 @@ class EventTests: XCTestCase {
         XCTAssertEqual(event.start, future)
         XCTAssertEqual(event.finish, nextXMas)
         let caption = event.publishCaption()
-        let results = "Between 2017-Jan-01 3:56:00 PM EST and 2017-Jan-01 3:56:00 PM EST"
+        let results = "Between 2017-Jan-01 3:56:00 PM EST and 2017-Dec-24 7:00:00 PM EST"
         XCTAssertEqual(results, caption)
         
         let interval = event.publishInterval()

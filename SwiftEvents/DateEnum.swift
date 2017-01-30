@@ -1,11 +1,12 @@
 import Foundation
 
-public enum Formats {
-    static let utc  = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
-    static let date = "yyyy-MMM-dd"
-    static let time = "h:mm:ss a z"
-    static let full = "yyyy-MMM-dd h:mm:ss a z"
+public enum Formats : String {
     static let wildCard = "*"
+
+    case utc  = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
+    case date = "yyyy-MMM-dd"
+    case time = "h:mm:ss a z"
+    case full = "yyyy-MMM-dd h:mm:ss a z"
 }
 
 extension TimeZone {
@@ -19,24 +20,16 @@ extension TimeZone {
 }
 
 extension Date {
-//    static func fromUTC(string: String) -> String? {
-//        guard let date = DateEnum.dateFrom(string: string) else {
-//            return nil
-//        }
-//        let dateFormatter = DateFormatter()
-//        dateFormatter.dateFormat = Formats.utc
-//        dateFormatter.timeZone = TimeZone.current
-//        let x = dateFormatter.string(from: date)
-//        return x
-//    }
-//    
     public var utcString : String {
-        return asString()!
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = Formats.utc.rawValue
+        dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
+        return dateFormatter.string(from: self)
     }
     
-    public func asString(format: String = Formats.utc, timeZone: TimeZone = TimeZone(secondsFromGMT: 0)!) -> String? {
+    public func format(_ format: Formats = Formats.utc, timeZone: TimeZone = TimeZone(secondsFromGMT: 0)!) -> String? {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = format
+        dateFormatter.dateFormat = format.rawValue
         dateFormatter.timeZone = timeZone
         return dateFormatter.string(from: self)
     }
@@ -44,21 +37,22 @@ extension Date {
 
 extension String {
     
-    public func display(timeZoneString: String = "UTC", format: String = Formats.full) -> String {
-        if let timeZone = timeZoneString.asTimeZone, self.asDate != nil {
-            return display(timeZone: timeZone, format: format)!
-        }
-        return NSLocalizedString("Not date String", comment: "Cant format this kind of string")
-    }
-    
-    public func display(timeZone: TimeZone = TimeZone.current, format: String = Formats.full) -> String? {
+    public func formatAs(_ type: Formats, withTimeZone: TimeZone = TimeZone.autoupdatingCurrent) -> String? {
         guard let date = self.asDate else {
             return nil
         }
+        let timeZone = (type == .utc) ? TimeZone(secondsFromGMT: 0) : withTimeZone
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = format
+        dateFormatter.dateFormat = type.rawValue
         dateFormatter.timeZone = timeZone
         return dateFormatter.string(from: date)
+    }
+    
+    public func formatAs(_ type: Formats, withTimeZone: String) -> String? {
+        guard let timeZone = withTimeZone.asTimeZone else {
+            return nil
+        }
+        return formatAs(type, withTimeZone: timeZone)
     }
     
     public var asDate : Date? {
@@ -66,11 +60,11 @@ extension String {
             return Date()
         }
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = Formats.utc
+        dateFormatter.dateFormat = Formats.utc.rawValue
         if let formatted = dateFormatter.date(from: self) {
             return formatted
         }
-        dateFormatter.dateFormat = Formats.full
+        dateFormatter.dateFormat = Formats.full.rawValue
         return dateFormatter.date(from: self)
     }
     
@@ -79,7 +73,13 @@ extension String {
     }
     
     public var asTimeZone : TimeZone? {
-        return TimeZone(abbreviation: self)
+        if let timeZone = TimeZone(abbreviation: self) {
+            return timeZone
+        }
+        if let timeZone = TimeZone(identifier: self) {
+            return timeZone
+        }
+        return nil
     }
 }
 
