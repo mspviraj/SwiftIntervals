@@ -15,6 +15,8 @@ class NewEventTableViewController: UITableViewController, ExpandableDatePicker {
     private struct Constants {
         static let textCell = "TextCell"
         static let basicCell = "BasicCell"
+        static let captionCell = "CaptionCell"
+        
         static let sectionHeaders = ["Event Caption", "Start Time", "End Time"]
         static let sectionEvent = 0
         static let sectionStart = 1
@@ -79,6 +81,10 @@ class NewEventTableViewController: UITableViewController, ExpandableDatePicker {
             return eventCell(indexPath: indexPath)
         case Constants.sectionStart:
             return startCells(indexPath: indexPath)
+        case Constants.sectionEnd:
+            return endCells(indexPath: indexPath)
+        case Constants.sectionSubmit:
+            return submitCells(indexPath: indexPath)
         default:
             return UITableViewCell()
         }
@@ -116,13 +122,21 @@ class NewEventTableViewController: UITableViewController, ExpandableDatePicker {
     private func startCells(indexPath: IndexPath) -> UITableViewCell {
         switch indexPath {
         case Constants.rowStartDate:
-            if let cell = tableView.dequeueReusableCell(withIdentifier: Constants.basicCell) {
-                cell.textLabel?.text = "Zerk"
-                return cell
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.basicCell) else {
+                return UITableViewCell()
             }
-            return UITableViewCell()
+            cell.textLabel?.text = "Start Date"
+            cell.detailTextLabel?.text = event.start.display(timeZoneString: event.startTimeZone, format: Formats.date)
+            return cell
+        case Constants.rowStartTime:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.basicCell) else {
+                return UITableViewCell()
+            }
+            cell.textLabel?.text = "Start Time"
+            cell.detailTextLabel?.text = event.start.display(timeZoneString: event.startTimeZone, format: Formats.time)
+            return cell
         case Constants.rowStartTimeZone:
-            return ExpandableDatePickerTimeZoneCell.reusableCell(for: indexPath, in: tableView, timeZone: selectedTimeZone)
+            return ExpandableDatePickerTimeZoneCell.reusableCell(for: indexPath, in: tableView, timeZone: event.startTimeZone.asTimeZone!)
         default:
             return UITableViewCell()
         }
@@ -132,6 +146,47 @@ class NewEventTableViewController: UITableViewController, ExpandableDatePicker {
     private func selectStartCells(at indexPath: IndexPath) {
     }
     
+    private func endCells(indexPath: IndexPath) -> UITableViewCell {
+        switch indexPath {
+        case Constants.rowEndIntervalOption:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.basicCell) else {
+                return UITableViewCell()
+            }
+            cell.textLabel?.text = "Intervals since start"
+            cell.textLabel?.textAlignment = .center
+            return cell
+        case Constants.rowEndDate:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.basicCell) else {
+                return UITableViewCell()
+            }
+            cell.textLabel?.text = "End Date"
+            cell.detailTextLabel?.text = (event.finish == Formats.wildCard) ? "Real Date" : event.finish.display(timeZoneString: event.finishTimeZone, format: Formats.date)
+            return cell
+        case Constants.rowEndTime:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.basicCell) else {
+                return UITableViewCell()
+            }
+            cell.textLabel?.text = "End Time"
+            cell.detailTextLabel?.text = (event.finish == Formats.wildCard) ? "Real Time" : event.finish.display(timeZoneString: event.finishTimeZone, format: Formats.time)
+            return cell
+        case Constants.rowEndTimeZone:
+            return ExpandableDatePickerTimeZoneCell.reusableCell(for: indexPath, in: tableView, timeZone: selectedTimeZone)
+            
+        default:
+            return UITableViewCell()
+        }
+    }
+    
+    private func selectEndCells(at indexPath: IndexPath) {
+    }
+
+    private func submitCells(indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.captionCell) else {
+            return UITableViewCell()
+        }
+        cell.textLabel?.text = "Add"
+        return cell
+    }
     /*
      // Override to support conditional editing of the table view.
      override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

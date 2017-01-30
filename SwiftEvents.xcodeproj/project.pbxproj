@@ -28,6 +28,7 @@
 		B05A16311E2845200053518E /* YearManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05A16301E2845200053518E /* YearManagerTests.swift */; };
 		B05A16331E28462C0053518E /* DayManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05A16321E28462C0053518E /* DayManagerTests.swift */; };
 		B05A16361E2948D50053518E /* CloudDropbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05A16341E2948D50053518E /* CloudDropbox.swift */; };
+		B074DF161E3EB9B20069843D /* EnumDateExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B074DF151E3EB9B20069843D /* EnumDateExtensionsTests.swift */; };
 		B0756B5E1E22D39200C267A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0E731E21E21B38C00160E37 /* Assets.xcassets */; };
 		B0756B6F1E234CE500C267A2 /* DateEnumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0756B6E1E234CE500C267A2 /* DateEnumTests.swift */; };
 		B0756B751E236EF800C267A2 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0756B741E236EF800C267A2 /* Event.swift */; };
@@ -117,6 +118,7 @@
 		B05A16301E2845200053518E /* YearManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YearManagerTests.swift; sourceTree = "<group>"; };
 		B05A16321E28462C0053518E /* DayManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayManagerTests.swift; sourceTree = "<group>"; };
 		B05A16341E2948D50053518E /* CloudDropbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudDropbox.swift; sourceTree = "<group>"; };
+		B074DF151E3EB9B20069843D /* EnumDateExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumDateExtensionsTests.swift; sourceTree = "<group>"; };
 		B0756B6E1E234CE500C267A2 /* DateEnumTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateEnumTests.swift; sourceTree = "<group>"; };
 		B0756B741E236EF800C267A2 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		B0756B771E23783F00C267A2 /* EventTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTests.swift; sourceTree = "<group>"; };
@@ -315,6 +317,7 @@
 				B007CF141E2F30E10053F851 /* TimeManagerTests.swift */,
 				B05A16301E2845200053518E /* YearManagerTests.swift */,
 				B099F2FC1E38037B00FC3F93 /* PreferencesTest.swift */,
+				B074DF151E3EB9B20069843D /* EnumDateExtensionsTests.swift */,
 			);
 			path = SwiftEventsTests;
 			sourceTree = "<group>";
@@ -663,6 +666,7 @@
 				B05A16361E2948D50053518E /* CloudDropbox.swift in Sources */,
 				B0C63C151E25DD4900D86AE9 /* MyNotificationCenter.swift in Sources */,
 				B092CC541E21B7BC000048FE /* DateEnum.swift in Sources */,
+				B074DF161E3EB9B20069843D /* EnumDateExtensionsTests.swift in Sources */,
 				B007CF111E2EF8D80053F851 /* DateIntervalsTest.swift in Sources */,
 				B05A16331E28462C0053518E /* DayManagerTests.swift in Sources */,
 				B092CC571E21B7CD000048FE /* DateIntervals.swift in Sources */,

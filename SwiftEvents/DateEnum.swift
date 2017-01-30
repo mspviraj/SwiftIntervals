@@ -1,38 +1,57 @@
 import Foundation
 
-    fileprivate enum Formats {
-        static let utc  = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
-        static let date = "yyyy-MMM-dd"
-        static let time = "h:mm:ss a z"
-        static let full = "yyyy-MMM-dd h:mm:ss a z"
+public enum Formats {
+    static let utc  = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
+    static let date = "yyyy-MMM-dd"
+    static let time = "h:mm:ss a z"
+    static let full = "yyyy-MMM-dd h:mm:ss a z"
+    static let wildCard = "*"
+}
+
+extension TimeZone {
+    public var asString : String {
+        return TimeZone.current.abbreviation() ?? "UTC"
     }
+    
+    public static func from(abbreviation: String) -> TimeZone {
+        return TimeZone(abbreviation: abbreviation) ?? TimeZone(secondsFromGMT: 0)!
+    }
+}
 
 extension Date {
-    static func fromUTC(string: String) -> String? {
-        guard let date = DateEnum.dateFrom(string: string) else {
-            return nil
-        }
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = localFormat
-        dateFormatter.timeZone = TimeZone.current
-        let x = dateFormatter.string(from: date)
-        return x
-    }
-    
+//    static func fromUTC(string: String) -> String? {
+//        guard let date = DateEnum.dateFrom(string: string) else {
+//            return nil
+//        }
+//        let dateFormatter = DateFormatter()
+//        dateFormatter.dateFormat = Formats.utc
+//        dateFormatter.timeZone = TimeZone.current
+//        let x = dateFormatter.string(from: date)
+//        return x
+//    }
+//    
     public var utcString : String {
+        return asString()!
     }
     
-    public func asString(format: String = Formats.utc, timeZone: TimeZone = TimeZone.init(secondsFromGMT: 0)) -> String? {
+    public func asString(format: String = Formats.utc, timeZone: TimeZone = TimeZone(secondsFromGMT: 0)!) -> String? {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = Formats.utc
+        dateFormatter.dateFormat = format
         dateFormatter.timeZone = timeZone
-        return dateFormatter.string(form: self)
+        return dateFormatter.string(from: self)
     }
 }
 
 extension String {
     
-    public func display(_ timeZone : TimeZone = TimeZone.current, format: String = Formats.full) -> String? {
+    public func display(timeZoneString: String = "UTC", format: String = Formats.full) -> String {
+        if let timeZone = timeZoneString.asTimeZone, self.asDate != nil {
+            return display(timeZone: timeZone, format: format)!
+        }
+        return NSLocalizedString("Not date String", comment: "Cant format this kind of string")
+    }
+    
+    public func display(timeZone: TimeZone = TimeZone.current, format: String = Formats.full) -> String? {
         guard let date = self.asDate else {
             return nil
         }
@@ -43,7 +62,7 @@ extension String {
     }
     
     public var asDate : Date? {
-        if self == "*" {
+        if self == Formats.wildCard {
             return Date()
         }
         let dateFormatter = DateFormatter()
@@ -53,6 +72,14 @@ extension String {
         }
         dateFormatter.dateFormat = Formats.full
         return dateFormatter.date(from: self)
+    }
+    
+    public var rawDate : String? {
+        return (self == Formats.wildCard) ? Formats.wildCard : self.asDate?.utcString
+    }
+    
+    public var asTimeZone : TimeZone? {
+        return TimeZone(abbreviation: self)
     }
 }
 
@@ -66,8 +93,6 @@ enum DateEnum {
     static let dateFormat = "yyyy-MMM-dd"
     static let timeFormat = "h:mm:ss a z"
     
-    
-    static let dateWildCard = "*"
     
     static func display(_ date : Date? = Date(),
                         format: String = dateFormat + " " + timeFormat,
@@ -107,7 +132,7 @@ enum DateEnum {
         guard let string = string else {
             return nil
         }
-        if string == dateWildCard {
+        if string == Formats.wildCard {
             return Date()
         }
         let dateFormatter = DateFormatter()
@@ -126,7 +151,7 @@ enum DateEnum {
             return .invalid
         }
         
-        if firstDate != dateWildCard && secondDate != dateWildCard {
+        if firstDate != Formats.wildCard && secondDate != Formats.wildCard {
             return .between
         }
         switch start.compare(ending) {

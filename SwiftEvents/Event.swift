@@ -22,20 +22,16 @@ struct EventInfo {
     }
     
 }
-fileprivate enum Constants {
-    static let keyName = "name"
-    static let keyStart = "start"
-    static let keyStartTimeZone = "startTimeZone"
-    static let keyFinish = "finish"
-    static let keyFinishTimeZone = "finishTimeZone"
-    static let keyDisplayInterval = "displayInterval"
+
+fileprivate enum Key {
+    static let name = "name"
+    static let start = "start"
+    static let startTimeZone = "startTimeZone"
+    static let finish = "finish"
+    static let finishTimeZone = "finishTimeZone"
+    static let displayInterval = "displayInterval"
 }
 
-extension TimeZone {
-    public static var asString : String {
-        return TimeZone.current.abbreviation() ?? "UTC"
-    }
-}
 
 struct Event : Decodable, JSONSerializable, Glossy {
     let name : String
@@ -62,46 +58,54 @@ struct Event : Decodable, JSONSerializable, Glossy {
     
     init() {
         self.name = "First used application"
-        self.start = DateEnum.stringFrom(date: Date())!
-        self.startTimeZone = TimeZone.asString
-        self.finish = DateEnum.dateWildCard
-        self.finishTimeZone = TimeZone.current.abbreviation() ?? "UTC"
+        self.start = Date().utcString
+        self.startTimeZone = TimeZone.current.asString
+        self.finish = Formats.wildCard
+        self.finishTimeZone = TimeZone.current.asString
         self.displayInterval = "minute"
     }
     
-    init?(name: String, startTime: String = DateEnum.stringFrom(date: Date())!, endTime: String = DateEnum.dateWildCard) {
+    init?(name: String, startTime: String = Date().utcString, startTimeZone : TimeZone = TimeZone.current, endTime: String = Formats.wildCard, endTimeZone : TimeZone = TimeZone.current) {
         self.name = name
         
-        guard DateEnum.dateFrom(string: startTime) != nil else {
+        if let start = startTime.rawDate, let finish = endTime.rawDate {
+            self.start = start
+            self.startTimeZone = startTimeZone.asString
+            self.finish = finish
+            self.finishTimeZone = endTimeZone.asString
+            self.displayInterval = "minute"
+        } else {
             return nil
         }
-        self.start = startTime
-        
-        guard DateEnum.dateFrom(string: endTime) != nil else {
-            return nil
-        }
-        self.finish = endTime
-        
-        self.displayInterval = "minute"
     }
     
     init?(json: JSON) {
-        guard let eventName : String = Constants.keyName <~~ json else {
+        guard let eventName : String = Key.name <~~ json else {
             return nil
         }
         self.name = eventName
         
-        guard let eventStart : String = "start" <~~ json else {
+        guard let eventStart : String = Key.start <~~ json else {
             return nil
         }
         self.start = eventStart
         
-        guard let eventFinish : String = "finish" <~~ json else {
+        guard let startTimeZone : String = Key.startTimeZone <~~ json else {
+            return nil
+        }
+        self.startTimeZone = startTimeZone
+        
+        guard let eventFinish : String = Key.finish <~~ json else {
             return nil
         }
         self.finish = eventFinish
         
-        guard let displayInterval : String = "displayInterval" <~~ json else {
+        guard let finishTimeZone : String = Key.finishTimeZone <~~ json else {
+            return nil
+        }
+        self.finishTimeZone = finishTimeZone
+        
+        guard let displayInterval : String = Key.displayInterval <~~ json else {
             return nil
         }
         self.displayInterval = displayInterval
@@ -119,7 +123,9 @@ struct Event : Decodable, JSONSerializable, Glossy {
             }
             self.name = builtEvent.name
             self.start = builtEvent.start
+            self.startTimeZone = builtEvent.startTimeZone
             self.finish = builtEvent.finish
+            self.finishTimeZone = builtEvent.finishTimeZone
             self.displayInterval = builtEvent.displayInterval
         } catch {
             print(error)
@@ -131,32 +137,36 @@ struct Event : Decodable, JSONSerializable, Glossy {
         guard let data = string.data(using: .utf8) else {
             return nil
         }
-        guard let built = Event(data) else {
+        guard let builtEvent = Event(data) else {
             return nil
         }
-        self.name = built.name
-        self.start = built.start
-        self.finish = built.finish
-        self.displayInterval = built.displayInterval
+        self.name = builtEvent.name
+        self.start = builtEvent.start
+        self.startTimeZone = builtEvent.startTimeZone
+        self.finish = builtEvent.finish
+        self.finishTimeZone = builtEvent.finishTimeZone
+        self.displayInterval = builtEvent.displayInterval
     }
 
     func toJSON() -> JSON? {  //Uses GLOSS pod
         return jsonify([
-            "name" ~~> self.name,
-            "start" ~~> self.start,
-            "finish" ~~> self.finish,
-            "displayInterval" ~~> self.displayInterval
+            Key.name ~~> self.name,
+            Key.start ~~> self.start,
+            Key.startTimeZone ~~> self.startTimeZone,
+            Key.finish ~~> self.finish,
+            Key.finishTimeZone ~~> self.finishTimeZone,
+            Key.displayInterval ~~> self.displayInterval
             ])
     }
     
     private func fixedDate() -> String {
-        if start == DateEnum.dateWildCard {
-            return Date.fromUTC(string: finish)!
+        if start == Formats.wildCard {
+            return self.finish.display(timeZoneString: self.finishTimeZone)
         }
-        if finish == DateEnum.dateWildCard {
-            return Date.fromUTC(string: start)!
+        if finish == Formats.wildCard {
+            return self.start.display(timeZoneString: self.startTimeZone)
         }
-        return "\(Date.fromUTC(string: start)!) and \(Date.fromUTC(string: finish)!)"
+        return "\(self.start.display(timeZoneString: self.startTimeZone)) and \(self.start.display(timeZoneString: self.startTimeZone))"
     }
     
     func publishCaption() -> String {

@@ -17,7 +17,7 @@ class AddEventTableViewCell: UITableViewCell, UITextFieldDelegate {
     @IBOutlet weak var finishButton: UIButton!
     
     var eventName : String = "" { didSet { updateUI() }}
-    var startDate : String = Date.fromUTC(string: DateEnum.dateWildCard)! { didSet { updateUI() }}
+    var startDate : String = "ZERK!" //Date.fromUTC(string: DateEnum.dateWildCard)! { didSet { updateUI() }}
     var finishDate : String = "Show Elapsed Time" { didSet { updateUI() }}
     
     private func updateUI() {

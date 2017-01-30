@@ -73,7 +73,7 @@ class EventTests: XCTestCase {
             return
         }
         XCTAssertEqual(event.start, birthday)
-        XCTAssertEqual(event.finish, DateEnum.dateWildCard)
+        XCTAssertEqual(event.finish, Formats.wildCard)
     }
     
     func testCaptioning() {
@@ -82,9 +82,9 @@ class EventTests: XCTestCase {
             return
         }
         XCTAssertEqual(event.start, birthday)
-        XCTAssertEqual(event.finish, DateEnum.dateWildCard)
+        XCTAssertEqual(event.finish, Formats.wildCard)
         let caption = event.publishCaption()
-        XCTAssertEqual(caption, "Since " + Date.fromUTC(string: birthday)!)
+        XCTAssertEqual(caption, "Since 1960-Dec-19 3:56:00 PM GMT-5")
     }
     
     func testFutureCaption() {
@@ -93,18 +93,10 @@ class EventTests: XCTestCase {
             return
         }
         XCTAssertEqual(event.start, nextXMas)
-        XCTAssertEqual(event.finish, DateEnum.dateWildCard)
+        XCTAssertEqual(event.finish, Formats.wildCard)
         let caption = event.publishCaption()
-        XCTAssertEqual(caption, "Until " + Date.fromUTC(string: nextXMas)!)
+        XCTAssertEqual(caption, "Until 2017-Dec-24 7:00:00 PM EST")
         
-    }
-    
-    func testDateExtension() {
-        if let myBirthday = Date.fromUTC(string: birthday) {
-            XCTAssertEqual(myBirthday, "19-Dec-1960 3:56:00 PM")
-        } else {
-            XCTAssertTrue(false)
-        }
     }
     
     func testPublishInterval() {
@@ -115,7 +107,7 @@ class EventTests: XCTestCase {
         XCTAssertEqual(event.start, future)
         XCTAssertEqual(event.finish, nextXMas)
         let caption = event.publishCaption()
-        let results = "Between \(Date.fromUTC(string: future)!) and \(Date.fromUTC(string: nextXMas)!)"
+        let results = "Between 2017-Jan-01 3:56:00 PM EST and 2017-Jan-01 3:56:00 PM EST"
         XCTAssertEqual(results, caption)
         
         let interval = event.publishInterval()
