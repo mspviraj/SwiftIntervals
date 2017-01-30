@@ -15,7 +15,7 @@ struct Preferences : JSONSerializable, Glossy {
     
     init(refreshRate: RefreshRates = RefreshRates.minute, lastCloudUpdate: Date = Date()) {
         self.refreshInSeconds = refreshRate.asSeconds()
-        self.lastCloudUpdate = DateEnum.stringFrom(date: lastCloudUpdate)!
+        self.lastCloudUpdate = lastCloudUpdate.utcString
     }
     
     init?(jsonString: String) {

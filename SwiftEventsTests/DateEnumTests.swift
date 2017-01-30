@@ -24,14 +24,11 @@ class DateEnumTests: XCTestCase {
     }
     
     func testUTC() {
-        guard let dateValue = DateEnum.dateFrom(string: birthday) else {
+        guard let dateValue = birthday.asDate else {
             XCTAssert(false, "Cannot parse dateVakye from:\(birthday)")
             return
         }
-        guard let dateString = DateEnum.stringFrom(date: dateValue) else {
-            XCTAssert(false, "Cannot get dateValue from date:\(dateValue) ")
-            return
-        }
+        let dateString = dateValue.utcString
         XCTAssertEqual(dateString, birthday, "String:\(dateString) does not match \(birthday)")
         
     }

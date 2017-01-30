@@ -82,15 +82,15 @@ enum DisplayInterval : String {
 
 struct DateIntervals {
     public static func setFor(startDate: String, endDate: String) -> DateIntervals? {
-        guard let startTime = DateEnum.dateFrom(string: startDate) else {
+        guard let startingDate = startDate.asDate else {
             return nil
         }
         
-        guard let endTime = DateEnum.dateFrom(string: endDate) else {
+        guard let endingDate = endDate.asDate else {
             return nil
         }
         
-        return DateIntervals(startTime: startTime, endTime: endTime)
+        return DateIntervals(startTime: startingDate, endTime: endingDate)
     }
     
     

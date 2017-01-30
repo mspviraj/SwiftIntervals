@@ -10,26 +10,13 @@
 import Foundation
 import Gloss
 
-struct EventInfo {
-    let name : String
-    let interval : String
-    let caption : String
-    
-    init(name: String, interval: String, caption: String) {
-        self.name = name
-        self.interval = interval
-        self.caption = caption
-    }
-    
-}
-
 fileprivate enum Key {
     static let name = "name"
     static let start = "start"
     static let startTimeZone = "startTimeZone"
     static let finish = "finish"
     static let finishTimeZone = "finishTimeZone"
-    static let displayInterval = "displayInterval"
+    static let refreshInterval = "refreshInterval"
 }
 
 
@@ -39,22 +26,22 @@ struct Event : Decodable, JSONSerializable, Glossy {
     let startTimeZone: String
     let finish : String
     let finishTimeZone: String
-    let displayInterval : String
+    let refreshInterval : String /// the layout of the display (eg: just seconds?, min,secs?, hours,min,secs?... etc
     
-    var startDate : Date { get { return DateEnum.dateFrom(string: start)! }}
-    var finishDate : Date { get { return DateEnum.dateFrom(string: finish)! }}
-    
-//    private var intervalType : DateEnum {
-//        get {
-//            return DateEnum.intervalType(firstDate: self.start, secondDate: self.finish)
-//        }
-//    }
-//    
-//    var information : EventInfo {
-//        get {
-//            return EventInfo(name: self.name, interval: self.publishInterval(), caption: self.publishCaption())
-//        }
-//    }
+    private var intervalType : DateEnum {
+        if start != Formats.wildCard && finish != Formats.wildCard {
+            return .between
+        }
+        switch start.asDate!.compare(finish.asDate!) {
+        case .orderedAscending:
+            return .since
+        case .orderedSame:
+            assertionFailure("Identical dates")
+            return .invalid
+        case .orderedDescending:
+            return .until
+        }
+    }
     
     init() {
         self.name = "First used application"
@@ -62,7 +49,7 @@ struct Event : Decodable, JSONSerializable, Glossy {
         self.startTimeZone = TimeZone.current.asString
         self.finish = Formats.wildCard
         self.finishTimeZone = TimeZone.current.asString
-        self.displayInterval = "minute"
+        self.refreshInterval = DisplayInterval.progressive.rawValue
     }
     
     init?(name: String, startTime: String = Date().utcString, startTimeZone : TimeZone = TimeZone.current, endTime: String = Formats.wildCard, endTimeZone : TimeZone = TimeZone.current) {
@@ -73,7 +60,7 @@ struct Event : Decodable, JSONSerializable, Glossy {
             self.startTimeZone = startTimeZone.asString
             self.finish = finish
             self.finishTimeZone = endTimeZone.asString
-            self.displayInterval = "minute"
+            self.refreshInterval = "minute"
         } else {
             return nil
         }
@@ -105,10 +92,10 @@ struct Event : Decodable, JSONSerializable, Glossy {
         }
         self.finishTimeZone = finishTimeZone
         
-        guard let displayInterval : String = Key.displayInterval <~~ json else {
+        guard let displayInterval : String = Key.refreshInterval <~~ json else {
             return nil
         }
-        self.displayInterval = displayInterval
+        self.refreshInterval = displayInterval
     }
     
     init?(_ data : Data) {
@@ -126,7 +113,7 @@ struct Event : Decodable, JSONSerializable, Glossy {
             self.startTimeZone = builtEvent.startTimeZone
             self.finish = builtEvent.finish
             self.finishTimeZone = builtEvent.finishTimeZone
-            self.displayInterval = builtEvent.displayInterval
+            self.refreshInterval = builtEvent.refreshInterval
         } catch {
             print(error)
             return nil
@@ -145,9 +132,9 @@ struct Event : Decodable, JSONSerializable, Glossy {
         self.startTimeZone = builtEvent.startTimeZone
         self.finish = builtEvent.finish
         self.finishTimeZone = builtEvent.finishTimeZone
-        self.displayInterval = builtEvent.displayInterval
+        self.refreshInterval = builtEvent.refreshInterval
     }
-
+    
     func toJSON() -> JSON? {  //Uses GLOSS pod
         return jsonify([
             Key.name ~~> self.name,
@@ -155,7 +142,7 @@ struct Event : Decodable, JSONSerializable, Glossy {
             Key.startTimeZone ~~> self.startTimeZone,
             Key.finish ~~> self.finish,
             Key.finishTimeZone ~~> self.finishTimeZone,
-            Key.displayInterval ~~> self.displayInterval
+            Key.refreshInterval ~~> self.refreshInterval
             ])
     }
     
@@ -170,7 +157,6 @@ struct Event : Decodable, JSONSerializable, Glossy {
     }
     
     func publishCaption() -> String {
-        let intervalType = DateEnum.intervalType(firstDate: start, secondDate: finish)
         switch intervalType {
         case .since:
             return "Since \(fixedDate())"
@@ -191,14 +177,10 @@ struct Event : Decodable, JSONSerializable, Glossy {
         return finish.formatAs(format, withTimeZone: self.finishTimeZone)!
     }
     
-    func publishInterval(type: DisplayInterval) -> String {
-        guard let intervals : DateIntervals = DateIntervals.setFor(startDate: start, endDate: finish) else {
-            return "no interval for \(start) \(finish)"
+    func publishInterval(_ interval: DisplayInterval? = nil) -> String {
+        guard let dateIntervals = DateIntervals.setFor(startDate: start, endDate: finish) else {
+            return "Invalid \(start) \(finish)"
         }
-        return intervals.publish(interval: type)
-    }
-    
-    func publishInterval() -> String {
-        return publishInterval(type: DisplayInterval.from(string: self.displayInterval))
+        return dateIntervals.publish(interval: (interval == nil) ? DisplayInterval.from(string: refreshInterval) : interval!)
     }
 }

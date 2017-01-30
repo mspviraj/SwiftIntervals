@@ -31,10 +31,7 @@ class EventTests: XCTestCase {
     func testInitEvent() {
         let now = Date()
         let event = Event()
-        guard let nowString = DateEnum.stringFrom(date: now) else {
-            XCTAssertTrue(false)
-            return
-        }
+        let nowString = now.utcString
         XCTAssertEqual(nowString, event.start)
     }
     
@@ -45,12 +42,8 @@ class EventTests: XCTestCase {
     }
     
     func testInitJSON() {
-        let now = Date()
         let event = Event()
-        guard let nowString = DateEnum.stringFrom(date: now) else {
-            XCTAssertTrue(false)
-            return
-        }
+        let nowString = Date().utcString
         XCTAssertEqual(nowString, event.start)
         
         let json : JSON = event.toJSON()!
