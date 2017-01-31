@@ -109,11 +109,6 @@ class NewEventTableViewController: UITableViewController, ExpandableDatePicker {
         default:
             return
         }
-        if indexPath.row == 0 {
-            let cell = tableView.cellForRow(at: indexPath)
-            DatePickerPopover.appearFrom(originView: (cell?.contentView)!, baseViewController: self, title: "Clearable DatePicker", dateMode: .date, initialDate: Date(), doneAction: { selectedDate in print("selectedDate \(selectedDate)")}, cancelAction: {print("cancel")},clearAction: { print("clear")})
-            return
-        }
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -154,6 +149,21 @@ class NewEventTableViewController: UITableViewController, ExpandableDatePicker {
     /// Called when a cell in the Start Time section is selected
     private func selectStartCells(at indexPath: IndexPath) {
         switch indexPath {
+        case Constants.rowStartDate:
+                let cell = tableView.cellForRow(at: indexPath)
+                DatePickerPopover.appearFrom(originView: (cell?.contentView)!,
+                                             baseViewController: self,
+                                             title: "Clearable DatePicker",
+                                             dateMode: .date,
+                                             initialDate: Date(),
+                                             doneAction: {
+                                                selectedDate in
+                                                
+                },
+                                             cancelAction: {
+                                                print("cancel")},clearAction: { print("clear")
+                })
+                return
         case Constants.rowStartTimeZone:
             let viewController = ExpandableDatePickerTimeZoneTableViewController {
                 [weak self] timeZone in

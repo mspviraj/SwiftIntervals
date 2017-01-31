@@ -31,8 +31,6 @@
 		B074DF161E3EB9B20069843D /* EnumDateExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B074DF151E3EB9B20069843D /* EnumDateExtensionsTests.swift */; };
 		B0756B5E1E22D39200C267A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0E731E21E21B38C00160E37 /* Assets.xcassets */; };
 		B0756B6F1E234CE500C267A2 /* DateEnumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0756B6E1E234CE500C267A2 /* DateEnumTests.swift */; };
-		B0756B751E236EF800C267A2 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0756B741E236EF800C267A2 /* Event.swift */; };
-		B0756B761E23762A00C267A2 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0756B741E236EF800C267A2 /* Event.swift */; };
 		B0756B781E23783F00C267A2 /* EventTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0756B771E23783F00C267A2 /* EventTests.swift */; };
 		B092CC531E21B7BC000048FE /* DateEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = B092CC521E21B7BC000048FE /* DateEnum.swift */; };
 		B092CC541E21B7BC000048FE /* DateEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = B092CC521E21B7BC000048FE /* DateEnum.swift */; };
@@ -59,6 +57,9 @@
 		B0C63C1F1E26D57D00D86AE9 /* CalenderManagerCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C63C1D1E26D57D00D86AE9 /* CalenderManagerCodes.swift */; };
 		B0C63C211E26D9AB00D86AE9 /* MockNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C63C201E26D9AB00D86AE9 /* MockNotificationCenter.swift */; };
 		B0C63C221E26D9AB00D86AE9 /* MockNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C63C201E26D9AB00D86AE9 /* MockNotificationCenter.swift */; };
+		B0CD939D1E40F30100B43FDE /* EventEditorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CD939C1E40F30100B43FDE /* EventEditorTests.swift */; };
+		B0CD939F1E40F38300B43FDE /* EventEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CD939E1E40F38300B43FDE /* EventEditor.swift */; };
+		B0CD93A11E40F54D00B43FDE /* EventContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CD93A01E40F54D00B43FDE /* EventContainer.swift */; };
 		B0DD67311E3D4A3500162DE0 /* NewEventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DD67301E3D4A3500162DE0 /* NewEventTableViewController.swift */; };
 		B0DD67351E3D4F2600162DE0 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DD67341E3D4F2600162DE0 /* EventTableViewCell.swift */; };
 		B0DD67371E3D4FB900162DE0 /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DD67361E3D4FB900162DE0 /* TextTableViewCell.swift */; };
@@ -120,7 +121,6 @@
 		B05A16341E2948D50053518E /* CloudDropbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudDropbox.swift; sourceTree = "<group>"; };
 		B074DF151E3EB9B20069843D /* EnumDateExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumDateExtensionsTests.swift; sourceTree = "<group>"; };
 		B0756B6E1E234CE500C267A2 /* DateEnumTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateEnumTests.swift; sourceTree = "<group>"; };
-		B0756B741E236EF800C267A2 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		B0756B771E23783F00C267A2 /* EventTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTests.swift; sourceTree = "<group>"; };
 		B092CC521E21B7BC000048FE /* DateEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateEnum.swift; sourceTree = "<group>"; };
 		B092CC551E21B7CD000048FE /* DateIntervals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateIntervals.swift; sourceTree = "<group>"; };
@@ -140,6 +140,9 @@
 		B0C63C181E26CBE900D86AE9 /* YearManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YearManager.swift; sourceTree = "<group>"; };
 		B0C63C1D1E26D57D00D86AE9 /* CalenderManagerCodes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalenderManagerCodes.swift; sourceTree = "<group>"; };
 		B0C63C201E26D9AB00D86AE9 /* MockNotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockNotificationCenter.swift; sourceTree = "<group>"; };
+		B0CD939C1E40F30100B43FDE /* EventEditorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventEditorTests.swift; sourceTree = "<group>"; };
+		B0CD939E1E40F38300B43FDE /* EventEditor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventEditor.swift; sourceTree = "<group>"; };
+		B0CD93A01E40F54D00B43FDE /* EventContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventContainer.swift; sourceTree = "<group>"; };
 		B0DD67301E3D4A3500162DE0 /* NewEventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewEventTableViewController.swift; sourceTree = "<group>"; };
 		B0DD67341E3D4F2600162DE0 /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		B0DD67361E3D4FB900162DE0 /* TextTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
@@ -279,7 +282,6 @@
 				B092CC551E21B7CD000048FE /* DateIntervals.swift */,
 				B05A162D1E2845020053518E /* DayManager.swift */,
 				B0E731DD1E21B38C00160E37 /* DropboxViewController.swift */,
-				B0756B741E236EF800C267A2 /* Event.swift */,
 				B095EA571E37B73E007F130F /* EventList.swift */,
 				B0E731DB1E21B38C00160E37 /* FirstViewController.swift */,
 				B0942A181E23D970002EECEE /* JSONUtil.swift */,
@@ -295,6 +297,8 @@
 				B0E731DF1E21B38C00160E37 /* Main.storyboard */,
 				B099F3021E3AAF5A00FC3F93 /* MonthTableViewCell.xib */,
 				B0DD673A1E3E989800162DE0 /* EventWrapper.swift */,
+				B0CD939E1E40F38300B43FDE /* EventEditor.swift */,
+				B0CD93A01E40F54D00B43FDE /* EventContainer.swift */,
 			);
 			path = SwiftEvents;
 			sourceTree = "<group>";
@@ -318,6 +322,7 @@
 				B05A16301E2845200053518E /* YearManagerTests.swift */,
 				B099F2FC1E38037B00FC3F93 /* PreferencesTest.swift */,
 				B074DF151E3EB9B20069843D /* EnumDateExtensionsTests.swift */,
+				B0CD939C1E40F30100B43FDE /* EventEditorTests.swift */,
 			);
 			path = SwiftEventsTests;
 			sourceTree = "<group>";
@@ -624,11 +629,11 @@
 				B05A162E1E2845020053518E /* DayManager.swift in Sources */,
 				B0357B4D1E3BDADA00683F3C /* AddEventViewController.swift in Sources */,
 				B0357B411E3BB14000683F3C /* MonthKeypad.swift in Sources */,
-				B0756B751E236EF800C267A2 /* Event.swift in Sources */,
 				B0DD67351E3D4F2600162DE0 /* EventTableViewCell.swift in Sources */,
 				B0C63C141E25DD4900D86AE9 /* MyNotificationCenter.swift in Sources */,
 				B095EA581E37B73E007F130F /* EventList.swift in Sources */,
 				B0357B4B1E3BD7CD00683F3C /* Keypad.swift in Sources */,
+				B0CD93A11E40F54D00B43FDE /* EventContainer.swift in Sources */,
 				B0942A191E23D970002EECEE /* JSONUtil.swift in Sources */,
 				B0170DFC1E36019B00028CC4 /* NextTime.swift in Sources */,
 				B0DD673B1E3E989800162DE0 /* EventWrapper.swift in Sources */,
@@ -641,6 +646,7 @@
 				B0357B4F1E3BEDA200683F3C /* KeypadView.swift in Sources */,
 				B095EA5C1E37D343007F130F /* Preferences.swift in Sources */,
 				B0A7AC891E39B2A30005A716 /* IntervalViewController.swift in Sources */,
+				B0CD939F1E40F38300B43FDE /* EventEditor.swift in Sources */,
 				B0E889DC1E3689AD00F1ECD7 /* EventTableViewController.swift in Sources */,
 				B007CF131E2F27450053F851 /* TimeManager.swift in Sources */,
 				B099F30A1E3AB9C700FC3F93 /* AddEventTableViewCell.swift in Sources */,
@@ -658,7 +664,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0756B761E23762A00C267A2 /* Event.swift in Sources */,
 				B095EA5E1E37D8C3007F130F /* JSONUtilTests.swift in Sources */,
 				B0756B6F1E234CE500C267A2 /* DateEnumTests.swift in Sources */,
 				B007CF0F1E2D70690053F851 /* CloudDropboxTests.swift in Sources */,
@@ -677,6 +682,7 @@
 				B0942A1B1E23E424002EECEE /* JSONUtil.swift in Sources */,
 				B05A162F1E2845020053518E /* DayManager.swift in Sources */,
 				B0E889DA1E367C4900F1ECD7 /* CloudManagerTests.swift in Sources */,
+				B0CD939D1E40F30100B43FDE /* EventEditorTests.swift in Sources */,
 				B05A16311E2845200053518E /* YearManagerTests.swift in Sources */,
 				B0756B781E23783F00C267A2 /* EventTests.swift in Sources */,
 				B0170DFF1E360C3300028CC4 /* NextTimeTests.swift in Sources */,

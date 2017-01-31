@@ -8,6 +8,7 @@
 
 import XCTest
 import Gloss
+@testable import SwiftEvents
 
 class EventTests: XCTestCase {
     

@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import Pods_SwiftEvents
+@testable import SwiftEvents
 
 class JSONUtilTests: XCTestCase {
     

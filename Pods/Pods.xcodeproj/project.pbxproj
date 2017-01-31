@@ -7,136 +7,137 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		081C9E744E322F077796AFB4DB4AF410 /* SwiftyPickerPopover-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 279880DD850E52DE3B3970B87BB50FE0 /* SwiftyPickerPopover-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		089BF9D4FB9821CC42715B6394808216 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF58B6F7EADDD13DE7DAF6699FF98CB2 /* Team.swift */; };
-		0B0EE373652A1A8A5CB4918FC5066C94 /* ExpandableDatePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2191B1B46DD98D2619C31E031EEDBAFA /* ExpandableDatePickerCell.swift */; };
-		0C247CCC098613E63BD3E2AC5417AE98 /* ColumnStringPickerPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E837B1D3CD7C24BCA97AEDA64EE618 /* ColumnStringPickerPopover.swift */; };
-		100B8C15B428CA6CAD03A2F922E1253D /* ShortTimeZoneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE281A7D96BB4765BFCBD8D71A74A6EF /* ShortTimeZoneDelegate.swift */; };
-		10EB23E9ECC4B33E16933BB1EA560B6A /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A7986317A21834F90CA504B75464D6 /* Timeline.swift */; };
-		14038F2CDE39590263EA9F2850F5101F /* DateInRegionFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFAE8A4FEA70B0395EAE4357774EED8 /* DateInRegionFormatter.swift */; };
-		15337A5AC60D3F47FAA5BE3728253314 /* ExpandableDatePickerSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1E61617D1B8F993C03165B46C9BD9B /* ExpandableDatePickerSelectionCell.swift */; };
+		01799C081EB898E3ECCA7FE7DC02B275 /* DateInRegion+Compare.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB89B79B56592A1442C6A21A45300D3A /* DateInRegion+Compare.swift */; };
+		081C9E744E322F077796AFB4DB4AF410 /* SwiftyPickerPopover-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 55C7FC5AB8BBF9834E5D8A4EDD61D891 /* SwiftyPickerPopover-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		089BF9D4FB9821CC42715B6394808216 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F5238EA70CA6589D4EB74470D20010 /* Team.swift */; };
+		0B0EE373652A1A8A5CB4918FC5066C94 /* ExpandableDatePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D3B2B8340C2BC7DD4277DF6DCC3100 /* ExpandableDatePickerCell.swift */; };
+		0C247CCC098613E63BD3E2AC5417AE98 /* ColumnStringPickerPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D06C00F28636F3AA408D724592EF1B5 /* ColumnStringPickerPopover.swift */; };
+		100B8C15B428CA6CAD03A2F922E1253D /* ShortTimeZoneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC141D2FFBC3EEAA94FE6DDDE22027E /* ShortTimeZoneDelegate.swift */; };
+		10EB23E9ECC4B33E16933BB1EA560B6A /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7740C135A9D27EB1FC9FF070C1C4EFC /* Timeline.swift */; };
+		11414A180D8F2322516E702D4147D574 /* Date+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A16F4A2285B4B000F77890D072B918 /* Date+Formatter.swift */; };
+		15337A5AC60D3F47FAA5BE3728253314 /* ExpandableDatePickerSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1703FF194B3DBE0DB7363627E0A5A3 /* ExpandableDatePickerSelectionCell.swift */; };
 		16147BD14F4274826EF6A37B5F382474 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEE2D7A1E4DE1EE485D611722B3EE03C /* Foundation.framework */; };
-		1A16D8BE58700ECAB14A3E252B5C766D /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B489B2A9E214E1890D430996912A43 /* Base.swift */; };
-		1A1A8AF731F2C620CCD7BF21601EBFB5 /* ExpandableDatePicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F90F817CAD4CAEFCAADB41CC2E21BE3 /* ExpandableDatePicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 03CDE1FC746E78F8B09C029F6AC43CAD /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1DFCBE71D2FD5EBF9E99B2441A0BF343 /* LongTimeZoneCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CDB7DEDAF88A5EC566097700AF43A6 /* LongTimeZoneCellData.swift */; };
-		1F2C8FA6EAF0974F1C78064FF6875D6C /* DatePickerPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E73494788C13523C5A3BD0E49EBE45 /* DatePickerPopover.swift */; };
+		1914467BA48062E26C31F7A59885B4B3 /* Commons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5973C6C4EFB5D4FB5839433457F46221 /* Commons.swift */; };
+		1A16D8BE58700ECAB14A3E252B5C766D /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C779CFD1C076B37DD0193D986D3F79 /* Base.swift */; };
+		1A1A8AF731F2C620CCD7BF21601EBFB5 /* ExpandableDatePicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 820903D34B557D37245A29528A8D56E3 /* ExpandableDatePicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FA92CE9F4E3C1BC3E4BF43072441375 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1DFCBE71D2FD5EBF9E99B2441A0BF343 /* LongTimeZoneCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1440D244D862590E1D608CD7330DF294 /* LongTimeZoneCellData.swift */; };
+		1F2C8FA6EAF0974F1C78064FF6875D6C /* DatePickerPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D83206945EF3FC02BB11EB21DC2254 /* DatePickerPopover.swift */; };
 		2001E5080FE7A8DF4DC67B77A4C338A5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEE2D7A1E4DE1EE485D611722B3EE03C /* Foundation.framework */; };
 		22FE2A545843C5DB4DB9BF47164434B9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2ADF0FE028B435EF3AC6145703A2A1D /* UIKit.framework */; };
 		23A77986972BD8D7BF41BB2FE9CBC32B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEE2D7A1E4DE1EE485D611722B3EE03C /* Foundation.framework */; };
-		24F2B3BA0C14772E7FC1B2C87A6B26D0 /* CountdownPickerPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA7AE41E04DA99DD418E48001A77E00 /* CountdownPickerPopoverViewController.swift */; };
-		2721598760D65592B5A11C668B36A0E2 /* Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BC5DD587E73E96C2E11C9A5D8DCDB7 /* Properties.swift */; };
-		28D6D8E2AC1711E18DB2192A26DFC0B9 /* OAuthMobile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48390B7EA6502F09F68DA7F6DA140F2 /* OAuthMobile.swift */; };
-		28F18E46338CE33562C22FD1542F8027 /* ShortTimeZoneCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3C0F34614EB63DA4DA26A1FA208EFB /* ShortTimeZoneCellData.swift */; };
-		338BAEC2983D1116494F776CF8ED527E /* TeamRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4F3CE29EADAF3DC07391890417622D /* TeamRoutes.swift */; };
+		24F2B3BA0C14772E7FC1B2C87A6B26D0 /* CountdownPickerPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4609F17C0057901371687948D1621A09 /* CountdownPickerPopoverViewController.swift */; };
+		2721598760D65592B5A11C668B36A0E2 /* Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0074714D9137EACEAA274A9509928FE6 /* Properties.swift */; };
+		28D6D8E2AC1711E18DB2192A26DFC0B9 /* OAuthMobile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A399C664BC125C6F52C54642BE0BC252 /* OAuthMobile.swift */; };
+		28F18E46338CE33562C22FD1542F8027 /* ShortTimeZoneCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43EC8F864F30E08946149DAF591A203 /* ShortTimeZoneCellData.swift */; };
+		2C064AEE8D43411476BB20C75C1FE699 /* CalendarName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927F76D5CD1102FEA0B363F8482BC936 /* CalendarName.swift */; };
+		338BAEC2983D1116494F776CF8ED527E /* TeamRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58317DA0009DD1F52EF554417090434 /* TeamRoutes.swift */; };
 		33D87FAFB0F1120DA6F3D80E3FD9DFAD /* Pods-SwiftEventsTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 456D986F7632F921512E2AA07B594897 /* Pods-SwiftEventsTests-dummy.m */; };
-		3626B94094672CB1C9DEA32B9F9502E1 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B8EE19AE36958A530E40F1867A128C /* TaskDelegate.swift */; };
-		367F4DAA802CAE6AACE1BA3834BE83EE /* BaseTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F7F7A3F208FA985C718DA2BD6658F5 /* BaseTeam.swift */; };
-		393A57171B477D6F74BA1083AD87FCF3 /* DatePickerPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CBAE091E8FD4447483F595FF53CD7E /* DatePickerPopoverViewController.swift */; };
-		3EB30AFB1712EF5856B20B6BEAEBAC8F /* Date+Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5088C7C1050463964C477115BB2DEB /* Date+Components.swift */; };
-		432266A3AC83BCECD04E34629FD9EB5A /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51132E8EF609E78BCCB9D9D06B2E4675 /* Common.swift */; };
-		44A330649098B89E21F39092B0253905 /* ColumnStringPickerPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E59462FDEAFB2F8BEE27222A04228A /* ColumnStringPickerPopoverViewController.swift */; };
+		3626B94094672CB1C9DEA32B9F9502E1 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2308536E1E56449981676FAF7AD309C5 /* TaskDelegate.swift */; };
+		367F4DAA802CAE6AACE1BA3834BE83EE /* BaseTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E46BC0E9CCD654C20C424A65E2E9F7 /* BaseTeam.swift */; };
+		393A57171B477D6F74BA1083AD87FCF3 /* DatePickerPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BCE6A1658212462C03DE38E5BDBAE9 /* DatePickerPopoverViewController.swift */; };
+		432266A3AC83BCECD04E34629FD9EB5A /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E43454ADA2C7FB37398814F826B738C /* Common.swift */; };
+		44A330649098B89E21F39092B0253905 /* ColumnStringPickerPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57C5B2696E64173A6FCEA1BB5A89906 /* ColumnStringPickerPopoverViewController.swift */; };
 		453EBB6F33338ED0098E1130DF1F9774 /* Pods-SwiftEvents-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9153848CB35E589FEFA1F534F40989AE /* Pods-SwiftEvents-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		480A4CC153E8D4799E2CB2F191CAD343 /* Pods-SwiftEvents-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA1CAD1361F5FC974AE37B458820F0E /* Pods-SwiftEvents-dummy.m */; };
 		4A41A804979E900400B3C91E998214C7 /* Pods-SwiftEventsTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6CD9D5984ABB7E13B7F6BE460A5A5A89 /* Pods-SwiftEventsTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4C74CC815703EB9924B68D3DF075C9A7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEE2D7A1E4DE1EE485D611722B3EE03C /* Foundation.framework */; };
-		4CAE6CEAC2F8B5B21B26B3C034E1E24F /* UsersRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFDD0FB58BA740214A7AAD954A9496C /* UsersRoutes.swift */; };
-		4CC364C1190C4FDCF14DE61874D5CC12 /* FilesRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786777CCDE2F3C83498F71EF80357262 /* FilesRoutes.swift */; };
-		507332715D64C2C366F3AE585377C70E /* DropboxClientsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9DF347CA4239E38773A8B7F4E55D3A /* DropboxClientsManager.swift */; };
-		51C08E8A19F11846D0BD7392E68DC04C /* SwiftyDropbox-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F0E01D08C279EEFEA6BB4FBD8FD90F /* SwiftyDropbox-dummy.m */; };
-		526ECA5891B307598343306857080E67 /* StoneBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A289AB8C49134408E7D60E5EE3C6C9 /* StoneBase.swift */; };
-		532FC5AFE6717F18DF98FF250F332139 /* AuthRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB94EABF15BAEFA7608B08CE1FAC1984 /* AuthRoutes.swift */; };
-		5387216E723A3C68E851CA15573CDD71 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E828A9EA00329E7AE220C5F0F8A6C0A /* Request.swift */; };
-		596F8AEF32CECD4E4594F611B6C6905A /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129F0106980A050A9870A9DBC39D16C1 /* UITableView.swift */; };
-		5D23B429384B91AE06C177F22CEE4C3B /* DateInRegion+Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3280C4B10D9E725020D80B5291CEA587 /* DateInRegion+Math.swift */; };
-		5E2B785FF6A92EE0815E68E8E6653BB3 /* SwiftyDropbox-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E62F3573D47C1B3242197A822FBCA05E /* SwiftyDropbox-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		60EF2B4A841620E7F6E237712878CAE1 /* Gloss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961CF60306D34BBD5A2D6EBB13992FD4 /* Gloss.swift */; };
-		61200D01A1855D7920CEF835C8BE00B0 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A7C5E5DABF0E768E48B7E543CEAA7F /* DispatchQueue+Alamofire.swift */; };
-		619DDACBA9ED1FC50F2C5F69A9CD3B1F /* LongTimeZoneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12023D5D3CF6F837FF694D886029F08 /* LongTimeZoneDelegate.swift */; };
-		62F65AD8DC4F0F9610F4B8B4738EC094 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27665C2EF660064B9B23BA5D36C713F /* ServerTrustPolicy.swift */; };
-		65B3D1F9F993D031978792B99B7BECFB /* StringPickerPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3A96CA230143287030AD236DDBEF21 /* StringPickerPopoverViewController.swift */; };
-		6662D3A8B3004868E039C4E339400666 /* DropboxTransportClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A1F1E3362C3B0089ABFB1FF1CC8A5C /* DropboxTransportClient.swift */; };
-		688A3D5F1F8573658542EB1BFC35AAD7 /* Date+Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795713D600E6AA691284A216A3492E87 /* Date+Math.swift */; };
-		68F987B50FE5E07ED9A2245512C96C98 /* OAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C30C04C99FF337E6420F8A9109F9772 /* OAuth.swift */; };
-		6D6EBBE59D6BF214A489F27AF71CD352 /* Date+Compare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E383AAB693EDAF52D15BBB484763C38 /* Date+Compare.swift */; };
-		79E93CB2A0C225E6F4A372079D83D6F1 /* DateInRegion+Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F630F60C432C11E4066F5EA6F58C6E /* DateInRegion+Components.swift */; };
-		7B5FE28C7EA4122B0598738E54DBEBD8 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D972FF6FED304D94541C9C012DC16E0 /* SessionDelegate.swift */; };
-		7D8CC01E8C9EFFF9F4D65406CDE0AB66 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D49C930DBE78F85E3239FA8A0BA1C9 /* Result.swift */; };
-		8175B9D8BC265FA9956F27593BFCFB00 /* DateInRegion+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AD08E9579DADCE641C8D14F452E785 /* DateInRegion+Formatter.swift */; };
+		4CAE6CEAC2F8B5B21B26B3C034E1E24F /* UsersRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF9DE5C08E7B33CB229F119F021DF14 /* UsersRoutes.swift */; };
+		4CC364C1190C4FDCF14DE61874D5CC12 /* FilesRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B167233EB6C45AAE81703E6B86024C /* FilesRoutes.swift */; };
+		4DD54A1D97B63CF34A4AA1FEAD94D99D /* ISO8601DateTimeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D2F352A4ADCCA21C41E599CD873D30 /* ISO8601DateTimeFormatter.swift */; };
+		507332715D64C2C366F3AE585377C70E /* DropboxClientsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1604D40DC06E3F430DDBDE14A9569ED5 /* DropboxClientsManager.swift */; };
+		51C08E8A19F11846D0BD7392E68DC04C /* SwiftyDropbox-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C542DE03052B1F1D1BA6C0401AD5DA17 /* SwiftyDropbox-dummy.m */; };
+		526ECA5891B307598343306857080E67 /* StoneBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBED32176A44EBC57A5D81542768E9F0 /* StoneBase.swift */; };
+		532FC5AFE6717F18DF98FF250F332139 /* AuthRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0BB7F70B94C69C7B3221BAB143EAFE /* AuthRoutes.swift */; };
+		5387216E723A3C68E851CA15573CDD71 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCCCFC1596A77A90537BC9514CCC423 /* Request.swift */; };
+		596F8AEF32CECD4E4594F611B6C6905A /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC572565D0320018A62D5FAB7483020 /* UITableView.swift */; };
+		5B128E3F159938BC3E7919031503EF87 /* Date+Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E19F9B3E75AA4BBEA00B7640633D5E /* Date+Math.swift */; };
+		5E2B785FF6A92EE0815E68E8E6653BB3 /* SwiftyDropbox-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E03A1762442DFA2FDD3303BAAEEC867 /* SwiftyDropbox-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5F58F98DD3A789C214A7E26545022D9C /* DateTimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7128FEF007A51C1EBE5E60347734A0EA /* DateTimeInterval.swift */; };
+		60EF2B4A841620E7F6E237712878CAE1 /* Gloss.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF1D109963B15190679EFC66D6C24C2 /* Gloss.swift */; };
+		61200D01A1855D7920CEF835C8BE00B0 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1800B4B64EBE501279D61AA43A4D1320 /* DispatchQueue+Alamofire.swift */; };
+		619DDACBA9ED1FC50F2C5F69A9CD3B1F /* LongTimeZoneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57E7CBFE316C58B02971693A296B534 /* LongTimeZoneDelegate.swift */; };
+		62F65AD8DC4F0F9610F4B8B4738EC094 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4236419477D1ABA1DE20A41B44B77313 /* ServerTrustPolicy.swift */; };
+		65B3D1F9F993D031978792B99B7BECFB /* StringPickerPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E161F46DC296464B5753D0C9072BEF55 /* StringPickerPopoverViewController.swift */; };
+		6662D3A8B3004868E039C4E339400666 /* DropboxTransportClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F7B9DC0DF3B4B2D2DF5B3C2C039F16 /* DropboxTransportClient.swift */; };
+		68F987B50FE5E07ED9A2245512C96C98 /* OAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7898A633DC90AF0EB0543B6C13D95F /* OAuth.swift */; };
+		6D988D865395CCB2851D2990516989C9 /* DateInRegion+Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E70A61D44DDA61EE9AD5138C10DD895 /* DateInRegion+Components.swift */; };
+		789E56D3C3AF62766C5FB6C9A4372334 /* LocaleName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523751D51594999CE3225EAA01959F91 /* LocaleName.swift */; };
+		7B5FE28C7EA4122B0598738E54DBEBD8 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AC72091FF0074073DF8C14F9595490 /* SessionDelegate.swift */; };
+		7D8CC01E8C9EFFF9F4D65406CDE0AB66 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AE4D6DD87E54CA4D205E88490FD260 /* Result.swift */; };
+		7EFBDF239DDE6491C8544F2C14451B55 /* TimeZoneName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83423E7258B7C9861433398DDFAF82FD /* TimeZoneName.swift */; };
+		7F7C5354319270193B0F4CE070C21AA5 /* DateComponents+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E407904BDBC056B3DBA77E1644BB8A3 /* DateComponents+Extension.swift */; };
+		84895C7A9A3B5C5AB163B2ACFD73E0AF /* DateInRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE500DC479D07599B29E0AD8FAE24672 /* DateInRegion.swift */; };
 		896859E40EF49C550F53027EB83E63D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEE2D7A1E4DE1EE485D611722B3EE03C /* Foundation.framework */; };
-		8AEDA2A6EFF4A960D65FC4C1212526C4 /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900334BB3636FCE6CD29F5D571E7DCDB /* Region.swift */; };
-		8B89839937D041EED37B783DE95ECC1F /* Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA8CFBB1EC795FE579806F11D002E7 /* Files.swift */; };
-		93C6E76AFD9750170ABB8DF5045BBAEE /* SwiftyDropbox.h in Headers */ = {isa = PBXBuildFile; fileRef = 183B7CDB6334371F04CEDE4B901D3B91 /* SwiftyDropbox.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B89839937D041EED37B783DE95ECC1F /* Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502E8E63BC3AD1B1275790ACBCB8AD5B /* Files.swift */; };
+		93C6E76AFD9750170ABB8DF5045BBAEE /* SwiftyDropbox.h in Headers */ = {isa = PBXBuildFile; fileRef = 4104E5CB0FD85CEF0CE0F8A1F84A4FBD /* SwiftyDropbox.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		94D395BE583A1C20F2E37C0C0F606E64 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C01CAF06394816DE12EC9314E5E242 /* Alamofire.framework */; };
 		96614464E2642EC5C67C37269C67D1E6 /* Pods-SwiftEventsUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 75C8E3EAD5C3E729B1853D6DF863BBA7 /* Pods-SwiftEventsUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9ECAD786B2ADCFC37763715B9C482E44 /* Webkit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E52D8C1BE08BBCFFBD0197C29AC0F4B1 /* Webkit.framework */; };
-		9ED2BB2981896E0A39EFA365503F58CE /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03B40422380FC6A19D845ADF29966CF /* AFError.swift */; };
+		9ED2BB2981896E0A39EFA365503F58CE /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6B69CAA7C0A72625F2BD4F90575843 /* AFError.swift */; };
 		A04BFC558D69E7DBB68023C80A9CFE4E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEE2D7A1E4DE1EE485D611722B3EE03C /* Foundation.framework */; };
-		A1D178306275F71F8D474E1BCD88589E /* DatePickerPopover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F420C57D8517489126A0330FE658C64F /* DatePickerPopover.storyboard */; };
-		A2A6F71B727312BD45CC7A4AAD7B0AB7 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF3A24A9BDAA11C2A2F387F5E96A6D9 /* NetworkReachabilityManager.swift */; };
-		A4081C3C1982F8BAB84A560E9E4F0692 /* DropboxTeamClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDAEE7B96737BC1E60A2A743358B51C /* DropboxTeamClient.swift */; };
-		A468A4124B7A89F5307459AE3A4AC8D5 /* TimeZoneName.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8DA8CCACF41CE06916B848B9BF968E /* TimeZoneName.swift */; };
+		A1D178306275F71F8D474E1BCD88589E /* DatePickerPopover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B09AD2827D7A9B11B86ABD3605FD5957 /* DatePickerPopover.storyboard */; };
+		A2A6F71B727312BD45CC7A4AAD7B0AB7 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1871C96EDF5287894215A530D2908138 /* NetworkReachabilityManager.swift */; };
+		A4081C3C1982F8BAB84A560E9E4F0692 /* DropboxTeamClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B515B5D373894FE17B712792271E4DF /* DropboxTeamClient.swift */; };
+		A5CBF67CF926D9B0D590AA103B3E8990 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806B9C032EB7E01CB0CD1C398705E521 /* Localization.swift */; };
 		A891F4CF48A2227572CAE2ED42AB160B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36915C6F7E93FA3A5496499DAC9A5A79 /* SystemConfiguration.framework */; };
-		A9EEEA7477981DEEBC72432DE9990A4B /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BFEAD65B9A07E344F00702D83DBEC27 /* Alamofire-dummy.m */; };
-		AA1C7E0397956A49FC724A86EE87BA2A /* DateTimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F3450C3C617F9222BFE65A122F7A33 /* DateTimeInterval.swift */; };
+		A960018FFF823A2FF83EAD36BED3E210 /* Date+Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C33F34D015F82068FDDF773522A703 /* Date+Components.swift */; };
+		A9EEEA7477981DEEBC72432DE9990A4B /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F147FE2F3767967016786E5E835B6EA3 /* Alamofire-dummy.m */; };
 		AA1F68B2079D3852BE9778AFECF511C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEE2D7A1E4DE1EE485D611722B3EE03C /* Foundation.framework */; };
-		ACE35E58D078411580A345549C89A282 /* TeamCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C9BDD56486EBDF08B0FA5E95A1EE48 /* TeamCommon.swift */; };
-		ADD59B6843D330C7385191C0A65E264F /* CountdownPickerPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0508F909B48C2B755692042CD81EB7DA /* CountdownPickerPopover.swift */; };
-		AE1EF48399533730D0066E04B22CA2D6 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34631561A0E99A2376AE0049C95DEDAC /* SessionManager.swift */; };
+		ACE35E58D078411580A345549C89A282 /* TeamCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F02701CB7129928C76B15FBEEF60C9 /* TeamCommon.swift */; };
+		ADD59B6843D330C7385191C0A65E264F /* CountdownPickerPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4196B5DD7F3D99871D1BCBCBF0C576F /* CountdownPickerPopover.swift */; };
+		ADFEDB1CF75769D5D63AD61642E65C76 /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2D37625F4FE78FBEF5B431AFF52C8C /* Region.swift */; };
+		AE1EF48399533730D0066E04B22CA2D6 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0799A0B6376FEEB7A8E2940E45DD913 /* SessionManager.swift */; };
 		AEDB6E572E1F1132EEB2ADEB24D39393 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEE2D7A1E4DE1EE485D611722B3EE03C /* Foundation.framework */; };
 		B2E588A8CFBB7C21A9ABD1BBED44608A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEE2D7A1E4DE1EE485D611722B3EE03C /* Foundation.framework */; };
-		B321CC517FF2A09E53C0F9AEEE58B0AA /* ExpandableDatePickerTimeZoneTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237B1416A695331DA368CC056A477EE0 /* ExpandableDatePickerTimeZoneTableViewController.swift */; };
-		B4675DCBE520BC89DB4D69D94BA70045 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD08328AC99A498F697A60E075ADBE0B /* Users.swift */; };
-		B5C6BC8466CDEFF250B36F4ED8BA74DD /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1594D0D393C83A7C659885EB07C8467D /* Async.swift */; };
-		B5F6B0E7B5C28EF23FB99E723DD1DDC2 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3106C81306DD03CB409A6F0B7C5F78 /* Auth.swift */; };
-		B65FCF589DA398C3EFE0128064E510EC /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B6504540F4FE00780C32544C58F56C /* MultipartFormData.swift */; };
-		B6C5A873F8E40760D0D403DF71776B54 /* DropboxClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AF77E6E8C37B2CB0C21D09C04E03CF /* DropboxClient.swift */; };
-		B71FD131A6E44C57F053C5AD47871217 /* DateInRegion+Compare.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A89E0B169BA794F6608D3B43253A8C /* DateInRegion+Compare.swift */; };
-		B7F43352787A32C5E8D8AEC7E68B98F4 /* LocaleName.swift in Sources */ = {isa = PBXBuildFile; fileRef = E640E8D23EE62B8A884E2131670DA0D7 /* LocaleName.swift */; };
-		B92556954788E5BB46A03DE7D15106F2 /* ExpandableDatePickerTimeZoneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6837495B8611DF8BA2CC167A1860D5C7 /* ExpandableDatePickerTimeZoneCell.swift */; };
-		BBEFE2F9CEB73DC7BD97FFA66A0D9D4F /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A213D0A8E672E9B9AE6744D63359DE3C /* Validation.swift */; };
-		BD5BD6EECB2FB14788E82CDDC92779F4 /* ColumnStringPickerPopover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D24719B813DD6EF25B4D039A76402C3 /* ColumnStringPickerPopover.storyboard */; };
-		BDE41D5AC654A393DFA342BD4359E951 /* Date+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C863D66022BD950706F3D92E3C9DFF76 /* Date+Formatter.swift */; };
-		BE1652374C0BE6102BCD4EC3F6C4C2C7 /* SwiftDate-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8237EF3BD9F946B782029EDC7B69EEBF /* SwiftDate-dummy.m */; };
-		BE5C67A07E289FE1F9BE27335B159997 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3DEFB3A30F6EC76EA2B57C4607BDFD /* ParameterEncoding.swift */; };
-		C25429CB755D10F250DD3EC2C0E4D0B6 /* AbstractPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911A82081380A8B23B38AF888F5FA8FB /* AbstractPopover.swift */; };
-		C479F89F21DB5400CA18A1B0543AE3D8 /* ExpandableDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA42A0915481A55640892E9208DCCE1 /* ExpandableDatePicker.swift */; };
-		CA3DD0BBA10012C102290B35C704D3CB /* Gloss-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 00227D0AF08E990D0F0F98C75B14D774 /* Gloss-dummy.m */; };
-		CB59259816DFA4FE1F700A9851F1F70B /* StringPickerPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB2ED61DAE946BDC4B2F3A53DEE22F3 /* StringPickerPopover.swift */; };
-		CB6D60925223897FFA2662667DF83E8A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE62A862B9E347BA679FA028E0041316 /* Response.swift */; };
-		CDDC5D753BFAEF96FEE1866089C18CEB /* StringPickerPopover.strings in Resources */ = {isa = PBXBuildFile; fileRef = DE6969F82FEB26E779EC14862B6D573C /* StringPickerPopover.strings */; };
-		CE8A3543DCEE1F288E406AA3065F0A06 /* DateComponents+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5997606942E7981ED694D3C0B2CDB455 /* DateComponents+Extension.swift */; };
-		D07BD0690C55FF99F8032E9479A0631D /* ExpandableDatePicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB3A8D87CDCB8F8C14155DD6156574F /* ExpandableDatePicker-dummy.m */; };
-		D0BB38ED2FD74A698B5826BC5957425C /* SwiftDate-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 45722C7D8CC31B43538ABDC9A18456C8 /* SwiftDate-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D3B1766D93EFC0E7736AE2CFD49D24C4 /* Encoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A22915596202A1D2467F678CEE6799 /* Encoder.swift */; };
-		D566E5DA8E17C7F6C211C6B64734ED70 /* StoneValidators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C293E710A9F3A8583DCCF2C88851CFE /* StoneValidators.swift */; };
-		D8BCE8FA43568D06572F71D0CF7FA159 /* TeamPolicies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1126E5ED9835616D39ACB3DE95247A23 /* TeamPolicies.swift */; };
-		DA5BC46868822DD254E4742FA673BCEE /* CountdownPickerPopover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6CA71DA8E048A18B8482CD052B8E09C /* CountdownPickerPopover.storyboard */; };
+		B321CC517FF2A09E53C0F9AEEE58B0AA /* ExpandableDatePickerTimeZoneTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309CCEAB88BED6401BA57A4F9D879757 /* ExpandableDatePickerTimeZoneTableViewController.swift */; };
+		B4675DCBE520BC89DB4D69D94BA70045 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D44D5ECF5027EF77A251A56B524347 /* Users.swift */; };
+		B4D5865F8751FCCB19013198523FEEFD /* TimeInterval+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5FD8452149B32428003C249B22DE06 /* TimeInterval+Extensions.swift */; };
+		B5C6BC8466CDEFF250B36F4ED8BA74DD /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B489D22ABCCCA82EE9AD65BF7BEBDB /* Async.swift */; };
+		B5F6B0E7B5C28EF23FB99E723DD1DDC2 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84F295E16B4605FBF669EF510851E06 /* Auth.swift */; };
+		B65FCF589DA398C3EFE0128064E510EC /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65416A3C06361187A6AF19530A684432 /* MultipartFormData.swift */; };
+		B66A636918CA2BD538B37932CA6CC8B0 /* Date+Compare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CAC05C75986E9F124390C80DC8FFCF /* Date+Compare.swift */; };
+		B6C5A873F8E40760D0D403DF71776B54 /* DropboxClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1C1589D4CD9D09A04547297D24543C /* DropboxClient.swift */; };
+		B92556954788E5BB46A03DE7D15106F2 /* ExpandableDatePickerTimeZoneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B36FFC96FA923DE722B657347E60A64 /* ExpandableDatePickerTimeZoneCell.swift */; };
+		BBEFE2F9CEB73DC7BD97FFA66A0D9D4F /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E188E3E2A3B22C3DB985C5A3BAA85E0 /* Validation.swift */; };
+		BD5BD6EECB2FB14788E82CDDC92779F4 /* ColumnStringPickerPopover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B24AB6D9EA46FDC1093558CA39072073 /* ColumnStringPickerPopover.storyboard */; };
+		BE5C67A07E289FE1F9BE27335B159997 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F987045CD0B1CE83C517851E1A07A8 /* ParameterEncoding.swift */; };
+		BEF34BDC4643EE55B54E054325741C46 /* DateInRegionFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4636D969F58BD1D79B9485B104332A81 /* DateInRegionFormatter.swift */; };
+		C25429CB755D10F250DD3EC2C0E4D0B6 /* AbstractPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DCB9B045B45BC89B6E22EB08573899 /* AbstractPopover.swift */; };
+		C479F89F21DB5400CA18A1B0543AE3D8 /* ExpandableDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8872685870EBFD420D88DA46FAA209 /* ExpandableDatePicker.swift */; };
+		CA3DD0BBA10012C102290B35C704D3CB /* Gloss-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E77DBF20A4661EFB48214B635EDEB7B7 /* Gloss-dummy.m */; };
+		CB59259816DFA4FE1F700A9851F1F70B /* StringPickerPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41A71C9145E1F17263D5C9D1BC2FF95 /* StringPickerPopover.swift */; };
+		CB6D60925223897FFA2662667DF83E8A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043AB3C8AC660E072E8A4AB8CE4330BD /* Response.swift */; };
+		CDDC5D753BFAEF96FEE1866089C18CEB /* StringPickerPopover.strings in Resources */ = {isa = PBXBuildFile; fileRef = E4C49D2D35AFC8CBC25D78736D5AB04D /* StringPickerPopover.strings */; };
+		CFCCD05AD555DC99444C15B057D058E8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0C27EFD092DDAFEB5A5D00F87D2E46 /* Extensions.swift */; };
+		D07BD0690C55FF99F8032E9479A0631D /* ExpandableDatePicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7202D671F4CF221B55235C6EDEA07A /* ExpandableDatePicker-dummy.m */; };
+		D0BB38ED2FD74A698B5826BC5957425C /* SwiftDate-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E041F42865F96AE6E980EEA228DBD63F /* SwiftDate-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D36433614F5F3E7A0939B443FD8697F0 /* DateInRegion+Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD6A2AF2D96A27C80E73AA0025A9DD3 /* DateInRegion+Math.swift */; };
+		D3B1766D93EFC0E7736AE2CFD49D24C4 /* Encoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800FDAAF14177E26221CC17381579846 /* Encoder.swift */; };
+		D566E5DA8E17C7F6C211C6B64734ED70 /* StoneValidators.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16944656A7AF42A7D664FE11D16E671 /* StoneValidators.swift */; };
+		D8BCE8FA43568D06572F71D0CF7FA159 /* TeamPolicies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E25A883D545BD8F141C30EA6FBE9CD /* TeamPolicies.swift */; };
+		DA5BC46868822DD254E4742FA673BCEE /* CountdownPickerPopover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4401D6A94E2682AB0B647A1538AA7E2E /* CountdownPickerPopover.storyboard */; };
 		E139A2E8BB9C21310ADD0966D97D2738 /* Pods-SwiftEventsUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD5263A3478D6DBC5743257F33A9C29 /* Pods-SwiftEventsUITests-dummy.m */; };
-		E4DDFAE1176E8E6CF607C24FF26BF9E4 /* SwiftyPickerPopover-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 976E3C383426AB7B423E1F7B7D8A90E4 /* SwiftyPickerPopover-dummy.m */; };
-		EAD2C47613A2C96A9A88621E219715F6 /* IndexPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F5B413F12A470DA9991DD79F1681F /* IndexPath.swift */; };
-		EC28677248B7E519CFA77C35046CF970 /* SharingRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B5637D874AA179F27559EA24277FB8 /* SharingRoutes.swift */; };
-		EE33386073ACE146615C9C291C584D73 /* ExtensionDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8356E7D1ACA24C98F8ED0555235F5F92 /* ExtensionDictionary.swift */; };
-		EFD264FC408EBF3BA2528E70B08DDD94 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E1E1A9422A3C483E78DB575FB75929 /* Notifications.swift */; };
-		EFE638F8F900AEBBE354C94405AAE7B8 /* DateInRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60663BB8BC055503DE6F9B48D112E1A7 /* DateInRegion.swift */; };
-		F021722C787E40EB17BAE0C2B45AF89A /* DatePickerPopover.strings in Resources */ = {isa = PBXBuildFile; fileRef = BE07AEAFC7941FF1845E50B7FD71A1A4 /* DatePickerPopover.strings */; };
-		F3FC601544D73434210810D90AE856F4 /* SwiftDate.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C361BA5BF3FE876882873CF8F64DF9B7 /* SwiftDate.bundle */; };
-		F4860A9A1494F46E4F64D7BCAD68A165 /* ISO8601DateTimeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC58B4EE68AA117EC8DAA36F37FCAD1F /* ISO8601DateTimeFormatter.swift */; };
-		F6400B826FBDA981447BA96B0CE08083 /* TimeInterval+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381B15161FA0CC2DCDED3F833FF72202 /* TimeInterval+Extensions.swift */; };
-		F651046E12C39E14BD36029A83C72EE6 /* CalendarName.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B29996B88F63E37D88D72140EAB4AF /* CalendarName.swift */; };
-		F6BECD98B97CBFEBE2C96F0E9E72A6C0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4301853768E4D1598D3E368002BAC131 /* ResponseSerialization.swift */; };
-		F6C46CB4C4D154D3DC53147EFF0F0E65 /* StoneSerializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A461639B49D16BD086D55B41D7D4D2 /* StoneSerializers.swift */; };
-		F7BA99394ED391BC9CC0208DD1E94921 /* Gloss-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 18D50A86E8E63ECF5D7BC6CB8F74833F /* Gloss-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F7DD87D17D2BEFF0D9C2348D543D49F5 /* ExtensionDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BCF776D0790A0AF250E0BEA907692D /* ExtensionDecodable.swift */; };
-		F86A705F6F65EAB52879C2E7769A6EA6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F53427C9E6090F653855DDD1667202 /* Extensions.swift */; };
-		F8B3D3092ED0417E8CDF32033F6122F5 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF1F9DEEA31BDF4AC2ADEE66A8A21F7 /* Alamofire.swift */; };
-		F8D81F377A1DF244782222DCB241CAEB /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A302B80D9E90A560D88EB9BCC5687009 /* Decoder.swift */; };
-		FA8A6E58FC810455B592D9C8E321098F /* Sharing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87823CAF051E0663BE8F892F3E40ADD9 /* Sharing.swift */; };
-		FAEFA9371AA5A7F4C499C5519E279C27 /* ExtensionArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB8DD08DD504B60F1B66F6AE956DD88 /* ExtensionArray.swift */; };
-		FBA873D017F99AC56947CCEF31641139 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE13BF6998CCC0DF9951FB9307D064C9 /* Operators.swift */; };
-		FD64E525BD3217175A71A1A94915EE1E /* StringPickerPopover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1809DF4C5A1390B3144ED908AC0E4845 /* StringPickerPopover.storyboard */; };
+		E4998626A89ED99349E187306596ED38 /* DateInRegion+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E91661AC6AE716869A2FDC7DF1B713 /* DateInRegion+Formatter.swift */; };
+		E4DDFAE1176E8E6CF607C24FF26BF9E4 /* SwiftyPickerPopover-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A016178EB19C6479F546E187184639C /* SwiftyPickerPopover-dummy.m */; };
+		EAD2C47613A2C96A9A88621E219715F6 /* IndexPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5BFDF98C9126C48D2595730AFAC0C6 /* IndexPath.swift */; };
+		EC28677248B7E519CFA77C35046CF970 /* SharingRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDF1E0162C7D84204210C57DB7B47B8 /* SharingRoutes.swift */; };
+		EE33386073ACE146615C9C291C584D73 /* ExtensionDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6EEC87720554F75E5AE90D98ED1A22 /* ExtensionDictionary.swift */; };
+		EFD264FC408EBF3BA2528E70B08DDD94 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65829C07945D73356966DC500EA12CC /* Notifications.swift */; };
+		F021722C787E40EB17BAE0C2B45AF89A /* DatePickerPopover.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3CA80D119705DB30FE744888D516D36 /* DatePickerPopover.strings */; };
+		F3FC601544D73434210810D90AE856F4 /* SwiftDate.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3E554B12479D1F26472ADA1BED928CB6 /* SwiftDate.bundle */; };
+		F6BECD98B97CBFEBE2C96F0E9E72A6C0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44B087703BC095AADB76700B8EE86D6 /* ResponseSerialization.swift */; };
+		F6C46CB4C4D154D3DC53147EFF0F0E65 /* StoneSerializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3D0898706D4F07094BCAC0A2A66234 /* StoneSerializers.swift */; };
+		F7BA99394ED391BC9CC0208DD1E94921 /* Gloss-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FB902FD071BA1A9E5A544CD0C3943D77 /* Gloss-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F7DD87D17D2BEFF0D9C2348D543D49F5 /* ExtensionDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD643F603396C7031361B8377078AD6D /* ExtensionDecodable.swift */; };
+		F8B3D3092ED0417E8CDF32033F6122F5 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = D922BAD339170BE68F91C0ABA79C0892 /* Alamofire.swift */; };
+		F8D81F377A1DF244782222DCB241CAEB /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A57974CC301B985C069FF71D2DB6FD /* Decoder.swift */; };
+		FA1888209086D2791283CA79784ADC68 /* SwiftDate-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1BB77D6224727442955703B3080544 /* SwiftDate-dummy.m */; };
+		FA8A6E58FC810455B592D9C8E321098F /* Sharing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A14A33D973F26688A12900A390D7AF /* Sharing.swift */; };
+		FAEFA9371AA5A7F4C499C5519E279C27 /* ExtensionArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB45FFC50729960D30FA7ACDF60B0FA /* ExtensionArray.swift */; };
+		FBA873D017F99AC56947CCEF31641139 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BCA83BB6C2B4E592C225CB361CA5B0 /* Operators.swift */; };
+		FD64E525BD3217175A71A1A94915EE1E /* StringPickerPopover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11FE41D6B071FBF8387DCBF8B7B8D26F /* StringPickerPopover.storyboard */; };
 		FD9231A1D405439F43E55CE1AAEFBA29 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2ADF0FE028B435EF3AC6145703A2A1D /* UIKit.framework */; };
-		FEB0387C86F9DA1CF988E153CDF8B10E /* Commons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B69E293F588D6BD5618393001C4FAFC /* Commons.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -192,185 +193,186 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00227D0AF08E990D0F0F98C75B14D774 /* Gloss-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Gloss-dummy.m"; sourceTree = "<group>"; };
-		00BC5DD587E73E96C2E11C9A5D8DCDB7 /* Properties.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Properties.swift; path = Source/SwiftyDropbox/PlatformNeutral/Properties.swift; sourceTree = "<group>"; };
-		01C9BDD56486EBDF08B0FA5E95A1EE48 /* TeamCommon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TeamCommon.swift; path = Source/SwiftyDropbox/PlatformNeutral/TeamCommon.swift; sourceTree = "<group>"; };
-		03CDE1FC746E78F8B09C029F6AC43CAD /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
-		0508F909B48C2B755692042CD81EB7DA /* CountdownPickerPopover.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CountdownPickerPopover.swift; path = SwiftyPickerPopover/CountdownPickerPopover.swift; sourceTree = "<group>"; };
-		08CDB7DEDAF88A5EC566097700AF43A6 /* LongTimeZoneCellData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LongTimeZoneCellData.swift; path = "ExpandableDatePicker/Time Zone/Long/LongTimeZoneCellData.swift"; sourceTree = "<group>"; };
-		0A5088C7C1050463964C477115BB2DEB /* Date+Components.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Date+Components.swift"; path = "Sources/SwiftDate/Date+Components.swift"; sourceTree = "<group>"; };
-		0B3106C81306DD03CB409A6F0B7C5F78 /* Auth.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Auth.swift; path = Source/SwiftyDropbox/PlatformNeutral/Auth.swift; sourceTree = "<group>"; };
-		0BB3A8D87CDCB8F8C14155DD6156574F /* ExpandableDatePicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ExpandableDatePicker-dummy.m"; sourceTree = "<group>"; };
-		0C9DF347CA4239E38773A8B7F4E55D3A /* DropboxClientsManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropboxClientsManager.swift; path = Source/SwiftyDropbox/PlatformNeutral/DropboxClientsManager.swift; sourceTree = "<group>"; };
-		0E828A9EA00329E7AE220C5F0F8A6C0A /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
-		1126E5ED9835616D39ACB3DE95247A23 /* TeamPolicies.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TeamPolicies.swift; path = Source/SwiftyDropbox/PlatformNeutral/TeamPolicies.swift; sourceTree = "<group>"; };
-		129F0106980A050A9870A9DBC39D16C1 /* UITableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UITableView.swift; path = ExpandableDatePicker/UITableView.swift; sourceTree = "<group>"; };
-		134A3109A9946C0B588B325BAFDC1208 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1594D0D393C83A7C659885EB07C8467D /* Async.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Async.swift; path = Source/SwiftyDropbox/PlatformNeutral/Async.swift; sourceTree = "<group>"; };
-		15A8D300C91E08ADBCE0468FCA885788 /* Gloss.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Gloss.xcconfig; sourceTree = "<group>"; };
-		15BCF776D0790A0AF250E0BEA907692D /* ExtensionDecodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExtensionDecodable.swift; path = Sources/ExtensionDecodable.swift; sourceTree = "<group>"; };
-		1809DF4C5A1390B3144ED908AC0E4845 /* StringPickerPopover.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; name = StringPickerPopover.storyboard; path = Base.lproj/StringPickerPopover.storyboard; sourceTree = "<group>"; };
-		183B7CDB6334371F04CEDE4B901D3B91 /* SwiftyDropbox.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SwiftyDropbox.h; path = Source/SwiftyDropbox/PlatformNeutral/SwiftyDropbox.h; sourceTree = "<group>"; };
-		18D50A86E8E63ECF5D7BC6CB8F74833F /* Gloss-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Gloss-umbrella.h"; sourceTree = "<group>"; };
-		1D972FF6FED304D94541C9C012DC16E0 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
-		1DF3A24A9BDAA11C2A2F387F5E96A6D9 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
-		1E8E3295B89851678BF9165725CA18C1 /* ExpandableDatePicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = ExpandableDatePicker.modulemap; sourceTree = "<group>"; };
-		1F90F817CAD4CAEFCAADB41CC2E21BE3 /* ExpandableDatePicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ExpandableDatePicker-umbrella.h"; sourceTree = "<group>"; };
-		20F7F7A3F208FA985C718DA2BD6658F5 /* BaseTeam.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseTeam.swift; path = Source/SwiftyDropbox/PlatformNeutral/BaseTeam.swift; sourceTree = "<group>"; };
-		2191B1B46DD98D2619C31E031EEDBAFA /* ExpandableDatePickerCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpandableDatePickerCell.swift; path = ExpandableDatePicker/ExpandableDatePickerCell.swift; sourceTree = "<group>"; };
-		22D49C930DBE78F85E3239FA8A0BA1C9 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
-		237B1416A695331DA368CC056A477EE0 /* ExpandableDatePickerTimeZoneTableViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpandableDatePickerTimeZoneTableViewController.swift; path = "ExpandableDatePicker/Time Zone/ExpandableDatePickerTimeZoneTableViewController.swift"; sourceTree = "<group>"; };
+		0074714D9137EACEAA274A9509928FE6 /* Properties.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Properties.swift; path = Source/SwiftyDropbox/PlatformNeutral/Properties.swift; sourceTree = "<group>"; };
+		00AC72091FF0074073DF8C14F9595490 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
+		043AB3C8AC660E072E8A4AB8CE4330BD /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
+		07AE4D6DD87E54CA4D205E88490FD260 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
+		07D44D5ECF5027EF77A251A56B524347 /* Users.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Users.swift; path = Source/SwiftyDropbox/PlatformNeutral/Users.swift; sourceTree = "<group>"; };
+		0A3D0898706D4F07094BCAC0A2A66234 /* StoneSerializers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StoneSerializers.swift; path = Source/SwiftyDropbox/PlatformNeutral/StoneSerializers.swift; sourceTree = "<group>"; };
+		0E7202D671F4CF221B55235C6EDEA07A /* ExpandableDatePicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ExpandableDatePicker-dummy.m"; sourceTree = "<group>"; };
+		105DE629A67F877DCDA87CF1D0E5C91F /* SwiftDate.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftDate.modulemap; sourceTree = "<group>"; };
+		11FE41D6B071FBF8387DCBF8B7B8D26F /* StringPickerPopover.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; name = StringPickerPopover.storyboard; path = Base.lproj/StringPickerPopover.storyboard; sourceTree = "<group>"; };
+		1440D244D862590E1D608CD7330DF294 /* LongTimeZoneCellData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LongTimeZoneCellData.swift; path = "ExpandableDatePicker/Time Zone/Long/LongTimeZoneCellData.swift"; sourceTree = "<group>"; };
+		1604D40DC06E3F430DDBDE14A9569ED5 /* DropboxClientsManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropboxClientsManager.swift; path = Source/SwiftyDropbox/PlatformNeutral/DropboxClientsManager.swift; sourceTree = "<group>"; };
+		179784354EB755A71A1E967FF46F46B3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1800B4B64EBE501279D61AA43A4D1320 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
+		1871C96EDF5287894215A530D2908138 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		18D99A6FBB93A9C1DCAB8373D5D781C8 /* Gloss.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Gloss.modulemap; sourceTree = "<group>"; };
+		1A6B69CAA7C0A72625F2BD4F90575843 /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
+		1AD6A2AF2D96A27C80E73AA0025A9DD3 /* DateInRegion+Math.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DateInRegion+Math.swift"; path = "Sources/SwiftDate/DateInRegion+Math.swift"; sourceTree = "<group>"; };
+		1AF9DE5C08E7B33CB229F119F021DF14 /* UsersRoutes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UsersRoutes.swift; path = Source/SwiftyDropbox/PlatformNeutral/UsersRoutes.swift; sourceTree = "<group>"; };
+		1B0C27EFD092DDAFEB5A5D00F87D2E46 /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Sources/SwiftDate/Extensions.swift; sourceTree = "<group>"; };
+		2308536E1E56449981676FAF7AD309C5 /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
 		24E4B42CE582186A25279B3D3353F716 /* Pods-SwiftEvents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftEvents.release.xcconfig"; sourceTree = "<group>"; };
-		26E837B1D3CD7C24BCA97AEDA64EE618 /* ColumnStringPickerPopover.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColumnStringPickerPopover.swift; path = SwiftyPickerPopover/ColumnStringPickerPopover.swift; sourceTree = "<group>"; };
-		279880DD850E52DE3B3970B87BB50FE0 /* SwiftyPickerPopover-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyPickerPopover-umbrella.h"; sourceTree = "<group>"; };
-		2988DC82BC8FFDC098F85B3C9F889FAA /* SwiftyDropbox.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftyDropbox.modulemap; sourceTree = "<group>"; };
-		2A3DEFB3A30F6EC76EA2B57C4607BDFD /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
-		2AB8DD08DD504B60F1B66F6AE956DD88 /* ExtensionArray.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExtensionArray.swift; path = Sources/ExtensionArray.swift; sourceTree = "<group>"; };
-		2C30C04C99FF337E6420F8A9109F9772 /* OAuth.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth.swift; path = Source/SwiftyDropbox/PlatformNeutral/OAuth.swift; sourceTree = "<group>"; };
-		2DFA8CFBB1EC795FE579806F11D002E7 /* Files.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Files.swift; path = Source/SwiftyDropbox/PlatformNeutral/Files.swift; sourceTree = "<group>"; };
-		2EA42A0915481A55640892E9208DCCE1 /* ExpandableDatePicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpandableDatePicker.swift; path = ExpandableDatePicker/ExpandableDatePicker.swift; sourceTree = "<group>"; };
-		3280C4B10D9E725020D80B5291CEA587 /* DateInRegion+Math.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DateInRegion+Math.swift"; path = "Sources/SwiftDate/DateInRegion+Math.swift"; sourceTree = "<group>"; };
+		27A57974CC301B985C069FF71D2DB6FD /* Decoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Decoder.swift; path = Sources/Decoder.swift; sourceTree = "<group>"; };
+		2E03A1762442DFA2FDD3303BAAEEC867 /* SwiftyDropbox-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyDropbox-umbrella.h"; sourceTree = "<group>"; };
+		2E43454ADA2C7FB37398814F826B738C /* Common.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Common.swift; path = Source/SwiftyDropbox/PlatformNeutral/Common.swift; sourceTree = "<group>"; };
+		309CCEAB88BED6401BA57A4F9D879757 /* ExpandableDatePickerTimeZoneTableViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpandableDatePickerTimeZoneTableViewController.swift; path = "ExpandableDatePicker/Time Zone/ExpandableDatePickerTimeZoneTableViewController.swift"; sourceTree = "<group>"; };
+		320B6A53B8DE7A918CE749D38A6FAD58 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3449E2F8C50419EDF19744E5F87DC9E7 /* SwiftyPickerPopover.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyPickerPopover.framework; path = SwiftyPickerPopover.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		34631561A0E99A2376AE0049C95DEDAC /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
 		363FBB24F8B184FED4957BFEB66D9130 /* Pods-SwiftEventsTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftEventsTests-frameworks.sh"; sourceTree = "<group>"; };
 		36915C6F7E93FA3A5496499DAC9A5A79 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
-		36B6DEF20769A609EC5404DB48F628A6 /* SwiftyPickerPopover.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyPickerPopover.xcconfig; sourceTree = "<group>"; };
-		381B15161FA0CC2DCDED3F833FF72202 /* TimeInterval+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "TimeInterval+Extensions.swift"; path = "Sources/SwiftDate/TimeInterval+Extensions.swift"; sourceTree = "<group>"; };
+		3A016178EB19C6479F546E187184639C /* SwiftyPickerPopover-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyPickerPopover-dummy.m"; sourceTree = "<group>"; };
+		3A8439ED7CFA95FCCFB4D7ED727FAC9F /* Gloss.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Gloss.xcconfig; sourceTree = "<group>"; };
+		3AC7466CAA823B5B375EB0031B3FDBC4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B0C11E926CE863EF2632C0E8170FB7D /* Pods-SwiftEventsTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftEventsTests-resources.sh"; sourceTree = "<group>"; };
-		3BFEAD65B9A07E344F00702D83DBEC27 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
-		3DFDD0FB58BA740214A7AAD954A9496C /* UsersRoutes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UsersRoutes.swift; path = Source/SwiftyDropbox/PlatformNeutral/UsersRoutes.swift; sourceTree = "<group>"; };
+		3B515B5D373894FE17B712792271E4DF /* DropboxTeamClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropboxTeamClient.swift; path = Source/SwiftyDropbox/PlatformNeutral/DropboxTeamClient.swift; sourceTree = "<group>"; };
+		3E407904BDBC056B3DBA77E1644BB8A3 /* DateComponents+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DateComponents+Extension.swift"; path = "Sources/SwiftDate/DateComponents+Extension.swift"; sourceTree = "<group>"; };
+		3E554B12479D1F26472ADA1BED928CB6 /* SwiftDate.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = SwiftDate.bundle; path = Sources/SwiftDate/SwiftDate.bundle; sourceTree = "<group>"; };
 		4073D020FBFC0502FA5D134F7F985F84 /* Pods-SwiftEvents.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SwiftEvents.modulemap"; sourceTree = "<group>"; };
-		4174662E2C177A5BEB322EB52099C1FF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		42A22915596202A1D2467F678CEE6799 /* Encoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Encoder.swift; path = Sources/Encoder.swift; sourceTree = "<group>"; };
-		42B5637D874AA179F27559EA24277FB8 /* SharingRoutes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SharingRoutes.swift; path = Source/SwiftyDropbox/PlatformNeutral/SharingRoutes.swift; sourceTree = "<group>"; };
-		4301853768E4D1598D3E368002BAC131 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
+		4104E5CB0FD85CEF0CE0F8A1F84A4FBD /* SwiftyDropbox.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SwiftyDropbox.h; path = Source/SwiftyDropbox/PlatformNeutral/SwiftyDropbox.h; sourceTree = "<group>"; };
+		4236419477D1ABA1DE20A41B44B77313 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
+		43F987045CD0B1CE83C517851E1A07A8 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
+		4401D6A94E2682AB0B647A1538AA7E2E /* CountdownPickerPopover.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; name = CountdownPickerPopover.storyboard; path = SwiftyPickerPopover/CountdownPickerPopover.storyboard; sourceTree = "<group>"; };
 		456D986F7632F921512E2AA07B594897 /* Pods-SwiftEventsTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftEventsTests-dummy.m"; sourceTree = "<group>"; };
-		45722C7D8CC31B43538ABDC9A18456C8 /* SwiftDate-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftDate-umbrella.h"; sourceTree = "<group>"; };
-		48246EDA55FF40510203DBA4E5D831B9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4C07C116E1A6858DE2BEB8763811FCEB /* Gloss-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Gloss-prefix.pch"; sourceTree = "<group>"; };
-		4C0F5B413F12A470DA9991DD79F1681F /* IndexPath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IndexPath.swift; path = ExpandableDatePicker/IndexPath.swift; sourceTree = "<group>"; };
-		4DF50D9AC7AEAB9F80DD115AA5BA6D1C /* ExpandableDatePicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ExpandableDatePicker-prefix.pch"; sourceTree = "<group>"; };
-		4E383AAB693EDAF52D15BBB484763C38 /* Date+Compare.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Date+Compare.swift"; path = "Sources/SwiftDate/Date+Compare.swift"; sourceTree = "<group>"; };
+		4609F17C0057901371687948D1621A09 /* CountdownPickerPopoverViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CountdownPickerPopoverViewController.swift; path = SwiftyPickerPopover/CountdownPickerPopoverViewController.swift; sourceTree = "<group>"; };
+		4636D969F58BD1D79B9485B104332A81 /* DateInRegionFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateInRegionFormatter.swift; path = Sources/SwiftDate/DateInRegionFormatter.swift; sourceTree = "<group>"; };
+		49D3B2B8340C2BC7DD4277DF6DCC3100 /* ExpandableDatePickerCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpandableDatePickerCell.swift; path = ExpandableDatePicker/ExpandableDatePickerCell.swift; sourceTree = "<group>"; };
+		4A7898A633DC90AF0EB0543B6C13D95F /* OAuth.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth.swift; path = Source/SwiftyDropbox/PlatformNeutral/OAuth.swift; sourceTree = "<group>"; };
 		4F51C722844495C1DB7C304DB19A73B9 /* Pods-SwiftEventsTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftEventsTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		51132E8EF609E78BCCB9D9D06B2E4675 /* Common.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Common.swift; path = Source/SwiftyDropbox/PlatformNeutral/Common.swift; sourceTree = "<group>"; };
+		502E8E63BC3AD1B1275790ACBCB8AD5B /* Files.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Files.swift; path = Source/SwiftyDropbox/PlatformNeutral/Files.swift; sourceTree = "<group>"; };
+		523751D51594999CE3225EAA01959F91 /* LocaleName.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocaleName.swift; path = Sources/SwiftDate/LocaleName.swift; sourceTree = "<group>"; };
+		53B489D22ABCCCA82EE9AD65BF7BEBDB /* Async.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Async.swift; path = Source/SwiftyDropbox/PlatformNeutral/Async.swift; sourceTree = "<group>"; };
+		55C7FC5AB8BBF9834E5D8A4EDD61D891 /* SwiftyPickerPopover-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyPickerPopover-umbrella.h"; sourceTree = "<group>"; };
+		55F7B9DC0DF3B4B2D2DF5B3C2C039F16 /* DropboxTransportClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropboxTransportClient.swift; path = Source/SwiftyDropbox/PlatformNeutral/DropboxTransportClient.swift; sourceTree = "<group>"; };
 		583D9E35D3ACBC9F4575AB23A477A75A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5952D47512A67245C8F0883A339875E3 /* Pods-SwiftEvents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftEvents.debug.xcconfig"; sourceTree = "<group>"; };
-		5997606942E7981ED694D3C0B2CDB455 /* DateComponents+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DateComponents+Extension.swift"; path = "Sources/SwiftDate/DateComponents+Extension.swift"; sourceTree = "<group>"; };
-		5B69E293F588D6BD5618393001C4FAFC /* Commons.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Commons.swift; path = Sources/SwiftDate/Commons.swift; sourceTree = "<group>"; };
+		5973C6C4EFB5D4FB5839433457F46221 /* Commons.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Commons.swift; path = Sources/SwiftDate/Commons.swift; sourceTree = "<group>"; };
+		59BCA83BB6C2B4E592C225CB361CA5B0 /* Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = Sources/Operators.swift; sourceTree = "<group>"; };
+		59E2847F020ED1FA3BEC9084C492086C /* SwiftDate.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftDate.xcconfig; sourceTree = "<group>"; };
+		5C118F5964DB0ADD4EF4F5AC0DB6A020 /* SwiftyDropbox.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyDropbox.xcconfig; sourceTree = "<group>"; };
 		5E2A14ECFF5199BD0B35366D584DDB6B /* Pods-SwiftEventsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftEventsUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		5EDAEE7B96737BC1E60A2A743358B51C /* DropboxTeamClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropboxTeamClient.swift; path = Source/SwiftyDropbox/PlatformNeutral/DropboxTeamClient.swift; sourceTree = "<group>"; };
-		60663BB8BC055503DE6F9B48D112E1A7 /* DateInRegion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateInRegion.swift; path = Sources/SwiftDate/DateInRegion.swift; sourceTree = "<group>"; };
-		6346345CA9DDA7387EFA745F1DE928E1 /* SwiftyPickerPopover-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyPickerPopover-prefix.pch"; sourceTree = "<group>"; };
-		6837495B8611DF8BA2CC167A1860D5C7 /* ExpandableDatePickerTimeZoneCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpandableDatePickerTimeZoneCell.swift; path = "ExpandableDatePicker/Time Zone/ExpandableDatePickerTimeZoneCell.swift"; sourceTree = "<group>"; };
-		6C293E710A9F3A8583DCCF2C88851CFE /* StoneValidators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StoneValidators.swift; path = Source/SwiftyDropbox/PlatformNeutral/StoneValidators.swift; sourceTree = "<group>"; };
+		5EC572565D0320018A62D5FAB7483020 /* UITableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UITableView.swift; path = ExpandableDatePicker/UITableView.swift; sourceTree = "<group>"; };
+		5EECC47BA1CF6765ACDFD776991B3C3E /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
+		65416A3C06361187A6AF19530A684432 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
+		6560FD406CFC518FB86C6E4DD99C260C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68E25A883D545BD8F141C30EA6FBE9CD /* TeamPolicies.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TeamPolicies.swift; path = Source/SwiftyDropbox/PlatformNeutral/TeamPolicies.swift; sourceTree = "<group>"; };
+		6B36FFC96FA923DE722B657347E60A64 /* ExpandableDatePickerTimeZoneCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpandableDatePickerTimeZoneCell.swift; path = "ExpandableDatePicker/Time Zone/ExpandableDatePickerTimeZoneCell.swift"; sourceTree = "<group>"; };
+		6BCCCFC1596A77A90537BC9514CCC423 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
 		6CD9D5984ABB7E13B7F6BE460A5A5A89 /* Pods-SwiftEventsTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftEventsTests-umbrella.h"; sourceTree = "<group>"; };
-		6D24719B813DD6EF25B4D039A76402C3 /* ColumnStringPickerPopover.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; name = ColumnStringPickerPopover.storyboard; path = SwiftyPickerPopover/ColumnStringPickerPopover.storyboard; sourceTree = "<group>"; };
-		6DDAF24C91BD0AF0611D09C83276D4B2 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Alamofire.modulemap; sourceTree = "<group>"; };
-		71A7986317A21834F90CA504B75464D6 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
-		71B2269033697E2E0E3E813F700A188A /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
-		7296BFA48B18774C1BF526688DB37212 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D06C00F28636F3AA408D724592EF1B5 /* ColumnStringPickerPopover.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColumnStringPickerPopover.swift; path = SwiftyPickerPopover/ColumnStringPickerPopover.swift; sourceTree = "<group>"; };
+		6E188E3E2A3B22C3DB985C5A3BAA85E0 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
+		6E70A61D44DDA61EE9AD5138C10DD895 /* DateInRegion+Components.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DateInRegion+Components.swift"; path = "Sources/SwiftDate/DateInRegion+Components.swift"; sourceTree = "<group>"; };
+		7128FEF007A51C1EBE5E60347734A0EA /* DateTimeInterval.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateTimeInterval.swift; path = Sources/SwiftDate/DateTimeInterval.swift; sourceTree = "<group>"; };
 		752B7C2570BD18172782758401930788 /* Pods_SwiftEvents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SwiftEvents.framework; path = "Pods-SwiftEvents.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		75C8E3EAD5C3E729B1853D6DF863BBA7 /* Pods-SwiftEventsUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftEventsUITests-umbrella.h"; sourceTree = "<group>"; };
-		75DAD034179DA90977C95D974EA4D358 /* SwiftyDropbox.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyDropbox.xcconfig; sourceTree = "<group>"; };
-		786777CCDE2F3C83498F71EF80357262 /* FilesRoutes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FilesRoutes.swift; path = Source/SwiftyDropbox/PlatformNeutral/FilesRoutes.swift; sourceTree = "<group>"; };
-		795713D600E6AA691284A216A3492E87 /* Date+Math.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Date+Math.swift"; path = "Sources/SwiftDate/Date+Math.swift"; sourceTree = "<group>"; };
+		75CAC05C75986E9F124390C80DC8FFCF /* Date+Compare.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Date+Compare.swift"; path = "Sources/SwiftDate/Date+Compare.swift"; sourceTree = "<group>"; };
+		7859907097271795E34D180735B9D36F /* SwiftyPickerPopover.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyPickerPopover.xcconfig; sourceTree = "<group>"; };
+		7DCCEAFAD5F77F59106EF7DF15E3251A /* SwiftyPickerPopover.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftyPickerPopover.modulemap; sourceTree = "<group>"; };
 		7EB666274167A920AD0EB79845C8AEB1 /* Pods-SwiftEventsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftEventsTests.release.xcconfig"; sourceTree = "<group>"; };
-		7EEC7AD9F8AE6AD316463625B8335EEA /* ExpandableDatePicker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ExpandableDatePicker.xcconfig; sourceTree = "<group>"; };
-		7F3C0F34614EB63DA4DA26A1FA208EFB /* ShortTimeZoneCellData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShortTimeZoneCellData.swift; path = "ExpandableDatePicker/Time Zone/Short/ShortTimeZoneCellData.swift"; sourceTree = "<group>"; };
-		80E1E1A9422A3C483E78DB575FB75929 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
+		7F5BFDF98C9126C48D2595730AFAC0C6 /* IndexPath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IndexPath.swift; path = ExpandableDatePicker/IndexPath.swift; sourceTree = "<group>"; };
+		7FA92CE9F4E3C1BC3E4BF43072441375 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		800FDAAF14177E26221CC17381579846 /* Encoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Encoder.swift; path = Sources/Encoder.swift; sourceTree = "<group>"; };
+		8037CC0C31E637FFDACE029DA0D2BD39 /* SwiftyDropbox-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyDropbox-prefix.pch"; sourceTree = "<group>"; };
+		806B9C032EB7E01CB0CD1C398705E521 /* Localization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Localization.swift; path = Sources/SwiftDate/Localization.swift; sourceTree = "<group>"; };
 		81629862E4BE5AF0951AD93950E83593 /* Pods-SwiftEventsUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftEventsUITests-frameworks.sh"; sourceTree = "<group>"; };
-		8237EF3BD9F946B782029EDC7B69EEBF /* SwiftDate-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftDate-dummy.m"; sourceTree = "<group>"; };
-		8356E7D1ACA24C98F8ED0555235F5F92 /* ExtensionDictionary.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExtensionDictionary.swift; path = Sources/ExtensionDictionary.swift; sourceTree = "<group>"; };
-		84F53427C9E6090F653855DDD1667202 /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Sources/SwiftDate/Extensions.swift; sourceTree = "<group>"; };
+		820903D34B557D37245A29528A8D56E3 /* ExpandableDatePicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ExpandableDatePicker-umbrella.h"; sourceTree = "<group>"; };
+		83423E7258B7C9861433398DDFAF82FD /* TimeZoneName.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimeZoneName.swift; path = Sources/SwiftDate/TimeZoneName.swift; sourceTree = "<group>"; };
 		859AF7B363153E0D629B021AC459C310 /* Pods-SwiftEventsUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftEventsUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		87823CAF051E0663BE8F892F3E40ADD9 /* Sharing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Sharing.swift; path = Source/SwiftyDropbox/PlatformNeutral/Sharing.swift; sourceTree = "<group>"; };
-		87CBAE091E8FD4447483F595FF53CD7E /* DatePickerPopoverViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatePickerPopoverViewController.swift; path = SwiftyPickerPopover/DatePickerPopoverViewController.swift; sourceTree = "<group>"; };
+		85D2F352A4ADCCA21C41E599CD873D30 /* ISO8601DateTimeFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ISO8601DateTimeFormatter.swift; path = Sources/SwiftDate/ISO8601DateTimeFormatter.swift; sourceTree = "<group>"; };
+		871E9DAC2AA780BA39C3B1F275F08DF0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8883280481C9FED3C2078F4CBF3DDED9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		88A461639B49D16BD086D55B41D7D4D2 /* StoneSerializers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StoneSerializers.swift; path = Source/SwiftyDropbox/PlatformNeutral/StoneSerializers.swift; sourceTree = "<group>"; };
-		88AF77E6E8C37B2CB0C21D09C04E03CF /* DropboxClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropboxClient.swift; path = Source/SwiftyDropbox/PlatformNeutral/DropboxClient.swift; sourceTree = "<group>"; };
+		8B232DE2882B617238CE78C5057F7CEC /* Gloss-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Gloss-prefix.pch"; sourceTree = "<group>"; };
 		8CA55B1994BDA65C7D9C256F5E7D6235 /* Pods-SwiftEvents-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftEvents-acknowledgements.markdown"; sourceTree = "<group>"; };
-		8CA7AE41E04DA99DD418E48001A77E00 /* CountdownPickerPopoverViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CountdownPickerPopoverViewController.swift; path = SwiftyPickerPopover/CountdownPickerPopoverViewController.swift; sourceTree = "<group>"; };
 		8D5ED1D247E0FA88A6BC67D55FC7804F /* Pods_SwiftEventsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SwiftEventsUITests.framework; path = "Pods-SwiftEventsUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F14F1AD1BA115679E3B9C636E3FA524 /* Pods-SwiftEvents-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftEvents-frameworks.sh"; sourceTree = "<group>"; };
-		8FB2ED61DAE946BDC4B2F3A53DEE22F3 /* StringPickerPopover.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringPickerPopover.swift; path = SwiftyPickerPopover/StringPickerPopover.swift; sourceTree = "<group>"; };
-		900334BB3636FCE6CD29F5D571E7DCDB /* Region.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Region.swift; path = Sources/SwiftDate/Region.swift; sourceTree = "<group>"; };
-		911A82081380A8B23B38AF888F5FA8FB /* AbstractPopover.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AbstractPopover.swift; path = SwiftyPickerPopover/AbstractPopover.swift; sourceTree = "<group>"; };
 		9153848CB35E589FEFA1F534F40989AE /* Pods-SwiftEvents-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftEvents-umbrella.h"; sourceTree = "<group>"; };
-		91E860063CA7C4A9F3E06F2F5170C43A /* SwiftDate.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftDate.modulemap; sourceTree = "<group>"; };
-		92EB0021D9EFDEE657A091E7BAD4D996 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		927F76D5CD1102FEA0B363F8482BC936 /* CalendarName.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CalendarName.swift; path = Sources/SwiftDate/CalendarName.swift; sourceTree = "<group>"; };
+		93A14A33D973F26688A12900A390D7AF /* Sharing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Sharing.swift; path = Source/SwiftyDropbox/PlatformNeutral/Sharing.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		961CF60306D34BBD5A2D6EBB13992FD4 /* Gloss.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Gloss.swift; path = Sources/Gloss.swift; sourceTree = "<group>"; };
+		93BB958DCC04EDA54A9997320699AFAB /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Alamofire.modulemap; sourceTree = "<group>"; };
 		9667D94CCB5A9EC971C250BA8757BB3A /* Gloss.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Gloss.framework; path = Gloss.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		976E3C383426AB7B423E1F7B7D8A90E4 /* SwiftyPickerPopover-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyPickerPopover-dummy.m"; sourceTree = "<group>"; };
-		97F0E01D08C279EEFEA6BB4FBD8FD90F /* SwiftyDropbox-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyDropbox-dummy.m"; sourceTree = "<group>"; };
+		96D83206945EF3FC02BB11EB21DC2254 /* DatePickerPopover.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatePickerPopover.swift; path = SwiftyPickerPopover/DatePickerPopover.swift; sourceTree = "<group>"; };
 		9991FCEEAED2908ABD79B268C5E0D2BB /* Pods_SwiftEventsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SwiftEventsTests.framework; path = "Pods-SwiftEventsTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		99CD0ABCFBDD118A9422B788379DD309 /* SwiftDate.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftDate.xcconfig; sourceTree = "<group>"; };
-		9A8FB326F1EACB9A7AE1D293C99DA7BF /* SwiftDate-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftDate-prefix.pch"; sourceTree = "<group>"; };
+		9A8872685870EBFD420D88DA46FAA209 /* ExpandableDatePicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpandableDatePicker.swift; path = ExpandableDatePicker/ExpandableDatePicker.swift; sourceTree = "<group>"; };
 		9AA1CAD1361F5FC974AE37B458820F0E /* Pods-SwiftEvents-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftEvents-dummy.m"; sourceTree = "<group>"; };
-		A213D0A8E672E9B9AE6744D63359DE3C /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
-		A27665C2EF660064B9B23BA5D36C713F /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
-		A302B80D9E90A560D88EB9BCC5687009 /* Decoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Decoder.swift; path = Sources/Decoder.swift; sourceTree = "<group>"; };
-		A5F3450C3C617F9222BFE65A122F7A33 /* DateTimeInterval.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateTimeInterval.swift; path = Sources/SwiftDate/DateTimeInterval.swift; sourceTree = "<group>"; };
-		A6CA71DA8E048A18B8482CD052B8E09C /* CountdownPickerPopover.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; name = CountdownPickerPopover.storyboard; path = SwiftyPickerPopover/CountdownPickerPopover.storyboard; sourceTree = "<group>"; };
+		9E1C1589D4CD9D09A04547297D24543C /* DropboxClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropboxClient.swift; path = Source/SwiftyDropbox/PlatformNeutral/DropboxClient.swift; sourceTree = "<group>"; };
+		A16944656A7AF42A7D664FE11D16E671 /* StoneValidators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StoneValidators.swift; path = Source/SwiftyDropbox/PlatformNeutral/StoneValidators.swift; sourceTree = "<group>"; };
+		A2F02701CB7129928C76B15FBEEF60C9 /* TeamCommon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TeamCommon.swift; path = Source/SwiftyDropbox/PlatformNeutral/TeamCommon.swift; sourceTree = "<group>"; };
+		A399C664BC125C6F52C54642BE0BC252 /* OAuthMobile.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuthMobile.swift; path = Source/SwiftyDropbox/SwiftyDropbox_iOS/iOS/OAuthMobile.swift; sourceTree = "<group>"; };
+		A3C779CFD1C076B37DD0193D986D3F79 /* Base.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Base.swift; path = Source/SwiftyDropbox/PlatformNeutral/Base.swift; sourceTree = "<group>"; };
+		A3CA80D119705DB30FE744888D516D36 /* DatePickerPopover.strings */ = {isa = PBXFileReference; includeInIndex = 1; name = DatePickerPopover.strings; path = ja.lproj/DatePickerPopover.strings; sourceTree = "<group>"; };
+		A3E91661AC6AE716869A2FDC7DF1B713 /* DateInRegion+Formatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DateInRegion+Formatter.swift"; path = "Sources/SwiftDate/DateInRegion+Formatter.swift"; sourceTree = "<group>"; };
+		A57C5B2696E64173A6FCEA1BB5A89906 /* ColumnStringPickerPopoverViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColumnStringPickerPopoverViewController.swift; path = SwiftyPickerPopover/ColumnStringPickerPopoverViewController.swift; sourceTree = "<group>"; };
+		A58317DA0009DD1F52EF554417090434 /* TeamRoutes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TeamRoutes.swift; path = Source/SwiftyDropbox/PlatformNeutral/TeamRoutes.swift; sourceTree = "<group>"; };
+		A6A16F4A2285B4B000F77890D072B918 /* Date+Formatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Date+Formatter.swift"; path = "Sources/SwiftDate/Date+Formatter.swift"; sourceTree = "<group>"; };
 		A6F03C3E2D229C442F250309892F199F /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A87F76B1313BC2CF2CA9715E3CDBF09A /* Pods-SwiftEventsUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SwiftEventsUITests.modulemap"; sourceTree = "<group>"; };
-		A9E73494788C13523C5A3BD0E49EBE45 /* DatePickerPopover.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatePickerPopover.swift; path = SwiftyPickerPopover/DatePickerPopover.swift; sourceTree = "<group>"; };
-		AC58B4EE68AA117EC8DAA36F37FCAD1F /* ISO8601DateTimeFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ISO8601DateTimeFormatter.swift; path = Sources/SwiftDate/ISO8601DateTimeFormatter.swift; sourceTree = "<group>"; };
-		ACFAE8A4FEA70B0395EAE4357774EED8 /* DateInRegionFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateInRegionFormatter.swift; path = Sources/SwiftDate/DateInRegionFormatter.swift; sourceTree = "<group>"; };
-		B1B29996B88F63E37D88D72140EAB4AF /* CalendarName.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CalendarName.swift; path = Sources/SwiftDate/CalendarName.swift; sourceTree = "<group>"; };
+		A8C33F34D015F82068FDDF773522A703 /* Date+Components.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Date+Components.swift"; path = "Sources/SwiftDate/Date+Components.swift"; sourceTree = "<group>"; };
+		A97498353C788765774818065DD15005 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
+		ABDF1E0162C7D84204210C57DB7B47B8 /* SharingRoutes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SharingRoutes.swift; path = Source/SwiftyDropbox/PlatformNeutral/SharingRoutes.swift; sourceTree = "<group>"; };
+		ADF1D109963B15190679EFC66D6C24C2 /* Gloss.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Gloss.swift; path = Sources/Gloss.swift; sourceTree = "<group>"; };
+		AEC141D2FFBC3EEAA94FE6DDDE22027E /* ShortTimeZoneDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShortTimeZoneDelegate.swift; path = "ExpandableDatePicker/Time Zone/Short/ShortTimeZoneDelegate.swift"; sourceTree = "<group>"; };
+		AF5FD8452149B32428003C249B22DE06 /* TimeInterval+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "TimeInterval+Extensions.swift"; path = "Sources/SwiftDate/TimeInterval+Extensions.swift"; sourceTree = "<group>"; };
+		B09AD2827D7A9B11B86ABD3605FD5957 /* DatePickerPopover.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; name = DatePickerPopover.storyboard; path = Base.lproj/DatePickerPopover.storyboard; sourceTree = "<group>"; };
+		B24AB6D9EA46FDC1093558CA39072073 /* ColumnStringPickerPopover.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; name = ColumnStringPickerPopover.storyboard; path = SwiftyPickerPopover/ColumnStringPickerPopover.storyboard; sourceTree = "<group>"; };
 		B415A29E548E0328FBCC19B664D384CC /* Pods-SwiftEvents-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftEvents-acknowledgements.plist"; sourceTree = "<group>"; };
-		BDF1F9DEEA31BDF4AC2ADEE66A8A21F7 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
-		BE07AEAFC7941FF1845E50B7FD71A1A4 /* DatePickerPopover.strings */ = {isa = PBXFileReference; includeInIndex = 1; name = DatePickerPopover.strings; path = ja.lproj/DatePickerPopover.strings; sourceTree = "<group>"; };
-		BE13BF6998CCC0DF9951FB9307D064C9 /* Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = Sources/Operators.swift; sourceTree = "<group>"; };
-		BE3A96CA230143287030AD236DDBEF21 /* StringPickerPopoverViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringPickerPopoverViewController.swift; path = SwiftyPickerPopover/StringPickerPopoverViewController.swift; sourceTree = "<group>"; };
-		BE62A862B9E347BA679FA028E0041316 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
-		BF58B6F7EADDD13DE7DAF6699FF98CB2 /* Team.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Team.swift; path = Source/SwiftyDropbox/PlatformNeutral/Team.swift; sourceTree = "<group>"; };
-		BF8DA8CCACF41CE06916B848B9BF968E /* TimeZoneName.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimeZoneName.swift; path = Sources/SwiftDate/TimeZoneName.swift; sourceTree = "<group>"; };
-		C361BA5BF3FE876882873CF8F64DF9B7 /* SwiftDate.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = SwiftDate.bundle; path = Sources/SwiftDate/SwiftDate.bundle; sourceTree = "<group>"; };
-		C3A89E0B169BA794F6608D3B43253A8C /* DateInRegion+Compare.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DateInRegion+Compare.swift"; path = "Sources/SwiftDate/DateInRegion+Compare.swift"; sourceTree = "<group>"; };
-		C6AD08E9579DADCE641C8D14F452E785 /* DateInRegion+Formatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DateInRegion+Formatter.swift"; path = "Sources/SwiftDate/DateInRegion+Formatter.swift"; sourceTree = "<group>"; };
-		C863D66022BD950706F3D92E3C9DFF76 /* Date+Formatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Date+Formatter.swift"; path = "Sources/SwiftDate/Date+Formatter.swift"; sourceTree = "<group>"; };
-		C8A1F1E3362C3B0089ABFB1FF1CC8A5C /* DropboxTransportClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropboxTransportClient.swift; path = Source/SwiftyDropbox/PlatformNeutral/DropboxTransportClient.swift; sourceTree = "<group>"; };
+		B7740C135A9D27EB1FC9FF070C1C4EFC /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
+		B8E19F9B3E75AA4BBEA00B7640633D5E /* Date+Math.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Date+Math.swift"; path = "Sources/SwiftDate/Date+Math.swift"; sourceTree = "<group>"; };
+		BB89B79B56592A1442C6A21A45300D3A /* DateInRegion+Compare.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DateInRegion+Compare.swift"; path = "Sources/SwiftDate/DateInRegion+Compare.swift"; sourceTree = "<group>"; };
+		BDECDEC947AAE4EC682DD62E646C7040 /* ExpandableDatePicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ExpandableDatePicker-prefix.pch"; sourceTree = "<group>"; };
+		C41A71C9145E1F17263D5C9D1BC2FF95 /* StringPickerPopover.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringPickerPopover.swift; path = SwiftyPickerPopover/StringPickerPopover.swift; sourceTree = "<group>"; };
+		C43EC8F864F30E08946149DAF591A203 /* ShortTimeZoneCellData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShortTimeZoneCellData.swift; path = "ExpandableDatePicker/Time Zone/Short/ShortTimeZoneCellData.swift"; sourceTree = "<group>"; };
+		C44B087703BC095AADB76700B8EE86D6 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
+		C542DE03052B1F1D1BA6C0401AD5DA17 /* SwiftyDropbox-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyDropbox-dummy.m"; sourceTree = "<group>"; };
+		C65829C07945D73356966DC500EA12CC /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
+		C76380B3ADE2D5F58686545F9E64528E /* SwiftyDropbox.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftyDropbox.modulemap; sourceTree = "<group>"; };
+		C77FB16A65D4890F29DC9E49983D78CC /* SwiftDate-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftDate-prefix.pch"; sourceTree = "<group>"; };
+		C9BCE6A1658212462C03DE38E5BDBAE9 /* DatePickerPopoverViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatePickerPopoverViewController.swift; path = SwiftyPickerPopover/DatePickerPopoverViewController.swift; sourceTree = "<group>"; };
+		C9E46BC0E9CCD654C20C424A65E2E9F7 /* BaseTeam.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseTeam.swift; path = Source/SwiftyDropbox/PlatformNeutral/BaseTeam.swift; sourceTree = "<group>"; };
+		CA2D37625F4FE78FBEF5B431AFF52C8C /* Region.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Region.swift; path = Sources/SwiftDate/Region.swift; sourceTree = "<group>"; };
 		CB8186D83944EEC0CFD74FC26E805474 /* ExpandableDatePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ExpandableDatePicker.framework; path = ExpandableDatePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC81BFC07BB86F6EF3FF6B9CE54DBAA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CC1E61617D1B8F993C03165B46C9BD9B /* ExpandableDatePickerSelectionCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpandableDatePickerSelectionCell.swift; path = ExpandableDatePicker/ExpandableDatePickerSelectionCell.swift; sourceTree = "<group>"; };
-		CD08328AC99A498F697A60E075ADBE0B /* Users.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Users.swift; path = Source/SwiftyDropbox/PlatformNeutral/Users.swift; sourceTree = "<group>"; };
-		CD4F3CE29EADAF3DC07391890417622D /* TeamRoutes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TeamRoutes.swift; path = Source/SwiftyDropbox/PlatformNeutral/TeamRoutes.swift; sourceTree = "<group>"; };
+		CBED32176A44EBC57A5D81542768E9F0 /* StoneBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StoneBase.swift; path = Source/SwiftyDropbox/PlatformNeutral/StoneBase.swift; sourceTree = "<group>"; };
 		CEE2D7A1E4DE1EE485D611722B3EE03C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D03B40422380FC6A19D845ADF29966CF /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
-		D0A289AB8C49134408E7D60E5EE3C6C9 /* StoneBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StoneBase.swift; path = Source/SwiftyDropbox/PlatformNeutral/StoneBase.swift; sourceTree = "<group>"; };
-		D0B6504540F4FE00780C32544C58F56C /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
+		CF0BB7F70B94C69C7B3221BAB143EAFE /* AuthRoutes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthRoutes.swift; path = Source/SwiftyDropbox/PlatformNeutral/AuthRoutes.swift; sourceTree = "<group>"; };
 		D17C549A9A201089469C56DB2F6B74B6 /* Pods-SwiftEvents-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftEvents-resources.sh"; sourceTree = "<group>"; };
-		D2206E4F4A286737EA8EE9766F7DC954 /* SwiftyDropbox-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyDropbox-prefix.pch"; sourceTree = "<group>"; };
-		D48390B7EA6502F09F68DA7F6DA140F2 /* OAuthMobile.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuthMobile.swift; path = Source/SwiftyDropbox/SwiftyDropbox_iOS/iOS/OAuthMobile.swift; sourceTree = "<group>"; };
-		D48E6B73E64FEE3553BCD03C49AB9AEB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D4E59462FDEAFB2F8BEE27222A04228A /* ColumnStringPickerPopoverViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColumnStringPickerPopoverViewController.swift; path = SwiftyPickerPopover/ColumnStringPickerPopoverViewController.swift; sourceTree = "<group>"; };
-		D5B8EE19AE36958A530E40F1867A128C /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
+		D4196B5DD7F3D99871D1BCBCBF0C576F /* CountdownPickerPopover.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CountdownPickerPopover.swift; path = SwiftyPickerPopover/CountdownPickerPopover.swift; sourceTree = "<group>"; };
+		D59E05A1067D0604BABA5D4733C7A292 /* ExpandableDatePicker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ExpandableDatePicker.xcconfig; sourceTree = "<group>"; };
 		D6C01CAF06394816DE12EC9314E5E242 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8221576D11FFB8A1E77A1AD6E5DA5D5 /* Pods-SwiftEventsUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftEventsUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		D84F295E16B4605FBF669EF510851E06 /* Auth.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Auth.swift; path = Source/SwiftyDropbox/PlatformNeutral/Auth.swift; sourceTree = "<group>"; };
 		D8A3BD84E27CB0D14D555DAA030579E3 /* SwiftDate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftDate.framework; path = SwiftDate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D8A7C5E5DABF0E768E48B7E543CEAA7F /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
-		DE6969F82FEB26E779EC14862B6D573C /* StringPickerPopover.strings */ = {isa = PBXFileReference; includeInIndex = 1; name = StringPickerPopover.strings; path = ja.lproj/StringPickerPopover.strings; sourceTree = "<group>"; };
-		E0656051512D278880CFEF90734BD696 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
-		E12023D5D3CF6F837FF694D886029F08 /* LongTimeZoneDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LongTimeZoneDelegate.swift; path = "ExpandableDatePicker/Time Zone/Long/LongTimeZoneDelegate.swift"; sourceTree = "<group>"; };
+		D922BAD339170BE68F91C0ABA79C0892 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
+		D9DCB9B045B45BC89B6E22EB08573899 /* AbstractPopover.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AbstractPopover.swift; path = SwiftyPickerPopover/AbstractPopover.swift; sourceTree = "<group>"; };
+		DA1703FF194B3DBE0DB7363627E0A5A3 /* ExpandableDatePickerSelectionCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpandableDatePickerSelectionCell.swift; path = ExpandableDatePicker/ExpandableDatePickerSelectionCell.swift; sourceTree = "<group>"; };
+		DA1BB77D6224727442955703B3080544 /* SwiftDate-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftDate-dummy.m"; sourceTree = "<group>"; };
+		DE500DC479D07599B29E0AD8FAE24672 /* DateInRegion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateInRegion.swift; path = Sources/SwiftDate/DateInRegion.swift; sourceTree = "<group>"; };
+		DE5797C02FBAE664883377DB6A93BFFD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEC335F9FD58949146A8561273FA31FC /* ExpandableDatePicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = ExpandableDatePicker.modulemap; sourceTree = "<group>"; };
+		E041F42865F96AE6E980EEA228DBD63F /* SwiftDate-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftDate-umbrella.h"; sourceTree = "<group>"; };
+		E0799A0B6376FEEB7A8E2940E45DD913 /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
+		E161F46DC296464B5753D0C9072BEF55 /* StringPickerPopoverViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringPickerPopoverViewController.swift; path = SwiftyPickerPopover/StringPickerPopoverViewController.swift; sourceTree = "<group>"; };
+		E4C49D2D35AFC8CBC25D78736D5AB04D /* StringPickerPopover.strings */ = {isa = PBXFileReference; includeInIndex = 1; name = StringPickerPopover.strings; path = ja.lproj/StringPickerPopover.strings; sourceTree = "<group>"; };
 		E52D8C1BE08BBCFFBD0197C29AC0F4B1 /* Webkit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Webkit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Webkit.framework; sourceTree = DEVELOPER_DIR; };
 		E5F4FAE4191D27046EF8D728B4713BE8 /* Pods-SwiftEventsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftEventsTests.debug.xcconfig"; sourceTree = "<group>"; };
-		E62F3573D47C1B3242197A822FBCA05E /* SwiftyDropbox-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyDropbox-umbrella.h"; sourceTree = "<group>"; };
-		E640E8D23EE62B8A884E2131670DA0D7 /* LocaleName.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocaleName.swift; path = Sources/SwiftDate/LocaleName.swift; sourceTree = "<group>"; };
-		E6B489B2A9E214E1890D430996912A43 /* Base.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Base.swift; path = Source/SwiftyDropbox/PlatformNeutral/Base.swift; sourceTree = "<group>"; };
 		E773867117AAF0DA296E1CE5AAA096E0 /* Pods-SwiftEventsTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SwiftEventsTests.modulemap"; sourceTree = "<group>"; };
-		ECE32EB54DA579336EEA669A240D2E73 /* SwiftyPickerPopover.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftyPickerPopover.modulemap; sourceTree = "<group>"; };
+		E77DBF20A4661EFB48214B635EDEB7B7 /* Gloss-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Gloss-dummy.m"; sourceTree = "<group>"; };
+		ECB45FFC50729960D30FA7ACDF60B0FA /* ExtensionArray.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExtensionArray.swift; path = Sources/ExtensionArray.swift; sourceTree = "<group>"; };
+		ED36DBC706B847B13D540BDE390E41D4 /* SwiftyPickerPopover-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyPickerPopover-prefix.pch"; sourceTree = "<group>"; };
 		EDD5263A3478D6DBC5743257F33A9C29 /* Pods-SwiftEventsUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftEventsUITests-dummy.m"; sourceTree = "<group>"; };
-		EE281A7D96BB4765BFCBD8D71A74A6EF /* ShortTimeZoneDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShortTimeZoneDelegate.swift; path = "ExpandableDatePicker/Time Zone/Short/ShortTimeZoneDelegate.swift"; sourceTree = "<group>"; };
+		EF6EEC87720554F75E5AE90D98ED1A22 /* ExtensionDictionary.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExtensionDictionary.swift; path = Sources/ExtensionDictionary.swift; sourceTree = "<group>"; };
 		F0C57727DE4DDE4881F2E8F95B9CAB69 /* SwiftyDropbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyDropbox.framework; path = SwiftyDropbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F147FE2F3767967016786E5E835B6EA3 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
 		F2ADF0FE028B435EF3AC6145703A2A1D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		F2F630F60C432C11E4066F5EA6F58C6E /* DateInRegion+Components.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DateInRegion+Components.swift"; path = "Sources/SwiftDate/DateInRegion+Components.swift"; sourceTree = "<group>"; };
-		F420C57D8517489126A0330FE658C64F /* DatePickerPopover.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; name = DatePickerPopover.storyboard; path = Base.lproj/DatePickerPopover.storyboard; sourceTree = "<group>"; };
+		F3F5238EA70CA6589D4EB74470D20010 /* Team.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Team.swift; path = Source/SwiftyDropbox/PlatformNeutral/Team.swift; sourceTree = "<group>"; };
 		F43D6E0D1EC891B5EBA3DD745BBF139E /* Pods-SwiftEventsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftEventsUITests.release.xcconfig"; sourceTree = "<group>"; };
-		F5929E334B7D6DE19B7728AE355EDC58 /* Gloss.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Gloss.modulemap; sourceTree = "<group>"; };
+		F57E7CBFE316C58B02971693A296B534 /* LongTimeZoneDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LongTimeZoneDelegate.swift; path = "ExpandableDatePicker/Time Zone/Long/LongTimeZoneDelegate.swift"; sourceTree = "<group>"; };
 		F7FE866D30F701BB359EF05987D16D49 /* Pods-SwiftEventsTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftEventsTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		FB94EABF15BAEFA7608B08CE1FAC1984 /* AuthRoutes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthRoutes.swift; path = Source/SwiftyDropbox/PlatformNeutral/AuthRoutes.swift; sourceTree = "<group>"; };
+		F9B167233EB6C45AAE81703E6B86024C /* FilesRoutes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FilesRoutes.swift; path = Source/SwiftyDropbox/PlatformNeutral/FilesRoutes.swift; sourceTree = "<group>"; };
+		FB902FD071BA1A9E5A544CD0C3943D77 /* Gloss-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Gloss-umbrella.h"; sourceTree = "<group>"; };
 		FD60241EC68C35B30AE7B67DF9277FCF /* Pods-SwiftEventsUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftEventsUITests-resources.sh"; sourceTree = "<group>"; };
+		FD643F603396C7031361B8377078AD6D /* ExtensionDecodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExtensionDecodable.swift; path = Sources/ExtensionDecodable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -454,54 +456,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1751D9B7B56FD5ADF8FF39C9E569612E /* Support Files */ = {
+		04F62E676FFAB203DEF1961F41FF83B7 /* Gloss */ = {
 			isa = PBXGroup;
 			children = (
-				6DDAF24C91BD0AF0611D09C83276D4B2 /* Alamofire.modulemap */,
-				E0656051512D278880CFEF90734BD696 /* Alamofire.xcconfig */,
-				3BFEAD65B9A07E344F00702D83DBEC27 /* Alamofire-dummy.m */,
-				71B2269033697E2E0E3E813F700A188A /* Alamofire-prefix.pch */,
-				03CDE1FC746E78F8B09C029F6AC43CAD /* Alamofire-umbrella.h */,
-				48246EDA55FF40510203DBA4E5D831B9 /* Info.plist */,
+				27A57974CC301B985C069FF71D2DB6FD /* Decoder.swift */,
+				800FDAAF14177E26221CC17381579846 /* Encoder.swift */,
+				ECB45FFC50729960D30FA7ACDF60B0FA /* ExtensionArray.swift */,
+				FD643F603396C7031361B8377078AD6D /* ExtensionDecodable.swift */,
+				EF6EEC87720554F75E5AE90D98ED1A22 /* ExtensionDictionary.swift */,
+				ADF1D109963B15190679EFC66D6C24C2 /* Gloss.swift */,
+				59BCA83BB6C2B4E592C225CB361CA5B0 /* Operators.swift */,
+				D5D69BD670798355E13804EB5A453FFA /* Support Files */,
+			);
+			name = Gloss;
+			path = Gloss;
+			sourceTree = "<group>";
+		};
+		0B04EDA808D05F957EA4C03909227775 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				93BB958DCC04EDA54A9997320699AFAB /* Alamofire.modulemap */,
+				A97498353C788765774818065DD15005 /* Alamofire.xcconfig */,
+				F147FE2F3767967016786E5E835B6EA3 /* Alamofire-dummy.m */,
+				5EECC47BA1CF6765ACDFD776991B3C3E /* Alamofire-prefix.pch */,
+				7FA92CE9F4E3C1BC3E4BF43072441375 /* Alamofire-umbrella.h */,
+				179784354EB755A71A1E967FF46F46B3 /* Info.plist */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Alamofire";
 			sourceTree = "<group>";
 		};
-		3369CA3831449C3B6D1E3FA1A23A3402 /* SwiftyDropbox */ = {
+		1EA4C2CEC67F7712540272F5C1F5551E /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				1594D0D393C83A7C659885EB07C8467D /* Async.swift */,
-				0B3106C81306DD03CB409A6F0B7C5F78 /* Auth.swift */,
-				FB94EABF15BAEFA7608B08CE1FAC1984 /* AuthRoutes.swift */,
-				E6B489B2A9E214E1890D430996912A43 /* Base.swift */,
-				20F7F7A3F208FA985C718DA2BD6658F5 /* BaseTeam.swift */,
-				51132E8EF609E78BCCB9D9D06B2E4675 /* Common.swift */,
-				88AF77E6E8C37B2CB0C21D09C04E03CF /* DropboxClient.swift */,
-				0C9DF347CA4239E38773A8B7F4E55D3A /* DropboxClientsManager.swift */,
-				5EDAEE7B96737BC1E60A2A743358B51C /* DropboxTeamClient.swift */,
-				C8A1F1E3362C3B0089ABFB1FF1CC8A5C /* DropboxTransportClient.swift */,
-				2DFA8CFBB1EC795FE579806F11D002E7 /* Files.swift */,
-				786777CCDE2F3C83498F71EF80357262 /* FilesRoutes.swift */,
-				2C30C04C99FF337E6420F8A9109F9772 /* OAuth.swift */,
-				D48390B7EA6502F09F68DA7F6DA140F2 /* OAuthMobile.swift */,
-				00BC5DD587E73E96C2E11C9A5D8DCDB7 /* Properties.swift */,
-				87823CAF051E0663BE8F892F3E40ADD9 /* Sharing.swift */,
-				42B5637D874AA179F27559EA24277FB8 /* SharingRoutes.swift */,
-				D0A289AB8C49134408E7D60E5EE3C6C9 /* StoneBase.swift */,
-				88A461639B49D16BD086D55B41D7D4D2 /* StoneSerializers.swift */,
-				6C293E710A9F3A8583DCCF2C88851CFE /* StoneValidators.swift */,
-				183B7CDB6334371F04CEDE4B901D3B91 /* SwiftyDropbox.h */,
-				BF58B6F7EADDD13DE7DAF6699FF98CB2 /* Team.swift */,
-				01C9BDD56486EBDF08B0FA5E95A1EE48 /* TeamCommon.swift */,
-				1126E5ED9835616D39ACB3DE95247A23 /* TeamPolicies.swift */,
-				CD4F3CE29EADAF3DC07391890417622D /* TeamRoutes.swift */,
-				CD08328AC99A498F697A60E075ADBE0B /* Users.swift */,
-				3DFDD0FB58BA740214A7AAD954A9496C /* UsersRoutes.swift */,
-				523B365452804F95F56AE1720D86575C /* Support Files */,
+				6560FD406CFC518FB86C6E4DD99C260C /* Info.plist */,
+				105DE629A67F877DCDA87CF1D0E5C91F /* SwiftDate.modulemap */,
+				59E2847F020ED1FA3BEC9084C492086C /* SwiftDate.xcconfig */,
+				DA1BB77D6224727442955703B3080544 /* SwiftDate-dummy.m */,
+				C77FB16A65D4890F29DC9E49983D78CC /* SwiftDate-prefix.pch */,
+				E041F42865F96AE6E980EEA228DBD63F /* SwiftDate-umbrella.h */,
 			);
-			name = SwiftyDropbox;
-			path = SwiftyDropbox;
+			name = "Support Files";
+			path = "../Target Support Files/SwiftDate";
 			sourceTree = "<group>";
 		};
 		3741E7C400652C7499DEE451C1DC36A8 /* iOS */ = {
@@ -515,46 +511,59 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		426631B6AB1DA61627658CA6557D3EBA /* Support Files */ = {
+		429ABCADE862A6239EBEFA7C6B15CA4A /* SwiftyDropbox */ = {
 			isa = PBXGroup;
 			children = (
-				F5929E334B7D6DE19B7728AE355EDC58 /* Gloss.modulemap */,
-				15A8D300C91E08ADBCE0468FCA885788 /* Gloss.xcconfig */,
-				00227D0AF08E990D0F0F98C75B14D774 /* Gloss-dummy.m */,
-				4C07C116E1A6858DE2BEB8763811FCEB /* Gloss-prefix.pch */,
-				18D50A86E8E63ECF5D7BC6CB8F74833F /* Gloss-umbrella.h */,
-				D48E6B73E64FEE3553BCD03C49AB9AEB /* Info.plist */,
+				53B489D22ABCCCA82EE9AD65BF7BEBDB /* Async.swift */,
+				D84F295E16B4605FBF669EF510851E06 /* Auth.swift */,
+				CF0BB7F70B94C69C7B3221BAB143EAFE /* AuthRoutes.swift */,
+				A3C779CFD1C076B37DD0193D986D3F79 /* Base.swift */,
+				C9E46BC0E9CCD654C20C424A65E2E9F7 /* BaseTeam.swift */,
+				2E43454ADA2C7FB37398814F826B738C /* Common.swift */,
+				9E1C1589D4CD9D09A04547297D24543C /* DropboxClient.swift */,
+				1604D40DC06E3F430DDBDE14A9569ED5 /* DropboxClientsManager.swift */,
+				3B515B5D373894FE17B712792271E4DF /* DropboxTeamClient.swift */,
+				55F7B9DC0DF3B4B2D2DF5B3C2C039F16 /* DropboxTransportClient.swift */,
+				502E8E63BC3AD1B1275790ACBCB8AD5B /* Files.swift */,
+				F9B167233EB6C45AAE81703E6B86024C /* FilesRoutes.swift */,
+				4A7898A633DC90AF0EB0543B6C13D95F /* OAuth.swift */,
+				A399C664BC125C6F52C54642BE0BC252 /* OAuthMobile.swift */,
+				0074714D9137EACEAA274A9509928FE6 /* Properties.swift */,
+				93A14A33D973F26688A12900A390D7AF /* Sharing.swift */,
+				ABDF1E0162C7D84204210C57DB7B47B8 /* SharingRoutes.swift */,
+				CBED32176A44EBC57A5D81542768E9F0 /* StoneBase.swift */,
+				0A3D0898706D4F07094BCAC0A2A66234 /* StoneSerializers.swift */,
+				A16944656A7AF42A7D664FE11D16E671 /* StoneValidators.swift */,
+				4104E5CB0FD85CEF0CE0F8A1F84A4FBD /* SwiftyDropbox.h */,
+				F3F5238EA70CA6589D4EB74470D20010 /* Team.swift */,
+				A2F02701CB7129928C76B15FBEEF60C9 /* TeamCommon.swift */,
+				68E25A883D545BD8F141C30EA6FBE9CD /* TeamPolicies.swift */,
+				A58317DA0009DD1F52EF554417090434 /* TeamRoutes.swift */,
+				07D44D5ECF5027EF77A251A56B524347 /* Users.swift */,
+				1AF9DE5C08E7B33CB229F119F021DF14 /* UsersRoutes.swift */,
+				A56CE3BD7E7EDAE7533EA7314A461C60 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/Gloss";
+			name = SwiftyDropbox;
+			path = SwiftyDropbox;
 			sourceTree = "<group>";
 		};
-		523B365452804F95F56AE1720D86575C /* Support Files */ = {
+		5F5C18AE25EFD8F2A5F3C3B84C611623 /* SwiftyPickerPopover */ = {
 			isa = PBXGroup;
 			children = (
-				4174662E2C177A5BEB322EB52099C1FF /* Info.plist */,
-				2988DC82BC8FFDC098F85B3C9F889FAA /* SwiftyDropbox.modulemap */,
-				75DAD034179DA90977C95D974EA4D358 /* SwiftyDropbox.xcconfig */,
-				97F0E01D08C279EEFEA6BB4FBD8FD90F /* SwiftyDropbox-dummy.m */,
-				D2206E4F4A286737EA8EE9766F7DC954 /* SwiftyDropbox-prefix.pch */,
-				E62F3573D47C1B3242197A822FBCA05E /* SwiftyDropbox-umbrella.h */,
+				D9DCB9B045B45BC89B6E22EB08573899 /* AbstractPopover.swift */,
+				6D06C00F28636F3AA408D724592EF1B5 /* ColumnStringPickerPopover.swift */,
+				A57C5B2696E64173A6FCEA1BB5A89906 /* ColumnStringPickerPopoverViewController.swift */,
+				D4196B5DD7F3D99871D1BCBCBF0C576F /* CountdownPickerPopover.swift */,
+				4609F17C0057901371687948D1621A09 /* CountdownPickerPopoverViewController.swift */,
+				96D83206945EF3FC02BB11EB21DC2254 /* DatePickerPopover.swift */,
+				C9BCE6A1658212462C03DE38E5BDBAE9 /* DatePickerPopoverViewController.swift */,
+				C41A71C9145E1F17263D5C9D1BC2FF95 /* StringPickerPopover.swift */,
+				E161F46DC296464B5753D0C9072BEF55 /* StringPickerPopoverViewController.swift */,
+				7BC290231A53172C7F7AEBF09ACAFA21 /* Resources */,
+				BB7C5BCF560A7C805E5CE2B25F8341A2 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/SwiftyDropbox";
-			sourceTree = "<group>";
-		};
-		56B9BF5EC7864D7CF3D35491FC53AEFB /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				134A3109A9946C0B588B325BAFDC1208 /* Info.plist */,
-				ECE32EB54DA579336EEA669A240D2E73 /* SwiftyPickerPopover.modulemap */,
-				36B6DEF20769A609EC5404DB48F628A6 /* SwiftyPickerPopover.xcconfig */,
-				976E3C383426AB7B423E1F7B7D8A90E4 /* SwiftyPickerPopover-dummy.m */,
-				6346345CA9DDA7387EFA745F1DE928E1 /* SwiftyPickerPopover-prefix.pch */,
-				279880DD850E52DE3B3970B87BB50FE0 /* SwiftyPickerPopover-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SwiftyPickerPopover";
+			name = SwiftyPickerPopover;
+			path = SwiftyPickerPopover;
 			sourceTree = "<group>";
 		};
 		7023AE85EBB564A093BC788FD45355BD /* Products */ = {
@@ -582,6 +591,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7916FC149081832C1FDFA590DB8636DB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EA0BD9ADC733E8BB6213C2BF43378BEC /* Alamofire */,
+				FE8C7FF306CE207149DAF03F112F9123 /* ExpandableDatePicker */,
+				04F62E676FFAB203DEF1961F41FF83B7 /* Gloss */,
+				FBC5CF34A8570268E5A220DEB511F039 /* SwiftDate */,
+				429ABCADE862A6239EBEFA7C6B15CA4A /* SwiftyDropbox */,
+				5F5C18AE25EFD8F2A5F3C3B84C611623 /* SwiftyPickerPopover */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		7B3157524DD658CB2FAA1D4CFAC146A1 /* Pods-SwiftEventsUITests */ = {
 			isa = PBXGroup;
 			children = (
@@ -600,23 +622,26 @@
 			path = "Target Support Files/Pods-SwiftEventsUITests";
 			sourceTree = "<group>";
 		};
+		7BC290231A53172C7F7AEBF09ACAFA21 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B24AB6D9EA46FDC1093558CA39072073 /* ColumnStringPickerPopover.storyboard */,
+				4401D6A94E2682AB0B647A1538AA7E2E /* CountdownPickerPopover.storyboard */,
+				4DDB71AC72DADD5BB721063613EA707D /* DatePickerPopover.storyboard */,
+				EA10CDDFD73957558E37E069DB9512AB /* StringPickerPopover.storyboard */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				7373ACB6198F1E9475AFA1E54D8EAA0A /* Frameworks */,
-				E27CC06000ADC2FC4129C2A40F21E576 /* Pods */,
+				7916FC149081832C1FDFA590DB8636DB /* Pods */,
 				7023AE85EBB564A093BC788FD45355BD /* Products */,
 				854CEAF217811B602B01D74BE41A6315 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		8383D7D4741ABCA6E69F49AE89C5F695 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				C361BA5BF3FE876882873CF8F64DF9B7 /* SwiftDate.bundle */,
-			);
-			name = Resources;
 			sourceTree = "<group>";
 		};
 		83D4D0EBDF776967A960630934927C20 /* Pods-SwiftEvents */ = {
@@ -647,48 +672,18 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		9DC7E6E4A422A715E81E7A1BEE525E00 /* Support Files */ = {
+		A56CE3BD7E7EDAE7533EA7314A461C60 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				92EB0021D9EFDEE657A091E7BAD4D996 /* Info.plist */,
-				91E860063CA7C4A9F3E06F2F5170C43A /* SwiftDate.modulemap */,
-				99CD0ABCFBDD118A9422B788379DD309 /* SwiftDate.xcconfig */,
-				8237EF3BD9F946B782029EDC7B69EEBF /* SwiftDate-dummy.m */,
-				9A8FB326F1EACB9A7AE1D293C99DA7BF /* SwiftDate-prefix.pch */,
-				45722C7D8CC31B43538ABDC9A18456C8 /* SwiftDate-umbrella.h */,
+				DE5797C02FBAE664883377DB6A93BFFD /* Info.plist */,
+				C76380B3ADE2D5F58686545F9E64528E /* SwiftyDropbox.modulemap */,
+				5C118F5964DB0ADD4EF4F5AC0DB6A020 /* SwiftyDropbox.xcconfig */,
+				C542DE03052B1F1D1BA6C0401AD5DA17 /* SwiftyDropbox-dummy.m */,
+				8037CC0C31E637FFDACE029DA0D2BD39 /* SwiftyDropbox-prefix.pch */,
+				2E03A1762442DFA2FDD3303BAAEEC867 /* SwiftyDropbox-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/SwiftDate";
-			sourceTree = "<group>";
-		};
-		A4BCA25EC53D6E032948C0F60586A74B /* SwiftDate */ = {
-			isa = PBXGroup;
-			children = (
-				B1B29996B88F63E37D88D72140EAB4AF /* CalendarName.swift */,
-				5B69E293F588D6BD5618393001C4FAFC /* Commons.swift */,
-				4E383AAB693EDAF52D15BBB484763C38 /* Date+Compare.swift */,
-				0A5088C7C1050463964C477115BB2DEB /* Date+Components.swift */,
-				C863D66022BD950706F3D92E3C9DFF76 /* Date+Formatter.swift */,
-				795713D600E6AA691284A216A3492E87 /* Date+Math.swift */,
-				5997606942E7981ED694D3C0B2CDB455 /* DateComponents+Extension.swift */,
-				60663BB8BC055503DE6F9B48D112E1A7 /* DateInRegion.swift */,
-				C3A89E0B169BA794F6608D3B43253A8C /* DateInRegion+Compare.swift */,
-				F2F630F60C432C11E4066F5EA6F58C6E /* DateInRegion+Components.swift */,
-				C6AD08E9579DADCE641C8D14F452E785 /* DateInRegion+Formatter.swift */,
-				3280C4B10D9E725020D80B5291CEA587 /* DateInRegion+Math.swift */,
-				ACFAE8A4FEA70B0395EAE4357774EED8 /* DateInRegionFormatter.swift */,
-				A5F3450C3C617F9222BFE65A122F7A33 /* DateTimeInterval.swift */,
-				84F53427C9E6090F653855DDD1667202 /* Extensions.swift */,
-				AC58B4EE68AA117EC8DAA36F37FCAD1F /* ISO8601DateTimeFormatter.swift */,
-				E640E8D23EE62B8A884E2131670DA0D7 /* LocaleName.swift */,
-				900334BB3636FCE6CD29F5D571E7DCDB /* Region.swift */,
-				381B15161FA0CC2DCDED3F833FF72202 /* TimeInterval+Extensions.swift */,
-				BF8DA8CCACF41CE06916B848B9BF968E /* TimeZoneName.swift */,
-				8383D7D4741ABCA6E69F49AE89C5F695 /* Resources */,
-				9DC7E6E4A422A715E81E7A1BEE525E00 /* Support Files */,
-			);
-			name = SwiftDate;
-			path = SwiftDate;
+			path = "../Target Support Files/SwiftyDropbox";
 			sourceTree = "<group>";
 		};
 		ADE735D2CB75236B799EEF60EBD5FD94 /* Pods-SwiftEventsTests */ = {
@@ -709,123 +704,131 @@
 			path = "Target Support Files/Pods-SwiftEventsTests";
 			sourceTree = "<group>";
 		};
-		B0CF4ADB4AD71C6DF6E1151535A1FD4C /* Gloss */ = {
+		B8EEF4085F34CE456BAF725258590E86 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				A302B80D9E90A560D88EB9BCC5687009 /* Decoder.swift */,
-				42A22915596202A1D2467F678CEE6799 /* Encoder.swift */,
-				2AB8DD08DD504B60F1B66F6AE956DD88 /* ExtensionArray.swift */,
-				15BCF776D0790A0AF250E0BEA907692D /* ExtensionDecodable.swift */,
-				8356E7D1ACA24C98F8ED0555235F5F92 /* ExtensionDictionary.swift */,
-				961CF60306D34BBD5A2D6EBB13992FD4 /* Gloss.swift */,
-				BE13BF6998CCC0DF9951FB9307D064C9 /* Operators.swift */,
-				426631B6AB1DA61627658CA6557D3EBA /* Support Files */,
+				DEC335F9FD58949146A8561273FA31FC /* ExpandableDatePicker.modulemap */,
+				D59E05A1067D0604BABA5D4733C7A292 /* ExpandableDatePicker.xcconfig */,
+				0E7202D671F4CF221B55235C6EDEA07A /* ExpandableDatePicker-dummy.m */,
+				BDECDEC947AAE4EC682DD62E646C7040 /* ExpandableDatePicker-prefix.pch */,
+				820903D34B557D37245A29528A8D56E3 /* ExpandableDatePicker-umbrella.h */,
+				871E9DAC2AA780BA39C3B1F275F08DF0 /* Info.plist */,
 			);
-			name = Gloss;
-			path = Gloss;
+			name = "Support Files";
+			path = "../Target Support Files/ExpandableDatePicker";
 			sourceTree = "<group>";
 		};
-		B6942F550ADFD6B6384BDB12DA0549B8 /* Resources */ = {
+		BB7C5BCF560A7C805E5CE2B25F8341A2 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				6D24719B813DD6EF25B4D039A76402C3 /* ColumnStringPickerPopover.storyboard */,
-				A6CA71DA8E048A18B8482CD052B8E09C /* CountdownPickerPopover.storyboard */,
-				425BB345BDB10893B8732ADECF9727E7 /* DatePickerPopover.storyboard */,
-				B10B7ADD449E7FECD1D883CFD02FDAF0 /* StringPickerPopover.storyboard */,
+				320B6A53B8DE7A918CE749D38A6FAD58 /* Info.plist */,
+				7DCCEAFAD5F77F59106EF7DF15E3251A /* SwiftyPickerPopover.modulemap */,
+				7859907097271795E34D180735B9D36F /* SwiftyPickerPopover.xcconfig */,
+				3A016178EB19C6479F546E187184639C /* SwiftyPickerPopover-dummy.m */,
+				ED36DBC706B847B13D540BDE390E41D4 /* SwiftyPickerPopover-prefix.pch */,
+				55C7FC5AB8BBF9834E5D8A4EDD61D891 /* SwiftyPickerPopover-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyPickerPopover";
+			sourceTree = "<group>";
+		};
+		D5D69BD670798355E13804EB5A453FFA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				18D99A6FBB93A9C1DCAB8373D5D781C8 /* Gloss.modulemap */,
+				3A8439ED7CFA95FCCFB4D7ED727FAC9F /* Gloss.xcconfig */,
+				E77DBF20A4661EFB48214B635EDEB7B7 /* Gloss-dummy.m */,
+				8B232DE2882B617238CE78C5057F7CEC /* Gloss-prefix.pch */,
+				FB902FD071BA1A9E5A544CD0C3943D77 /* Gloss-umbrella.h */,
+				3AC7466CAA823B5B375EB0031B3FDBC4 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Gloss";
+			sourceTree = "<group>";
+		};
+		E9B9C6A988F9102D072F03C1C952AD72 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3E554B12479D1F26472ADA1BED928CB6 /* SwiftDate.bundle */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		D171706C0729F5EA005AB59647ADA7C5 /* Alamofire */ = {
+		EA0BD9ADC733E8BB6213C2BF43378BEC /* Alamofire */ = {
 			isa = PBXGroup;
 			children = (
-				D03B40422380FC6A19D845ADF29966CF /* AFError.swift */,
-				BDF1F9DEEA31BDF4AC2ADEE66A8A21F7 /* Alamofire.swift */,
-				D8A7C5E5DABF0E768E48B7E543CEAA7F /* DispatchQueue+Alamofire.swift */,
-				D0B6504540F4FE00780C32544C58F56C /* MultipartFormData.swift */,
-				1DF3A24A9BDAA11C2A2F387F5E96A6D9 /* NetworkReachabilityManager.swift */,
-				80E1E1A9422A3C483E78DB575FB75929 /* Notifications.swift */,
-				2A3DEFB3A30F6EC76EA2B57C4607BDFD /* ParameterEncoding.swift */,
-				0E828A9EA00329E7AE220C5F0F8A6C0A /* Request.swift */,
-				BE62A862B9E347BA679FA028E0041316 /* Response.swift */,
-				4301853768E4D1598D3E368002BAC131 /* ResponseSerialization.swift */,
-				22D49C930DBE78F85E3239FA8A0BA1C9 /* Result.swift */,
-				A27665C2EF660064B9B23BA5D36C713F /* ServerTrustPolicy.swift */,
-				1D972FF6FED304D94541C9C012DC16E0 /* SessionDelegate.swift */,
-				34631561A0E99A2376AE0049C95DEDAC /* SessionManager.swift */,
-				D5B8EE19AE36958A530E40F1867A128C /* TaskDelegate.swift */,
-				71A7986317A21834F90CA504B75464D6 /* Timeline.swift */,
-				A213D0A8E672E9B9AE6744D63359DE3C /* Validation.swift */,
-				1751D9B7B56FD5ADF8FF39C9E569612E /* Support Files */,
+				1A6B69CAA7C0A72625F2BD4F90575843 /* AFError.swift */,
+				D922BAD339170BE68F91C0ABA79C0892 /* Alamofire.swift */,
+				1800B4B64EBE501279D61AA43A4D1320 /* DispatchQueue+Alamofire.swift */,
+				65416A3C06361187A6AF19530A684432 /* MultipartFormData.swift */,
+				1871C96EDF5287894215A530D2908138 /* NetworkReachabilityManager.swift */,
+				C65829C07945D73356966DC500EA12CC /* Notifications.swift */,
+				43F987045CD0B1CE83C517851E1A07A8 /* ParameterEncoding.swift */,
+				6BCCCFC1596A77A90537BC9514CCC423 /* Request.swift */,
+				043AB3C8AC660E072E8A4AB8CE4330BD /* Response.swift */,
+				C44B087703BC095AADB76700B8EE86D6 /* ResponseSerialization.swift */,
+				07AE4D6DD87E54CA4D205E88490FD260 /* Result.swift */,
+				4236419477D1ABA1DE20A41B44B77313 /* ServerTrustPolicy.swift */,
+				00AC72091FF0074073DF8C14F9595490 /* SessionDelegate.swift */,
+				E0799A0B6376FEEB7A8E2940E45DD913 /* SessionManager.swift */,
+				2308536E1E56449981676FAF7AD309C5 /* TaskDelegate.swift */,
+				B7740C135A9D27EB1FC9FF070C1C4EFC /* Timeline.swift */,
+				6E188E3E2A3B22C3DB985C5A3BAA85E0 /* Validation.swift */,
+				0B04EDA808D05F957EA4C03909227775 /* Support Files */,
 			);
 			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
-		D74856D94F0AF1F0A3FB90D407347458 /* SwiftyPickerPopover */ = {
+		FBC5CF34A8570268E5A220DEB511F039 /* SwiftDate */ = {
 			isa = PBXGroup;
 			children = (
-				911A82081380A8B23B38AF888F5FA8FB /* AbstractPopover.swift */,
-				26E837B1D3CD7C24BCA97AEDA64EE618 /* ColumnStringPickerPopover.swift */,
-				D4E59462FDEAFB2F8BEE27222A04228A /* ColumnStringPickerPopoverViewController.swift */,
-				0508F909B48C2B755692042CD81EB7DA /* CountdownPickerPopover.swift */,
-				8CA7AE41E04DA99DD418E48001A77E00 /* CountdownPickerPopoverViewController.swift */,
-				A9E73494788C13523C5A3BD0E49EBE45 /* DatePickerPopover.swift */,
-				87CBAE091E8FD4447483F595FF53CD7E /* DatePickerPopoverViewController.swift */,
-				8FB2ED61DAE946BDC4B2F3A53DEE22F3 /* StringPickerPopover.swift */,
-				BE3A96CA230143287030AD236DDBEF21 /* StringPickerPopoverViewController.swift */,
-				B6942F550ADFD6B6384BDB12DA0549B8 /* Resources */,
-				56B9BF5EC7864D7CF3D35491FC53AEFB /* Support Files */,
+				927F76D5CD1102FEA0B363F8482BC936 /* CalendarName.swift */,
+				5973C6C4EFB5D4FB5839433457F46221 /* Commons.swift */,
+				75CAC05C75986E9F124390C80DC8FFCF /* Date+Compare.swift */,
+				A8C33F34D015F82068FDDF773522A703 /* Date+Components.swift */,
+				A6A16F4A2285B4B000F77890D072B918 /* Date+Formatter.swift */,
+				B8E19F9B3E75AA4BBEA00B7640633D5E /* Date+Math.swift */,
+				3E407904BDBC056B3DBA77E1644BB8A3 /* DateComponents+Extension.swift */,
+				DE500DC479D07599B29E0AD8FAE24672 /* DateInRegion.swift */,
+				BB89B79B56592A1442C6A21A45300D3A /* DateInRegion+Compare.swift */,
+				6E70A61D44DDA61EE9AD5138C10DD895 /* DateInRegion+Components.swift */,
+				A3E91661AC6AE716869A2FDC7DF1B713 /* DateInRegion+Formatter.swift */,
+				1AD6A2AF2D96A27C80E73AA0025A9DD3 /* DateInRegion+Math.swift */,
+				4636D969F58BD1D79B9485B104332A81 /* DateInRegionFormatter.swift */,
+				7128FEF007A51C1EBE5E60347734A0EA /* DateTimeInterval.swift */,
+				1B0C27EFD092DDAFEB5A5D00F87D2E46 /* Extensions.swift */,
+				85D2F352A4ADCCA21C41E599CD873D30 /* ISO8601DateTimeFormatter.swift */,
+				523751D51594999CE3225EAA01959F91 /* LocaleName.swift */,
+				806B9C032EB7E01CB0CD1C398705E521 /* Localization.swift */,
+				CA2D37625F4FE78FBEF5B431AFF52C8C /* Region.swift */,
+				AF5FD8452149B32428003C249B22DE06 /* TimeInterval+Extensions.swift */,
+				83423E7258B7C9861433398DDFAF82FD /* TimeZoneName.swift */,
+				E9B9C6A988F9102D072F03C1C952AD72 /* Resources */,
+				1EA4C2CEC67F7712540272F5C1F5551E /* Support Files */,
 			);
-			name = SwiftyPickerPopover;
-			path = SwiftyPickerPopover;
+			name = SwiftDate;
+			path = SwiftDate;
 			sourceTree = "<group>";
 		};
-		E27CC06000ADC2FC4129C2A40F21E576 /* Pods */ = {
+		FE8C7FF306CE207149DAF03F112F9123 /* ExpandableDatePicker */ = {
 			isa = PBXGroup;
 			children = (
-				D171706C0729F5EA005AB59647ADA7C5 /* Alamofire */,
-				E33C51F1286091DF7A941E906652DD32 /* ExpandableDatePicker */,
-				B0CF4ADB4AD71C6DF6E1151535A1FD4C /* Gloss */,
-				A4BCA25EC53D6E032948C0F60586A74B /* SwiftDate */,
-				3369CA3831449C3B6D1E3FA1A23A3402 /* SwiftyDropbox */,
-				D74856D94F0AF1F0A3FB90D407347458 /* SwiftyPickerPopover */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		E33C51F1286091DF7A941E906652DD32 /* ExpandableDatePicker */ = {
-			isa = PBXGroup;
-			children = (
-				2EA42A0915481A55640892E9208DCCE1 /* ExpandableDatePicker.swift */,
-				2191B1B46DD98D2619C31E031EEDBAFA /* ExpandableDatePickerCell.swift */,
-				CC1E61617D1B8F993C03165B46C9BD9B /* ExpandableDatePickerSelectionCell.swift */,
-				6837495B8611DF8BA2CC167A1860D5C7 /* ExpandableDatePickerTimeZoneCell.swift */,
-				237B1416A695331DA368CC056A477EE0 /* ExpandableDatePickerTimeZoneTableViewController.swift */,
-				4C0F5B413F12A470DA9991DD79F1681F /* IndexPath.swift */,
-				08CDB7DEDAF88A5EC566097700AF43A6 /* LongTimeZoneCellData.swift */,
-				E12023D5D3CF6F837FF694D886029F08 /* LongTimeZoneDelegate.swift */,
-				7F3C0F34614EB63DA4DA26A1FA208EFB /* ShortTimeZoneCellData.swift */,
-				EE281A7D96BB4765BFCBD8D71A74A6EF /* ShortTimeZoneDelegate.swift */,
-				129F0106980A050A9870A9DBC39D16C1 /* UITableView.swift */,
-				E75F129413BE111C4C347F9F4C4668DD /* Support Files */,
+				9A8872685870EBFD420D88DA46FAA209 /* ExpandableDatePicker.swift */,
+				49D3B2B8340C2BC7DD4277DF6DCC3100 /* ExpandableDatePickerCell.swift */,
+				DA1703FF194B3DBE0DB7363627E0A5A3 /* ExpandableDatePickerSelectionCell.swift */,
+				6B36FFC96FA923DE722B657347E60A64 /* ExpandableDatePickerTimeZoneCell.swift */,
+				309CCEAB88BED6401BA57A4F9D879757 /* ExpandableDatePickerTimeZoneTableViewController.swift */,
+				7F5BFDF98C9126C48D2595730AFAC0C6 /* IndexPath.swift */,
+				1440D244D862590E1D608CD7330DF294 /* LongTimeZoneCellData.swift */,
+				F57E7CBFE316C58B02971693A296B534 /* LongTimeZoneDelegate.swift */,
+				C43EC8F864F30E08946149DAF591A203 /* ShortTimeZoneCellData.swift */,
+				AEC141D2FFBC3EEAA94FE6DDDE22027E /* ShortTimeZoneDelegate.swift */,
+				5EC572565D0320018A62D5FAB7483020 /* UITableView.swift */,
+				B8EEF4085F34CE456BAF725258590E86 /* Support Files */,
 			);
 			name = ExpandableDatePicker;
 			path = ExpandableDatePicker;
-			sourceTree = "<group>";
-		};
-		E75F129413BE111C4C347F9F4C4668DD /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				1E8E3295B89851678BF9165725CA18C1 /* ExpandableDatePicker.modulemap */,
-				7EEC7AD9F8AE6AD316463625B8335EEA /* ExpandableDatePicker.xcconfig */,
-				0BB3A8D87CDCB8F8C14155DD6156574F /* ExpandableDatePicker-dummy.m */,
-				4DF50D9AC7AEAB9F80DD115AA5BA6D1C /* ExpandableDatePicker-prefix.pch */,
-				1F90F817CAD4CAEFCAADB41CC2E21BE3 /* ExpandableDatePicker-umbrella.h */,
-				7296BFA48B18774C1BF526688DB37212 /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/ExpandableDatePicker";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1020,7 +1023,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A97D3DDA47402E47367215F78110DED1 /* Build configuration list for PBXNativeTarget "SwiftDate" */;
 			buildPhases = (
-				7197BA364EFA7DC3FC8475EBCEBFFE4C /* Sources */,
+				F489694E585E7A18A6020E42E02E92AE /* Sources */,
 				640DB10A1A0AFBE01417F1594B6CED1D /* Frameworks */,
 				8841B58536E32F0FAB6A76C667F12E07 /* Resources */,
 				08DC416256DEFE20CB74017D5D29ADC5 /* Headers */,
@@ -1170,34 +1173,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7197BA364EFA7DC3FC8475EBCEBFFE4C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F651046E12C39E14BD36029A83C72EE6 /* CalendarName.swift in Sources */,
-				FEB0387C86F9DA1CF988E153CDF8B10E /* Commons.swift in Sources */,
-				6D6EBBE59D6BF214A489F27AF71CD352 /* Date+Compare.swift in Sources */,
-				3EB30AFB1712EF5856B20B6BEAEBAC8F /* Date+Components.swift in Sources */,
-				BDE41D5AC654A393DFA342BD4359E951 /* Date+Formatter.swift in Sources */,
-				688A3D5F1F8573658542EB1BFC35AAD7 /* Date+Math.swift in Sources */,
-				CE8A3543DCEE1F288E406AA3065F0A06 /* DateComponents+Extension.swift in Sources */,
-				B71FD131A6E44C57F053C5AD47871217 /* DateInRegion+Compare.swift in Sources */,
-				79E93CB2A0C225E6F4A372079D83D6F1 /* DateInRegion+Components.swift in Sources */,
-				8175B9D8BC265FA9956F27593BFCFB00 /* DateInRegion+Formatter.swift in Sources */,
-				5D23B429384B91AE06C177F22CEE4C3B /* DateInRegion+Math.swift in Sources */,
-				EFE638F8F900AEBBE354C94405AAE7B8 /* DateInRegion.swift in Sources */,
-				14038F2CDE39590263EA9F2850F5101F /* DateInRegionFormatter.swift in Sources */,
-				AA1C7E0397956A49FC724A86EE87BA2A /* DateTimeInterval.swift in Sources */,
-				F86A705F6F65EAB52879C2E7769A6EA6 /* Extensions.swift in Sources */,
-				F4860A9A1494F46E4F64D7BCAD68A165 /* ISO8601DateTimeFormatter.swift in Sources */,
-				B7F43352787A32C5E8D8AEC7E68B98F4 /* LocaleName.swift in Sources */,
-				8AEDA2A6EFF4A960D65FC4C1212526C4 /* Region.swift in Sources */,
-				BE1652374C0BE6102BCD4EC3F6C4C2C7 /* SwiftDate-dummy.m in Sources */,
-				F6400B826FBDA981447BA96B0CE08083 /* TimeInterval+Extensions.swift in Sources */,
-				A468A4124B7A89F5307459AE3A4AC8D5 /* TimeZoneName.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		7FF618F7DBBD0C61E8A7E7D3AEC9D885 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1271,6 +1246,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F489694E585E7A18A6020E42E02E92AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C064AEE8D43411476BB20C75C1FE699 /* CalendarName.swift in Sources */,
+				1914467BA48062E26C31F7A59885B4B3 /* Commons.swift in Sources */,
+				B66A636918CA2BD538B37932CA6CC8B0 /* Date+Compare.swift in Sources */,
+				A960018FFF823A2FF83EAD36BED3E210 /* Date+Components.swift in Sources */,
+				11414A180D8F2322516E702D4147D574 /* Date+Formatter.swift in Sources */,
+				5B128E3F159938BC3E7919031503EF87 /* Date+Math.swift in Sources */,
+				7F7C5354319270193B0F4CE070C21AA5 /* DateComponents+Extension.swift in Sources */,
+				01799C081EB898E3ECCA7FE7DC02B275 /* DateInRegion+Compare.swift in Sources */,
+				6D988D865395CCB2851D2990516989C9 /* DateInRegion+Components.swift in Sources */,
+				E4998626A89ED99349E187306596ED38 /* DateInRegion+Formatter.swift in Sources */,
+				D36433614F5F3E7A0939B443FD8697F0 /* DateInRegion+Math.swift in Sources */,
+				84895C7A9A3B5C5AB163B2ACFD73E0AF /* DateInRegion.swift in Sources */,
+				BEF34BDC4643EE55B54E054325741C46 /* DateInRegionFormatter.swift in Sources */,
+				5F58F98DD3A789C214A7E26545022D9C /* DateTimeInterval.swift in Sources */,
+				CFCCD05AD555DC99444C15B057D058E8 /* Extensions.swift in Sources */,
+				4DD54A1D97B63CF34A4AA1FEAD94D99D /* ISO8601DateTimeFormatter.swift in Sources */,
+				789E56D3C3AF62766C5FB6C9A4372334 /* LocaleName.swift in Sources */,
+				A5CBF67CF926D9B0D590AA103B3E8990 /* Localization.swift in Sources */,
+				ADFEDB1CF75769D5D63AD61642E65C76 /* Region.swift in Sources */,
+				FA1888209086D2791283CA79784ADC68 /* SwiftDate-dummy.m in Sources */,
+				B4D5865F8751FCCB19013198523FEEFD /* TimeInterval+Extensions.swift in Sources */,
+				7EFBDF239DDE6491C8544F2C14451B55 /* TimeZoneName.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F945AC127B5DA919B52DD1A81927A20D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1338,21 +1342,21 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		425BB345BDB10893B8732ADECF9727E7 /* DatePickerPopover.storyboard */ = {
+		4DDB71AC72DADD5BB721063613EA707D /* DatePickerPopover.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F420C57D8517489126A0330FE658C64F /* DatePickerPopover.storyboard */,
-				BE07AEAFC7941FF1845E50B7FD71A1A4 /* DatePickerPopover.strings */,
+				B09AD2827D7A9B11B86ABD3605FD5957 /* DatePickerPopover.storyboard */,
+				A3CA80D119705DB30FE744888D516D36 /* DatePickerPopover.strings */,
 			);
 			name = DatePickerPopover.storyboard;
 			path = SwiftyPickerPopover;
 			sourceTree = "<group>";
 		};
-		B10B7ADD449E7FECD1D883CFD02FDAF0 /* StringPickerPopover.storyboard */ = {
+		EA10CDDFD73957558E37E069DB9512AB /* StringPickerPopover.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1809DF4C5A1390B3144ED908AC0E4845 /* StringPickerPopover.storyboard */,
-				DE6969F82FEB26E779EC14862B6D573C /* StringPickerPopover.strings */,
+				11FE41D6B071FBF8387DCBF8B7B8D26F /* StringPickerPopover.storyboard */,
+				E4C49D2D35AFC8CBC25D78736D5AB04D /* StringPickerPopover.strings */,
 			);
 			name = StringPickerPopover.storyboard;
 			path = SwiftyPickerPopover;
@@ -1363,7 +1367,7 @@
 /* Begin XCBuildConfiguration section */
 		13CC166350648876AEB1125FD2BC608A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 75DAD034179DA90977C95D974EA4D358 /* SwiftyDropbox.xcconfig */;
+			baseConfigurationReference = 5C118F5964DB0ADD4EF4F5AC0DB6A020 /* SwiftyDropbox.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1396,7 +1400,7 @@
 		};
 		39AD04E91445E949117177B30833DF5A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7EEC7AD9F8AE6AD316463625B8335EEA /* ExpandableDatePicker.xcconfig */;
+			baseConfigurationReference = D59E05A1067D0604BABA5D4733C7A292 /* ExpandableDatePicker.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1498,7 +1502,7 @@
 		};
 		40D0E26574A81A64ACDBEAD74B80BD7D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 15A8D300C91E08ADBCE0468FCA885788 /* Gloss.xcconfig */;
+			baseConfigurationReference = 3A8439ED7CFA95FCCFB4D7ED727FAC9F /* Gloss.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1530,7 +1534,7 @@
 		};
 		61F9F042D2F2370F1E60233E368A0D53 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7EEC7AD9F8AE6AD316463625B8335EEA /* ExpandableDatePicker.xcconfig */;
+			baseConfigurationReference = D59E05A1067D0604BABA5D4733C7A292 /* ExpandableDatePicker.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1563,7 +1567,7 @@
 		};
 		621A10F5C0A994B466277661C1B2C19F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E0656051512D278880CFEF90734BD696 /* Alamofire.xcconfig */;
+			baseConfigurationReference = A97498353C788765774818065DD15005 /* Alamofire.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1635,7 +1639,7 @@
 		};
 		6E0104FAB8049523556172FEE6110207 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 36B6DEF20769A609EC5404DB48F628A6 /* SwiftyPickerPopover.xcconfig */;
+			baseConfigurationReference = 7859907097271795E34D180735B9D36F /* SwiftyPickerPopover.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1702,7 +1706,7 @@
 		};
 		8C48CCCB862EC56A4174F6E1715688C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E0656051512D278880CFEF90734BD696 /* Alamofire.xcconfig */;
+			baseConfigurationReference = A97498353C788765774818065DD15005 /* Alamofire.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1735,7 +1739,7 @@
 		};
 		962668902E5B3F1F9D2360CE6BFCB8DC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 75DAD034179DA90977C95D974EA4D358 /* SwiftyDropbox.xcconfig */;
+			baseConfigurationReference = 5C118F5964DB0ADD4EF4F5AC0DB6A020 /* SwiftyDropbox.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1803,7 +1807,7 @@
 		};
 		A007FEB8764E1381A43E9D9C16448711 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 15A8D300C91E08ADBCE0468FCA885788 /* Gloss.xcconfig */;
+			baseConfigurationReference = 3A8439ED7CFA95FCCFB4D7ED727FAC9F /* Gloss.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1950,7 +1954,7 @@
 		};
 		E6C628C73D5EFE131B1A8BA35C9EA52A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 99CD0ABCFBDD118A9422B788379DD309 /* SwiftDate.xcconfig */;
+			baseConfigurationReference = 59E2847F020ED1FA3BEC9084C492086C /* SwiftDate.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1983,7 +1987,7 @@
 		};
 		E9B2A9C22723CB0A03C0E71C836A6161 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 36B6DEF20769A609EC5404DB48F628A6 /* SwiftyPickerPopover.xcconfig */;
+			baseConfigurationReference = 7859907097271795E34D180735B9D36F /* SwiftyPickerPopover.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -2016,7 +2020,7 @@
 		};
 		FE6F1A5202B0CDD72E2212472E2D71A8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 99CD0ABCFBDD118A9422B788379DD309 /* SwiftDate.xcconfig */;
+			baseConfigurationReference = 59E2847F020ED1FA3BEC9084C492086C /* SwiftDate.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";

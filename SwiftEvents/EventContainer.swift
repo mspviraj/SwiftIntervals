@@ -1,12 +1,11 @@
 //
-//  Event.swift
+//  EventZerk.swift
 //  SwiftEvents
 //
-//  Created by Steven Smith on 1/9/17.
+//  Created by Steven Smith on 1/31/17.
 //  Copyright © 2017 LTMM. All rights reserved.
 //
-// Single event with caption, start time, end time, and refresh interval
-//
+
 import Foundation
 import Gloss
 
@@ -20,7 +19,7 @@ fileprivate enum Key {
 }
 
 
-struct Event : Decodable, JSONSerializable, Glossy {
+struct Event : JSONSerializable, Glossy {
     let name : String
     let start : String
     private var startTimeZone: String
@@ -147,6 +146,8 @@ struct Event : Decodable, JSONSerializable, Glossy {
             print(error)
             return nil
         }
+        
+        
     }
     
     init?(string: String) {
