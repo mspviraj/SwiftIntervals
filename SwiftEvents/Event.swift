@@ -23,9 +23,9 @@ fileprivate enum Key {
 struct Event : Decodable, JSONSerializable, Glossy {
     let name : String
     let start : String
-    var startTimeZone: String
+    private var startTimeZone: String
     let finish : String
-    let finishTimeZone: String
+    private var finishTimeZone: String
     let refreshInterval : String /// the layout of the display (eg: just seconds?, min,secs?, hours,min,secs?... etc
     
     private var intervalType : DateEnum {
@@ -43,24 +43,53 @@ struct Event : Decodable, JSONSerializable, Glossy {
         }
     }
     
+    public var startingTimeZone : String {
+        get {
+            return startTimeZone
+        }
+        set {
+            guard let timeZone = newValue.asTimeZone else {
+                assertionFailure("Not valid time zone: \(newValue)")
+                return
+            }
+            startTimeZone = timeZone.identifier
+        }
+    }
+    
+    public var finishingTimeZone : String {
+        get {
+            return finishTimeZone
+        }
+        set {
+            guard let timeZone = newValue.asTimeZone else {
+                assertionFailure("Not valid time zone: \(newValue)")
+                return
+            }
+            finishTimeZone = timeZone.identifier
+        }
+    }
+    
     init() {
         self.name = "First used application"
         self.start = Date().utcString
-        self.startTimeZone = TimeZone.current.asString
+        self.startTimeZone = TimeZone.autoupdatingCurrent.identifier
         self.finish = Formats.wildCard
-        self.finishTimeZone = TimeZone.current.asString
+        self.finishTimeZone = TimeZone.autoupdatingCurrent.identifier
         self.refreshInterval = DisplayInterval.progressive.rawValue
     }
     
-    init?(name: String, startTime: String = Date().utcString, startTimeZone : TimeZone = TimeZone.current, endTime: String = Formats.wildCard, endTimeZone : TimeZone = TimeZone.current) {
+    init?(name: String, startTime: String = Date().utcString,
+          startTimeZone : TimeZone = TimeZone.autoupdatingCurrent,
+          endTime: String = Formats.wildCard,
+          endTimeZone : TimeZone = TimeZone.autoupdatingCurrent) {
         self.name = name
         
         if let start = startTime.rawDate, let finish = endTime.rawDate {
             self.start = start
-            self.startTimeZone = startTimeZone.asString
+            self.startTimeZone = startTimeZone.identifier
             self.finish = finish
-            self.finishTimeZone = endTimeZone.asString
-            self.refreshInterval = "minute"
+            self.finishTimeZone = endTimeZone.identifier
+            self.refreshInterval = DisplayInterval.progressive.rawValue
         } else {
             return nil
         }

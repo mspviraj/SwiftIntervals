@@ -25,10 +25,10 @@ class NewEventTableViewController: UITableViewController, ExpandableDatePicker {
         static let rowStartDate = IndexPath(row: 0, section: 1)
         static let rowStartTime = IndexPath(row: 1, section: 1)
         static let rowStartTimeZone = IndexPath(row: 2, section: 1)
-        static let rowEndIntervalOption = IndexPath(row: 3, section: 1)
-        static let rowEndDate = IndexPath(row: 0, section: 2)
-        static let rowEndTime = IndexPath(row: 1, section: 2)
-        static let rowEndTimeZone = IndexPath(row: 2, section: 2)
+        static let rowEndIntervalOption = IndexPath(row: 0, section: 2)
+        static let rowEndDate = IndexPath(row: 1, section: 2)
+        static let rowEndTime = IndexPath(row: 2, section: 2)
+        static let rowEndTimeZone = IndexPath(row: 3, section: 2)
     }
     
     // Part of ExpandableDatePicker protocol
@@ -40,6 +40,13 @@ class NewEventTableViewController: UITableViewController, ExpandableDatePicker {
     
     private var event = Event(name: "Quick Entry")!
     private var timeZone = TimeZone.current
+    
+    
+    private var endedTime : String? = nil
+    private var endedDate : String? = nil
+    private var endedTimeZone : String? = nil
+    private var timer : Timer? = nil
+    private var endBlockCaption : String = "--:--"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,6 +99,9 @@ class NewEventTableViewController: UITableViewController, ExpandableDatePicker {
         case Constants.sectionStart:
             selectStartCells(at: indexPath)
             return
+        case Constants.sectionEnd:
+            selectEndCells(at: indexPath)
+            return
         default:
             return
         }
@@ -131,7 +141,7 @@ class NewEventTableViewController: UITableViewController, ExpandableDatePicker {
             cell.detailTextLabel?.text = event.startAs(.time)
             return cell
         case Constants.rowStartTimeZone:
-            return ExpandableDatePickerTimeZoneCell.reusableCell(for: indexPath, in: tableView, timeZone: event.startTimeZone.asTimeZone!)
+            return ExpandableDatePickerTimeZoneCell.reusableCell(for: indexPath, in: tableView, timeZone: event.startingTimeZone.asTimeZone!)
         default:
             return UITableViewCell()
         }
@@ -143,20 +153,9 @@ class NewEventTableViewController: UITableViewController, ExpandableDatePicker {
         case Constants.rowStartTimeZone:
             let viewController = ExpandableDatePickerTimeZoneTableViewController {
                 [weak self] timeZone in
-                print("\(timeZone.localizedName(for: NSTimeZone.NameStyle.shortGeneric, locale: Locale.current))")
-                print("\(timeZone.localizedName(for: NSTimeZone.NameStyle.generic, locale: Locale.current))")
-                print("\(timeZone.localizedName(for: NSTimeZone.NameStyle.standard, locale: Locale.current))")
-                print("\(timeZone.localizedName(for: NSTimeZone.NameStyle.shortStandard, locale: Locale.current))")
-                let v = timeZone.identifier
-                let tzString = timeZone.localizedName(for: NSTimeZone.NameStyle.shortStandard, locale: Locale.current)
-                if let t = tzString?.asTimeZone {
-                    print("\(t)")
-                }
-                
-                print("\(timeZone.localizedName(for: NSTimeZone.NameStyle.standard, locale: Locale.current))")
-                self?.event.startTimeZone = timeZone.identifier
+                self?.event.startingTimeZone = timeZone.identifier
                 self?.selectedTimeZone = timeZone
-                self?.tableView.reloadRows(at: [indexPath], with: .automatic)
+                self?.tableView.reloadRows(at: [Constants.rowStartDate, Constants.rowStartTime, indexPath], with: .automatic)
             }
             self.navigationController!.pushViewController(viewController, animated: true)
             return
@@ -207,51 +206,18 @@ class NewEventTableViewController: UITableViewController, ExpandableDatePicker {
     }
     
     private func selectEndCells(at indexPath: IndexPath) {
-    }
-
-    /*
-     // Override to support conditional editing of the table view.
-     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the specified item to be editable.
-     return true
-     }
-     */
-    
-    /*
-     // Override to support editing the table view.
-     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-     if editingStyle == .delete {
-     // Delete the row from the data source
-     tableView.deleteRows(at: [indexPath], with: .fade)
-     } else if editingStyle == .insert {
-     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-     }
-     }
-     */
-    
-    /*
-     // Override to support rearranging the table view.
-     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-     
-     }
-     */
-    
-    /*
-     // Override to support conditional rearranging of the table view.
-     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the item to be re-orderable.
-     return true
-     }
-     */
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
+        switch indexPath {
+        case Constants.rowEndTimeZone:
+            let viewController = ExpandableDatePickerTimeZoneTableViewController {
+                [weak self] timeZone in
+                self?.event.finishingTimeZone = timeZone.identifier
+                self?.selectedTimeZone = timeZone
+                self?.tableView.reloadRows(at: [Constants.rowEndDate, Constants.rowEndTimeZone, indexPath], with: .automatic)
+            }
+            self.navigationController!.pushViewController(viewController, animated: true)
+            return
+        default:
+            return
+        }
+    }    
 }

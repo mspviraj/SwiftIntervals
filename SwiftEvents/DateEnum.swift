@@ -16,16 +16,6 @@ enum DateEnum {
     case invalid
 }
 
-extension TimeZone {
-    public var asString : String {
-        return TimeZone.autoupdatingCurrent.abbreviation() ?? "UTC"
-    }
-    
-    public static func from(abbreviation: String) -> TimeZone {
-        return TimeZone(abbreviation: abbreviation) ?? TimeZone(secondsFromGMT: 0)!
-    }
-}
-
 extension Date {
     public var utcString : String {
         let dateFormatter = DateFormatter()
@@ -84,11 +74,6 @@ extension String {
         }
         if let timeZone = TimeZone(identifier: self) {
             return timeZone
-        }
-        if !self.contains(":") {
-            if let timeZone = TimeZone(abbreviation: self + ":00") {
-                return timeZone
-            }
         }
         return nil
     }
