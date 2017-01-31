@@ -165,7 +165,9 @@
                             <outlet property="delegate" destination="MA3-SD-nEX" id="7op-Fb-djV"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="dga-ul-LkB"/>
+                    <navigationItem key="navigationItem" id="dga-ul-LkB">
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="JUJ-Po-Jns"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6R4-cZ-F9S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

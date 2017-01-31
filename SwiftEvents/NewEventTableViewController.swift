@@ -21,7 +21,6 @@ class NewEventTableViewController: UITableViewController, ExpandableDatePicker {
         static let sectionEvent = 0
         static let sectionStart = 1
         static let sectionEnd = 2
-        static let sectionSubmit = 3
         static let rowEventCaption = IndexPath(row: 0, section: 0)
         static let rowStartDate = IndexPath(row: 0, section: 1)
         static let rowStartTime = IndexPath(row: 1, section: 1)
@@ -30,7 +29,6 @@ class NewEventTableViewController: UITableViewController, ExpandableDatePicker {
         static let rowEndDate = IndexPath(row: 0, section: 2)
         static let rowEndTime = IndexPath(row: 1, section: 2)
         static let rowEndTimeZone = IndexPath(row: 2, section: 2)
-        static let rowSubmit = IndexPath(row: 0, section: 3)
     }
     
     // Part of ExpandableDatePicker protocol
@@ -62,7 +60,7 @@ class NewEventTableViewController: UITableViewController, ExpandableDatePicker {
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 4
+        return 3
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -70,7 +68,6 @@ class NewEventTableViewController: UITableViewController, ExpandableDatePicker {
         case Constants.sectionEvent: return 1
         case Constants.sectionStart: return 3
         case Constants.sectionEnd: return 4
-        case Constants.sectionSubmit: return 1
         default: return 0
         }
     }
@@ -83,8 +80,6 @@ class NewEventTableViewController: UITableViewController, ExpandableDatePicker {
             return startCells(indexPath: indexPath)
         case Constants.sectionEnd:
             return endCells(indexPath: indexPath)
-        case Constants.sectionSubmit:
-            return submitCells(indexPath: indexPath)
         default:
             return UITableViewCell()
         }
@@ -144,6 +139,40 @@ class NewEventTableViewController: UITableViewController, ExpandableDatePicker {
     
     /// Called when a cell in the Start Time section is selected
     private func selectStartCells(at indexPath: IndexPath) {
+        switch indexPath {
+        case Constants.rowStartTimeZone:
+            let viewController = ExpandableDatePickerTimeZoneTableViewController {
+                [weak self] timeZone in
+                print("\(timeZone.localizedName(for: NSTimeZone.NameStyle.shortGeneric, locale: Locale.current))")
+                print("\(timeZone.localizedName(for: NSTimeZone.NameStyle.generic, locale: Locale.current))")
+                print("\(timeZone.localizedName(for: NSTimeZone.NameStyle.standard, locale: Locale.current))")
+                print("\(timeZone.localizedName(for: NSTimeZone.NameStyle.shortStandard, locale: Locale.current))")
+                let v = timeZone.identifier
+                let tzString = timeZone.localizedName(for: NSTimeZone.NameStyle.shortStandard, locale: Locale.current)
+                if let t = tzString?.asTimeZone {
+                    print("\(t)")
+                }
+                
+                print("\(timeZone.localizedName(for: NSTimeZone.NameStyle.standard, locale: Locale.current))")
+                self?.event.startTimeZone = timeZone.identifier
+                self?.selectedTimeZone = timeZone
+                self?.tableView.reloadRows(at: [indexPath], with: .automatic)
+            }
+            self.navigationController!.pushViewController(viewController, animated: true)
+            return
+        default:
+            return
+        }
+    }
+    
+    private func showTimeZonePicker(indexPath: IndexPath) {
+        let viewController = ExpandableDatePickerTimeZoneTableViewController {
+            [weak self] timeZone in
+            self?.selectedTimeZone = timeZone
+            self?.tableView.reloadRows(at: [indexPath], with: .automatic)
+        }
+        self.navigationController!.pushViewController(viewController, animated: true)
+        return
     }
     
     private func endCells(indexPath: IndexPath) -> UITableViewCell {
@@ -180,13 +209,6 @@ class NewEventTableViewController: UITableViewController, ExpandableDatePicker {
     private func selectEndCells(at indexPath: IndexPath) {
     }
 
-    private func submitCells(indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.captionCell) else {
-            return UITableViewCell()
-        }
-        cell.textLabel?.text = "Add"
-        return cell
-    }
     /*
      // Override to support conditional editing of the table view.
      override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

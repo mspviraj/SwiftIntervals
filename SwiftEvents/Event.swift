@@ -23,7 +23,7 @@ fileprivate enum Key {
 struct Event : Decodable, JSONSerializable, Glossy {
     let name : String
     let start : String
-    let startTimeZone: String
+    var startTimeZone: String
     let finish : String
     let finishTimeZone: String
     let refreshInterval : String /// the layout of the display (eg: just seconds?, min,secs?, hours,min,secs?... etc

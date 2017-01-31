@@ -85,6 +85,11 @@ extension String {
         if let timeZone = TimeZone(identifier: self) {
             return timeZone
         }
+        if !self.contains(":") {
+            if let timeZone = TimeZone(abbreviation: self + ":00") {
+                return timeZone
+            }
+        }
         return nil
     }
 }
