@@ -59,6 +59,10 @@ class NewEventTableViewController: UITableViewController, ExpandableDatePicker {
         tableView.registerExpandableDatePicker()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        startTimer()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -181,7 +185,7 @@ class NewEventTableViewController: UITableViewController, ExpandableDatePicker {
                 return UITableViewCell()
             }
             cell.textLabel?.text = "Intervals since start"
-            cell.textLabel?.textAlignment = .center
+            cell.detailTextLabel?.text = endBlockCaption
             return cell
         case Constants.rowEndDate:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.basicCell) else {
@@ -206,18 +210,52 @@ class NewEventTableViewController: UITableViewController, ExpandableDatePicker {
     }
     
     private func selectEndCells(at indexPath: IndexPath) {
+        stopTimer()
         switch indexPath {
+        case Constants.rowEndIntervalOption:
+            startTimer()
+            return
         case Constants.rowEndTimeZone:
             let viewController = ExpandableDatePickerTimeZoneTableViewController {
                 [weak self] timeZone in
                 self?.event.finishingTimeZone = timeZone.identifier
                 self?.selectedTimeZone = timeZone
                 self?.tableView.reloadRows(at: [Constants.rowEndDate, Constants.rowEndTimeZone, indexPath], with: .automatic)
+                self?.endedTimeZone = timeZone.identifier
             }
             self.navigationController!.pushViewController(viewController, animated: true)
             return
         default:
             return
         }
-    }    
+    }
+    
+    private func startTimer() {
+        if timer != nil {
+            timer?.invalidate()
+            timer = nil
+        }
+        endedDate = nil
+        endedTime = nil
+        endedTimeZone = nil
+        timer = Timer.init(fire: Date(), interval: 1.0, repeats: true) { (timer) in
+            self.endBlockCaption = self.event.publishInterval(.progressive)
+            self.tableView.reloadRows(at: [Constants.rowEndIntervalOption], with: .automatic)
+        }
+        RunLoop.main.add(timer!, forMode: .defaultRunLoopMode)
+        reloadEndCells()
+    }
+    
+    private func stopTimer() {
+        if timer != nil {
+            timer?.invalidate()
+            timer = nil
+        }
+        endBlockCaption = "--:--"
+        reloadEndCells()
+    }
+    
+    private func reloadEndCells() {
+        self.tableView.reloadRows(at: [Constants.rowEndIntervalOption, Constants.rowEndTime, Constants.rowEndTimeZone, Constants.rowEndDate], with: .automatic)
+    }
 }
