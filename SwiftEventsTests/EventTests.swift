@@ -31,26 +31,26 @@ class EventTests: XCTestCase {
     
     func testInitEvent() {
         let now = Date()
-        let event = Event()
+        let event = EventContainer()
         let nowString = now.utcString
         XCTAssertEqual(nowString, event.start)
     }
     
     func testToString() {
-        let event = Event()
+        let event = EventContainer()
         let asString = event.toJSON()
         XCTAssertNotNil(asString)
     }
     
     func testInitJSON() {
-        let event = Event()
+        let event = EventContainer()
         let nowString = Date().utcString
         XCTAssertEqual(nowString, event.start)
         
         let json : JSON = event.toJSON()!
         print("json:\(json)")
         XCTAssertNotNil(json)
-        guard let event2 = Event(json: json) else {
+        guard let event2 = EventContainer(json: json) else {
             XCTAssertTrue(false)
             return
         }
@@ -62,7 +62,7 @@ class EventTests: XCTestCase {
     
     func testInitWithStart() {
         
-        guard let event = Event(name: "My Event", startTime: birthday) else {
+        guard let event = EventContainer(name: "My Event", startTime: birthday) else {
             XCTAssertTrue(false)
             return
         }
@@ -71,7 +71,7 @@ class EventTests: XCTestCase {
     }
     
     func testCaptioning() {
-        guard let event = Event(name: "My Event", startTime: birthday) else {
+        guard let event = EventContainer(name: "My Event", startTime: birthday) else {
             XCTAssertTrue(false)
             return
         }
@@ -82,7 +82,7 @@ class EventTests: XCTestCase {
     }
     
     func testFutureCaption() {
-        guard let event = Event(name: "Next Christmas", startTime: nextXMas) else {
+        guard let event = EventContainer(name: "Next Christmas", startTime: nextXMas) else {
             XCTAssertTrue(false)
             return
         }
@@ -94,7 +94,7 @@ class EventTests: XCTestCase {
     }
     
     func testPublishInterval() {
-        guard let event = Event(name: "Next Christmas", startTime: future, endTime: nextXMas) else {
+        guard let event = EventContainer(name: "Next Christmas", startTime: future, endTime: nextXMas) else {
             XCTAssertTrue(false)
             return
         }
@@ -110,12 +110,12 @@ class EventTests: XCTestCase {
     }
     
     func testEventToJSONandBack() {
-        let event = Event()
+        let event = EventContainer()
         let json = event.toString()
         XCTAssertNotNil(json)
         let data = json?.data(using: .utf8)
         if let parsed = try? JSONSerialization.jsonObject(with: data!) as! [String:Any] {
-            let e = Event(json: parsed)
+            let e = EventContainer(json: parsed)
             print("e=\(e)")
             XCTAssertNotNil(e)
         } else {

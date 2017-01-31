@@ -92,7 +92,7 @@ class EventListTests: XCTestCase {
         }
         XCTAssertNotNil(eventList)
         XCTAssertTrue(eventList.count == 1)
-        let newEvent = Event()
+        let newEvent = EventContainer()
         eventList.addEvent(string: newEvent.toString()!)
         let save : Bool = (eventList.saveEvents(withKey: key))
         XCTAssertTrue(save)

@@ -19,7 +19,7 @@ fileprivate enum Key {
 }
 
 
-struct Event : JSONSerializable, Glossy {
+struct EventContainer : JSONSerializable, Glossy {
     let name : String
     let start : String
     private var startTimeZone: String
@@ -133,7 +133,7 @@ struct Event : JSONSerializable, Glossy {
             guard let json = convertedJSON else {
                 return nil
             }
-            guard let builtEvent = Event(json: json) else {
+            guard let builtEvent = EventContainer(json: json) else {
                 return nil
             }
             self.name = builtEvent.name
@@ -154,7 +154,7 @@ struct Event : JSONSerializable, Glossy {
         guard let data = string.data(using: .utf8) else {
             return nil
         }
-        guard let builtEvent = Event(data) else {
+        guard let builtEvent = EventContainer(data) else {
             return nil
         }
         self.name = builtEvent.name

@@ -22,7 +22,7 @@ class JSONUtilTests: XCTestCase {
     }
     
     func testStringToDictionary() {
-        let event = Event()
+        let event = EventContainer()
         guard let string = event.toString() else {
             XCTFail("Nil String")
             return

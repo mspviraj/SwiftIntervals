@@ -38,7 +38,7 @@ class NewEventTableViewController: UITableViewController, ExpandableDatePicker {
     fileprivate var selectedDate = Date()
     fileprivate var selectedTimeZone = TimeZone.autoupdatingCurrent
     
-    private var event = Event(name: "Quick Entry")!
+    private var event = EventContainer(name: "Quick Entry")!
     private var timeZone = TimeZone.current
     
     

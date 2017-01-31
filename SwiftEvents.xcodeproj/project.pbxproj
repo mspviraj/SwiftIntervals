@@ -59,7 +59,7 @@
 		B0C63C221E26D9AB00D86AE9 /* MockNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C63C201E26D9AB00D86AE9 /* MockNotificationCenter.swift */; };
 		B0CD939D1E40F30100B43FDE /* EventEditorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CD939C1E40F30100B43FDE /* EventEditorTests.swift */; };
 		B0CD939F1E40F38300B43FDE /* EventEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CD939E1E40F38300B43FDE /* EventEditor.swift */; };
-		B0CD93A11E40F54D00B43FDE /* EventContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CD93A01E40F54D00B43FDE /* EventContainer.swift */; };
+		B0CD93A11E40F54D00B43FDE /* EventBlob.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CD93A01E40F54D00B43FDE /* EventBlob.swift */; };
 		B0DD67311E3D4A3500162DE0 /* NewEventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DD67301E3D4A3500162DE0 /* NewEventTableViewController.swift */; };
 		B0DD67351E3D4F2600162DE0 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DD67341E3D4F2600162DE0 /* EventTableViewCell.swift */; };
 		B0DD67371E3D4FB900162DE0 /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DD67361E3D4FB900162DE0 /* TextTableViewCell.swift */; };
@@ -142,7 +142,7 @@
 		B0C63C201E26D9AB00D86AE9 /* MockNotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockNotificationCenter.swift; sourceTree = "<group>"; };
 		B0CD939C1E40F30100B43FDE /* EventEditorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventEditorTests.swift; sourceTree = "<group>"; };
 		B0CD939E1E40F38300B43FDE /* EventEditor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventEditor.swift; sourceTree = "<group>"; };
-		B0CD93A01E40F54D00B43FDE /* EventContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventContainer.swift; sourceTree = "<group>"; };
+		B0CD93A01E40F54D00B43FDE /* EventBlob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventBlob.swift; sourceTree = "<group>"; };
 		B0DD67301E3D4A3500162DE0 /* NewEventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewEventTableViewController.swift; sourceTree = "<group>"; };
 		B0DD67341E3D4F2600162DE0 /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		B0DD67361E3D4FB900162DE0 /* TextTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
@@ -298,7 +298,7 @@
 				B099F3021E3AAF5A00FC3F93 /* MonthTableViewCell.xib */,
 				B0DD673A1E3E989800162DE0 /* EventWrapper.swift */,
 				B0CD939E1E40F38300B43FDE /* EventEditor.swift */,
-				B0CD93A01E40F54D00B43FDE /* EventContainer.swift */,
+				B0CD93A01E40F54D00B43FDE /* EventBlob.swift */,
 			);
 			path = SwiftEvents;
 			sourceTree = "<group>";
@@ -633,7 +633,7 @@
 				B0C63C141E25DD4900D86AE9 /* MyNotificationCenter.swift in Sources */,
 				B095EA581E37B73E007F130F /* EventList.swift in Sources */,
 				B0357B4B1E3BD7CD00683F3C /* Keypad.swift in Sources */,
-				B0CD93A11E40F54D00B43FDE /* EventContainer.swift in Sources */,
+				B0CD93A11E40F54D00B43FDE /* EventBlob.swift in Sources */,
 				B0942A191E23D970002EECEE /* JSONUtil.swift in Sources */,
 				B0170DFC1E36019B00028CC4 /* NextTime.swift in Sources */,
 				B0DD673B1E3E989800162DE0 /* EventWrapper.swift in Sources */,

@@ -22,7 +22,7 @@ class EventEditorTests: XCTestCase {
     }
     
     func testInit() {
-        let eventblob = Event()
+        let eventblob = EventContainer()
         let editor = EventEditor(forEvent: eventblob)
         print("editor:\(editor)")
     }

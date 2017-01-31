@@ -20,7 +20,7 @@ struct EventList : JSONSerializable, Glossy {
     }
     
     init() {
-        self.list.append(Event().toString()!)
+        self.list.append(EventContainer().toString()!)
     }
     
     //For Glossy protocol
@@ -80,16 +80,16 @@ struct EventList : JSONSerializable, Glossy {
         return self.toString()?.data(using: .utf8)
     }
     
-    public func event(at: Int) -> Event? {
-        return (at < 0 || at >= count) ? nil : Event(string: list[at])
+    public func event(at: Int) -> EventContainer? {
+        return (at < 0 || at >= count) ? nil : EventContainer(string: list[at])
     }
     
-    public mutating func addEvent(_ event: Event) {
+    public mutating func addEvent(_ event: EventContainer) {
         list.append(event.toString()!)
     }
     
     public mutating func addEvent(string: String) {
-        guard Event(string: string) != nil else {
+        guard EventContainer(string: string) != nil else {
             return
         }
         list.append(string)

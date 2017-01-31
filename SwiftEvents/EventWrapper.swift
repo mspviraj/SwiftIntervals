@@ -9,9 +9,9 @@
 import Foundation
 
 struct EventWrapper {
-    let event : Event
+    let event : EventContainer
     
-    init(_ event: Event) {
+    init(_ event: EventContainer) {
         self.event = event
     }
     

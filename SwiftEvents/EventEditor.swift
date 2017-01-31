@@ -9,9 +9,9 @@
 import Foundation
 
 class EventEditor {
-    let event : Event
+    let event : EventContainer
     
-    init(forEvent: Event) {
+    init(forEvent: EventContainer) {
         event = forEvent
     }
 }
