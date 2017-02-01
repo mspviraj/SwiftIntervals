@@ -24,7 +24,7 @@ extension Date {
         return dateFormatter.string(from: self)
     }
     
-    public func format(_ format: Formats = Formats.utc, timeZone: TimeZone = TimeZone.autoupdatingCurrent) -> String? {
+    public func formatted(_ format: Formats, timeZone: TimeZone = TimeZone.autoupdatingCurrent) -> String? {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = format.rawValue
         dateFormatter.timeZone = (format == .utc) ? TimeZone(secondsFromGMT: 0) : timeZone

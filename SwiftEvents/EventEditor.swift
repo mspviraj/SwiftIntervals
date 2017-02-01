@@ -9,9 +9,13 @@
 import Foundation
 
 class EventEditor {
-    let event : EventContainer
+    private let event : EventContainer
+    private var start : DateTimeObject?
+    private var finish : DateTimeObject? = nil
     
     init(forEvent: EventContainer) {
         event = forEvent
+        start = DateTimeObject(dateTime: event.start, timeZone: event.startingTimeZone)
     }
 }
+

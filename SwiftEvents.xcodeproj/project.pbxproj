@@ -42,6 +42,8 @@
 		B095EA5A1E37BBBA007F130F /* EventListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B095EA591E37BBBA007F130F /* EventListTests.swift */; };
 		B095EA5C1E37D343007F130F /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = B095EA5B1E37D343007F130F /* Preferences.swift */; };
 		B095EA5E1E37D8C3007F130F /* JSONUtilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B095EA5D1E37D8C3007F130F /* JSONUtilTests.swift */; };
+		B099D3681E415EB000956FEC /* DateTimeObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B099D3671E415EB000956FEC /* DateTimeObject.swift */; };
+		B099D36A1E415EF600956FEC /* DateTimeObjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B099D3691E415EF600956FEC /* DateTimeObjectTests.swift */; };
 		B099F2FD1E38037B00FC3F93 /* PreferencesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B099F2FC1E38037B00FC3F93 /* PreferencesTest.swift */; };
 		B099F3041E3AAF5A00FC3F93 /* MonthTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B099F3021E3AAF5A00FC3F93 /* MonthTableViewCell.xib */; };
 		B099F30A1E3AB9C700FC3F93 /* AddEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B099F3091E3AB9C700FC3F93 /* AddEventTableViewCell.swift */; };
@@ -129,6 +131,8 @@
 		B095EA591E37BBBA007F130F /* EventListTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventListTests.swift; sourceTree = "<group>"; };
 		B095EA5B1E37D343007F130F /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		B095EA5D1E37D8C3007F130F /* JSONUtilTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONUtilTests.swift; sourceTree = "<group>"; };
+		B099D3671E415EB000956FEC /* DateTimeObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTimeObject.swift; sourceTree = "<group>"; };
+		B099D3691E415EF600956FEC /* DateTimeObjectTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTimeObjectTests.swift; sourceTree = "<group>"; };
 		B099F2FC1E38037B00FC3F93 /* PreferencesTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesTest.swift; sourceTree = "<group>"; };
 		B099F3021E3AAF5A00FC3F93 /* MonthTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MonthTableViewCell.xib; sourceTree = "<group>"; };
 		B099F3091E3AB9C700FC3F93 /* AddEventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEventTableViewCell.swift; sourceTree = "<group>"; };
@@ -299,6 +303,7 @@
 				B0DD673A1E3E989800162DE0 /* EventWrapper.swift */,
 				B0CD939E1E40F38300B43FDE /* EventEditor.swift */,
 				B0CD93A01E40F54D00B43FDE /* EventContainer.swift */,
+				B099D3671E415EB000956FEC /* DateTimeObject.swift */,
 			);
 			path = SwiftEvents;
 			sourceTree = "<group>";
@@ -323,6 +328,7 @@
 				B099F2FC1E38037B00FC3F93 /* PreferencesTest.swift */,
 				B074DF151E3EB9B20069843D /* EnumDateExtensionsTests.swift */,
 				B0CD939C1E40F30100B43FDE /* EventEditorTests.swift */,
+				B099D3691E415EF600956FEC /* DateTimeObjectTests.swift */,
 			);
 			path = SwiftEventsTests;
 			sourceTree = "<group>";
@@ -645,6 +651,7 @@
 				B0E731DE1E21B38C00160E37 /* DropboxViewController.swift in Sources */,
 				B0357B4F1E3BEDA200683F3C /* KeypadView.swift in Sources */,
 				B095EA5C1E37D343007F130F /* Preferences.swift in Sources */,
+				B099D3681E415EB000956FEC /* DateTimeObject.swift in Sources */,
 				B0A7AC891E39B2A30005A716 /* IntervalViewController.swift in Sources */,
 				B0CD939F1E40F38300B43FDE /* EventEditor.swift in Sources */,
 				B0E889DC1E3689AD00F1ECD7 /* EventTableViewController.swift in Sources */,
@@ -669,6 +676,7 @@
 				B007CF0F1E2D70690053F851 /* CloudDropboxTests.swift in Sources */,
 				B095EA5A1E37BBBA007F130F /* EventListTests.swift in Sources */,
 				B05A16361E2948D50053518E /* CloudDropbox.swift in Sources */,
+				B099D36A1E415EF600956FEC /* DateTimeObjectTests.swift in Sources */,
 				B0C63C151E25DD4900D86AE9 /* MyNotificationCenter.swift in Sources */,
 				B092CC541E21B7BC000048FE /* DateEnum.swift in Sources */,
 				B074DF161E3EB9B20069843D /* EnumDateExtensionsTests.swift in Sources */,
